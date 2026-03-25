@@ -2,14 +2,16 @@ import { useRef } from 'react'
 import { useGSAP } from '@gsap/react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+// 1. Importamos SplitText (Asegúrate de tener instalado el paquete premium)
+import { SplitText } from 'gsap/SplitText'
 
-gsap.registerPlugin(ScrollTrigger)
+// 2. Registramos ambos plugins
+gsap.registerPlugin(ScrollTrigger, SplitText)
 
 export default function HeroSection() {
   const sectionRef = useRef(null)
   const tagRef = useRef(null)
   
-  // 1. Separamos los títulos en 3 referencias independientes
   const title1Ref = useRef(null)
   const title2Ref = useRef(null)
   const title3Ref = useRef(null)
@@ -20,6 +22,12 @@ export default function HeroSection() {
   const decorRef = useRef(null)
 
   useGSAP(() => {
+    // 3. Inicializamos SplitText pasándole un array con las refs de tus títulos
+    const splitTitles = new SplitText(
+      [title1Ref.current, title2Ref.current, title3Ref.current], 
+      { type: "words,chars" } // Puedes usar "chars" si quieres que cada letra rote
+    )
+
     const ctx = gsap.context(() => {
       const tl = gsap.timeline({ defaults: { ease: 'power3.out' }, delay: 0.5 })
 
@@ -27,12 +35,15 @@ export default function HeroSection() {
         { opacity: 0, y: 20 },
         { opacity: 1, y: 0, duration: 0.6 }
       )
-      // 2. Animamos los 3 textos en cascada (stagger) para un efecto cómic genial
-      .fromTo([title1Ref.current, title2Ref.current, title3Ref.current],
-        { opacity: 0, y: 80, skewY: 3 },
-        { opacity: 1, y: 0, skewY: 0, duration: 0.8, stagger: 0.15 },
-        '-=0.3'
-      )
+      // 4. Aplicamos la animación de la documentación al array de palabras separadas
+      .from(splitTitles.words, {
+        y: -100,
+        opacity: 0,
+        rotation: "random(-80, 80)",
+        duration: 0.7, 
+        ease: "back.out(1.7)", // back.out es ideal para que el texto "rebote" hacia su lugar
+        stagger: 0.15
+      }, '-=0.3')
       .fromTo(subtitleRef.current,
         { opacity: 0, y: 30 },
         { opacity: 1, y: 0, duration: 0.7 },
@@ -65,21 +76,13 @@ export default function HeroSection() {
           scrub: 1.2,
         }
       })
-
-      // Parallax en cascada para los títulos
-      gsap.to([title1Ref.current, title2Ref.current, title3Ref.current], {
-        y: -30,
-        ease: 'none',
-        stagger: 0.05,
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: 'top top',
-          end: 'bottom top',
-          scrub: 0.8,
-        }
-      })
     }, sectionRef)
-    return () => ctx.revert()
+
+    // 5. Cleanup: Revertimos el contexto de GSAP y el SplitText
+    return () => {
+      ctx.revert()
+      splitTitles.revert()
+    }
   }, [])
 
   return (
@@ -106,31 +109,31 @@ export default function HeroSection() {
               </span>
             </div>
 
-            {/* 3. El truco CSS: Bloques separados, con padding bottom (pb-3) y espacio negativo (-space-y-3) */}
             <div className="flex flex-col mb-6 -space-y-3">
-              <div className="overflow-hidden">
+              {/* Quitamos el overflow-hidden de aquí para que la rotación y el y:-100 no se corten */}
+              <div>
                 <h1
                   ref={title1Ref}
                   className="font-black text-[#1A1A1A] leading-[1] tracking-[-0.03em] pb-3"
-                  style={{ fontSize: 'clamp(3.5rem, 8vw, 7rem)', opacity: 0 }}
+                  style={{ fontSize: 'clamp(3.5rem, 8vw, 7rem)', opacity: 1 }}
                 >
                   EL
                 </h1>
               </div>
-              <div className="overflow-hidden">
+              <div>
                 <h1
                   ref={title2Ref}
                   className="font-black text-[#1A1A1A] leading-[1] tracking-[-0.03em] pb-3"
-                  style={{ fontSize: 'clamp(3.5rem, 8vw, 7rem)', opacity: 0 }}
+                  style={{ fontSize: 'clamp(3.5rem, 8vw, 7rem)', opacity: 1 }}
                 >
                   CAMBIO
                 </h1>
               </div>
-              <div className="overflow-hidden">
+              <div>
                 <h1
                   ref={title3Ref}
                   className="font-black leading-[1] tracking-[-0.03em] pb-3"
-                  style={{ fontSize: 'clamp(3.5rem, 8vw, 7rem)', color: '#D72638', opacity: 0 }}
+                  style={{ fontSize: 'clamp(3.5rem, 8vw, 7rem)', color: '#D72638', opacity: 1 }}
                 >
                   ES POSIBLE
                 </h1>
@@ -163,7 +166,7 @@ export default function HeroSection() {
             </div>
           </div>
 
-          {/* Hero image container */}
+          {/* Hero image container (sin cambios aquí) */}
           <div className="relative flex justify-center items-center w-full h-full mt-10 lg:mt-0">
             <div
               ref={decorRef}
@@ -193,8 +196,10 @@ export default function HeroSection() {
                   <p className="text-white/60 text-xs font-medium mt-0.5">Por un gobierno que te representa</p>
                 </div>
               </div>
+              
 
-              <div className="absolute -bottom-4 -left-6 bg-white rounded-2xl shadow-xl px-5 py-3 flex items-center gap-3">
+              {/* Boton de Propuesta #1 */}
+              {/* <div className="absolute -bottom-4 -left-6 bg-white rounded-2xl shadow-xl px-5 py-3 flex items-center gap-3">
                 <div className="w-8 h-8 rounded-full bg-[#D72638] flex items-center justify-center flex-shrink-0">
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="white">
                     <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
@@ -204,7 +209,7 @@ export default function HeroSection() {
                   <p className="font-black text-[#1A1A1A] text-sm leading-tight">Propuesta #1</p>
                   <p className="text-[#1A1A1A]/50 text-xs">en transparencia</p>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
 
