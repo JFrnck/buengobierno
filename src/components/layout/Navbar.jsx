@@ -5,7 +5,7 @@ import { useGSAP } from '@gsap/react'
 
 gsap.registerPlugin()
 
-const WA_LINK = 'https://chat.whatsapp.com/pbg-grupo'
+const WA_LINK = 'https://chat.whatsapp.com/'
 
 export default function Navbar() {
   const navRef = useRef(null)
