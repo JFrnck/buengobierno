@@ -71,13 +71,8 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto flex items-center justify-between h-16 md:h-20">
         {/* Logo */}
         <Link to="/" ref={logoRef} className="flex items-center gap-3 group">
-          <div className="w-9 h-9 rounded-full bg-[#1A1A1A] flex items-center justify-center flex-shrink-0 transition-transform duration-300 group-hover:scale-110">
-            <span className="text-[#F5C800] font-black text-sm leading-none">PBG</span>
-          </div>
-          <span className="font-black text-[#1A1A1A] text-lg tracking-tight hidden sm:block">
-            Partido del Buen Gobierno
-          </span>
-          <span className="font-black text-[#1A1A1A] text-lg tracking-tight sm:hidden">PBG</span>
+          <img src="logo-sol-pbg.png" alt="" width={80}/>
+          <img src="/logo-pbg.png" alt="" width={200}/>
         </Link>
 
         {/* Links */}

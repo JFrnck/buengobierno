@@ -1,14 +1,41 @@
-import { useRef } from 'react'
+import { useRef, useState } from 'react'
 import { useGSAP } from '@gsap/react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 gsap.registerPlugin(ScrollTrigger)
 
+// He añadido la propiedad 'youtubeId' con el ID extraído de tu enlace
 const VIDEOS = [
-  { id: 1, title: 'Discurso de lanzamiento', duration: '4:32', views: '12K', featured: true },
-  { id: 2, title: 'Propuesta educativa en cifras', duration: '2:15', views: '8K', featured: false },
-  { id: 3, title: 'Visita a comunidades', duration: '3:48', views: '6K', featured: false },
+  { 
+    id: 1, 
+    title: 'Discurso de lanzamiento', 
+    youtubeId: '0Tw1T6nU_YI', 
+    start: 0, // Empieza en el segundo 30
+    end: 0,   // Termina en el segundo 60 (dura 30s en total)
+    duration: '0:30', 
+    views: '12K', 
+    featured: true 
+  },
+  { 
+    id: 2, 
+    title: 'Propuesta educativa en cifras', 
+    youtubeId: '0Tw1T6nU_YI', 
+    start: 0, // Empieza en el minuto 2:00
+    end: 0,
+    duration: '2:15', 
+    views: '8K', 
+    featured: false 
+  },
+  { 
+    id: 3, 
+    title: 'Visita a comunidades', 
+    youtubeId: '0Tw1T6nU_YI', 
+    // Sin start ni end, se reproduce completo desde el inicio
+    duration: '3:48', 
+    views: '6K', 
+    featured: false 
+  },
 ]
 
 const IMAGES = [
@@ -26,7 +53,7 @@ export default function MediaSection() {
 
   useGSAP(() => {
     const ctx = gsap.context(() => {
-      // Heading
+      // Animación del Encabezado
       gsap.fromTo(headingRef.current,
         { opacity: 0, y: 30 },
         {
@@ -35,7 +62,7 @@ export default function MediaSection() {
         }
       )
 
-      // Video cards — clip-path reveal
+      // Animación Video cards — clip-path reveal
       const videoCards = videosRef.current ? Array.from(videosRef.current.children) : []
       gsap.fromTo(videoCards,
         { clipPath: 'inset(100% 0 0 0)', opacity: 0 },
@@ -46,7 +73,7 @@ export default function MediaSection() {
         }
       )
 
-      // Gallery images — alternating reveal
+      // Animación Gallery images — alternating reveal
       const galleryItems = galleryRef.current ? Array.from(galleryRef.current.children) : []
       galleryItems.forEach((item, i) => {
         const fromLeft = i % 2 === 0
@@ -62,7 +89,7 @@ export default function MediaSection() {
           }
         )
 
-        // Hover effect
+        // Efectos Hover de imágenes
         item.addEventListener('mouseenter', () => {
           gsap.to(item.querySelector('.media-inner'), {
             scale: 1.05, duration: 0.4, ease: 'power2.out'
@@ -85,24 +112,24 @@ export default function MediaSection() {
   }, [])
 
   return (
-    <section ref={sectionRef} className="bg-[#F5C800] py-24 md:py-32 px-6 md:px-12 lg:px-20">
+    <section ref={sectionRef} className="bg-[#F5C800] py-24 md:py-12 px-6 md:px-[5vw] lg:px-[10vw]">
       <div className="max-w-7xl mx-auto">
-        {/* Heading */}
-        <div ref={headingRef} className="mb-16" style={{ opacity: 0 }}>
+        {/* Encabezado */}
+        <div ref={headingRef} className="mb-12 md:mb-16">
           <div className="flex items-center gap-3 mb-4">
-            <span className="w-10 h-0.5 bg-[#D72638]" />
+            <span className="w-8 h-0.5 bg-[#D72638]" />
             <span className="text-[#D72638] font-bold text-xs tracking-[0.2em] uppercase">Multimedia</span>
           </div>
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
             <h2
               className="font-black text-[#1A1A1A] leading-tight"
-              style={{ fontSize: 'clamp(2rem, 4vw, 3.2rem)', letterSpacing: '-0.025em' }}
+              style={{ fontSize: 'clamp(2.2rem, 4vw, 3.2rem)', letterSpacing: '-0.025em' }}
             >
               Vívelo en imágenes y video
             </h2>
             <a
               href="#"
-              className="text-[#D72638] font-bold text-sm flex items-center gap-2 hover:gap-3 transition-all duration-200"
+              className="text-[#1A1A1A] font-bold text-sm flex items-center gap-2 hover:gap-3 transition-all duration-200 bg-white/50 px-5 py-2.5 rounded-full hover:bg-white"
             >
               Ver todo el contenido
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
@@ -112,14 +139,14 @@ export default function MediaSection() {
           </div>
         </div>
 
-        {/* Video cards */}
-        <div ref={videosRef} className="grid md:grid-cols-3 gap-5 mb-8">
+        {/* Video cards Bento Box */}
+        <div ref={videosRef} className="grid md:grid-cols-2 gap-5 mb-8">
           {VIDEOS.map((v) => (
             <VideoCard key={v.id} video={v} />
           ))}
         </div>
 
-        {/* Image gallery */}
+        {/* Image gallery Bento Box */}
         <div ref={galleryRef} className="grid grid-cols-2 md:grid-cols-4 gap-4 auto-rows-[200px]">
           {IMAGES.map((img) => (
             <ImageCard key={img.id} image={img} />
@@ -131,28 +158,62 @@ export default function MediaSection() {
 }
 
 function VideoCard({ video }) {
+  const [isPlaying, setIsPlaying] = useState(false)
+  const spanClass = video.featured ? 'md:col-span-2 md:row-span-1' : ''
+
+  // Construimos la URL de YouTube dinámicamente con los tiempos
+  const getYouTubeUrl = () => {
+    let url = `https://www.youtube.com/embed/${video.youtubeId}?autoplay=1&rel=0`;
+    if (video.start) url += `&start=${video.start}`;
+    if (video.end) url += `&end=${video.end}`;
+    return url;
+  }
+
   return (
-    <div className={`bg-[#1A1A1A] rounded-2xl overflow-hidden cursor-pointer ${video.featured ? 'md:col-span-2 md:row-span-1' : ''}`}>
-      {/* Thumbnail placeholder */}
+    <div className={`bg-[#1A1A1A] rounded-2xl overflow-hidden ${spanClass} flex flex-col`}>
       <div className="relative aspect-video bg-[#2D2D2D] flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 flex items-center justify-center">
-          <div className="w-16 h-16 rounded-full bg-[#F5C800] flex items-center justify-center hover:scale-110 transition-transform duration-200 cursor-pointer shadow-lg">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="#1A1A1A">
-              <polygon points="5 3 19 12 5 21 5 3"/>
-            </svg>
-          </div>
-        </div>
-        {/* Simulated thumbnail */}
-        <div className="absolute inset-0 bg-gradient-to-br from-[#2D2D2D] to-[#1A1A1A]" />
-        <div className="absolute top-3 right-3 bg-[#D72638] text-white text-xs font-bold px-2 py-1 rounded-md">
-          {video.duration}
-        </div>
-        <div className="absolute bottom-3 left-3 text-white/50 text-xs font-semibold">
-          {video.views} vistas
-        </div>
+        
+        {isPlaying ? (
+          <iframe 
+            className="absolute inset-0 w-full h-full"
+            src={getYouTubeUrl()} 
+            title={video.title} 
+            frameBorder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerPolicy="strict-origin-when-cross-origin" 
+            allowFullScreen
+          ></iframe>
+        ) : (
+          <>
+            <img 
+              src={`https://img.youtube.com/vi/${video.youtubeId}/maxresdefault.jpg`} 
+              alt={video.title}
+              className="absolute inset-0 w-full h-full object-cover opacity-60 transition-opacity duration-300 hover:opacity-80"
+            />
+            
+            <div className="absolute inset-0 flex items-center justify-center z-10 pointer-events-none">
+              <button 
+                onClick={() => setIsPlaying(true)}
+                className="w-16 h-16 rounded-full bg-[#F5C800] flex items-center justify-center shadow-xl pointer-events-auto transform transition-transform duration-200 hover:scale-110"
+              >
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="#1A1A1A" className="ml-1">
+                  <polygon points="5 3 19 12 5 21 5 3"/>
+                </svg>
+              </button>
+            </div>
+
+            <div className="absolute top-3 right-3 bg-[#D72638] text-white text-xs font-bold px-2 py-1 rounded-md z-10 shadow-md">
+              {video.duration}
+            </div>
+            <div className="absolute bottom-3 left-3 text-white/80 text-xs font-semibold z-10 drop-shadow-md">
+              {video.views} vistas
+            </div>
+          </>
+        )}
       </div>
-      <div className="p-5">
-        <h4 className="text-white font-bold text-base tracking-tight">{video.title}</h4>
+
+      <div className="p-5 flex-grow bg-[#1A1A1A]">
+        <h4 className="text-white font-bold text-base tracking-tight line-clamp-1">{video.title}</h4>
         <p className="text-white/40 text-xs font-medium mt-1">Partido del Buen Gobierno</p>
       </div>
     </div>
@@ -164,13 +225,13 @@ function ImageCard({ image }) {
 
   return (
     <div className={`relative rounded-2xl overflow-hidden cursor-pointer ${spanClass}`}>
-      <div className="media-inner w-full h-full bg-[#E0B400] flex items-center justify-center">
+      <div className="media-inner w-full h-full bg-[#E0B400] flex items-center justify-center transition-transform duration-500">
         <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="rgba(26,26,26,0.2)" strokeWidth="1">
           <rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/>
           <polyline points="21 15 16 10 5 21"/>
         </svg>
       </div>
-      <div className="media-overlay absolute inset-0 bg-[#1A1A1A]/50 flex items-end p-4 opacity-0">
+      <div className="media-overlay absolute inset-0 bg-[#1A1A1A]/60 flex items-end p-5 opacity-0 transition-opacity duration-300">
         <p className="text-white font-bold text-sm leading-tight">{image.label}</p>
       </div>
     </div>
