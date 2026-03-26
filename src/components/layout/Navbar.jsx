@@ -181,6 +181,7 @@ function MobileMenu({ location, waLink }) {
         className="absolute top-12 right-0 w-56 bg-white rounded-2xl shadow-xl p-5 flex-col gap-4"
       >
         <Link to="/" onClick={() => setOpen(false)} className="font-bold text-[#1A1A1A] hover:text-[#D72638] transition-colors">PBG</Link>
+        <Link to="/plan-de-gobierno" onClick={() => setOpen(false)} className="font-bold text-[#1A1A1A] hover:text-[#D72638] transition-colors">Plan de Gobierno</Link>
         <Link to="/voluntarios" onClick={() => setOpen(false)} className="font-bold text-[#1A1A1A] hover:text-[#D72638] transition-colors">Voluntariado</Link>
         <a href={waLink} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 font-bold text-[#1A1A1A] hover:text-[#D72638] transition-colors">
           <WhatsAppIcon />WhatsApp
