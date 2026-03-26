@@ -44,7 +44,12 @@ export default function Footer() {
                 {['facebook', 'instagram', 'twitter', 'youtube'].map(s => (
                   <a
                     key={s}
-                    href="#"
+                    href={ 
+                      s === 'facebook' ? 'https://www.facebook.com/BuenGobiernoPe/' : '' | 
+                      s === 'instagram' ? 'https://www.instagram.com/buengobiernope' : '' | 
+                      s === 'twitter' ? 'https://x.com/buengobiernope?s=21' : '' | 
+                      s === 'youtube' ? 'https://www.youtube.com/@pbg-peru' : '' 
+                    }
                     className="w-9 h-9 rounded-full bg-white/8 flex items-center justify-center text-white/40 hover:bg-[#F5C800] hover:text-[#1A1A1A] transition-all duration-200"
                     aria-label={s}
                   >
@@ -61,7 +66,7 @@ export default function Footer() {
                 {[
                   { to: '/', label: 'Inicio' },
                   { to: '/#plan', label: 'Plan de Gobierno' },
-                  { to: '/voluntarios', label: 'Voluntariado' },
+                  // { to: '/voluntarios', label: 'Voluntariado' },
                   { to: '/#contacto', label: 'Contacto' },
                 ].map(l => (
                   <li key={l.label}>
@@ -73,7 +78,7 @@ export default function Footer() {
               </ul>
             </div>
 
-            {/* Contact */}
+            {/* Contact
             <div>
               <h4 className="text-white font-bold text-xs tracking-widest uppercase mb-5">Contacto</h4>
               <ul className="flex flex-col gap-3 text-white/45 text-sm font-medium">
@@ -87,7 +92,7 @@ export default function Footer() {
                   </a>
                 </li>
               </ul>
-            </div>
+            </div> */}
           </div>
 
           {/* Bottom bar */}
@@ -109,7 +114,7 @@ export default function Footer() {
   )
 }
 
-function SocialIcon({ name }) {
+function SocialIcon({ name, url }) {
   const icons = {
     facebook: <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>,
     instagram: <><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></>,

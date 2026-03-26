@@ -6,6 +6,7 @@ import MediaSection from '../components/home/MediaSection'
 import FormSection from '../components/home/FormSection'
 import VoteSection from '../components/home/VoteSection'
 import Footer from '../components/layout/Footer'
+import VotingComponent from '../components/home/VotingComponent'
 
 export default function Home() {
   return (
@@ -16,7 +17,8 @@ export default function Home() {
       <PlanSection />
       <MediaSection />
       <VoteSection />
-      <FormSection />
+      <VotingComponent/>
+      {/* <FormSection /> */}
       <Footer />
     </main>
   )

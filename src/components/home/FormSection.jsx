@@ -74,25 +74,9 @@ export default function FormSection() {
               Sé parte del cambio
             </h2>
             <p className="text-[#1A1A1A]/65 font-medium leading-relaxed mb-10 text-base">
-              Regístrate para recibir información sobre el programa de gobierno, eventos de campaña y oportunidades de participación ciudadana.
+              Regístra tu dolencia y puedes dejar tu correo para recibir información sobre el programa de gobierno, eventos de campaña y oportunidades de participación ciudadana.
             </p>
-            <div className="flex flex-col gap-5">
-              {[
-                { icon: '📬', label: 'Correo oficial', value: 'contacto@pbg.com' },
-                { icon: '📱', label: 'Teléfono de campaña', value: '+57 300 000 0000' },
-                { icon: '📍', label: 'Sede central', value: 'Calle 10 #22-15, Local 3' },
-              ].map((item, i) => (
-                <div key={i} className="flex items-center gap-4">
-                  <div className="w-11 h-11 rounded-xl bg-[#1A1A1A]/8 flex items-center justify-center text-lg flex-shrink-0">
-                    {item.icon}
-                  </div>
-                  <div>
-                    <p className="text-[#1A1A1A]/50 text-xs font-semibold tracking-wider uppercase">{item.label}</p>
-                    <p className="text-[#1A1A1A] font-bold text-sm mt-0.5">{item.value}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
+         
           </div>
 
           {/* Right: form */}

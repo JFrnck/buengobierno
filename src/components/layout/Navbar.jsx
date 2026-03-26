@@ -87,9 +87,9 @@ export default function Navbar() {
           <div className="nav-item">
             <NavLink to="/plan-de-gobierno" active={isActive('/plan-de-gobierno')}>Plan de Gobierno</NavLink>
           </div>
-          <div className="nav-item">
+          {/* <div className="nav-item">
             <NavLink to="/voluntarios" active={isActive('/voluntarios')}>Voluntariado</NavLink>
-          </div>
+          </div> */}
           <div className="nav-item">
             <a
               href={WA_LINK}
@@ -186,7 +186,7 @@ function MobileMenu({ location, waLink }) {
       >
         <MobileItem to="/" active={location.pathname === '/'} onClick={() => setOpen(false)}>PBG</MobileItem>
         <MobileItem to="/plan-de-gobierno" active={location.pathname === '/plan-de-gobierno'} onClick={() => setOpen(false)}>Plan de Gobierno</MobileItem>
-        <MobileItem to="/voluntarios" active={location.pathname === '/voluntarios'} onClick={() => setOpen(false)}>Voluntariado</MobileItem>
+        {/* <MobileItem to="/voluntarios" active={location.pathname === '/voluntarios'} onClick={() => setOpen(false)}>Voluntariado</MobileItem> */}
         <hr className="border-gray-100" />
         <a href={waLink} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 font-bold text-[#1A1A1A]">
           <WhatsAppIcon /> WhatsApp
