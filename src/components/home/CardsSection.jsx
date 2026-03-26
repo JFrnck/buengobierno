@@ -125,10 +125,21 @@ export default function CardsSection() {
             <span className="text-[#D72638] font-bold text-xs tracking-[0.2em] uppercase">Nuestros Pilares</span>
           </div>
           <h2
-            className="font-black text-[#1A1A1A] leading-tight max-w-2xl"
-            style={{ fontSize: 'clamp(2.2rem, 4.5vw, 3.5rem)', letterSpacing: '-0.025em' }}
+            className="font-black text-[#D72638] leading-tight w-[70%]"
+            style={{ 
+              fontSize: 'clamp(2.2rem, 4.5vw, 3.5rem)', 
+              letterSpacing: '0.030em',
+              textShadow: '1px 1px 0px black, -1px -1px 0px black, 1px -1px 0px black, -1px 1px 0px black'
+            }}
           >
-            Seis compromisos que transformarán la región
+            SEIS COMPROMISOS QUE TRANSFORMARÁN EL
+            <br />
+
+            <span className='text-[#D72638] text-[100px]'>P</span>
+            <span className='text-[#FFF5D9] text-[100px]'>E</span>
+            <span className='text-[#D72638] text-[100px]'>R</span>
+            <span className='text-[#FFF5D9] text-[100px]'>Ú</span>
+      
           </h2>
           <p className="text-[#1A1A1A]/60 font-medium mt-4 max-w-xl leading-relaxed">
             Propuestas concretas, financiables y verificables. Sin promesas vacías.
@@ -154,7 +165,7 @@ export default function CardsSection() {
               <h3 className="font-black text-[#1A1A1A] text-xl tracking-tight mb-3">{p.title}</h3>
               <p className="text-[#1A1A1A]/60 text-sm leading-relaxed font-medium">{p.desc}</p>
               <div className="mt-6 flex items-center gap-2 text-[#D72638] font-bold text-sm group cursor-pointer">
-                <span>Leer más</span>
+                <span></span>
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className="transition-transform duration-200 group-hover:translate-x-1">
                   <path d="M5 12h14M12 5l7 7-7 7"/>
                 </svg>

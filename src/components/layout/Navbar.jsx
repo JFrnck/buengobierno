@@ -78,6 +78,7 @@ export default function Navbar() {
         {/* Links */}
         <div ref={linksRef} className="hidden md:flex items-center gap-8">
           <NavLink to="/" active={isActive('/')}>PBG</NavLink>
+          <NavLink to="/plan-de-gobierno" active={isActive('/plan-de-gobierno')}>Plan de Gobierno</NavLink>
           <NavLink to="/voluntarios" active={isActive('/voluntarios')}>Voluntariado</NavLink>
           <a
             href={WA_LINK}

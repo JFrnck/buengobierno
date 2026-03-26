@@ -178,38 +178,18 @@ export default function HeroSection() {
 
             <div
               ref={imageRef}
-              className="relative z-10 w-full max-w-[380px] lg:max-w-[420px]"
+              className="relative z-10 w-full max-w-[680px] lg:max-w-[620px]"
               style={{ opacity: 0 }}
             >
-              <div className="relative bg-[#E0B400] rounded-3xl overflow-hidden aspect-[4/5] shadow-[0_24px_64px_rgba(0,0,0,0.2)]">
-                <div className="absolute inset-0 flex flex-col items-center justify-center gap-4">
-                    <img src="/JorgeNieto.png" alt="" />
-                  <p className="text-[#1A1A1A]/40 text-sm font-medium text-center px-8">
-                    Insertar imagen<br />del candidato aquí
-                  </p>
-                </div>
-                <div className="absolute top-6 right-6 bg-[#D72638] text-white text-xs font-bold px-3 py-1.5 rounded-full">
-                  #2026
-                </div>
-                <div className="absolute bottom-0 left-0 right-0 bg-[#1A1A1A] px-6 py-4">
-                  <p className="text-[#F5C800] font-black text-lg tracking-tight">Partido del Buen Gobierno</p>
-                  <p className="text-white/60 text-xs font-medium mt-0.5">Por un gobierno que te representa</p>
-                </div>
-              </div>
+{/* 
+            <h2 className='text-[60px] font-black'>
+              <span className='text-[#D72638]'>JORGE </span>  
+              <span className='text-white'>NIETO </span>  
+              <span className='text-[#D72638]'>PRESIDENTE</span>  
+            </h2> 
+               */}
+            <img src="/JorgeNieto.png" alt="" />
               
-
-              {/* Boton de Propuesta #1 */}
-              {/* <div className="absolute -bottom-4 -left-6 bg-white rounded-2xl shadow-xl px-5 py-3 flex items-center gap-3">
-                <div className="w-8 h-8 rounded-full bg-[#D72638] flex items-center justify-center flex-shrink-0">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="white">
-                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                  </svg>
-                </div>
-                <div>
-                  <p className="font-black text-[#1A1A1A] text-sm leading-tight">Propuesta #1</p>
-                  <p className="text-[#1A1A1A]/50 text-xs">en transparencia</p>
-                </div>
-              </div> */}
             </div>
           </div>
 

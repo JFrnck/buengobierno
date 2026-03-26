@@ -2,8 +2,11 @@ import { useRef } from 'react'
 import { useGSAP } from '@gsap/react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+// 1. Importamos SplitText
+import { SplitText } from 'gsap/SplitText'
 
-gsap.registerPlugin(ScrollTrigger)
+// 2. Registramos ambos plugins
+gsap.registerPlugin(ScrollTrigger, SplitText)
 
 const PANELS = [
   {
@@ -90,9 +93,15 @@ export default function PlanSection() {
   const sectionRef = useRef(null)
   const trackRef = useRef(null)
   const headingRef = useRef(null)
+  // 3. Nueva referencia para el título que queremos dividir
+  const titleRef = useRef(null)
 
   useGSAP(() => {
+    // 4. Inicializamos SplitText en el título
+    const splitTitle = new SplitText(titleRef.current, { type: "words,chars" })
+
     const ctx = gsap.context(() => {
+      // Tu animación original del encabezado (Intacta)
       gsap.fromTo(
         headingRef.current?.children ? Array.from(headingRef.current.children) : [],
         { opacity: 0, y: 30 },
@@ -102,6 +111,17 @@ export default function PlanSection() {
         }
       )
 
+      // 5. Nueva animación para las palabras del título dividido
+      gsap.from(splitTitle.words, {
+        opacity: 0,
+        y: 40,
+        duration: 0.8,
+        stagger: 0.05,
+        ease: 'back.out(1.4)', // Le da un pequeño efecto de rebote muy elegante
+        scrollTrigger: { trigger: headingRef.current, start: 'top 85%' }
+      })
+
+      // Tu lógica de paneles horizontales y verticales (Intacta)
       const mm = gsap.matchMedia()
 
       mm.add('(min-width: 768px)', () => {
@@ -163,27 +183,34 @@ export default function PlanSection() {
       })
     }, sectionRef)
 
-    return () => ctx.revert()
+    // 6. Aseguramos el cleanup de SplitText
+    return () => {
+      ctx.revert()
+      splitTitle.revert()
+    }
   }, [])
 
   return (
     <section ref={sectionRef} id="plan" className="bg-[#F5C800] py-20 overflow-hidden">
       {/* Encabezado */}
-      <div ref={headingRef} className="max-w-7xl mx-auto px-6 md:px-12 lg:px-20 mb-12">
+      <div ref={headingRef} className="w-full mx-auto px-6 md:px-12 lg:px-20 mb-12">
         <div className="flex items-center gap-3 mb-4">
           <span className="w-10 h-0.5 bg-[#D72638]" />
           <span className="text-[#D72638] font-bold text-xs tracking-[0.2em] uppercase">Plan de Gobierno</span>
         </div>
-        <div className="flex flex-col md:flex-row md:items-end gap-6 md:justify-between">
+        <div className="flex flex-col md:flex-row md:items-end gap-2 md:justify-between">
+          {/* Asignamos la referencia titleRef al h2 */}
           <h2
-            className="font-black text-[#1A1A1A] leading-tight max-w-xl"
-            style={{ fontSize: 'clamp(2.2rem, 4.5vw, 3.5rem)', letterSpacing: '-0.025em' }}
+            ref={titleRef}
+            className="font-black text-[#D72638] leading-tight w-[50%]"
+            style={{ 
+              fontSize: 'clamp(2.2rem, 4.5vw, 3.5rem)', 
+              letterSpacing: '0.030em',
+              textShadow: '1px 1px 0px black, -1px -1px 0px black, 1px -1px 0px black, -1px 1px 0px black'
+            }}
           >
-            6 ejes que definen nuestro gobierno
+            6 EJES QUE DEFINEN UN BUEN GOBIERNO
           </h2>
-          <p className="text-[#1A1A1A]/60 font-medium max-w-xs text-sm leading-relaxed">
-            Desliza horizontalmente para explorar cada pilar del programa de gobierno del PBG.
-          </p>
         </div>
       </div>
 
@@ -229,7 +256,7 @@ function PlanPanel({ panel, index }) {
 
   return (
     <div
-      className="plan-panel flex-shrink-0 w-[85vw] md:w-[400px] lg:w-[420px] min-h-[65%] flex flex-col rounded-[2rem] overflow-hidden"
+      className="plan-panel flex-shrink-0 w-[85vw] md:w-[400px] lg:w-[420px] min-h-[70%] flex flex-col rounded-[2rem] overflow-hidden"
       style={{
         background: isLight ? '#D72638' : 'white',
         boxShadow: '0 8px 40px rgba(0,0,0,0.12)'
@@ -238,7 +265,7 @@ function PlanPanel({ panel, index }) {
       <div className="panel-content flex-grow flex flex-col p-8 md:p-10">
 
         <div className="panel-main-content">
-          <div className="flex items-start justify-between gap-4 mb-4">
+          <div className="flex items-start justify-between gap-8 mb-4">
             <span
               className="font-black text-5xl md:text-6xl leading-none tracking-tighter"
               style={{ color: isLight ? 'rgba(245,200,0,0.25)' : 'rgba(26,26,26,0.08)' }}
@@ -249,8 +276,7 @@ function PlanPanel({ panel, index }) {
             <span
               className="text-[10px] font-bold tracking-widest uppercase px-3 py-2 rounded-2xl text-right leading-tight max-w-[65%]"
               style={{
-                background: isLight ? 'rgba(245,200,0,0.15)' : 'rgba(215,38,56,0.1)',
-                color: isLight ? '#F5C800' : '#D72638'
+                color: isLight ? '#FFFFFF' : '#D72638'
               }}
             >
               {panel.subtitle}
@@ -269,7 +295,7 @@ function PlanPanel({ panel, index }) {
           </h3>
 
           <p
-            className="text-xs leading-relaxed font-medium mb-6"
+            className="text-[15px] leading-relaxed font-medium mb-6"
             style={{ color: isLight ? 'rgba(255,255,255,0.6)' : 'rgba(26,26,26,0.6)' }}
           >
             {panel.body}
@@ -304,3 +330,5 @@ function PlanPanel({ panel, index }) {
     </div>
   )
 }
+
+
