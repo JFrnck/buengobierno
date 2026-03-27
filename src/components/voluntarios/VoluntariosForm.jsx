@@ -136,14 +136,14 @@ export default function VoluntariosForm() {
               <p className="text-[#1A1A1A]/60 font-medium text-sm max-w-xs leading-relaxed">
                 Bienvenido a la familia. Recibirás instrucciones en tu correo y serás añadido al grupo de coordinación.
               </p>
-              <a
+              {/* <a
                 href="https://chat.whatsapp.com/pbg-grupo"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-[#25D366] text-white font-bold px-6 py-3 rounded-full text-sm hover:bg-[#1ebe57] transition-colors mt-2"
               >
                 Unirse al grupo de WhatsApp
-              </a>
+              </a> */}
             </div>
           )}
         </div>
