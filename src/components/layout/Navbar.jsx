@@ -86,7 +86,7 @@ export default function Navbar() {
           <div className="nav-item">
             <NavLink to="/plan-de-gobierno" active={isActive('/plan-de-gobierno')}>Plan de Gobierno</NavLink>
           </div>
-          <div className="nav-item">
+          {/* <div className="nav-item">
             <a
               href={WA_LINK}
               target="_blank"
@@ -96,7 +96,7 @@ export default function Navbar() {
               <WhatsAppIcon />
               WhatsApp
             </a>
-          </div>
+          </div> */}
         </div>
 
         {/* Mobile Menu */}

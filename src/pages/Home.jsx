@@ -16,7 +16,7 @@ export default function Home() {
       <CardsSection />
       <PlanSection />
       <MediaSection />
-      <VoteSection />
+      {/* <VoteSection /> */}
       <VotingComponent/>
       {/* <FormSection /> */}
       <Footer />
