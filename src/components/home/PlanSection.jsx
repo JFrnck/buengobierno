@@ -2,11 +2,9 @@ import { useRef } from 'react'
 import { useGSAP } from '@gsap/react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-// 1. Importamos SplitText
 import { SplitText } from 'gsap/SplitText'
-import {NavLink} from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
-// 2. Registramos ambos plugins
 gsap.registerPlugin(ScrollTrigger, SplitText)
 
 const PANELS = [
@@ -94,35 +92,57 @@ export default function PlanSection() {
   const sectionRef = useRef(null)
   const trackRef = useRef(null)
   const headingRef = useRef(null)
-  // 3. Nueva referencia para el título que queremos dividir
   const titleRef = useRef(null)
 
   useGSAP(() => {
-    // 4. Inicializamos SplitText en el título
-    const splitTitle = new SplitText(titleRef.current, { type: "words,chars" })
+    // Detectar preferencia de movimiento reducido del SO
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
 
-    const ctx = gsap.context(() => {
-      // Tu animación original del encabezado
-      gsap.fromTo(
-        headingRef.current?.children ? Array.from(headingRef.current.children) : [],
-        { opacity: 0, y: 30 },
-        {
-          opacity: 1, y: 0, duration: 0.7, stagger: 0.12, ease: 'power3.out',
-          scrollTrigger: { trigger: headingRef.current, start: 'top 85%' }
-        }
-      )
+    // matchMedia para separar lógica móvil y desktop
+    const mm = gsap.matchMedia()
 
-      // 5. Animación para las palabras del título dividido
-      gsap.from(splitTitle.words, {
-        opacity: 0,
-        y: 40,
-        duration: 0.8,
-        stagger: 0.05,
-        ease: 'back.out(1.4)', 
-        scrollTrigger: { trigger: headingRef.current, start: 'top 85%' }
-      })
+    // ─── MÓVIL (hasta 767px) ────────────────────────────────────────────────
+    mm.add('(max-width: 767px)', () => {
+      // En móvil: SplitText solo por palabras (no chars) para reducir nodos DOM
+      let splitTitle = null
+      if (!prefersReducedMotion) {
+        splitTitle = new SplitText(titleRef.current, { type: 'words' })
 
-      // LÓGICA DE PANALES: UNIFICADA PARA DESKTOP Y MÓVIL (Aplicará el efecto Pin/Scroll Horizontal a todos)
+        // Heading: animación simple, sin stagger pesado
+        gsap.fromTo(
+          headingRef.current?.children ? Array.from(headingRef.current.children) : [],
+          { opacity: 0, y: 20 },
+          {
+            opacity: 1,
+            y: 0,
+            duration: 0.5,
+            stagger: 0.08,
+            ease: 'power2.out',
+            force3D: true,           // <- GPU
+            scrollTrigger: {
+              trigger: headingRef.current,
+              start: 'top 90%',
+              once: true,            // <- solo dispara una vez, sin reverse costoso
+            },
+          }
+        )
+
+        gsap.from(splitTitle.words, {
+          opacity: 0,
+          y: 25,
+          duration: 0.55,
+          stagger: 0.04,
+          ease: 'power2.out',
+          force3D: true,
+          scrollTrigger: {
+            trigger: headingRef.current,
+            start: 'top 90%',
+            once: true,
+          },
+        })
+      }
+
+      // Scroll horizontal — igual que desktop pero con scrub más suave en móvil
       const panels = trackRef.current?.querySelectorAll('.plan-panel')
       if (!panels || !trackRef.current) return
 
@@ -131,14 +151,108 @@ export default function PlanSection() {
       const scrollTween = gsap.to(trackRef.current, {
         x: () => -getScrollAmount(),
         ease: 'none',
+        force3D: true,
         scrollTrigger: {
           trigger: sectionRef.current,
-          start: 'top 18px', // Puedes ajustarlo a 'top top' para mejor pinning en móviles pequeños si hay header
+          start: 'top 18px',
+          pin: true,
+          scrub: 0.5,              // <- scrub menor = respuesta más ágil en móvil
+          end: () => `+=${getScrollAmount()}`,
+          invalidateOnRefresh: true,
+          fastScrollEnd: true,     // <- evita glitches al scrollear rápido
+          preventOverlaps: true,
+        },
+      })
+
+      if (!prefersReducedMotion) {
+        panels.forEach((panel) => {
+          // En móvil animamos el panel como bloque, NO cada hijo por separado
+          gsap.set(panel, { opacity: 0, y: 20 })
+
+          gsap.to(panel, {
+            opacity: 1,
+            y: 0,
+            duration: 0.45,
+            ease: 'power2.out',
+            force3D: true,
+            scrollTrigger: {
+              trigger: panel,
+              containerAnimation: scrollTween,
+              start: 'left 90%',
+              once: true,          // <- sin reverse en móvil
+            },
+          })
+        })
+      } else {
+        // Si prefiere movimiento reducido, solo hace fade simple
+        panels.forEach((panel) => {
+          gsap.set(panel, { opacity: 0 })
+          gsap.to(panel, {
+            opacity: 1,
+            duration: 0.3,
+            force3D: true,
+            scrollTrigger: {
+              trigger: panel,
+              containerAnimation: scrollTween,
+              start: 'left 90%',
+              once: true,
+            },
+          })
+        })
+      }
+
+      return () => {
+        splitTitle?.revert()
+      }
+    })
+
+    // ─── DESKTOP (desde 768px) ──────────────────────────────────────────────
+    mm.add('(min-width: 768px)', () => {
+      const splitTitle = new SplitText(titleRef.current, { type: 'words,chars' })
+
+      gsap.fromTo(
+        headingRef.current?.children ? Array.from(headingRef.current.children) : [],
+        { opacity: 0, y: 30 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.7,
+          stagger: 0.12,
+          ease: 'power3.out',
+          force3D: true,
+          scrollTrigger: { trigger: headingRef.current, start: 'top 85%' },
+        }
+      )
+
+      gsap.from(splitTitle.words, {
+        opacity: 0,
+        y: 40,
+        duration: 0.8,
+        stagger: 0.05,
+        ease: 'back.out(1.4)',
+        force3D: true,
+        scrollTrigger: { trigger: headingRef.current, start: 'top 85%' },
+      })
+
+      const panels = trackRef.current?.querySelectorAll('.plan-panel')
+      if (!panels || !trackRef.current) return
+
+      const getScrollAmount = () => trackRef.current.scrollWidth - window.innerWidth
+
+      const scrollTween = gsap.to(trackRef.current, {
+        x: () => -getScrollAmount(),
+        ease: 'none',
+        force3D: true,
+        scrollTrigger: {
+          trigger: sectionRef.current,
+          start: 'top 18px',
           pin: true,
           scrub: 1,
           end: () => `+=${getScrollAmount()}`,
           invalidateOnRefresh: true,
-        }
+          fastScrollEnd: true,
+          preventOverlaps: true,
+        },
       })
 
       panels.forEach((panel) => {
@@ -154,27 +268,28 @@ export default function PlanSection() {
           duration: 0.6,
           stagger: 0.08,
           ease: 'power3.out',
+          force3D: true,
           scrollTrigger: {
             trigger: panel,
             containerAnimation: scrollTween,
             start: 'left 85%',
             toggleActions: 'play none none reverse',
-          }
+          },
         })
       })
 
-    }, sectionRef)
+      return () => {
+        splitTitle.revert()
+      }
+    })
 
-    // 6. Aseguramos el cleanup de SplitText
     return () => {
-      ctx.revert()
-      splitTitle.revert()
+      mm.revert()
     }
   }, [])
 
   return (
     <section ref={sectionRef} id="plan" className="bg-[#F5C800] py-20 overflow-hidden">
-      {/* Encabezado */}
       <div ref={headingRef} className="w-full mx-auto px-6 md:px-12 lg:px-20 mb-12">
         <div className="flex items-center gap-3 mb-4">
           <span className="w-10 h-0.5 bg-[#D72638]" />
@@ -184,10 +299,12 @@ export default function PlanSection() {
           <h2
             ref={titleRef}
             className="font-black text-[#D72638] leading-tight w-full md:w-[50%]"
-            style={{ 
-              fontSize: 'clamp(2.2rem, 4.5vw, 3.5rem)', 
+            style={{
+              fontSize: 'clamp(2.2rem, 4.5vw, 3.5rem)',
               letterSpacing: '0.030em',
-              textShadow: '1px 1px 0px black, -1px -1px 0px black, 1px -1px 0px black, -1px 1px 0px black'
+              textShadow: '1px 1px 0px black, -1px -1px 0px black, 1px -1px 0px black, -1px 1px 0px black',
+              // will-change ayuda al browser a preparar la capa GPU anticipadamente
+              willChange: 'transform, opacity',
             }}
           >
             6 EJES QUE DEFINEN UN BUEN GOBIERNO
@@ -195,17 +312,18 @@ export default function PlanSection() {
         </div>
       </div>
 
-      {/* Track Horizontal Unificado */}
       <div>
         <div
           ref={trackRef}
           className="flex gap-5 px-6 md:px-12 lg:px-20 pb-8"
-          style={{ width: 'max-content' }}
+          style={{
+            width: 'max-content',
+            willChange: 'transform', // prepara la capa GPU para el scroll horizontal
+          }}
         >
           {PANELS.map((p, i) => (
             <PlanPanel key={i} panel={p} index={i} />
           ))}
-          {/* Panel final spacer adaptado para verse bien en Mobile y Desktop */}
           <div className="w-[85vw] md:w-[calc(100vw-10rem)] flex-shrink-0 flex items-center justify-center">
             <div className="text-center">
               <div className="text-[#1A1A1A]/30 font-black text-8xl tracking-tighter mb-4">FIN</div>
@@ -232,11 +350,11 @@ function PlanPanel({ panel, index }) {
       className="plan-panel flex-shrink-0 w-[85vw] md:w-[400px] lg:w-[420px] min-h-[70%] flex flex-col rounded-[2rem] overflow-hidden"
       style={{
         background: isLight ? '#D72638' : 'white',
-        boxShadow: '0 8px 40px rgba(0,0,0,0.12)'
+        boxShadow: '0 8px 40px rgba(0,0,0,0.12)',
+        willChange: 'transform, opacity', // cada panel en su propia capa
       }}
     >
       <div className="panel-content flex-grow flex flex-col p-8 md:p-10">
-
         <div className="panel-main-content">
           <div className="flex items-start justify-between gap-8 mb-4">
             <span
@@ -245,12 +363,9 @@ function PlanPanel({ panel, index }) {
             >
               {panel.num}
             </span>
-
             <span
               className="text-[10px] font-bold tracking-widest uppercase px-3 py-2 rounded-2xl text-right leading-tight max-w-[65%]"
-              style={{
-                color: isLight ? '#FFFFFF' : '#D72638'
-              }}
+              style={{ color: isLight ? '#FFFFFF' : '#D72638' }}
             >
               {panel.subtitle}
             </span>
@@ -261,7 +376,7 @@ function PlanPanel({ panel, index }) {
             style={{
               fontSize: 'clamp(1.2rem, 1.6vw, 1.6rem)',
               letterSpacing: '-0.025em',
-              color: isLight ? '#FFFFFF' : '#1A1A1A'
+              color: isLight ? '#FFFFFF' : '#1A1A1A',
             }}
           >
             {panel.title}
@@ -286,7 +401,7 @@ function PlanPanel({ panel, index }) {
                 style={{ background: isLight ? '#F5C800' : '#D72638' }}
               >
                 <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke={isLight ? '#1A1A1A' : 'white'} strokeWidth="3">
-                  <polyline points="20 6 9 17 4 12"/>
+                  <polyline points="20 6 9 17 4 12" />
                 </svg>
               </div>
               <span
@@ -298,7 +413,6 @@ function PlanPanel({ panel, index }) {
             </div>
           ))}
         </div>
-
       </div>
     </div>
   )
