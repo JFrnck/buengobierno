@@ -174,10 +174,6 @@ function MobileMenu({ location, waLink }) {
       >
         <MobileItem to="/" active={location.pathname === '/'} onClick={() => setOpen(false)}>PBG</MobileItem>
         <MobileItem to="/plan-de-gobierno" active={location.pathname === '/plan-de-gobierno'} onClick={() => setOpen(false)}>Plan de Gobierno</MobileItem>
-        <hr className="border-gray-100" />
-        <a href={waLink} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 font-bold text-[#1A1A1A]">
-          <WhatsAppIcon /> WhatsApp
-        </a>
       </div>
     </div>
   )
