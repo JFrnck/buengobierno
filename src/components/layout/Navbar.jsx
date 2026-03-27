@@ -100,9 +100,9 @@ export default function Navbar() {
         </div>
 
         {/* Mobile Menu */}
-        {/* <div ref={ctaRef} className="flex items-center gap-4">
-          <MobileMenu location={location} waLink={WA_LINK} />
-        </div> */}
+        <div ref={ctaRef} className="flex items-center gap-4">
+          <MobileMenu location={location} />
+        </div>
       </div>
     </nav>
   )
