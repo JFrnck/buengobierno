@@ -56,14 +56,16 @@ const HeroPresentation = () => {
               Plan de Gobierno 2026-2031
             </span>
           </div>
-          <h1 className="hero-title font-black text-[#1A1A1A] leading-[1] tracking-[-0.03em] text-5xl md:text-7xl lg:text-8xl mb-8">
-            NUESTRO <span className="text-[#D72638]">PACTO</span> SOCIAL
+          <h1 className="flex flex-col hero-title font-black text-[#1A1A1A] leading-[1] tracking-[-0.03em] text-5xl md:text-7xl lg:text-8xl mb-8">
+            <span className="text-[#D72638]">NUESTRO</span>
+            <span className="text-white">PACTO</span>
+            <span className="text-[#D72638]">SOCIAL</span>
           </h1>
           <p className="hero-text text-[#1A1A1A]/80 font-medium text-lg md:text-xl leading-relaxed mb-6">
-            El PBG 2026–2031 plantea transformar el Perú hacia un modelo de desarrollo equitativo, sostenible, territorialmente equilibrado y libre de corrupción[cite: 12049].
+            El PBG 2026–2031 plantea transformar el Perú hacia un modelo de desarrollo equitativo, sostenible, territorialmente equilibrado y libre de corrupción.
           </p>
           <p className="hero-text text-[#1A1A1A]/80 font-medium text-lg md:text-xl leading-relaxed mb-10">
-            Mediante un Estado profesional, transparente y orientado al bienestar, reemplazamos el enfoque extractivista por un nuevo pacto social centrado en las personas y la naturaleza[cite: 12049].
+            Mediante un Estado profesional, transparente y orientado al bienestar, reemplazamos el enfoque extractivista por un nuevo pacto social centrado en las personas y la naturaleza.
           </p>
         </div>
 
@@ -128,9 +130,9 @@ const EjeSection = ({ id, number, title, icon: Icon, points, isDark }) => {
     );
   }, { scope: sectionRef });
 
-  const bgClass = isDark ? 'bg-[#1A1A1A] text-white' : 'bg-white text-[#1A1A1A]';
-  const accentClass = isDark ? 'text-[#F5C800]' : 'text-[#D72638]';
-  const cardClass = isDark ? 'bg-white/5 border-white/10' : 'bg-[#1A1A1A]/5 border-[#1A1A1A]/10';
+  const bgClass = isDark ? 'bg-white text-black' : 'bg-[#D72638] text-white';
+  const accentClass = isDark ? 'text-black' : 'text-white';
+  const cardClass = isDark ? 'bg-[#1A1A1A]/5 border-[#1A1A1A]/10' : 'bg-white/5 border-white/10';
 
   return (
     <section ref={sectionRef} id={id} className={`py-24 px-6 md:px-12 lg:px-20 relative overflow-hidden ${bgClass}`}>
@@ -140,8 +142,8 @@ const EjeSection = ({ id, number, title, icon: Icon, points, isDark }) => {
         </div>
 
         <div className="eje-header flex items-center gap-4 mb-12">
-          <div className={`p-4 rounded-2xl ${isDark ? 'bg-[#D72638]' : 'bg-[#1A1A1A]'}`}>
-            <Icon className={isDark ? 'text-white' : 'text-[#F5C800]'} size={32} />
+          <div className={`p-4 rounded-2xl ${isDark ? 'bg-[#D72638]' : 'bg-[#F5C800]'}`}>
+            <Icon className={isDark ? 'text-white' : 'text-[#D72638]'} size={32} />
           </div>
           <div>
             <h4 className={`font-bold tracking-[0.2em] text-sm mb-1 ${accentClass}`}>EJE ESTRATÉGICO 0{number}</h4>
@@ -153,7 +155,7 @@ const EjeSection = ({ id, number, title, icon: Icon, points, isDark }) => {
           {points.map((point, idx) => (
             <div key={idx} className={`eje-point p-6 rounded-2xl border ${cardClass} backdrop-blur-sm hover:-translate-y-2 transition-transform duration-300`}>
               <div className="flex items-start gap-4">
-                <div className={`w-2 h-2 rounded-full mt-2 shrink-0 ${isDark ? 'bg-[#F5C800]' : 'bg-[#D72638]'}`} />
+                <div className={`w-2 h-2 rounded-full mt-2 shrink-0 ${isDark ? 'bg-[#F5C800]' : 'bg-white'}`} />
                 <p className="text-lg font-medium leading-relaxed opacity-90">{point}</p>
               </div>
             </div>
@@ -265,10 +267,10 @@ const CompromisosMeta = () => {
           
           <div className="space-y-4">
             {[
-              "Integración regional: Alianza del Pacífico, Comunidad Andina, APEC y adhesión a la OCDE[cite: 12134].",
-              "Inversión sostenida en CTI, infraestructura y energías limpias[cite: 12135].",
-              "Participación ciudadana activa en el control y evaluación de políticas públicas[cite: 12135].",
-              "Enfoques transversales: género, interculturalidad, sostenibilidad climática y digitalización estatal[cite: 12136]."
+              "Integración regional: Alianza del Pacífico, Comunidad Andina, APEC y adhesión a la OCDE.",
+              "Inversión sostenida en CTI, infraestructura y energías limpias.",
+              "Participación ciudadana activa en el control y evaluación de políticas públicas.",
+              "Enfoques transversales: género, interculturalidad, sostenibilidad climática y digitalización estatal."
             ].map((text, i) => (
               <div key={i} className="comp-card bg-white/10 backdrop-blur-md p-5 rounded-2xl flex items-start gap-4">
                 <Target className="text-[#F5C800] shrink-0 mt-1" size={20} />
@@ -284,11 +286,11 @@ const CompromisosMeta = () => {
           
           <h3 className="text-[#D72638] font-black text-2xl tracking-widest uppercase mb-4">Meta Final 2031</h3>
           <p className="text-3xl md:text-4xl font-black leading-tight tracking-tight mb-8">
-            Construir un Perú justo, competitivo, verde e inclusivo, donde el crecimiento económico, la igualdad social y el respeto ambiental vayan de la mano[cite: 12136].
+            Construir un Perú justo, competitivo, verde e inclusivo, donde el crecimiento económico, la igualdad social y el respeto ambiental vayan de la mano.
           </p>
           <div className="h-1 w-20 bg-[#D72638] mb-8" />
           <p className="text-xl font-medium leading-relaxed opacity-90">
-            El PBG busca consolidar un nuevo contrato social que combine eficiencia estatal, desarrollo humano y sostenibilidad ambiental como pilares del Buen Gobierno[cite: 12136].
+            El PBG busca consolidar un nuevo contrato social que combine eficiencia estatal, desarrollo humano y sostenibilidad ambiental como pilares del Buen Gobierno.
           </p>
         </div>
 

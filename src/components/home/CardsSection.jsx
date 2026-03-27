@@ -9,22 +9,12 @@ const PILLARS = [
   {
     icon: (
       <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/>
+        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
       </svg>
     ),
-    title: 'Vivienda Digna',
-    desc: 'Acceso justo a vivienda para todas las familias. Programas de mejoramiento y construcción sostenible.',
-    tag: 'Social'
-  },
-  {
-    icon: (
-      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/>
-      </svg>
-    ),
-    title: 'Educación de Calidad',
-    desc: 'Inversión real en colegios, docentes y tecnología. Becas para jóvenes talentosos sin recursos.',
-    tag: 'Educación'
+    title: 'Cortaremos las redes de extorsión desde la raíz',
+    desc: 'Implementaremos bloqueadores de señal al 100% en todos los penales del país para 2028 y desplegaremos fuerzas conjuntas de inteligencia para reducir en más del 50% la incidencia de la extorsión. El Estado recuperará el control de las calles.',
+    tag: 'Seguridad'
   },
   {
     icon: (
@@ -32,41 +22,50 @@ const PILLARS = [
         <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
       </svg>
     ),
-    title: 'Salud para Todos',
-    desc: 'Sistema de salud cercano, eficiente y humano. Más centros de atención primaria en barrios.',
+    title: 'Salud digital y erradicación de la anemia infantil',
+    desc: 'Llevaremos la anemia infantil por debajo del 10%. Además, eliminaremos las barreras burocráticas implementando la Historia Clínica Electrónica Única e interoperable, asegurando que con solo tu DNI recibas atención en cualquier establecimiento de salud del país.',
     tag: 'Salud'
   },
   {
     icon: (
       <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+        <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/>
       </svg>
     ),
-    title: 'Empleo y Economía',
-    desc: 'Apoyo a emprendedores locales, atracción de inversión y generación de empleo formal digno.',
+    title: 'Crecimiento del 5% y fin del crédito "gota a gota"',
+    desc: 'Retomaremos la senda del crecimiento sostenido por encima del 5% anual. Para proteger a nuestros emprendedores, crearemos el Programa Nacional de Crédito Justo, desplazando las mafias informales y ofreciendo financiamiento real y accesible a las MYPE.',
     tag: 'Economía'
   },
   {
     icon: (
       <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+        <path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/>
       </svg>
     ),
-    title: 'Seguridad Ciudadana',
-    desc: 'Policía comunitaria, cámaras en zonas críticas y programas de prevención del delito.',
-    tag: 'Seguridad'
+    title: 'El 100% de las escuelas públicas con internet',
+    desc: 'Cerraremos la brecha digital educativa. Garantizaremos conectividad de banda ancha e infraestructura tecnológica operativa en todas las escuelas y colegios públicos del territorio nacional, asegurando que ningún estudiante se quede fuera del mundo digital.',
+    tag: 'Educación'
   },
   {
     icon: (
       <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/>
-        <path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/>
       </svg>
     ),
-    title: 'Participación Ciudadana',
-    desc: 'Gobierno abierto, presupuesto participativo y consultas populares en decisiones clave.',
-    tag: 'Democracia'
+    title: 'Contrataciones y obras 100% auditables',
+    desc: 'La corrupción se combate con luz. Implementaremos la plataforma "Estado Íntegro", haciendo que todas las compras, licitaciones y obras públicas sean 100% digitales, abiertas y trazables en tiempo real por cualquier ciudadano. Cero contrataciones a oscuras.',
+    tag: 'Transparencia'
   },
+  {
+    icon: (
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+      </svg>
+    ),
+    title: 'Cobertura total de luz en zonas rurales',
+    desc: 'Llevaremos al país hacia el siglo XXI logrando el 100% de electrificación rural mediante proyectos sostenibles y microrredes de energía limpia. Nadie se quedará atrás en el acceso a servicios básicos, sin importar lo lejos que viva de la capital.',
+    tag: 'Infraestructura'
+  }
 ]
 
 export default function CardsSection() {
@@ -125,7 +124,8 @@ export default function CardsSection() {
             <span className="text-[#D72638] font-bold text-xs tracking-[0.2em] uppercase">Nuestros Pilares</span>
           </div>
           <h2
-            className="font-black text-[#D72638] leading-tight w-[70%]"
+            // Ancho reajustado a w-full para mobile y w-[70%] para desktop
+            className="font-black text-[#D72638] leading-tight w-full md:w-[70%]"
             style={{ 
               fontSize: 'clamp(2.2rem, 4.5vw, 3.5rem)', 
               letterSpacing: '0.030em',
@@ -134,12 +134,11 @@ export default function CardsSection() {
           >
             SEIS COMPROMISOS QUE TRANSFORMARÁN EL
             <br />
-
-            <span className='text-[#D72638] text-[100px]'>P</span>
-            <span className='text-[#FFF5D9] text-[100px]'>E</span>
-            <span className='text-[#D72638] text-[100px]'>R</span>
-            <span className='text-[#FFF5D9] text-[100px]'>Ú</span>
-      
+            {/* Clases adaptables al tamaño de fuente en mobile evitando desbordamientos */}
+            <span className='text-[#D72638] text-[60px] md:text-[100px]'>P</span>
+            <span className='text-[#FFF5D9] text-[60px] md:text-[100px]'>E</span>
+            <span className='text-[#D72638] text-[60px] md:text-[100px]'>R</span>
+            <span className='text-[#FFF5D9] text-[60px] md:text-[100px]'>Ú</span>
           </h2>
           <p className="text-[#1A1A1A]/60 font-medium mt-4 max-w-xl leading-relaxed">
             Propuestas concretas, financiables y verificables. Sin promesas vacías.
@@ -164,12 +163,6 @@ export default function CardsSection() {
               </div>
               <h3 className="font-black text-[#1A1A1A] text-xl tracking-tight mb-3">{p.title}</h3>
               <p className="text-[#1A1A1A]/60 text-sm leading-relaxed font-medium">{p.desc}</p>
-              <div className="mt-6 flex items-center gap-2 text-[#D72638] font-bold text-sm group cursor-pointer">
-                <span></span>
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className="transition-transform duration-200 group-hover:translate-x-1">
-                  <path d="M5 12h14M12 5l7 7-7 7"/>
-                </svg>
-              </div>
             </div>
           ))}
         </div>

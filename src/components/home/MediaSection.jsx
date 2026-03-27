@@ -38,10 +38,10 @@ const VIDEOS = [
 
 // Ajustamos los tamaños para formar un rectángulo perfecto de 4 columnas
 const IMAGES = [
-  { id: 1, label: 'Caravana por el norte', size: 'tall' },        // Columna 1 (ocupa 2 filas)
-  { id: 2, label: 'Encuentro con líderes comunitarios', size: 'wide' }, // Columnas 2 y 3 (fila 1)
-  { id: 3, label: 'Rally de apertura', size: 'normal' },      // Columna 4 (fila 1)
-  { id: 4, label: 'Sede central PBG', size: 'large-wide' },   // Columnas 2, 3 y 4 (fila 2)
+  { id: 1, label: 'Caravana por el norte', size: 'tall' },        
+  { id: 2, label: 'Encuentro con líderes comunitarios', size: 'wide' }, 
+  { id: 3, label: 'Rally de apertura', size: 'normal' },      
+  { id: 4, label: 'Sede central PBG', size: 'large-wide' },   
 ]
 
 export default function MediaSection() {
@@ -52,7 +52,6 @@ export default function MediaSection() {
 
   useGSAP(() => {
     const ctx = gsap.context(() => {
-      // Animación del Encabezado
       gsap.fromTo(headingRef.current,
         { opacity: 0, y: 30 },
         {
@@ -61,7 +60,6 @@ export default function MediaSection() {
         }
       )
 
-      // Animación Gallery images — alternating reveal
       const galleryItems = galleryRef.current ? Array.from(galleryRef.current.children) : []
       galleryItems.forEach((item, i) => {
         const fromLeft = i % 2 === 0
@@ -77,7 +75,6 @@ export default function MediaSection() {
           }
         )
 
-        // Efectos Hover de imágenes
         item.addEventListener('mouseenter', () => {
           gsap.to(item.querySelector('.media-inner'), {
             scale: 1.05, duration: 0.4, ease: 'power2.out'
@@ -96,7 +93,6 @@ export default function MediaSection() {
         })
       })
 
-      // Animación Video cards — clip-path reveal
       const videoCards = videosRef.current ? Array.from(videosRef.current.children) : []
       gsap.fromTo(videoCards,
         { clipPath: 'inset(100% 0 0 0)', opacity: 0 },
@@ -113,7 +109,6 @@ export default function MediaSection() {
   return (
     <section ref={sectionRef} className="bg-[#F5C800] py-24 md:py-12 px-6 md:px-[5vw] lg:px-[10vw]">
       <div className="max-w-7xl mx-auto">
-        {/* Encabezado */}
         <div ref={headingRef} className="mb-12 md:mb-16">
           <div className="flex items-center gap-3 mb-4">
             <span className="w-8 h-0.5 bg-[#D72638]" />
@@ -128,7 +123,7 @@ export default function MediaSection() {
             </h2>
             <a
               href="#"
-              className="text-[#1A1A1A] font-bold text-sm flex items-center gap-2 hover:gap-3 transition-all duration-200 bg-white/50 px-5 py-2.5 rounded-full hover:bg-white"
+              className="text-[#1A1A1A] font-bold text-sm flex items-center gap-2 hover:gap-3 transition-all duration-200 bg-white/50 px-5 py-2.5 rounded-full hover:bg-white w-fit"
             >
               Ver todo el contenido
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
@@ -138,14 +133,12 @@ export default function MediaSection() {
           </div>
         </div>
 
-        {/* Image gallery Bento Box (Aparece Primero) */}
         <div ref={galleryRef} className="grid grid-cols-1 md:grid-cols-4 gap-4 auto-rows-[250px] mb-8">
           {IMAGES.map((img) => (
             <ImageCard key={img.id} image={img} />
           ))}
         </div>
 
-        {/* Video cards Bento Box (Aparece Después) */}
         <div ref={videosRef} className="grid grid-cols-1 md:grid-cols-2 gap-5">
           {VIDEOS.map((v) => (
             <VideoCard key={v.id} video={v} />
@@ -158,7 +151,6 @@ export default function MediaSection() {
 
 function VideoCard({ video }) {
   const [isPlaying, setIsPlaying] = useState(false)
-  // Utilizamos md:col-span-2 para que sea bento-box solo en pantallas medianas o más grandes
   const spanClass = video.featured ? 'md:col-span-2 md:row-span-1' : ''
 
   const getYouTubeUrl = () => {
@@ -171,7 +163,6 @@ function VideoCard({ video }) {
   return (
     <div className={`bg-[#1A1A1A] rounded-2xl overflow-hidden ${spanClass} flex flex-col min-h-[250px]`}>
       <div className="relative aspect-video bg-[#2D2D2D] flex items-center justify-center overflow-hidden h-full">
-        
         {isPlaying ? (
           <iframe 
             className="absolute inset-0 w-full h-full"
@@ -220,7 +211,6 @@ function VideoCard({ video }) {
 }
 
 function ImageCard({ image }) {
-  // Configuración de tamaños Bento Box para pantallas medianas/grandes
   const spanClass = 
     image.size === 'tall' ? 'md:row-span-2' : 
     image.size === 'wide' ? 'md:col-span-2' : 
@@ -228,7 +218,6 @@ function ImageCard({ image }) {
 
   return (
     <div className={`relative rounded-2xl overflow-hidden cursor-pointer ${spanClass} h-full`}>
-      {/* Puedes reemplazar "Fondo-jornada.png" con la ruta de tu imagen real, usando object-cover */}
       <div className="media-inner w-full h-full bg-[#E0B400] flex items-center justify-center transition-transform duration-500">
         <img src="Fondo-jornada.png" alt={image.label} className="w-full h-full object-cover" />
       </div>

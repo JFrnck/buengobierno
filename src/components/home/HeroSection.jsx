@@ -41,7 +41,7 @@ export default function HeroSection() {
         opacity: 0,
         rotation: "random(-80, 80)",
         duration: 0.7, 
-        ease: "back.out(1.7)", // back.out es ideal para que el texto "rebote" hacia su lugar
+        ease: "back.out(1.7)", 
         stagger: 0.15
       }, '-=0.3')
       .fromTo(subtitleRef.current,
@@ -88,7 +88,8 @@ export default function HeroSection() {
   return (
     <section
       ref={sectionRef}
-      className="relative h-screen bg-[#F5C800] flex items-center overflow-hidden"
+      // Se agregó min-h-screen para mobile y h-screen para desktop, asegurando que nada se corte
+      className="relative min-h-screen lg:h-screen py-24 lg:py-0 bg-[#F5C800] flex items-center overflow-hidden"
     >
       {/* Background geometric elements */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
@@ -101,7 +102,7 @@ export default function HeroSection() {
       <div className="relative max-w-7xl mx-auto px-6 md:px-12 lg:px-20 w-full">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Text content */}
-          <div className="flex flex-col justify-center z-10">
+          <div className="flex flex-col justify-center z-10 pt-10 lg:pt-0">
             <div ref={tagRef} className="inline-flex items-center gap-2 mb-2" style={{ opacity: 0 }}>
               <span className="w-8 h-0.5 bg-[#D72638]" />
               <span className="text-[#D72638] font-bold text-xs tracking-[0.2em] uppercase">
@@ -110,7 +111,6 @@ export default function HeroSection() {
             </div>
 
             <div className="flex flex-col mb-6 -space-y-3">
-              {/* Quitamos el overflow-hidden de aquí para que la rotación y el y:-100 no se corten */}
               <div>
                 <h1
                   ref={title1Ref}
@@ -145,59 +145,44 @@ export default function HeroSection() {
               className="text-[#1A1A1A]/70 font-medium leading-relaxed mb-8 max-w-md"
               style={{ fontSize: 'clamp(1rem, 1.2vw, 1.1rem)', opacity: 0 }}
             >
-              Un gobierno limpio, transparente y cercano a la gente. Juntos construimos el futuro que nuestra región merece.
+              Un gobierno limpio, transparente y cercano a la gente. Juntos construimos el futuro que nuestro país merece.
             </p>
 
             <div ref={ctasRef} className="flex flex-wrap gap-4">
               <a
                 href="#plan"
-                className="bg-[#D72638] text-white font-bold px-8 py-3.5 rounded-full hover:bg-[#B81F2E] transition-all duration-200 hover:shadow-[0_8px_24px_rgba(215,38,56,0.4)] hover:-translate-y-1 text-sm tracking-wide"
+                className="bg-[#D72638] text-white font-bold px-8 py-3.5 rounded-full hover:bg-[#B81F2E] transition-all duration-200 hover:shadow-[0_8px_24px_rgba(215,38,56,0.4)] hover:-translate-y-1 text-sm tracking-wide text-center"
                 style={{ opacity: 0 }}
               >
                 Ver Plan de Gobierno
               </a>
-              <a
-                href="/voluntarios"
-                className="bg-[#1A1A1A] text-[#F5C800] font-bold px-8 py-3.5 rounded-full hover:bg-[#2D2D2D] transition-all duration-200 hover:-translate-y-1 text-sm tracking-wide"
-                style={{ opacity: 0 }}
-              >
-                Ser Voluntario
-              </a>
             </div>
           </div>
 
-          {/* Hero image container (sin cambios aquí) */}
+          {/* Hero image container */}
           <div className="relative flex justify-center items-center w-full h-full mt-10 lg:mt-0">
             <div
               ref={decorRef}
               className="absolute inset-0 flex items-center justify-center"
               style={{ opacity: 0 }}
             >
-              <div className="w-[340px] h-[340px] lg:w-[420px] lg:h-[420px] rounded-full bg-[#E0B400] opacity-50" />
+              <div className="w-[300px] h-[300px] sm:w-[340px] sm:h-[340px] lg:w-[420px] lg:h-[420px] rounded-full bg-[#E0B400] opacity-50" />
             </div>
 
             <div
               ref={imageRef}
-              className="relative z-10 w-full max-w-[680px] lg:max-w-[620px]"
+              className="relative z-10 w-full max-w-[500px] lg:max-w-[620px]"
               style={{ opacity: 0 }}
             >
-{/* 
-            <h2 className='text-[60px] font-black'>
-              <span className='text-[#D72638]'>JORGE </span>  
-              <span className='text-white'>NIETO </span>  
-              <span className='text-[#D72638]'>PRESIDENTE</span>  
-            </h2> 
-               */}
-            <img src="/JorgeNieto.png" alt="" />
-              
+              <img src="/JorgeNieto.png" alt="Jorge Nieto" className="w-full h-auto object-contain" />
             </div>
           </div>
 
         </div>
       </div>
 
-      {/* Scroll indicator */}
-      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-bounce">
+      {/* Scroll indicator - oculto en mobile ultra pequeños por colisiones */}
+      <div className="hidden sm:flex absolute bottom-4 left-1/2 -translate-x-1/2 flex-col items-center gap-2 animate-bounce">
         <span className="text-[#1A1A1A]/40 text-[10px] font-semibold tracking-widest uppercase">Scroll</span>
         <div className="w-0.5 h-6 bg-[#1A1A1A]/20 rounded-full overflow-hidden">
           <div className="w-full h-1/2 bg-[#1A1A1A]/60 rounded-full animate-[shimmer_1.5s_ease-in-out_infinite]" />

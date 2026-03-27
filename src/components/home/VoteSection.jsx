@@ -153,7 +153,7 @@ export default function VoteSection() {
                 <span>Apoyo ciudadano</span>
                 <span>{count.toLocaleString()} votos</span>
               </div>
-              <div className="h-2 bg-[#F5C800] rounded-full overflow-hidden">
+              <div className="h-2 bg-[#F5C800] rounded-full overflow-hidden w-full">
                 <div className="h-full bg-[#D72638] rounded-full" style={{ width: '73%' }} />
               </div>
             </div>
@@ -164,7 +164,7 @@ export default function VoteSection() {
             ref={btnRef}
             onClick={handleVote}
             disabled={voted}
-            className="text-white font-black py-4 px-12 rounded-full text-base tracking-wide transition-opacity duration-200 disabled:cursor-default"
+            className="text-white font-black py-4 px-12 rounded-full text-base tracking-wide transition-opacity duration-200 disabled:cursor-default w-full sm:w-auto"
             style={{
               backgroundColor: voted ? '#1A1A1A' : '#D72638',
               boxShadow: voted ? '0 6px 24px rgba(26,26,26,0.3)' : '0 8px 28px rgba(215,38,56,0.45)'
@@ -184,7 +184,7 @@ export default function VoteSection() {
 
           {/* Social share — visible after vote */}
           {voted && (
-            <div className="flex justify-center gap-3 mt-4">
+            <div className="flex justify-center flex-wrap gap-3 mt-4">
               {['WhatsApp', 'Facebook', 'X'].map(s => (
                 <button
                   key={s}

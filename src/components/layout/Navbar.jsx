@@ -13,7 +13,7 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const location = useLocation()
 
-  // 1. Animación de entrada (Modernizada con useGSAP)
+  // 1. Animación de entrada
   useGSAP(() => {
     const tl = gsap.timeline({ defaults: { ease: 'power3.out' } })
     
@@ -26,7 +26,7 @@ export default function Navbar() {
       { x: 0, opacity: 1, duration: 0.7 },
       '-=0.6'
     )
-    // Animación escalonada (stagger) de los links
+    
     const children = linksRef.current?.querySelectorAll('.nav-item')
     if (children) {
       tl.fromTo(children,
@@ -49,19 +49,18 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
-  // 3. Transición de Estilo al hacer Scroll (GSAP para suavidad técnica)
+  // 3. Transición de Estilo
   useGSAP(() => {
     gsap.to(navRef.current, {
       backgroundColor: scrolled ? 'rgba(255, 255, 255, 0.95)' : 'rgba(245, 200, 0, 1)',
       backdropFilter: scrolled ? 'blur(10px)' : 'blur(0px)',
       boxShadow: scrolled ? '0 4px 30px rgba(0, 0, 0, 0.08)' : '0 0 0 rgba(0,0,0,0)',
-      height: scrolled ? '70px' : '85px', // Sutil cambio de altura
+      height: scrolled ? '70px' : '85px', 
       duration: 0.4,
       ease: 'none'
     })
     
-    // Cambiar color de texto según el fondo
-    const textColor = scrolled ? '#1A1A1A' : '#1A1A1A' // Puedes ajustarlos si el amarillo pide blanco
+    const textColor = scrolled ? '#1A1A1A' : '#1A1A1A' 
     gsap.to('.nav-link-text', { color: textColor, duration: 0.3 })
   }, [scrolled])
 
@@ -74,9 +73,9 @@ export default function Navbar() {
     >
       <div className="max-w-7xl w-full flex items-center justify-between">
         {/* Logo Section */}
-        <Link to="/" ref={logoRef} className="flex items-center gap-3 group relative z-10">
+        <Link to="/" ref={logoRef} className="flex items-center gap-3 group relative z-10 shrink-0">
           <img src="/logo-sol-pbg.png" alt="Sol PBG" className="w-10 md:w-12 h-auto object-contain transition-transform group-hover:rotate-12" />
-          <img src="/logo-pbg.png" alt="Partido del Buen Gobierno" className="w-32 md:w-44 h-auto object-contain" />
+          <img src="/logo-pbg.png" alt="Partido del Buen Gobierno" className="w-28 sm:w-32 md:w-44 h-auto object-contain" />
         </Link>
 
         {/* Desktop Links */}
@@ -87,9 +86,6 @@ export default function Navbar() {
           <div className="nav-item">
             <NavLink to="/plan-de-gobierno" active={isActive('/plan-de-gobierno')}>Plan de Gobierno</NavLink>
           </div>
-          {/* <div className="nav-item">
-            <NavLink to="/voluntarios" active={isActive('/voluntarios')}>Voluntariado</NavLink>
-          </div> */}
           <div className="nav-item">
             <a
               href={WA_LINK}
@@ -103,16 +99,8 @@ export default function Navbar() {
           </div>
         </div>
 
-        {/* CTA Section */}
+        {/* Mobile Menu */}
         <div ref={ctaRef} className="flex items-center gap-4">
-          <a
-            href={WA_LINK}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hidden md:block bg-[#D72638] text-white font-black text-xs uppercase tracking-widest px-8 py-3 rounded-full hover:bg-[#B81F2E] transition-all duration-300 hover:shadow-[0_10px_20px_rgba(215,38,56,0.3)] active:scale-95"
-          >
-            Únete
-          </a>
           <MobileMenu location={location} waLink={WA_LINK} />
         </div>
       </div>
@@ -182,17 +170,13 @@ function MobileMenu({ location, waLink }) {
       <div
         ref={menuRef}
         style={{ display: 'none' }}
-        className="absolute top-14 right-0 w-64 bg-white rounded-3xl shadow-2xl p-6 flex-col gap-5 border border-gray-100"
+        className="absolute top-14 right-0 w-[calc(100vw-3rem)] max-w-sm bg-white rounded-3xl shadow-2xl p-6 flex-col gap-5 border border-gray-100"
       >
         <MobileItem to="/" active={location.pathname === '/'} onClick={() => setOpen(false)}>PBG</MobileItem>
         <MobileItem to="/plan-de-gobierno" active={location.pathname === '/plan-de-gobierno'} onClick={() => setOpen(false)}>Plan de Gobierno</MobileItem>
-        {/* <MobileItem to="/voluntarios" active={location.pathname === '/voluntarios'} onClick={() => setOpen(false)}>Voluntariado</MobileItem> */}
         <hr className="border-gray-100" />
         <a href={waLink} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 font-bold text-[#1A1A1A]">
           <WhatsAppIcon /> WhatsApp
-        </a>
-        <a href={waLink} target="_blank" rel="noopener noreferrer" className="bg-[#D72638] text-white font-bold text-center py-3 rounded-xl">
-          Únete Aquí
         </a>
       </div>
     </div>

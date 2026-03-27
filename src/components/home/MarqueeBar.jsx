@@ -7,8 +7,8 @@ export default function MarqueeBar() {
   ]
 
   return (
-    <div className="bg-[white] py-4 overflow-hidden flex items-center">
-      <div className="marquee-inner whitespace-nowrap">
+    <div className="bg-[white] py-4 overflow-hidden flex items-center w-full">
+      <div className="marquee-inner whitespace-nowrap flex">
         {items.map((item, i) => (
           <span key={i} className="inline-flex items-center gap-4 mx-6">
             <span className="text-[#D72638] font-black text-xs tracking-[0.2em] uppercase">{item}</span>

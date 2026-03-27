@@ -4,6 +4,7 @@ import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { useGSAP } from '@gsap/react'
 import './index.css'
+import '@n8n/chat/style.css';
 import App from './App.jsx'
 
 // Register GSAP plugins globally
