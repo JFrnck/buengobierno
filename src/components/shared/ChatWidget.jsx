@@ -26,7 +26,7 @@ headers: {}
 
 initialMessages: [
 
-'¡Hola! 🐶 Soy Coquito, la mascota oficial del Partido del Buen Gobierno.',
+'¡Hola! 🌞 Soy Cocosol, la mascota oficial del Partido del Buen Gobierno.',
 
 '¿Qué te gustaría saber sobre el plan de gobierno de Jorge Nieto?'
 
@@ -276,7 +276,7 @@ BOTÓN FLOTANTE (COQUITO)
 
 background-color: transparent !important;
 
-background-image: url('/coquito.png') !important;
+background-image: url('/logo-sol-pbg.png') !important;
 
 background-size: cover !important;
 

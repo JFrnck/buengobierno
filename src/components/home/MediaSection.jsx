@@ -19,7 +19,7 @@ const VIDEOS = [
   { 
     id: 2, 
     title: 'Propuesta educativa en cifras', 
-    youtubeId: '0Tw1T6nU_YI', 
+    youtubeId: 'xejfb7qFpAs', 
     start: 0, 
     end: 0,
     duration: '2:15', 
@@ -29,8 +29,8 @@ const VIDEOS = [
   { 
     id: 3, 
     title: 'Visita a comunidades', 
-    youtubeId: '0Tw1T6nU_YI', 
-    duration: '3:48', 
+    youtubeId: '63QHdNE0YGk', 
+    duration: '8:34', 
     views: '6K', 
     featured: false 
   },
@@ -219,7 +219,14 @@ function ImageCard({ image }) {
   return (
     <div className={`relative rounded-2xl overflow-hidden cursor-pointer ${spanClass} h-full`}>
       <div className="media-inner w-full h-full bg-[#E0B400] flex items-center justify-center transition-transform duration-500">
-        <img src="Fondo-jornada.png" alt={image.label} className="w-full h-full object-cover" />
+        <img src={
+
+          image.id === 1 ? "jorge-debate.png" : "" | 
+          image.id === 2 ? "jorge-nieto-bandera.jpg" : "" | 
+          image.id === 3 ? "nieto-debate.png" : "" | 
+          image.id === 4 ? "Fondo-jornada.png" : "" 
+
+        } alt={image.label} className="w-full h-full object-cover" />
       </div>
       <div className="media-overlay absolute inset-0 bg-gradient-to-t from-[#1A1A1A]/90 to-transparent flex items-end p-5 opacity-0 transition-opacity duration-300">
         <p className="text-white font-bold text-sm leading-tight drop-shadow-lg">{image.label}</p>
