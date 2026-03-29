@@ -66,7 +66,8 @@ export default function Footer() {
                 {[
                   { to: '/', label: 'Inicio' },
                   { to: '/#plan', label: 'Plan de Gobierno' },
-                  { to: '/#contacto', label: 'Contacto' },
+                  { to: 'https://mapa.partidodelbuengobierno.com', label: 'Mapa de dolencias' },
+
                 ].map(l => (
                   <li key={l.label}>
                     <Link to={l.to} className="text-white/45 font-medium text-sm hover:text-[#F5C800] transition-colors duration-200">

@@ -95,20 +95,15 @@ export default function PlanSection() {
   const titleRef = useRef(null)
 
   useGSAP(() => {
-    // Detectar preferencia de movimiento reducido del SO
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
-
-    // matchMedia para separar lógica móvil y desktop
     const mm = gsap.matchMedia()
 
     // ─── MÓVIL (hasta 767px) ────────────────────────────────────────────────
     mm.add('(max-width: 767px)', () => {
-      // En móvil: SplitText solo por palabras (no chars) para reducir nodos DOM
       let splitTitle = null
       if (!prefersReducedMotion) {
         splitTitle = new SplitText(titleRef.current, { type: 'words' })
 
-        // Heading: animación simple, sin stagger pesado
         gsap.fromTo(
           headingRef.current?.children ? Array.from(headingRef.current.children) : [],
           { opacity: 0, y: 20 },
@@ -116,98 +111,44 @@ export default function PlanSection() {
             opacity: 1,
             y: 0,
             duration: 0.5,
-            stagger: 0.08,
+            stagger: 0.1,
             ease: 'power2.out',
-            force3D: true,           // <- GPU
             scrollTrigger: {
               trigger: headingRef.current,
-              start: 'top 90%',
-              once: true,            // <- solo dispara una vez, sin reverse costoso
+              start: 'top 85%',
+              once: true,
             },
           }
         )
 
         gsap.from(splitTitle.words, {
           opacity: 0,
-          y: 25,
-          duration: 0.55,
-          stagger: 0.04,
+          y: 20,
+          duration: 0.5,
+          stagger: 0.05,
           ease: 'power2.out',
-          force3D: true,
           scrollTrigger: {
             trigger: headingRef.current,
-            start: 'top 90%',
+            start: 'top 85%',
             once: true,
           },
         })
       }
 
-      // Scroll horizontal — igual que desktop pero con scrub más suave en móvil
-      const panels = trackRef.current?.querySelectorAll('.plan-panel')
-      if (!panels || !trackRef.current) return
-
-      const getScrollAmount = () => trackRef.current.scrollWidth - window.innerWidth
-
-      const scrollTween = gsap.to(trackRef.current, {
-        x: () => -getScrollAmount(),
-        ease: 'none',
-        force3D: true,
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: 'top 18px',
-          pin: true,
-          scrub: 0.5,              // <- scrub menor = respuesta más ágil en móvil
-          end: () => `+=${getScrollAmount()}`,
-          invalidateOnRefresh: true,
-          fastScrollEnd: true,     // <- evita glitches al scrollear rápido
-          preventOverlaps: true,
-        },
-      })
-
-      if (!prefersReducedMotion) {
-        panels.forEach((panel) => {
-          // En móvil animamos el panel como bloque, NO cada hijo por separado
-          gsap.set(panel, { opacity: 0, y: 20 })
-
-          gsap.to(panel, {
-            opacity: 1,
-            y: 0,
-            duration: 0.45,
-            ease: 'power2.out',
-            force3D: true,
-            scrollTrigger: {
-              trigger: panel,
-              containerAnimation: scrollTween,
-              start: 'left 90%',
-              once: true,          // <- sin reverse en móvil
-            },
-          })
-        })
-      } else {
-        // Si prefiere movimiento reducido, solo hace fade simple
-        panels.forEach((panel) => {
-          gsap.set(panel, { opacity: 0 })
-          gsap.to(panel, {
-            opacity: 1,
-            duration: 0.3,
-            force3D: true,
-            scrollTrigger: {
-              trigger: panel,
-              containerAnimation: scrollTween,
-              start: 'left 90%',
-              once: true,
-            },
-          })
-        })
-      }
-
       return () => {
         splitTitle?.revert()
+        // Limpiar animaciones de GSAP para que no interfieran con el scroll de CSS
+        gsap.set(trackRef.current, { clearProps: 'transform' })
+        const panels = trackRef.current?.querySelectorAll('.plan-panel')
+        if (panels) gsap.set(panels, { clearProps: 'transform,opacity,visibility' })
       }
     })
 
     // ─── DESKTOP (desde 768px) ──────────────────────────────────────────────
     mm.add('(min-width: 768px)', () => {
+      const panels = trackRef.current?.querySelectorAll('.plan-panel')
+      if (panels) gsap.set(panels, { force3D: true })
+
       const splitTitle = new SplitText(titleRef.current, { type: 'words,chars' })
 
       gsap.fromTo(
@@ -234,7 +175,6 @@ export default function PlanSection() {
         scrollTrigger: { trigger: headingRef.current, start: 'top 85%' },
       })
 
-      const panels = trackRef.current?.querySelectorAll('.plan-panel')
       if (!panels || !trackRef.current) return
 
       const getScrollAmount = () => trackRef.current.scrollWidth - window.innerWidth
@@ -251,35 +191,38 @@ export default function PlanSection() {
           end: () => `+=${getScrollAmount()}`,
           invalidateOnRefresh: true,
           fastScrollEnd: true,
-          preventOverlaps: true,
         },
       })
 
-      panels.forEach((panel) => {
-        const contentMain = panel.querySelectorAll('.panel-main-content > *')
-        const listItems = panel.querySelectorAll('.panel-item')
-        const allElements = [...contentMain, ...listItems]
+      if (!prefersReducedMotion) {
+        panels.forEach((panel) => {
+          const contentMain = panel.querySelectorAll('.panel-main-content > *')
+          const listItems = panel.querySelectorAll('.panel-item')
+          const allElements = [...contentMain, ...listItems]
 
-        gsap.set(allElements, { opacity: 0, y: 30 })
+          gsap.set(allElements, { opacity: 0, y: 30 })
 
-        gsap.to(allElements, {
-          opacity: 1,
-          y: 0,
-          duration: 0.6,
-          stagger: 0.08,
-          ease: 'power3.out',
-          force3D: true,
-          scrollTrigger: {
-            trigger: panel,
-            containerAnimation: scrollTween,
-            start: 'left 85%',
-            toggleActions: 'play none none reverse',
-          },
+          gsap.to(allElements, {
+            opacity: 1,
+            y: 0,
+            duration: 0.6,
+            stagger: 0.08,
+            ease: 'power3.out',
+            force3D: true,
+            scrollTrigger: {
+              trigger: panel,
+              containerAnimation: scrollTween,
+              start: 'left 85%',
+              toggleActions: 'play none none reverse',
+            },
+          })
         })
-      })
+      }
 
       return () => {
         splitTitle.revert()
+        gsap.set(trackRef.current, { clearProps: 'transform' })
+        gsap.set(panels, { clearProps: 'transform,opacity,visibility' })
       }
     })
 
@@ -289,8 +232,8 @@ export default function PlanSection() {
   }, [])
 
   return (
-    <section ref={sectionRef} id="plan" className="bg-[#F5C800] py-20 overflow-hidden">
-      <div ref={headingRef} className="w-full mx-auto px-6 md:px-12 lg:px-20 mb-12">
+    <section ref={sectionRef} id="plan" className="bg-[#F5C800] py-16 md:py-20 overflow-hidden">
+      <div ref={headingRef} className="w-full mx-auto px-6 md:px-12 lg:px-20 mb-8 md:mb-12">
         <div className="flex items-center gap-3 mb-4">
           <span className="w-10 h-0.5 bg-[#D72638]" />
           <span className="text-[#D72638] font-bold text-xs tracking-[0.2em] uppercase">Plan de Gobierno</span>
@@ -303,7 +246,6 @@ export default function PlanSection() {
               fontSize: 'clamp(2.2rem, 4.5vw, 3.5rem)',
               letterSpacing: '0.030em',
               textShadow: '1px 1px 0px black, -1px -1px 0px black, 1px -1px 0px black, -1px 1px 0px black',
-              // will-change ayuda al browser a preparar la capa GPU anticipadamente
               willChange: 'transform, opacity',
             }}
           >
@@ -315,29 +257,40 @@ export default function PlanSection() {
       <div>
         <div
           ref={trackRef}
-          className="flex gap-5 px-6 md:px-12 lg:px-20 pb-8"
+          // LA CLAVE ESTÁ AQUÍ: w-full en móvil, md:w-max en desktop
+          className="w-full md:w-max flex gap-5 px-6 md:px-12 lg:px-20 pb-8 overflow-x-auto snap-x snap-mandatory md:overflow-visible md:snap-none hide-scrollbar"
           style={{
-            width: 'max-content',
-            willChange: 'transform', // prepara la capa GPU para el scroll horizontal
+            willChange: 'transform',
           }}
         >
           {PANELS.map((p, i) => (
             <PlanPanel key={i} panel={p} index={i} />
           ))}
-          <div className="w-[85vw] md:w-[calc(100vw-10rem)] flex-shrink-0 flex items-center justify-center">
+          
+          <div className="w-[85vw] md:w-[calc(100vw-10rem)] flex-shrink-0 flex items-center justify-center snap-center md:snap-align-none">
             <div className="text-center">
-              <div className="text-[#1A1A1A]/30 font-black text-8xl tracking-tighter mb-4">FIN</div>
-              <p className="text-[#1A1A1A]/50 font-medium">¿Tienes preguntas sobre el plan?</p>
+              <div className="text-[#1A1A1A]/30 font-black text-7xl md:text-8xl tracking-tighter mb-4 leading-none">FIN</div>
+              <p className="text-[#1A1A1A]/50 font-medium mb-4">¿Tienes preguntas sobre el plan?</p>
               <NavLink
                 to="/plan-de-gobierno"
-                className="inline-block mt-4 bg-[#D72638] text-white font-bold px-6 py-3 rounded-full text-sm hover:bg-[#B81F2E] transition-colors"
+                className="inline-block bg-[#D72638] text-white font-bold px-8 py-4 rounded-full text-sm md:text-base hover:bg-[#B81F2E] transition-colors shadow-lg"
               >
-                Mira el Plan de Gobierno
+                Mira el Plan de Gobierno Completo
               </NavLink>
             </div>
           </div>
         </div>
       </div>
+      
+      <style>{`
+        .hide-scrollbar::-webkit-scrollbar {
+          display: none;
+        }
+        .hide-scrollbar {
+          -ms-overflow-style: none;
+          scrollbar-width: none;
+        }
+      `}</style>
     </section>
   )
 }
@@ -347,16 +300,16 @@ function PlanPanel({ panel, index }) {
 
   return (
     <div
-      className="plan-panel flex-shrink-0 w-[85vw] md:w-[400px] lg:w-[420px] min-h-[70%] flex flex-col rounded-[2rem] overflow-hidden"
+      className="plan-panel flex-shrink-0 w-[85vw] md:w-[400px] lg:w-[420px] min-h-[70%] flex flex-col rounded-[2rem] overflow-hidden snap-center md:snap-align-none"
       style={{
         background: isLight ? '#D72638' : 'white',
         boxShadow: '0 8px 40px rgba(0,0,0,0.12)',
-        willChange: 'transform, opacity', // cada panel en su propia capa
+        willChange: 'transform, opacity', 
       }}
     >
-      <div className="panel-content flex-grow flex flex-col p-8 md:p-10">
+      <div className="panel-content flex-grow flex flex-col p-6 md:p-10">
         <div className="panel-main-content">
-          <div className="flex items-start justify-between gap-8 mb-4">
+          <div className="flex items-start justify-between gap-4 mb-4">
             <span
               className="font-black text-5xl md:text-6xl leading-none tracking-tighter"
               style={{ color: isLight ? 'rgba(245,200,0,0.25)' : 'rgba(26,26,26,0.08)' }}
@@ -372,9 +325,8 @@ function PlanPanel({ panel, index }) {
           </div>
 
           <h3
-            className="font-black leading-tight mb-3"
+            className="font-black leading-tight mb-3 text-xl md:text-2xl lg:text-[1.6rem]"
             style={{
-              fontSize: 'clamp(1.2rem, 1.6vw, 1.6rem)',
               letterSpacing: '-0.025em',
               color: isLight ? '#FFFFFF' : '#1A1A1A',
             }}
@@ -383,15 +335,15 @@ function PlanPanel({ panel, index }) {
           </h3>
 
           <p
-            className="text-[15px] leading-relaxed font-medium mb-6"
-            style={{ color: isLight ? 'rgba(255,255,255,0.6)' : 'rgba(26,26,26,0.6)' }}
+            className="text-sm md:text-[15px] leading-relaxed font-medium mb-6"
+            style={{ color: isLight ? 'rgba(255,255,255,0.7)' : 'rgba(26,26,26,0.7)' }}
           >
             {panel.body}
           </p>
         </div>
 
         <div
-          className="panel-item-list flex flex-col gap-3 pt-4 border-t"
+          className="panel-item-list flex flex-col gap-3 pt-4 border-t mt-auto"
           style={{ borderColor: isLight ? 'rgba(255,255,255,0.1)' : 'rgba(26,26,26,0.1)' }}
         >
           {panel.items.map((item, j) => (
@@ -405,8 +357,8 @@ function PlanPanel({ panel, index }) {
                 </svg>
               </div>
               <span
-                className="text-xs font-semibold leading-snug"
-                style={{ color: isLight ? 'rgba(255,255,255,0.85)' : '#1A1A1A' }}
+                className="text-[11px] md:text-xs font-semibold leading-snug"
+                style={{ color: isLight ? 'rgba(255,255,255,0.9)' : '#1A1A1A' }}
               >
                 {item}
               </span>
