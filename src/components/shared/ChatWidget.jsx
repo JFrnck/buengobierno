@@ -43,7 +43,7 @@ export default function CoquitoChat() {
 
     // 3. Hacemos la llamada POST usando fetchEventSource
     try {
-      await fetchEventSource('https://api.partidodelbuengobierno.com//chat/stream', {
+      await fetchEventSource('https://api.partidodelbuengobierno.com/chat/stream', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
