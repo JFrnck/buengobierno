@@ -1,12 +1,15 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { fetchEventSource } from '@microsoft/fetch-event-source'; // <-- Nueva importación
 
 export default function CoquitoChat() {
   const [isOpen, setIsOpen] = useState(false);
   const [inputValue, setInputValue] = useState('');
   const [isLoading, setIsLoading] = useState(false);
+  
+  // Cambiamos 'bot' por 'assistant' para que coincida con lo que espera el backend de NestJS
   const [messages, setMessages] = useState([
-    { role: 'bot', content: '¡Hola! 🌞 Soy Cocosol, la mascota oficial del Partido del Buen Gobierno.' },
-    { role: 'bot', content: '¿Qué te gustaría saber sobre el plan de gobierno de Jorge Nieto?' }
+    { role: 'assistant', content: '¡Hola! 🌞 Soy Cocosol, la mascota oficial del Partido del Buen Gobierno.' },
+    { role: 'assistant', content: '¿Qué te gustaría saber sobre el plan de gobierno de Jorge Nieto?' }
   ]);
 
   const messagesEndRef = useRef(null);
@@ -18,7 +21,7 @@ export default function CoquitoChat() {
 
   const toggleChat = () => setIsOpen(!isOpen);
 
-  const sendMessage = (e) => {
+  const sendMessage = async (e) => {
     e.preventDefault();
     if (!inputValue.trim() || isLoading) return;
 
@@ -26,37 +29,57 @@ export default function CoquitoChat() {
     setInputValue('');
     setIsLoading(true);
 
-    setMessages((prev) => [
-      ...prev,
-      { role: 'user', content: userText },
-      { role: 'bot', content: '' } 
+    // 1. Guardamos el historial actual + el nuevo mensaje del usuario
+    const newChatHistory = [
+      ...messages,
+      { role: 'user', content: userText }
+    ];
+
+    // 2. Actualizamos la UI inmediatamente añadiendo una burbuja vacía para la respuesta
+    setMessages([
+      ...newChatHistory,
+      { role: 'assistant', content: '' } 
     ]);
 
-    const url = `https://api.partidodelbuengobierno.com/chat/stream?message=${encodeURIComponent(userText)}`;
-    const eventSource = new EventSource(url);
-
-    eventSource.onmessage = (event) => {
-      const newWord = event.data;
-      
-      setMessages((prev) => {
-        const newMessages = [...prev];
-        const lastIndex = newMessages.length - 1;
+    // 3. Hacemos la llamada POST usando fetchEventSource
+    try {
+      await fetchEventSource('https://unbasketlike-overneglectful-natosha.ngrok-free.dev/chat/stream', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        // Enviamos todo el historial (sin la burbuja vacía que acabamos de agregar para la UI)
+        body: JSON.stringify({ history: newChatHistory }),
         
-        // El truco está aquí: clonamos la burbuja antes de sumarle la palabra nueva
-        // para que el Strict Mode de React no la duplique.
-        newMessages[lastIndex] = { 
-          ...newMessages[lastIndex], 
-          content: newMessages[lastIndex].content + newWord 
-        };
-        
-        return newMessages;
+        onmessage(event) {
+          const newWord = event.data;
+          
+          setMessages((prev) => {
+            const newMessages = [...prev];
+            const lastIndex = newMessages.length - 1;
+            
+            newMessages[lastIndex] = { 
+              ...newMessages[lastIndex], 
+              content: newMessages[lastIndex].content + newWord 
+            };
+            
+            return newMessages;
+          });
+        },
+        onclose() {
+          // Se ejecuta cuando el backend termina de enviar el mensaje
+          setIsLoading(false);
+        },
+        onerror(err) {
+          console.error("Error en la conexión SSE:", err);
+          setIsLoading(false);
+          throw err; // Esto detiene los reintentos automáticos si hay un error fatal
+        }
       });
-    };
-
-    eventSource.onerror = () => {
-      eventSource.close();
+    } catch (error) {
+      console.error("Error al enviar el mensaje:", error);
       setIsLoading(false);
-    };
+    }
   };
 
   // Función mágica para renderizar las **negritas** que envía OpenAI
