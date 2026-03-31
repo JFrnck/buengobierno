@@ -1,9 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+/* 1. Importación de Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
+/* 2. Directivas estándar de Tailwind v3 */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+/* 3. Variables de color y Reset */
 :root {
   --pbg-yellow: #F5C800;
   --pbg-yellow-light: #FFD93D;
@@ -13,61 +16,75 @@
   --pbg-black: #1A1A1A;
 }
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: Montserrat ;
+@layer base {
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  body {
+    /* Aquí definimos Montserrat para todo el cuerpo */
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--pbg-yellow);
+    color: var(--pbg-black);
+    overflow-x: hidden;
+  }
+
+  /* Importante: Forzar a los inputs y botones a usar la fuente del body */
+  input, button, textarea, select {
+    font-family: inherit;
+  }
 }
 
-html {
-  scroll-behavior: smooth;
-  -webkit-font-smoothing: antialiased;
+/* 4. Componentes Personalizados */
+@layer components {
+  #root {
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  .pbg-input {
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid rgba(26, 26, 26, 0.2);
+    padding: 12px 0;
+    font-size: 1rem;
+    font-family: 'Montserrat', sans-serif; /* Cambiado a Montserrat */
+    font-weight: 500;
+    color: var(--pbg-black);
+    outline: none;
+    transition: border-color 0.3s ease;
+  }
+
+  .pbg-input::placeholder {
+    color: rgba(26, 26, 26, 0.4);
+  }
+
+  .pbg-input:focus {
+    border-color: var(--pbg-red);
+  }
+
+  .horizontal-track {
+    display: flex;
+    width: max-content;
+    will-change: transform;
+  }
+
+  .marquee-inner {
+    animation: marquee 22s linear infinite;
+    display: flex;
+    width: max-content;
+  }
 }
 
-body {
-  font-family: 'Inter', sans-serif;
-  background-color: var(--pbg-yellow);
-  color: var(--pbg-black);
-  overflow-x: hidden;
-}
-
-#root {
-  width: 100%;
-  overflow-x: hidden;
-}
-
-::-webkit-scrollbar { width: 5px; }
-::-webkit-scrollbar-track { background: var(--pbg-yellow); }
-::-webkit-scrollbar-thumb { background: var(--pbg-black); border-radius: 3px; }
-
-::selection {
-  background-color: var(--pbg-red);
-  color: white;
-}
-
-.pbg-input {
-  width: 100%;
-  background: transparent;
-  border: none;
-  border-bottom: 2px solid rgba(26,26,26,0.2);
-  padding: 12px 0;
-  font-size: 1rem;
-  font-family: 'Inter', sans-serif;
-  font-weight: 500;
-  color: var(--pbg-black);
-  outline: none;
-  transition: border-color 0.3s ease;
-}
-.pbg-input::placeholder { color: rgba(26,26,26,0.4); }
-.pbg-input:focus { border-color: var(--pbg-red); }
-
-.horizontal-track {
-  display: flex;
-  width: max-content;
-  will-change: transform;
-}
-
+/* 5. Animaciones y otros estilos */
 @keyframes float {
   0%, 100% { transform: translateY(0px); }
   50% { transform: translateY(-8px); }
@@ -83,10 +100,14 @@ body {
 
 .animate-float { animation: float 3s ease-in-out infinite; }
 .animate-pulse-ring { animation: pulse_ring 2s ease-out infinite; }
-.marquee-inner {
-  animation: marquee 22s linear infinite;
-  display: flex;
-  width: max-content;
+
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: var(--pbg-yellow); }
+::-webkit-scrollbar-thumb { background: var(--pbg-black); border-radius: 3px; }
+
+::selection {
+  background-color: var(--pbg-red);
+  color: white;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -95,5 +116,3 @@ body {
     transition-duration: 0.01ms !important;
   }
 }
-
-

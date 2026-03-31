@@ -23,8 +23,10 @@ export default {
         }
       },
       fontFamily: {
-        heading: ['"Inter"', 'sans-serif'],
-        body: ['"Inter"', 'sans-serif'],
+        // 🔥 Reemplazado Inter por Montserrat en todo
+        sans: ['"Montserrat"', 'sans-serif'], // Define la fuente sans por defecto
+        heading: ['"Montserrat"', 'sans-serif'], 
+        body: ['"Montserrat"', 'sans-serif'],
       },
       fontSize: {
         'display': ['clamp(3rem, 8vw, 7rem)', { lineHeight: '0.95', letterSpacing: '-0.03em' }],

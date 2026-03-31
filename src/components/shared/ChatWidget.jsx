@@ -1,245 +1,155 @@
-import { useEffect } from 'react';
-import { createChat } from '@n8n/chat';
-import '@n8n/chat/style.css';
+import React, { useState, useEffect, useRef } from 'react';
 
 export default function CoquitoChat() {
+  const [isOpen, setIsOpen] = useState(false);
+  const [inputValue, setInputValue] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
+  const [messages, setMessages] = useState([
+    { role: 'bot', content: '¡Hola! 🌞 Soy Cocosol, la mascota oficial del Partido del Buen Gobierno.' },
+    { role: 'bot', content: '¿Qué te gustaría saber sobre el plan de gobierno de Jorge Nieto?' }
+  ]);
+
+  const messagesEndRef = useRef(null);
+
+  // Auto-scroll al último mensaje
   useEffect(() => {
-    // Inicializamos el chat de n8n
-    const chat = createChat({
-      webhookUrl: 'https://buengobierno.app.n8n.cloud/webhook/13c1b3ba-998f-4907-b425-b3e31eee2c77/chat',
-      webhookConfig: {
-        method: 'POST',
-        headers: {}
-      },
-      initialMessages: [
-        '¡Hola! 🌞 Soy Cocosol, la mascota oficial del Partido del Buen Gobierno.',
-        '¿Qué te gustaría saber sobre el plan de gobierno de Jorge Nieto?'
-      ],
-      i18n: {
-        en: {
-          title: 'Partido del Buen Gobierno 🌞',
-          subtitle: 'Busco tus dudas en el plan de gobierno en tiempo real, esperame un poquito 🌞',
-          footer: 'Construyendo un mejor futuro',
-          getStarted: 'Nueva conversación',
-          inputPlaceholder: 'Escribe tu mensaje...',
-          closeButtonTooltip: 'Cerrar chat'
-        },
-      },
-    });
+    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+  }, [messages]);
 
-    let observer; // Variable para nuestro vigilante
+  const toggleChat = () => setIsOpen(!isOpen);
 
-    // --- NUEVA LÓGICA: Vigilante para saber si el chat está abierto ---
-    // Usamos setInterval porque a veces n8n tarda unos milisegundos en inyectar el HTML
-    const setupObserver = setInterval(() => {
-      const chatWindow = document.querySelector('.chat-window');
-      const toggleButton = document.querySelector('.chat-window-toggle');
+  const sendMessage = (e) => {
+    e.preventDefault();
+    if (!inputValue.trim() || isLoading) return;
 
-      if (chatWindow && toggleButton) {
-        clearInterval(setupObserver); // Ya los encontramos, detenemos la búsqueda
+    const userText = inputValue;
+    setInputValue('');
+    setIsLoading(true);
 
-        // Creamos el vigilante que observará cambios en la ventana
-        observer = new MutationObserver(() => {
-          const styles = window.getComputedStyle(chatWindow);
-          const isChatOpen = styles.opacity !== '0' && styles.display !== 'none';
-          
-          if (isChatOpen) {
-            toggleButton.classList.add('chat-is-open'); // Agrega clase para ocultar tooltip
-          } else {
-            toggleButton.classList.remove('chat-is-open'); // Quita clase para mostrar tooltip
-          }
-        });
+    setMessages((prev) => [
+      ...prev,
+      { role: 'user', content: userText },
+      { role: 'bot', content: '' } 
+    ]);
 
-        // Le decimos que observe si cambian los estilos o las clases de la ventana del chat
-        observer.observe(chatWindow, { attributes: true, attributeFilter: ['style', 'class'] });
-      }
-    }, 500);
+    const url = `https://api.partidodelbuengobierno.com/chat/stream?message=${encodeURIComponent(userText)}`;
+    const eventSource = new EventSource(url);
 
-    // --- LÓGICA EXISTENTE: Cierre automático al hacer clic fuera ---
-    const handleOutsideClick = (event) => {
-      const chatWindow = document.querySelector('.chat-window');
-      const toggleButton = document.querySelector('.chat-window-toggle');
-
-      if (chatWindow && toggleButton) {
-        const styles = window.getComputedStyle(chatWindow);
-        const isChatOpen = styles.opacity !== '0' && styles.display !== 'none';
-
-        const clickedInsideChat = chatWindow.contains(event.target);
-        const clickedOnToggle = toggleButton.contains(event.target);
-
-        if (isChatOpen && !clickedInsideChat && !clickedOnToggle) {
-          const closeBtn = chatWindow.querySelector('button[title="Cerrar chat"]') || 
-                           chatWindow.querySelector('button[aria-label="Cerrar chat"]') || 
-                           document.querySelector('.chat-window header button');
-          
-          if (closeBtn) {
-            closeBtn.click();
-          } else {
-            toggleButton.click(); 
-          }
-        }
-      }
-    };
-
-    document.addEventListener('mousedown', handleOutsideClick);
-    document.addEventListener('touchstart', handleOutsideClick);
-
-    // Función de limpieza al desmontar el componente
-    return () => {
-      clearInterval(setupObserver);
-      if (observer) observer.disconnect(); // Apagamos el vigilante
-
-      document.removeEventListener('mousedown', handleOutsideClick);
-      document.removeEventListener('touchstart', handleOutsideClick);
+    eventSource.onmessage = (event) => {
+      const newWord = event.data;
       
-      const chatContainer = document.querySelector('.chat-window');
-      const toggleBtn = document.querySelector('.chat-window-toggle');
-      if (chatContainer) chatContainer.remove();
-      if (toggleBtn) toggleBtn.remove();
+      setMessages((prev) => {
+        const newMessages = [...prev];
+        const lastIndex = newMessages.length - 1;
+        
+        // El truco está aquí: clonamos la burbuja antes de sumarle la palabra nueva
+        // para que el Strict Mode de React no la duplique.
+        newMessages[lastIndex] = { 
+          ...newMessages[lastIndex], 
+          content: newMessages[lastIndex].content + newWord 
+        };
+        
+        return newMessages;
+      });
     };
-  }, []);
+
+    eventSource.onerror = () => {
+      eventSource.close();
+      setIsLoading(false);
+    };
+  };
+
+  // Función mágica para renderizar las **negritas** que envía OpenAI
+  const formatMessage = (text) => {
+    const parts = text.split(/(\*\*.*?\*\*)/g);
+    return parts.map((part, index) => {
+      if (part.startsWith('**') && part.endsWith('**')) {
+        return <strong key={index} className="font-bold text-gray-900">{part.slice(2, -2)}</strong>;
+      }
+      return <span key={index}>{part}</span>;
+    });
+  };
 
   return (
-    <>
-      <style dangerouslySetInnerHTML={{ __html: `
-        /* 1. FUENTE MONTSERRAT */
-        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;900&display=swap');
+    <div className="fixed bottom-5 right-5 z-[9999] font-sans">
+      
+      {/* Tooltip flotante "¡Pregúntame!" */}
+      <div 
+        className={`absolute bottom-[85px] right-[-5px] bg-white text-[#D72638] border-2 border-[#F5C800] px-4 py-2 rounded-full font-bold text-sm whitespace-nowrap shadow-md pointer-events-none animate-bounce transition-all duration-300 ${isOpen ? 'opacity-0 invisible' : 'opacity-100 visible'}`}
+      >
+        ¡Pregúntame!
+        {/* Triangulito del globo de texto */}
+        <div className="absolute -bottom-2 right-6 w-0 h-0 border-l-[6px] border-l-transparent border-r-[6px] border-r-transparent border-t-[8px] border-t-[#F5C800]"></div>
+      </div>
 
-        :root {
-          --chat--color-secondary: #D72638;
-          --chat--color-primary: #F5C800;
-          --chat--color-white: #ffffff;
-          --chat--color-dark: #1A1A1A;
-          --chat--window--background: var(--chat--color-white);
-          --chat--window--border-radius: 20px;
-          --chat--header--background: var(--chat--color-secondary);
-          --chat--header--color: var(--chat--color-white);
-          --chat--message--user--background: var(--chat--color-primary);
-          --chat--message--user--color: var(--chat--color-white);
-          --chat--message--bot--background: rgba(245, 200, 0, 0.2);
-          --chat--message--bot--color: var(--chat--color-dark);
-        }
+      {/* Ventana del Chat */}
+      <div 
+        className={`absolute bottom-[90px] right-0 w-[350px] h-[550px] max-h-[80vh] bg-white rounded-[20px] border border-[#F5C800] shadow-2xl flex flex-col overflow-hidden origin-bottom-right transition-all duration-300 ease-out ${isOpen ? 'scale-100 opacity-100' : 'scale-50 opacity-0 pointer-events-none'}`}
+      >
+        {/* Header */}
+        <div className="bg-[#D72638] text-white p-5 flex justify-between items-center border-b-[3px] border-[#F5C800]">
+          <div>
+            <h2 className="m-0 text-lg font-bold leading-tight">Partido del Buen Gobierno 🌞</h2>
+            <p className="m-0 mt-1 text-sm font-medium opacity-90">Cocosol está en línea</p>
+          </div>
+          <button 
+            onClick={toggleChat}
+            className="bg-transparent border-none text-white text-3xl cursor-pointer hover:scale-110 transition-transform leading-none"
+            aria-label="Cerrar chat"
+          >
+            &times;
+          </button>
+        </div>
 
-        .chat-window, .chat-window * { font-family: 'Montserrat', sans-serif !important; }
+        {/* Cuerpo del Chat */}
+        <div className="flex-1 p-5 overflow-y-auto bg-gray-50 flex flex-col gap-3">
+          {messages.map((msg, index) => (
+            <div 
+              key={index} 
+              className={`max-w-[85%] p-3 text-sm leading-relaxed font-medium break-words ${
+                msg.role === 'user' 
+                  ? 'self-end bg-[#F5C800] text-[#1A1A1A] rounded-t-2xl rounded-bl-2xl rounded-br-sm' 
+                  : 'self-start bg-[#F5C800]/20 text-[#1A1A1A] border border-[#F5C800]/50 rounded-t-2xl rounded-br-2xl rounded-bl-sm'
+              }`}
+            >
+              {formatMessage(msg.content)}
+            </div>
+          ))}
+          <div ref={messagesEndRef} />
+        </div>
 
-        .chat-window {
-          border: 1px solid #F5C800 !important;
-          box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15) !important;
-          bottom: 90px !important;
-        }
+        {/* Footer / Input */}
+        <div className="p-4 bg-white border-t border-[#F5C800]/30">
+          <form className="flex gap-2" onSubmit={sendMessage}>
+            <input
+              type="text"
+              className="flex-1 px-4 py-3 border border-gray-300 rounded-full text-sm outline-none focus:border-[#F5C800] focus:ring-1 focus:ring-[#F5C800] transition-all"
+              placeholder="Escribe tu mensaje..."
+              value={inputValue}
+              onChange={(e) => setInputValue(e.target.value)}
+              disabled={isLoading}
+            />
+            <button 
+              type="submit" 
+              className="bg-[#D72638] text-white w-11 h-11 rounded-full flex items-center justify-center hover:bg-red-700 disabled:bg-gray-300 disabled:cursor-not-allowed transition-colors"
+              disabled={isLoading || !inputValue.trim()}
+            >
+              {isLoading ? (
+                <span className="animate-pulse">...</span>
+              ) : (
+                <svg className="w-5 h-5 ml-1" fill="currentColor" viewBox="0 0 20 20"><path d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z"></path></svg>
+              )}
+            </button>
+          </form>
+        </div>
+      </div>
 
-        .chat-header-title, .chat-header h1 {
-          font-weight: 700 !important;
-          color: #ffffff !important;
-          font-size: 1.35rem !important;
-          position: relative !important;
-        }
-
-        .chat-header-title::after, .chat-header h1::after {
-          content: '';
-          display: block !important;
-          width: 100% !important;
-          height: 1px !important;
-          background-color: rgba(255, 255, 255, 0.4) !important;
-          margin-top: 12px !important;
-          margin-bottom: 6px !important;
-        }
-
-        .chat-header p, .chat-header span, .chat-header-subtitle, div[class*="subtitle"] {
-          color: #ffffff !important;
-          font-weight: 500 !important;
-          opacity: 0.95 !important;
-        }
-
-        .chat-message.bot .chat-message-bubble, .chat-message-bot, div[class*="bot"] > div[class*="bubble"], .chat-message-bot .chat-message-bubble {
-          background-color: rgba(245, 200, 0, 0.2) !important;
-          border: 1px solid #F5C800 !important;
-          border-radius: 20px 20px 20px 4px !important;
-          padding: 14px 18px !important;
-          font-weight: 500 !important;
-          line-height: 1.5 !important;
-          box-shadow: none !important;
-        }
-
-        .chat-message.user .chat-message-bubble, .chat-message-user .chat-message-bubble, div[class*="user"] > div[class*="bubble"] {
-          border-radius: 20px 20px 4px 20px !important;
-          font-weight: 500 !important;
-        }
-
-        .chat-window-toggle {
-          background-color: transparent !important;
-          background-image: url('/logo-sol-pbg.png') !important;
-          background-size: cover !important;
-          background-position: center !important;
-          background-repeat: no-repeat !important;
-          border: 3px solid #F5C800 !important;
-          border-radius: 50% !important;
-          width: 70px !important;
-          height: 70px !important;
-          box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15) !important;
-          transition: transform 0.3s ease, box-shadow 0.3s ease !important;
-          bottom: 20px !important;
-        }
-
-        .chat-window-toggle:hover {
-          transform: translateY(-4px) scale(1.05) !important;
-          box-shadow: 0 12px 28px rgba(215, 38, 56, 0.3) !important;
-        }
-
-        .chat-window-toggle svg { display: none !important; }
-
-        .chat-input-container { border-top: 1px solid rgba(245, 200, 0, 0.3) !important; }
-
-        /* ----------------------------------------------------
-        MENSAJE FLOTANTE "¿PREGÚNTAME?"
-        ---------------------------------------------------- */
-        .chat-window-toggle::before {
-          content: '¡Pregúntame!';
-          position: absolute;
-          bottom: 85px;
-          right: -5px;
-          background-color: var(--chat--color-white);
-          color: var(--chat--color-secondary);
-          border: 2px solid var(--chat--color-primary);
-          padding: 8px 16px;
-          border-radius: 20px;
-          font-weight: 700 !important;
-          font-size: 14px;
-          white-space: nowrap;
-          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-          pointer-events: none;
-          z-index: 1000;
-          animation: anime-pulse 2s infinite ease-in-out !important;
-        }
-
-        .chat-window-toggle::after {
-          content: '';
-          position: absolute;
-          bottom: 73px;
-          right: 25px;
-          border-width: 12px 12px 0;
-          border-style: solid;
-          border-color: var(--chat--color-primary) transparent transparent transparent;
-          pointer-events: none;
-          animation: anime-pulse 2s infinite ease-in-out !important;
-        }
-
-        @keyframes anime-pulse {
-          0% { transform: translateY(0) scale(1); }
-          50% { transform: translateY(-6px) scale(1.03); }
-          100% { transform: translateY(0) scale(1); }
-        }
-
-        /* ✨ EL SECRETO: Ocultar cuando el usuario hace hover O el chat está abierto ✨ */
-        .chat-window-toggle:hover::before,
-        .chat-window-toggle:hover::after,
-        .chat-window-toggle.chat-is-open::before,
-        .chat-window-toggle.chat-is-open::after {
-          opacity: 0 !important;
-          visibility: hidden !important;
-          transition: opacity 0.2s ease, visibility 0.2s;
-        }
-      `}} />
-    </>
+      {/* Botón Circular Toggle */}
+      <button 
+        className="absolute bottom-0 right-0 w-[70px] h-[70px] rounded-full border-[3px] border-[#F5C800] bg-white bg-cover bg-center shadow-lg cursor-pointer hover:-translate-y-1 hover:scale-105 hover:shadow-2xl transition-all duration-300 z-50 bg-[url('/logo-sol-pbg.png')]"
+        onClick={toggleChat}
+        aria-label="Abrir chat"
+      />
+    </div>
   );
 }
