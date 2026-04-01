@@ -1,65 +1,46 @@
+import React from 'react';
+import * as Icons from 'lucide-react';
 
-import { Shield, GraduationCap, Briefcase, Heart, Leaf } from "lucide-react";
-
-const propuestas = [
-  {
-    icon: Shield,
-    title: "Seguridad Ciudadana",
-    desc: "Implementar tecnología de vigilancia inteligente y fortalecer la policía comunitaria para reducir la criminalidad en un 40%.",
-  },
-  {
-    icon: GraduationCap,
-    title: "Educación de Calidad",
-    desc: "Becas completas para estudiantes de escasos recursos, digitalización de las aulas y formación docente continua.",
-  },
-  {
-    icon: Briefcase,
-    title: "Empleo y Emprendimiento",
-    desc: "Crear un fondo de microcréditos sin intereses para jóvenes emprendedores y atraer inversión extranjera a la provincia.",
-  },
-  {
-    icon: Heart,
-    title: "Salud para Todos",
-    desc: "Ampliar la cobertura del seguro de salud, construir 3 nuevos centros de atención primaria y equipar hospitales con tecnología moderna.",
-  },
-  {
-    icon: Leaf,
-    title: "Medio Ambiente",
-    desc: "Programa de reforestación masiva, protección de cuencas hidrográficas y transición hacia energías limpias en edificios públicos.",
-  },
-];
-
-const PropuestasSection = () => {
+export default function PropuestasSection({ propuestas }) {
   return (
-    <section id="propuestas" className="py-20 md:py-28 bg-secondary">
+    <section className="py-20 md:py-32 bg-gray-50">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-14">
-          <p className="text-sm font-bold uppercase tracking-[0.3em] text-cta mb-4">
-            El Plan
+        <div className="text-center mb-16">
+          <p className="text-[#D72638] font-bold tracking-[0.2em] text-sm uppercase mb-4">
+            El Plan de Acción
           </p>
-          <h2 className="text-3xl md:text-5xl font-black leading-tight">
-            Propuestas concretas,
-            <br />
-            resultados reales.
+          <h2 className="text-4xl md:text-5xl font-black text-[#0D1B2A] leading-tight">
+            Propuestas que <span className="text-[#D72638]">mejorarán el Perú</span>
           </h2>
         </div>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
-          {propuestas.map((p) => (
-            <div
-              key={p.title}
-              className="bg-background rounded-2xl p-6 md:p-8 shadow-sm hover:shadow-lg transition-shadow border border-border group"
-            >
-              <div className="w-12 h-12 rounded-xl bg-primary/20 flex items-center justify-center mb-5 group-hover:bg-primary transition-colors">
-                <p.icon size={24} className="text-primary-foreground" />
+        
+        <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+          {propuestas.map((p, index) => {
+            const IconComp = Icons[p.icon] || Icons.CheckCircle;
+            return (
+              <div key={index} className="bg-white rounded-3xl p-8 shadow-sm hover:shadow-xl transition-shadow duration-300 border border-gray-100 flex flex-col">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="w-14 h-14 shrink-0 rounded-2xl bg-[#D72638]/10 flex items-center justify-center">
+                    <IconComp size={28} className="text-[#D72638]" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-[#0D1B2A] leading-tight">{p.titulo}</h3>
+                </div>
+                
+                <div className="space-y-4 flex-grow">
+                  <div className="bg-gray-50 p-4 rounded-xl border border-gray-100">
+                    <p className="text-sm font-bold text-[#D72638] uppercase tracking-wider mb-2">¿Qué proponemos?</p>
+                    <p className="text-gray-700 leading-relaxed">{p.que_proponemos}</p>
+                  </div>
+                  <div className="p-4 border-l-4 border-[#0D1B2A]">
+                    <p className="text-sm font-bold text-[#0D1B2A] uppercase tracking-wider mb-2">¿Cómo mejorará el Perú?</p>
+                    <p className="text-gray-700 leading-relaxed">{p.como_mejorara}</p>
+                  </div>
+                </div>
               </div>
-              <h3 className="text-lg font-bold mb-3">{p.title}</h3>
-              <p className="text-muted-foreground text-sm leading-relaxed">{p.desc}</p>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>
   );
-};
-
-export default PropuestasSection;
+}

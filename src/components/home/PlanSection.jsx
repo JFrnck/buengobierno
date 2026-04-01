@@ -185,7 +185,8 @@ export default function PlanSection() {
         force3D: true,
         scrollTrigger: {
           trigger: sectionRef.current,
-          start: 'top 18px',
+          // CAMBIO AQUÍ: Inicia cuando el centro de la sección llega al centro de la pantalla
+          start: 'center center', 
           pin: true,
           scrub: 1,
           end: () => `+=${getScrollAmount()}`,
@@ -257,7 +258,6 @@ export default function PlanSection() {
       <div>
         <div
           ref={trackRef}
-          // LA CLAVE ESTÁ AQUÍ: w-full en móvil, md:w-max en desktop
           className="w-full md:w-max flex gap-5 px-6 md:px-12 lg:px-20 pb-8 overflow-x-auto snap-x snap-mandatory md:overflow-visible md:snap-none hide-scrollbar"
           style={{
             willChange: 'transform',

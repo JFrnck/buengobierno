@@ -1,0 +1,176 @@
+[
+  {
+    "id": 1,
+    "slug": "jehu-pezo",
+    "nombre": "JEHÚ DANIEL",
+    "apellidoHighlighted": "PEZO SHAPIAMA",
+    "rol": "Candidato a la camara de Diputados",
+    "distrito": "Región San Martín",
+    "numero_lista": "1",
+    "slogan_principal": "Con raíces en San Martín, con compromiso por su gente.",
+    "lemas": ["Preparación", "Trabajo", "Cercanía"],
+    
+    "hero_resumen": "Soy abogado tarapotino y candidato a diputado por San Martín con el N° 1 del Partido del Buen Gobierno. Mi trayectoria en gestión, derecho y trabajo de campo me ha preparado para este reto. Asumo esta candidatura con identidad regional, formación jurídica y experiencia laboral para ofrecer una representación seria, responsable y comprometida con nuestra Amazonía.",
+    
+    "hero_image": "/jehu-pezo.png", 
+    "partido_logo": "/logo-sol-pbg.png",
+    
+    "biografia": {
+      "titulo": "Conóceme",
+      "subtitulo": "De la región, para la región.",
+      "historia": [
+        "Soy sanmartinense y mi historia está profundamente ligada a nuestra tierra amazónica. Nací en Tarapoto, provengo de padres agricultores y lugares como Morales, Chazuta y Huimbayoc han marcado mi camino. Esa memoria y esas raíces me comprometen a luchar por una región más verde y con oportunidades reales para las nuevas generaciones.",
+        "A lo largo de mi trayectoria, he construido una mirada amplia sobre las necesidades de la ciudadanía. Soy abogado por la Universidad Científica del Perú, con estudios de posgrado en Derecho Constitucional y Gobernabilidad. Cuento con producción académica registrada que respalda una ruta profesional formal, estrictamente vinculada al respeto por la ley y la institucionalidad.",
+        "Mi experiencia no se queda en el escritorio; he desarrollado un intenso trabajo de campo y gestión de proyectos. En el ejercicio de mi profesión, me he enfocado en temas de vivienda y construcción, asesorando directamente a las familias para asegurar la compra de sus terrenos y acceder a programas de vivienda, logrando que tomen decisiones seguras e informadas sobre su patrimonio.",
+        "Hoy participo en esta contienda electoral encabezando la lista regional con el número 1, impulsando un mensaje de renovación y anticorrupción. Es urgente poner en la agenda nacional el abandono histórico de la Amazonía y recuperar la confianza de la gente con trabajo territorial, preparación y total coherencia."
+      ],
+      "hitos_academicos": [
+        {
+          "anio": "2022",
+          "titulo": "Bachiller en Derecho"
+        },
+        {
+          "anio": "2024",
+          "titulo": "Título de Abogado"
+        },
+        {
+          "anio": "2024",
+          "titulo": "Título de Abogado"
+        },
+        {
+          "anio": "2024",
+          "titulo": "Título de Abogado"
+        }
+      ]
+    },
+    
+    "propuestas": [
+      {
+        "icon": "ShieldBan",
+        "titulo": "1. Tolerancia Cero: Derogación de las Leyes Pro Crimen",
+        "que_proponemos": "El primer día de gestión derogaremos todas las 'leyes pro crimen'. Estas son las normas que han debilitado al sistema de justicia, a la PNP, al Ministerio Público, al sistema educativo y al de salud, incluyendo las leyes que hoy favorecen a la tala y la minería ilegal.",
+        "como_mejorara": "Recuperaremos el orden y la autoridad. Al devolverle el poder a la Policía y al Ministerio Público, habrá una lucha real contra las mafias; además, liberaremos a la educación, la salud y nuestros recursos naturales del impacto de la corrupción."
+      },
+      {
+        "icon": "Award",
+        "titulo": "2. Tu Experiencia Vale: Registro Empírico y Empleabilidad",
+        "que_proponemos": "Crearemos el 'Registro Nacional de Competencias Empíricas' para certificar a quienes saben un oficio por experiencia propia (sin título), y lanzaremos la 'Plataforma de Empleabilidad Juvenil'.",
+        "como_mejorara": "Impulsaremos la economía de las familias. Los trabajadores informales podrán conseguir mejores empleos con su experiencia reconocida por el Estado, y los jóvenes tendrán apoyo directo para encontrar su primer trabajo."
+      },
+      {
+        "icon": "Users",
+        "titulo": "3. Rondas Urbanas con Voz y Voto",
+        "que_proponemos": "Impulsaremos la 'Ley de Rondas Urbanas', reconociendo formalmente a los vecinos organizados y dándoles voz y voto obligatorio dentro de los planes de seguridad en todos los niveles del gobierno.",
+        "como_mejorara": "Calles protegidas por quienes mejor las conocen. Las estrategias contra el crimen ya no se harán solo desde un escritorio, sino con la participación directa y el poder de decisión de los propios vecinos."
+      },
+      {
+        "icon": "Building",
+        "titulo": "4. Fin a los Privilegios en el Congreso",
+        "que_proponemos": "Implementaremos la revocatoria para Diputados y Senadores, eliminaremos sus seguros privados (Art. 25 del Reglamento), exigiremos licencia sin sueldo para congresistas en campaña, reduciremos a 2.5 años la elección del presidente de cada cámara y eliminaremos la elección de Parlamentarios Andinos.",
+        "como_mejorara": "Tendremos un Parlamento austero, eficiente y que rinda cuentas. El dinero de tus impuestos dejará de pagar lujos, y el pueblo tendrá el poder de despedir a los legisladores que no trabajen."
+      },
+      {
+        "icon": "Video",
+        "titulo": "5. Cámaras en el Uniforme Policial (Bodycams)",
+        "que_proponemos": "Aprobaremos una ley para hacer obligatorio el uso de cámaras filmadoras en los uniformes de la PNP durante absolutamente todas sus intervenciones.",
+        "como_mejorara": "Transparencia total en las calles. Se evitarán los abusos de autoridad y los pedidos de coimas, y al mismo tiempo se protegerá a los buenos policías frente a denuncias falsas."
+      },
+      {
+        "icon": "HeartPulse",
+        "titulo": "6. Licencia Menstrual Remunerada",
+        "que_proponemos": "Estableceremos por ley el derecho a un día al mes de licencia con goce de haber (remunerada) para las mujeres trabajadoras.",
+        "como_mejorara": "Un país más justo y humano. Se reconocerá una necesidad de salud real sin afectar el bolsillo de las trabajadoras, mejorando el bienestar y el clima laboral en las empresas."
+      },
+      {
+        "icon": "PersonStanding",
+        "titulo": "7. Dignidad para el Adulto Mayor Vulnerable",
+        "que_proponemos": "Crearemos un gran 'Programa Nacional de Cuidado al Adulto Mayor' enfocado exclusivamente en las personas de la tercera edad que viven en situación de pobreza y pobreza extrema.",
+        "como_mejorara": "Ningún abuelo será abandonado por el Estado. Garantizaremos que vivan sus últimos años con dignidad, atención y cuidado integral después de haber aportado al país."
+      },
+      {
+        "icon": "HardHat",
+        "titulo": "8. Obras Públicas Sin Corrupción y Con Vigilancia",
+        "que_proponemos": "Fundaremos una nueva entidad estatal dedicada solo a elaborar expedientes técnicos de obras. En sus comités de selección incluiremos obligatoriamente a la sociedad civil y a los decanos de los colegios de abogados, ingenieros, arquitectos y contadores.",
+        "como_mejorara": "Fin a las obras paralizadas y sobrevaloradas. Al tener a ciudadanos y expertos técnicos vigilando desde el minuto cero, aseguraremos que el dinero se use bien y las obras duren."
+      },
+      {
+        "icon": "BookOpen",
+        "titulo": "9. Revolución Curricular en los Colegios",
+        "que_proponemos": "Actualizaremos la currícula escolar para integrar cursos útiles para la vida diaria y el futuro: música, primeros auxilios, psicología, además de enseñanza de quechua y chino mandarín.",
+        "como_mejorara": "Formaremos jóvenes preparados para el mundo real. Sabrán salvar vidas, cuidar su salud mental, estarán conectados con nuestras raíces (quechua) y listos para el mercado global (chino)."
+      },
+      {
+        "icon": "UserX",
+        "titulo": "10. Muerte Civil y Política a los Sentenciados",
+        "que_proponemos": "Persona que reciba una sentencia por cualquier tipo de delito, nunca más podrá volver a trabajar para el Estado, ni manejar recursos públicos, ni postular a un cargo político.",
+        "como_mejorara": "Limpiaremos el Estado de raíz. Tendremos la garantía de que las instituciones públicas estarán lideradas únicamente por personas con las manos limpias y sin antecedentes."
+      },
+      {
+        "icon": "School",
+        "titulo": "11. SUNEDU en Todos los Niveles Educativos",
+        "que_proponemos": "Ampliaremos la autoridad de la SUNEDU para que su injerencia y supervisión de calidad llegue a todos los niveles: colegios, institutos y universidades.",
+        "como_mejorara": "Garantizaremos una educación de excelencia en cada etapa de la vida. Ninguna familia será estafada con mala educación; el Estado vigilará la calidad desde la escuela hasta la profesión."
+      },
+      {
+        "icon": "Hospital",
+        "titulo": "12. Un Solo Sistema de Salud Universal",
+        "que_proponemos": "Unificaremos todos los servicios en un solo sistema de salud integrado para todos los peruanos, eliminando la división actual entre las diferentes redes.",
+        "como_mejorara": "Atención rápida y sin discriminación. Si te enfermas, podrás atenderte en el hospital, clínica o posta más cercana sin importar el seguro que tengas, eliminando trámites burocráticos que cuestan vidas."
+      },
+      {
+        "icon": "Wallet",
+        "titulo": "13. Cero Sueldos Vitalicios a Expresidentes",
+        "que_proponemos": "Eliminaremos de manera definitiva los sueldos y pensiones vitalicias que se pagan mes a mes a los expresidentes de la República.",
+        "como_mejorara": "Justicia económica. Ese dinero de los peruanos, que hoy beneficia a exmandatarios muchas veces cuestionados, se ahorrará para invertirlo en obras y servicios que la población necesita."
+      },
+      {
+        "icon": "Scale",
+        "titulo": "14. El Poder de Anular Leyes Injustas al Ciudadano",
+        "que_proponemos": "Permitiremos que cualquier ciudadano pueda presentar una 'acción de inconstitucionalidad'. Porque, en concordancia con el artículo 38 de la Constitución, todo ciudadano tiene el deber de protegerla y posee una alícuota (una cuota) de ese poder.",
+        "como_mejorara": "Devolveremos el verdadero poder a la gente. El pueblo ya no dependerá de congresistas para frenar leyes abusivas; podrá defender directamente sus derechos y frenar las injusticias legales."
+      },
+      {
+        "icon": "Vote",
+        "titulo": "15. Voto Libre (Sufragio Facultativo)",
+        "que_proponemos": "Cambiaremos la ley para que ir a votar sea un derecho voluntario y ya no una obligación bajo amenaza de cobrarte una multa económica.",
+        "como_mejorara": "Democracia real y sin extorsión. Los partidos se verán obligados a trabajar mejor para convencer a la gente con propuestas, y las familias humildes no se verán perjudicadas con multas."
+      },
+      {
+        "icon": "Globe2",
+        "titulo": "16. Fin de las Votaciones para el Parlamento Andino",
+        "que_proponemos": "Eliminaremos de una vez por todas las elecciones para designar representantes peruanos ante el Parlamento Andino.",
+        "como_mejorara": "Un gran ahorro para el país. Dejaremos de gastar millones organizando elecciones y pagando sueldos a representantes de una institución que no genera beneficios prácticos para el desarrollo de nuestro país."
+      }
+    ],
+
+    "territorio": {
+      "nombre": "Región de San Martín",
+      "descripcion": "Ubicada en la Amazonía peruana, San Martín está conformada por 10 provincias y 78 distritos. Según las proyecciones oficiales del INEI, su población alcanzó 899,648 habitantes en 2020.",
+      "estadisticas": [
+        { "valor": "899,648", "etiqueta": "Habitantes" },
+        { "valor": "10", "etiqueta": "Provincias" },
+        { "valor": "78", "etiqueta": "Distritos" }
+      ]
+    },
+
+    "redes_sociales": {
+      "facebook": "https://www.facebook.com/JehuDaniel/",
+      "instagram": "https://www.instagram.com/pezojehu?igsh=MXBuc2t4bGo3bWNrZA%3D%3D",
+      "tiktok": "https://www.tiktok.com/@jehupezo?_r=1&_t=ZS-95A2UJkCJXg"
+    },
+
+    "enlaces_importantes": [
+      {
+        "titulo": "Plan de Trabajo Detallado",
+        "url": "/documentos/jehu-plan-trabajo.pdf",
+        "icon": "FileCheck",
+        "tipo": "pdf"
+      }
+    ],
+
+    "multimedia": {
+      "videos": [],
+      "galeria_fotos": []
+    }
+  }
+]

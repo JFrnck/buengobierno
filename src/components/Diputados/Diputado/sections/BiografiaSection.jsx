@@ -1,47 +1,53 @@
+import React from 'react';
+import { GraduationCap } from 'lucide-react';
 
-
-const BiografiaSection = () => {
+export default function BiografiaSection({ biografia, nombre }) {
   return (
-    <section id="biografia" className="py-20 md:py-28 bg-background">
+    <section className="py-20 md:py-32 bg-white">
       <div className="container mx-auto px-4">
-        <div className="max-w-3xl mx-auto">
-          <p className="text-sm font-bold uppercase tracking-[0.3em] text-cta mb-4">
-            Conóceme
-          </p>
-          <h2 className="text-3xl md:text-5xl font-black mb-8 leading-tight">
-            De la comunidad,
-            <br />
-            <span className="text-cta">para la comunidad.</span>
-          </h2>
-          <div className="space-y-5 text-muted-foreground text-lg leading-relaxed">
-            <p>
-              Nacido y criado en el corazón de Santiago, Ricardo Méndez conoce de primera mano los retos que enfrenta nuestra provincia. Hijo de una maestra y un comerciante, aprendió desde joven el valor del trabajo honesto y el servicio a los demás.
+        <div className="max-w-6xl mx-auto grid lg:grid-cols-3 gap-16 items-start">
+          
+          <div className="lg:col-span-2">
+            <p className="text-[#FF6B00] font-bold tracking-[0.2em] text-sm uppercase mb-4">
+              {biografia.titulo}
             </p>
-            <p>
-              Graduado con honores en Derecho por la Universidad Autónoma de Santo Domingo y con una Maestría en Políticas Públicas de la Universidad de Columbia, ha dedicado más de 15 años a la defensa legal de comunidades vulnerables y a la construcción de proyectos de desarrollo local.
-            </p>
-            <p>
-              Como regidor y luego director de la Oficina de Desarrollo Comunitario, lideró programas que beneficiaron a más de 50,000 familias en educación, salud y empleo. Hoy busca llevar esa misma visión al Senado de la República.
-            </p>
-          </div>
-          <div className="grid grid-cols-3 gap-6 mt-12">
-            <div className="text-center">
-              <p className="text-4xl md:text-5xl font-black text-cta">15+</p>
-              <p className="text-sm text-muted-foreground mt-1 font-medium">Años de servicio</p>
-            </div>
-            <div className="text-center">
-              <p className="text-4xl md:text-5xl font-black text-cta">50K</p>
-              <p className="text-sm text-muted-foreground mt-1 font-medium">Familias beneficiadas</p>
-            </div>
-            <div className="text-center">
-              <p className="text-4xl md:text-5xl font-black text-cta">120+</p>
-              <p className="text-sm text-muted-foreground mt-1 font-medium">Proyectos ejecutados</p>
+            <h2 className="text-4xl md:text-5xl font-black text-[#0D1B2A] leading-tight mb-8">
+              {biografia.subtitulo}
+            </h2>
+            
+            <div className="space-y-6 text-gray-700 text-lg leading-relaxed">
+              {biografia.historia.map((parrafo, index) => (
+                <p key={index}>{parrafo}</p>
+              ))}
             </div>
           </div>
+
+          {/* Línea de tiempo académica */}
+          {biografia.hitos_academicos && biografia.hitos_academicos.length > 0 && (
+            <div className="bg-gray-50 rounded-3xl p-8 border border-gray-100 shadow-sm sticky top-24">
+              <div className="flex items-center gap-3 mb-8">
+                <div className="w-12 h-12 bg-[#0D1B2A] rounded-xl flex items-center justify-center">
+                  <GraduationCap className="text-white" size={24} />
+                </div>
+                <h3 className="text-2xl font-bold text-[#0D1B2A]">Formación</h3>
+              </div>
+              
+              <div className="space-y-8 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-gray-300 before:to-transparent">
+                {biografia.hitos_academicos.map((hito, i) => (
+                  <div key={i} className="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
+                    <div className="flex items-center justify-center w-10 h-10 rounded-full border-4 border-white bg-[#FF6B00] text-white shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10"></div>
+                    <div className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-white p-4 rounded-xl border border-gray-100 shadow-sm">
+                      <time className="text-sm font-bold text-[#FF6B00]">{hito.anio}</time>
+                      <p className="font-bold text-[#0D1B2A] mt-1">{hito.titulo}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
         </div>
       </div>
     </section>
   );
-};
-
-export default BiografiaSection;
+}
