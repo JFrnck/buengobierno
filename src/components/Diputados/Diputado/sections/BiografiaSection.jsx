@@ -8,7 +8,7 @@ export default function BiografiaSection({ biografia, nombre }) {
         <div className="max-w-6xl mx-auto grid lg:grid-cols-3 gap-16 items-start">
           
           <div className="lg:col-span-2">
-            <p className="text-[#FF6B00] font-bold tracking-[0.2em] text-sm uppercase mb-4">
+            <p className="text-[#D72638] font-bold tracking-[0.2em] text-sm uppercase mb-4">
               {biografia.titulo}
             </p>
             <h2 className="text-4xl md:text-5xl font-black text-[#0D1B2A] leading-tight mb-8">
@@ -35,9 +35,9 @@ export default function BiografiaSection({ biografia, nombre }) {
               <div className="space-y-8 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-gray-300 before:to-transparent">
                 {biografia.hitos_academicos.map((hito, i) => (
                   <div key={i} className="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
-                    <div className="flex items-center justify-center w-10 h-10 rounded-full border-4 border-white bg-[#FF6B00] text-white shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10"></div>
+                    <div className="flex items-center justify-center w-10 h-10 rounded-full border-4 border-white bg-[#D72638] text-white shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10"></div>
                     <div className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-white p-4 rounded-xl border border-gray-100 shadow-sm">
-                      <time className="text-sm font-bold text-[#FF6B00]">{hito.anio}</time>
+                      <time className="text-sm font-bold text-[#D72638]">{hito.anio}</time>
                       <p className="font-bold text-[#0D1B2A] mt-1">{hito.titulo}</p>
                     </div>
                   </div>

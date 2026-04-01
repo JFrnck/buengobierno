@@ -14,6 +14,7 @@
     
     "hero_image": "/jehu-pezo.png", 
     "partido_logo": "/logo-sol-pbg.png",
+    "qr_image" : "/jehu-pezo-qr.png",
     
     "biografia": {
       "titulo": "Conóceme",
@@ -28,14 +29,6 @@
         {
           "anio": "2022",
           "titulo": "Bachiller en Derecho"
-        },
-        {
-          "anio": "2024",
-          "titulo": "Título de Abogado"
-        },
-        {
-          "anio": "2024",
-          "titulo": "Título de Abogado"
         },
         {
           "anio": "2024",

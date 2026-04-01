@@ -1,7 +1,12 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import { MapPin, Link } from 'lucide-react';
 import { gsap } from 'gsap';
 import { useGSAP } from '@gsap/react';
+// 1. Importamos SplitText
+import { SplitText } from 'gsap/SplitText';
+
+// Registramos el plugin
+gsap.registerPlugin(SplitText);
 
 // ─── Diccionario de Íconos de Redes Sociales ───────────────────────────────────
 const SOCIAL_ICONS = {
@@ -37,28 +42,71 @@ const SOCIAL_ICONS = {
 
 export default function HeroSection({ candidato }) {
   const sectionRef     = useRef(null);
+  
+  // Refs para las animaciones iniciales
+  const infoRef        = useRef(null);
+  const titleRef       = useRef(null);
+  const subtitleRef    = useRef(null);
+  const socialRef      = useRef(null);
+  const imageContainerRef = useRef(null); // Ref para la foto
+  
   const marcaCardRef   = useRef(null);
   const escribeCardRef = useRef(null);
   const xPath1Ref      = useRef(null);
   const xPath2Ref      = useRef(null);
   const wipeMaskRef    = useRef(null);
 
+  // Estado para la foto volteada
+  const [isFlipped, setIsFlipped] = useState(false);
+
   useGSAP(() => {
+    // 1. Configuramos el SplitText para animar las letras del título
+    const splitTitle = new SplitText(titleRef.current, { type: "words,chars" });
+
     const ctx = gsap.context(() => {
-      gsap.fromTo(
-        [marcaCardRef.current, escribeCardRef.current],
-        { opacity: 0, y: 30, scale: 0.9 },
+      
+      // ─── LÍNEA DE TIEMPO DE ENTRADA (Coreografía Inicial) ───
+      const initTl = gsap.timeline({ defaults: { ease: 'power3.out' } });
+
+      // Animamos la info superior (Slide)
+      initTl.fromTo(infoRef.current, { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.8, delay: 0.2 })
+      
+      // Animamos cada letra del título (Aparecen y rotan)
+      .from(splitTitle.chars, {
+        opacity: 0,
+        y: 40,
+        rotationX: -90,
+        stagger: 0.02, 
+        duration: 0.8,
+        ease: "back.out(1.5)"
+      }, "-=0.4")
+      
+      // Animamos el resumen (Slide)
+      .fromTo(subtitleRef.current, { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.8 }, "-=0.6")
+      
+      // Animamos los botones sociales (Pop)
+      .fromTo(socialRef.current?.children ? Array.from(socialRef.current.children) : [], 
+        { opacity: 0, scale: 0 }, 
+        { opacity: 1, scale: 1, stagger: 0.1, duration: 0.5, ease: "back.out(1.5)" }, 
+        "-=0.6"
+      )
+      
+      // ─── IMAGEN Y TARJETAS APARECEN JUNTAS ───
+      .fromTo(
+        [imageContainerRef.current, marcaCardRef.current, escribeCardRef.current],
+        { opacity: 0, y: 50, scale: 0.95 },
         {
           opacity: 1,
           y: 0,
           scale: 1,
-          duration: 3,
-          stagger: 0.2,
-          ease: 'back.out(1.5)',
-          delay: 0.5,
-        }
+          duration: 1.2,
+          stagger: 0.1, 
+          ease: 'back.out(1.2)',
+        },
+        "-=0.8" // Inician casi junto con los botones sociales para mayor fluidez
       );
 
+      // ─── LÍNEA DE TIEMPO CICLO TARJETAS (Marcar y Escribir Mejorado) ───
       if (xPath1Ref.current && xPath2Ref.current && wipeMaskRef.current) {
         const BUFFER = 30; 
         const xLengths = [
@@ -66,7 +114,8 @@ export default function HeroSection({ candidato }) {
           xPath2Ref.current.getTotalLength() + BUFFER
         ];
 
-        const masterTl = gsap.timeline({ repeat: -1, delay: 0.8 });
+        // Se retrasa el inicio para asegurar que la animación de entrada terminó
+        const masterTl = gsap.timeline({ repeat: -1, delay: 2.0 });
 
         masterTl.set([xPath1Ref.current, xPath2Ref.current], { opacity: 0 });
         masterTl.set(wipeMaskRef.current, { xPercent: 0 }); 
@@ -74,42 +123,51 @@ export default function HeroSection({ candidato }) {
         masterTl.set(xPath1Ref.current, { strokeDasharray: xLengths[0], strokeDashoffset: xLengths[0] });
         masterTl.set(xPath2Ref.current, { strokeDasharray: xLengths[1], strokeDashoffset: xLengths[1] });
 
-        masterTl.to(xPath1Ref.current, { opacity: 1, duration: 0.01 }, 0.1);
-        masterTl.to(xPath1Ref.current, { strokeDashoffset: 0, duration: 0.4, ease: 'power1.inOut' }, 0.1);
+        // Tarda 1.5s antes de hacer la primera línea de la X
+        masterTl.to(xPath1Ref.current, { opacity: 1, duration: 0.01 }, 1.5);
+        masterTl.to(xPath1Ref.current, { strokeDashoffset: 0, duration: 0.8, ease: 'power2.inOut' }, 1.5);
 
-        masterTl.to(xPath2Ref.current, { opacity: 1, duration: 0.01 }, 0.4);
-        masterTl.to(xPath2Ref.current, { strokeDashoffset: 0, duration: 0.4, ease: 'power1.inOut' }, 0.4);
+        // La segunda línea de la X
+        masterTl.to(xPath2Ref.current, { opacity: 1, duration: 0.01 }, 2.3);
+        masterTl.to(xPath2Ref.current, { strokeDashoffset: 0, duration: 0.8, ease: 'power2.inOut' }, 2.3);
 
+        // BARRIDO MÁS LENTO Y NOTORIO (Dura 2 segundos)
         masterTl.to(wipeMaskRef.current, { 
           xPercent: 100, 
-          duration: 3, 
-          ease: 'power2.inOut' 
-        }, 0.8);
+          duration: 2.0, 
+          ease: 'power1.inOut' 
+        }, 3.1);
 
+        // Permanece a la vista por 3 segundos más antes de ocultarse
         masterTl.to([xPath1Ref.current, xPath2Ref.current], {
           opacity: 0,
-          duration: 0.5, 
+          duration: 0.8, 
           ease: 'power1.inOut'
-        }, 2.0);
+        }, 8.0);
         
         masterTl.to(wipeMaskRef.current, {
            xPercent: 0,
-           duration: 0.5,
+           duration: 0.8,
            ease: 'power1.inOut'
-        }, 2.0);
+        }, 8.0);
 
+        // Rebobinar en secreto
         masterTl.set([xPath1Ref.current, xPath2Ref.current], {
           strokeDashoffset: (i) => xLengths[i]
-        }, 2.6);
+        }, 9.0);
 
-        masterTl.set({}, {}, 3.2); 
+        // Fin del ciclo
+        masterTl.set({}, {}, 9.5); 
       }
     }, sectionRef);
 
-    return () => ctx.revert();
+    return () => {
+      ctx.revert();
+      splitTitle.revert();
+    };
   }, []);
 
-  // ── 3. Normalizador Dinámico de Redes (Soporta Arrays, Objetos y URLs planas) ──
+  // ── 3. Normalizador Dinámico de Redes ──
   let redesValidas = [];
   const datosRedes = candidato?.redes_sociales;
 
@@ -125,158 +183,218 @@ export default function HeroSection({ candidato }) {
     Object.entries(datosRedes).forEach(([k, v]) => redesValidas.push({ key: k, url: v }));
   }
 
-  // Filtramos solo las que tengan una URL de verdad
   redesValidas = redesValidas.filter(r => r.url && typeof r.url === 'string' && r.url.trim() !== '');
 
-
   return (
-    <section
-      ref={sectionRef}
-      className="bg-[#F5C800] text-[#0D1B2A] min-h-[110vh] flex items-center pb-20 overflow-hidden relative"
-    >
-      <div className="container mx-auto px-4 z-10 pt-10 md:pt-0">
-        <div className="flex flex-col md:grid md:grid-cols-2 gap-8 md:gap-12 items-center max-w-7xl mx-auto">
+    <>
+      {/* Importamos la fuente 'Inter' para el número */}
+      <style>
+        {`
+          @import url('https://fonts.googleapis.com/css2?family=Inter:wght@900&display=swap');
+          .font-number {
+            font-family: 'Inter', sans-serif;
+            letter-spacing: -0.05em;
+          }
+        `}
+      </style>
 
-          {/* ── COLUMNA IZQUIERDA ─────────────────────────────────────────── */}
-          <div className="contents md:flex md:flex-col md:order-1 space-y-0 md:space-y-8">
-            
-            <div className="order-1 md:order-none flex items-center gap-4">
-              <img src={candidato.partido_logo} alt="Partido" className="w-16 h-16 object-contain" />
-              <div>
-                <p className="text-[#D72638] font-bold tracking-[0.2em] text-sm uppercase">
-                  {candidato.rol}
+      <section
+        ref={sectionRef}
+        className="bg-[#F5C800] text-[#0D1B2A] min-h-[110vh] flex items-center pb-20 overflow-hidden relative"
+      >
+        <div className="container mx-auto px-4 z-10 pt-10 md:pt-0">
+          <div className="flex flex-col md:grid md:grid-cols-2 gap-8 md:gap-12 items-center max-w-7xl mx-auto">
+
+            {/* ── COLUMNA IZQUIERDA ─────────────────────────────────────────── */}
+            <div className="contents md:flex md:flex-col md:order-1 space-y-0 md:space-y-8">
+              
+              <div ref={infoRef} className="order-1 md:order-none flex items-center gap-4" style={{ opacity: 0 }}>
+                <img src={candidato.partido_logo} alt="Partido" className="w-16 h-16 object-contain" />
+                <div>
+                  <p className="text-[#D72638] font-bold tracking-[0.2em] text-sm uppercase">
+                    {candidato.rol}
+                  </p>
+                  <div className="flex items-center gap-2 text-[#0D1B2A]/80 mt-1">
+                    <MapPin size={16} />
+                    <span className="text-sm font-bold">{candidato.distrito} - Lista {candidato.numero_lista}</span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="order-2 md:order-none" style={{ perspective: "1000px" }}>
+                <h1 ref={titleRef} className="text-5xl md:text-7xl lg:text-8xl font-black leading-[0.9] tracking-tight uppercase text-[#0D1B2A]">
+                  {candidato.nombre}
+                  <br />
+                  <span className="text-[#D72638]">{candidato.apellidoHighlighted}</span>
+                </h1>
+              </div>
+
+              <div className="order-4 md:order-none flex flex-col space-y-8 w-full">
+                <p ref={subtitleRef} className="text-lg md:text-xl text-[#0D1B2A] max-w-xl leading-relaxed border-l-4 border-[#D72638] pl-5 font-medium" style={{ opacity: 0 }}>
+                  {candidato.hero_resumen}
                 </p>
-                <div className="flex items-center gap-2 text-[#0D1B2A]/80 mt-1">
-                  <MapPin size={16} />
-                  <span className="text-sm font-bold">{candidato.distrito} - Lista {candidato.numero_lista}</span>
-                </div>
+
+                <div ref={socialRef} className="flex gap-4">
+                    {redesValidas.map((item, index) => {
+                      let network = item.key.toLowerCase();
+                      const urlString = item.url.toLowerCase();
+
+                      if (!isNaN(network) || network === 'desconocida') {
+                        if (urlString.includes('facebook') || urlString.includes('fb.')) network = 'facebook';
+                        else if (urlString.includes('instagram')) network = 'instagram';
+                        else if (urlString.includes('twitter') || urlString.includes('x.com')) network = 'twitter';
+                        else if (urlString.includes('youtube') || urlString.includes('youtu.be')) network = 'youtube';
+                        else if (urlString.includes('tiktok')) network = 'tiktok';
+                      }
+                      
+                      const IconComponent = SOCIAL_ICONS[network] || <Link size={24} />;
+      
+                      return (
+                        <a 
+                          key={index} 
+                          href={item.url} 
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="w-14 h-14 rounded-full border border-[#0D1B2A]/20 flex items-center justify-center hover:bg-[#D72638] hover:text-white transition-all duration-300"
+                        >
+                          {IconComponent}
+                        </a>
+                      );
+                    })}
+                  </div>
               </div>
+
             </div>
 
-            <h1 className="order-2 md:order-none text-5xl md:text-7xl lg:text-8xl font-black leading-[0.9] tracking-tight uppercase text-[#0D1B2A]">
-              {candidato.nombre}
-              <br />
-              <span className="text-[#D72638]">{candidato.apellidoHighlighted}</span>
-            </h1>
+            {/* ── COLUMNA DERECHA ───────────────────────────────────────────── */}
+            <div className="order-3 md:order-2 flex flex-col items-center justify-end relative h-auto -mt-10 md:-mt-10">
 
-            <div className="order-4 md:order-none flex flex-col space-y-8 w-full">
-              <p className="text-lg md:text-xl text-[#0D1B2A] max-w-xl leading-relaxed border-l-4 border-[#D72638] pl-5 font-medium">
-                {candidato.hero_resumen}
-              </p>
-
-              <div className="flex gap-4">
-                  {redesValidas.map((item, index) => {
-                    let network = item.key.toLowerCase();
-                    const urlString = item.url.toLowerCase();
-
-                    // Si el key es un número (porque era un Array) o es "desconocida", adivinamos leyendo el enlace
-                    if (!isNaN(network) || network === 'desconocida') {
-                      if (urlString.includes('facebook') || urlString.includes('fb.')) network = 'facebook';
-                      else if (urlString.includes('instagram')) network = 'instagram';
-                      else if (urlString.includes('twitter') || urlString.includes('x.com')) network = 'twitter';
-                      else if (urlString.includes('youtube') || urlString.includes('youtu.be')) network = 'youtube';
-                      else if (urlString.includes('tiktok')) network = 'tiktok';
-                    }
-                    
-                    const IconComponent = SOCIAL_ICONS[network] || <Link size={24} />;
-    
-                    return (
-                      <a 
-                        key={index} 
-                        href={item.url} 
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="w-14 h-14 rounded-full border border-[#0D1B2A]/20 flex items-center justify-center hover:bg-[#D72638] hover:text-white transition-all duration-300"
-                      >
-                        {IconComponent}
-                      </a>
-                    );
-                  })}
-                </div>
-            </div>
-
-          </div>
-
-          {/* ── COLUMNA DERECHA ───────────────────────────────────────────── */}
-          <div className="order-3 md:order-2 flex flex-col items-center justify-end relative h-auto -mt-10 md: md:-mt-10">
-
-            <img
-              src={candidato.hero_image}
-              alt={`${candidato.nombre} ${candidato.apellidoHighlighted}`}
-              className="relative z-10 h-[65%] md:w-[64%] max-w-lg object-contain -mb-14 rounded-lg"
-            />
-
-            <div className="flex justify-center w-full max-w-sm relative z-20 ">
-
-              {/* ── Tarjeta: MARCA ──────────────────────────────────────── */}
-              <div
-                ref={marcaCardRef}
-                className="bg-[#f0f0f0] p-4 md:p-6 w-1/2 flex flex-col items-center rounded-l-lg"
-                style={{ opacity: 0 }}
+              {/* ── CONTENEDOR FLIP DE LA FOTO ── */}
+              <div 
+                ref={imageContainerRef}
+                className="relative z-10 w-full md:w-[64%] h-[40vh] md:h-[65vh] max-w-lg -mb-14 cursor-pointer group"
+                style={{ perspective: '1000px', opacity: 0 }} 
+                onClick={() => setIsFlipped(!isFlipped)}
               >
-                <div className="w-full h-full bg-[#F5C800] flex items-center justify-center p-2 mb-3 border border-black relative">
-                  <img src={candidato.partido_logo} alt="Marca el Sol" className="w-full h-full object-contain" />
-
-                  <svg
-                    viewBox="0 0 100 100"
+                <div 
+                  className="w-full h-full relative transition-transform duration-700 ease-in-out"
+                  style={{ 
+                    transformStyle: 'preserve-3d', 
+                    transform: isFlipped ? 'rotateY(180deg)' : 'rotateY(0deg)' 
+                  }}
+                >
+                  {/* Lado A: FRENTE */}
+                  <div 
                     className="absolute inset-0 w-full h-full"
-                    style={{ overflow: 'visible' }}
+                    style={{ backfaceVisibility: 'hidden', WebkitBackfaceVisibility: 'hidden' }}
                   >
-                    <path
-                      ref={xPath1Ref}
-                      d="M 15,15 L 85,85"
-                      fill="none"
-                      stroke="#0D1B2A"
-                      strokeWidth="5"
-                      strokeLinecap="round"
+                    <img
+                      src={candidato.hero_image}
+                      alt={`${candidato.nombre} ${candidato.apellidoHighlighted}`}
+                      className="w-full h-full object-contain rounded-lg"
                     />
-                    <path
-                      ref={xPath2Ref}
-                      d="M 85,15 L 15,85"
-                      fill="none"
-                      stroke="#0D1B2A"
-                      strokeWidth="5"
-                      strokeLinecap="round"
-                    />
-                  </svg>
-                </div>
-
-                <div className="bg-[#0D1B2A] text-white text-xs md:text-sm font-black tracking-widest uppercase py-1.5 px-6 w-full text-center">
-                  MARCA
-                </div>
-              </div>
-
-              {/* ── Tarjeta: ESCRIBE ─────────────────────────────────────── */}
-              <div
-                ref={escribeCardRef}
-                className="bg-[#f0f0f0] p-4 md:p-6 w-1/2 flex flex-col items-center  rounded-r-lg"
-                style={{ opacity: 0 }}
-              >
-                <div className="w-full h-full bg-[#F5C800] flex items-center justify-center p-2 mb-3 border border-black">
-                  
-                  <div className="relative overflow-hidden w-full flex items-center justify-center h-16 md:h-24">
-                     <span className="text-6xl md:text-7xl font-bold text-[#0D1B2A]">
-                        {candidato.numero_lista}
-                     </span>
-                     
-                     <div 
-                        ref={wipeMaskRef}
-                        className="absolute inset-0 bg-[#F5C800] w-full h-full transform-gpu"
-                        style={{ transformOrigin: 'right' }} 
-                     ></div>
                   </div>
 
-                </div>
-
-                <div className="bg-[#D72638] text-white w-full text-xs md:text-sm font-black tracking-widest uppercase py-1.5 px-6 text-center">
-                  ESCRIBE
+                  {/* Lado B: DORSO */}
+                  <div 
+                    className="absolute inset-0 w-full h-full bg-[#f0f0f0] rounded-lg shadow-2xl flex flex-col items-center justify-center p-8 border-4 border-[#f0f0f0]"
+                    style={{ 
+                      backfaceVisibility: 'hidden', 
+                      WebkitBackfaceVisibility: 'hidden',
+                      transform: 'rotateY(180deg)' 
+                    }}
+                  >
+                    <p className="text-[#0D1B2A] font-black text-xl md:text-2xl mb-6 text-center tracking-tight uppercase">
+                      ¡Escanea para sumarte!
+                    </p>
+                    
+                    <img 
+                      src={candidato.qr_image || candidato.partido_logo} 
+                      alt="Código QR" 
+                      className="w-full max-w-[200px] aspect-square object-contain" 
+                    />
+                    
+                    <p className="text-[#0D1B2A]/60 text-sm mt-6 font-bold uppercase tracking-wider">
+                      Toca para volver
+                    </p>
+                  </div>
                 </div>
               </div>
 
+              {/* Tarjetas de Votación */}
+              <div className="flex justify-center w-full max-w-sm relative z-20 ">
+
+                {/* ── Tarjeta: MARCA ──────────────────────────────────────── */}
+                <div
+                  ref={marcaCardRef}
+                  className="bg-[#f0f0f0] p-4 md:p-6 w-1/2 flex flex-col items-center rounded-l-lg"
+                  style={{ opacity: 0 }}
+                >
+                  <div className="w-full h-full bg-[#F5C800] flex items-center justify-center p-2 mb-3 border border-black relative">
+                    <img src={candidato.partido_logo} alt="Marca el Sol" className="w-full h-full object-contain" />
+
+                    <svg
+                      viewBox="0 0 100 100"
+                      className="absolute inset-0 w-full h-full"
+                      style={{ overflow: 'visible' }}
+                    >
+                      <path
+                        ref={xPath1Ref}
+                        d="M 15,15 L 85,85"
+                        fill="none"
+                        stroke="#0D1B2A"
+                        strokeWidth="5"
+                        strokeLinecap="round"
+                      />
+                      <path
+                        ref={xPath2Ref}
+                        d="M 85,15 L 15,85"
+                        fill="none"
+                        stroke="#0D1B2A"
+                        strokeWidth="5"
+                        strokeLinecap="round"
+                      />
+                    </svg>
+                  </div>
+
+                  <div className="bg-[#0D1B2A] text-white text-xs md:text-sm font-black tracking-widest uppercase py-1.5 px-6 w-full text-center">
+                    MARCA
+                  </div>
+                </div>
+
+                {/* ── Tarjeta: ESCRIBE ─────────────────────────────────────── */}
+                <div
+                  ref={escribeCardRef}
+                  className="bg-[#f0f0f0] p-4 md:p-6 w-1/2 flex flex-col items-center  rounded-r-lg"
+                  style={{ opacity: 0 }}
+                >
+                  <div className="w-full h-full bg-[#F5C800] flex items-center justify-center p-2 mb-3 border border-black">
+                    
+                    <div className="relative overflow-hidden w-full flex items-center justify-center h-16 md:h-24">
+                       {/* Se aplica la fuente Inter y un tamaño más grande al número */}
+                       <span className="text-7xl md:text-8xl font-number text-[#0D1B2A]">
+                          {candidato.numero_lista}
+                       </span>
+                       
+                       <div 
+                          ref={wipeMaskRef}
+                          className="absolute inset-0 bg-[#F5C800] w-[105%] h-full transform-gpu"
+                          style={{ transformOrigin: 'right', right: '-2%' }} 
+                       ></div>
+                    </div>
+
+                  </div>
+
+                  <div className="bg-[#D72638] text-white w-full text-xs md:text-sm font-black tracking-widest uppercase py-1.5 px-6 text-center">
+                    ESCRIBE
+                  </div>
+                </div>
+
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 }
