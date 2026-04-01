@@ -4,6 +4,8 @@ import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 // 1. Importamos SplitText (Asegúrate de tener instalado el paquete premium)
 import { SplitText } from 'gsap/SplitText'
+import TikTokEmbed from './VideoComponent'
+import CampaignVideoPlayer from './VideoComponent'
 
 // 2. Registramos ambos plugins
 gsap.registerPlugin(ScrollTrigger, SplitText)
@@ -178,7 +180,8 @@ export default function HeroSection() {
               className="relative z-10 w-[85%] sm:w-full max-w-[420px] sm:max-w-[500px] lg:max-w-[620px] mx-auto"
               style={{ opacity: 0 }}
             >
-              <img src="/JorgeNieto.png" alt="Jorge Nieto" className="w-full h-auto object-contain" />
+              {/* <img src="/JorgeNieto.png" alt="Jorge Nieto" className="w-full h-auto object-contain" /> */}
+            <CampaignVideoPlayer/>
             </div>
           </div>
 

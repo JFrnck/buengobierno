@@ -138,6 +138,7 @@
 
     "territorio": {
       "nombre": "Región de San Martín",
+      "mapa": "SAN MARTIN",
       "descripcion": "Ubicada en la Amazonía peruana, San Martín está conformada por 10 provincias y 78 distritos. Según las proyecciones oficiales del INEI, su población alcanzó 899,648 habitantes en 2020.",
       "estadisticas": [
         { "valor": "899,648", "etiqueta": "Habitantes" },
@@ -148,6 +149,7 @@
 
     "redes_sociales": {
       "facebook": "https://www.facebook.com/JehuDaniel/",
+      "instagram": "https://www.instagram.com/pezojehu?igsh=MXBuc2t4bGo3bWNrZA%3D%3D",
       "tiktok": "https://www.tiktok.com/@jehupezo?_r=1&_t=ZS-95A2UJkCJXg"
     },
 
@@ -155,6 +157,170 @@
       {
         "titulo": "Plan de Trabajo Detallado",
         "url": "/documentos/jehu-plan-trabajo.pdf",
+        "icon": "FileCheck",
+        "tipo": "pdf"
+      }
+    ],
+
+    "multimedia": {
+      "videos": [],
+      "galeria_fotos": []
+    }
+  },
+  {
+    "id": 2,
+    "slug": "juan-villarroel",
+    "nombre": "JUAN JOSÉ",
+    "apellidoHighlighted": "VILLARROEL CÁRDENAS",
+    "rol": "Candidato a la camara de Diputados",
+    "distrito": "Región Ayacucho",
+    "numero_lista": "1",
+    "slogan_principal": "Experiencia, gestión y compromiso para servir a Ayacucho.",
+    "lemas": ["Experiencia", "Gestión", "Compromiso"],
+
+    "hero_resumen": "Soy Juan José Villarroel Cárdenas, ingeniero de minas ayacuchano y candidato a diputado por Ayacucho. Mi trayectoria en gestión pública, saneamiento, fiscalización ambiental y trabajo de campo me ha preparado para representar con seriedad, experiencia y compromiso a nuestra región.",
+
+    "hero_image": "/juan-villarroel.png",
+    "partido_logo": "/logo-sol-pbg.png",
+    "qr_image": "/juan-jose-villarroel-qr.png",
+
+    "biografia": {
+      "titulo": "Conóceme",
+      "subtitulo": "De Ayacucho, con experiencia y compromiso para servir.",
+      "historia": [
+        "Soy Juan José Villarroel Cárdenas, ayacuchano de nacimiento y convicción. Nací en Huanta y resido en Huamanga, lo que me ha permitido conocer de cerca la realidad, las necesidades y el potencial de nuestra región.",
+        "Soy Ingeniero de Minas por la Universidad Nacional de San Cristóbal de Huamanga, con formación en gestión ambiental, gestión pública, saneamiento, inversiones, contrataciones del Estado y desarrollo social. Mi trayectoria combina preparación técnica, experiencia de campo y vocación de servicio.",
+        "He trabajado en entidades como el Gobierno Regional de Ayacucho, la Municipalidad Provincial de Huamanga, DIGESA-MINSA, UNICEF y proyectos de cooperación nacional e internacional. A lo largo de mi vida profesional he asumido responsabilidades en evaluación de proyectos, fiscalización ambiental, desarrollo social y agua y saneamiento.",
+        "Entre los resultados más importantes de mi trayectoria destaca la implementación de más de 5000 sistemas de agua y saneamiento en comunidades rurales de Ayacucho, Apurímac y Huancavelica, así como mi participación en la respuesta de emergencia tras el terremoto de 2007. Hoy quiero llevar esa experiencia al Congreso para trabajar por un Ayacucho con más oportunidades, mejor gestión y soluciones reales para la población."
+      ],
+      "hitos_academicos": [
+        {
+          "anio": "",
+          "titulo": "Ingeniero de Minas - Universidad Nacional de San Cristóbal de Huamanga"
+        }
+      ]
+    },
+
+    "linea_tiempo": [
+      {
+        "anio": "1984",
+        "titulo": "Dibujante técnico y asistente topográfico en Electro Perú"
+      },
+      {
+        "anio": "1990",
+        "titulo": "Dibujante y topógrafo en Proyecto Especial Sierra Centro Sur"
+      },
+      {
+        "anio": "2004",
+        "titulo": "Consultor en agua y saneamiento en Proyecto AMARES"
+      },
+      {
+        "anio": "2007",
+        "titulo": "Consultor en agua y saneamiento de emergencia para UNICEF en Ica"
+      },
+      {
+        "anio": "2009",
+        "titulo": "Consultor en agua y saneamiento en Proyecto Crecer Wari"
+      },
+      {
+        "anio": "2010",
+        "titulo": "Consultor en agua y saneamiento para UNICEF en Cusco"
+      },
+      {
+        "anio": "2011",
+        "titulo": "Gerente de Desarrollo Social de la Municipalidad Provincial de Huamanga"
+      },
+      {
+        "anio": "2012",
+        "titulo": "Consultor externo de DIGESA en evaluación técnica ambiental"
+      },
+      {
+        "anio": "2013",
+        "titulo": "Especialista de DIGESA en evaluación, supervisión y fiscalización"
+      },
+      {
+        "anio": "2019",
+        "titulo": "Consultor externo en formalización minera para GORE Ayacucho y CONAID"
+      },
+      {
+        "anio": "2021",
+        "titulo": "Evaluador de estudios y proyectista en GORE Ayacucho"
+      },
+      {
+        "anio": "2022",
+        "titulo": "Gerente General de CONAID S.A.C. en consultoría de ingeniería y desarrollo social"
+      }
+    ],
+
+    "propuestas": [
+      {
+        "icon": "Droplets",
+        "titulo": "1. Saneamiento y Salud Pública",
+        "que_proponemos": "Impulsar proyectos de agua y saneamiento con tecnologías apropiadas para comunidades rurales, articulando esfuerzos entre el Estado y los gobiernos locales para ampliar la cobertura y mejorar la salud pública.",
+        "como_mejorara": "Permitirá reducir brechas básicas, prevenir enfermedades y fortalecer la lucha contra la anemia y la desnutrición crónica infantil en las zonas más vulnerables."
+      },
+      {
+        "icon": "Leaf",
+        "titulo": "2. Fiscalización y Medio Ambiente",
+        "que_proponemos": "Fortalecer la evaluación, supervisión y fiscalización ambiental en actividades productivas, promoviendo el uso responsable de los recursos y el cumplimiento de los instrumentos de gestión ambiental.",
+        "como_mejorara": "Ayudará a proteger el agua, el suelo y la salud de la población, garantizando mayor control sobre actividades mineras, hidrocarburíferas e industriales."
+      },
+      {
+        "icon": "ShieldAlert",
+        "titulo": "3. Gestión de Riesgos y Emergencias",
+        "que_proponemos": "Desarrollar una respuesta rápida y técnica en agua y saneamiento para situaciones de emergencia y desastres, con protocolos claros y coordinación entre instituciones públicas y cooperación internacional.",
+        "como_mejorara": "Permitirá atender con rapidez a la población afectada en momentos críticos, reduciendo riesgos sanitarios y mejorando la capacidad de reacción del Estado."
+      },
+      {
+        "icon": "Building2",
+        "titulo": "4. Proyectos de Inversión Pública",
+        "que_proponemos": "Promover una mejor formulación y evaluación de estudios de inversión pública, priorizando proyectos viables, bien diseñados y alineados con las necesidades reales de Ayacucho.",
+        "como_mejorara": "Contribuirá a que las obras se ejecuten con mayor calidad, menos retrasos y mejor uso de los recursos públicos, beneficiando directamente a la población."
+      },
+      {
+        "icon": "HeartHandshake",
+        "titulo": "5. Desarrollo Humano y Social",
+        "que_proponemos": "Fortalecer políticas en salud, nutrición, educación, cultura y participación vecinal, con enfoque intercultural y atención prioritaria a poblaciones vulnerables.",
+        "como_mejorara": "Mejorará la calidad de vida de las familias ayacuchanas mediante una gestión más cercana, participativa y enfocada en el desarrollo integral de la persona."
+      },
+      {
+        "icon": "Map",
+        "titulo": "6. Infraestructura y Topografía",
+        "que_proponemos": "Impulsar infraestructura útil y planificada en salud, educación, conectividad y riego, basada en experiencia técnica de campo y conocimiento directo del territorio.",
+        "como_mejorara": "Permitirá ejecutar obras mejor ubicadas, más seguras y realmente necesarias para las comunidades altoandinas y rurales de la región."
+      }
+    ],
+
+    "territorio": {
+      "nombre": "Región de Ayacucho",
+      "mapa": "AYACUCHO",
+      "descripcion": "Cuna de la Libertad y rincón de retablos eternos. Ayacucho no solo es el latido histórico donde nació la independencia de América, sino el refugio donde las manos de sus artesanos transforman el barro y la piedra en poesía. Es la tierra de las 33 iglesias que guardan siglos de fe y de huaynos que cantan con el alma. Ser ayacuchano es llevar en la sangre el orgullo de un pueblo que es guardián de la memoria y esencia viva de la identidad peruana.",
+      "estadisticas": [
+        {
+          "valor": "612,489+",
+          "etiqueta": "Habitantes"
+        },
+        {
+          "valor": "11",
+          "etiqueta": "Provincias"
+        },
+        {
+          "valor": "124",
+          "etiqueta": "Distritos"
+        }
+      ]
+    },
+
+    "redes_sociales": {
+      "facebook": "https://www.facebook.com/share/1B2LaZ7zWL/?mibextid=wwXIfr",
+      "instagram": "https://www.instagram.com/juanjosevillarroelcardenas?igsh=MTdmanNqOXVyd2xlbA==",
+      "tiktok": "https://www.tiktok.com/@juan.jose.villarr11?_r=1&_t=ZS-95AB09tJxKO"
+    },
+
+    "enlaces_importantes": [
+      {
+        "titulo": "Plan de Trabajo Detallado",
+        "url": "/documentos/juan-jose-villarroel-plan-trabajo.pdf",
         "icon": "FileCheck",
         "tipo": "pdf"
       }

@@ -221,12 +221,17 @@ export default function HeroSection({ candidato }) {
                 </div>
               </div>
 
-              <div className="order-2 md:order-none" style={{ perspective: "1000px" }}>
-                <h1 ref={titleRef} className="text-5xl md:text-7xl lg:text-8xl font-black leading-[0.9] tracking-tight uppercase text-[#0D1B2A]">
-                  {candidato.nombre}
-                  <br />
-                  <span className="text-[#D72638]">{candidato.apellidoHighlighted}</span>
-                </h1>
+              <div className="order-2 md:order-none flex flex-col" style={{ perspective: "1000px" }}>
+                <div ref={titleRef} className="text-5xl md:text-7xl lg:text-[90px] font-black leading-[0.9] tracking-tight uppercase">
+                  {/* Contenedor del Nombre */}
+                  <div className="text-[#0D1B2A]">
+                    {candidato.nombre}
+                  </div>
+                  {/* Contenedor del Apellido */}
+                  <div className="text-[#D72638]">
+                    {candidato.apellidoHighlighted}
+                  </div>
+                </div>
               </div>
 
               <div className="order-4 md:order-none flex flex-col space-y-8 w-full">

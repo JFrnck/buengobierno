@@ -1,40 +1,65 @@
 import React, { useState, useEffect } from 'react';
 import { Map } from 'lucide-react';
-import { MapContainer, GeoJSON } from 'react-leaflet';
+import { MapContainer, GeoJSON, useMap } from 'react-leaflet';
+import L from 'leaflet'; // Importamos Leaflet para el cálculo automático de límites
 import 'leaflet/dist/leaflet.css';
 
+// ─── Sub-componente para centrar el mapa automáticamente ───────────
+function FitBounds({ data }) {
+  const map = useMap();
+  useEffect(() => {
+    if (data) {
+      // Calculamos los bordes exactos de la región geométrica
+      const bounds = L.geoJSON(data).getBounds();
+      // Le decimos al mapa que se adapte a esos bordes con un ligero margen (padding)
+      map.fitBounds(bounds, { padding: [20, 20] });
+    }
+  }, [data, map]);
+  return null;
+}
+
 export default function TerritorioSection({ territorio }) {
-  const [sanMartinGeoJSON, setSanMartinGeoJSON] = useState(null);
+  const [regionGeoJSON, setRegionGeoJSON] = useState(null);
   
   // Nuevo estado para saber si el cursor está sobre el mapa
   const [isHovered, setIsHovered] = useState(false);
 
   useEffect(() => {
-    const fetchSanMartin = async () => {
+    const fetchRegion = async () => {
+      // Si no hay mapa definido en el JSON, no hacemos la petición
+      if (!territorio?.mapa) return;
+
       try {
         const response = await fetch('https://raw.githubusercontent.com/juaneladio/peru-geojson/master/peru_departamental_simple.geojson');
         if (!response.ok) throw new Error("No se pudo cargar el GeoJSON");
         
         const data = await response.json();
 
-        const sanMartinFeature = data.features.find(
-          (feature) => feature.properties.NOMBDEP === 'SAN MARTIN'
+        // 1. Convertimos el valor del JSON a mayúsculas por seguridad
+        const regionSolicitada = territorio.mapa.toUpperCase();
+
+        // 2. Filtramos el GeoJSON buscando específicamente la región solicitada
+        const regionFeature = data.features.find(
+          (feature) => feature.properties.NOMBDEP === regionSolicitada
         );
 
-        if (sanMartinFeature) {
-          setSanMartinGeoJSON(sanMartinFeature);
+        if (regionFeature) {
+          setRegionGeoJSON(regionFeature);
+        } else {
+          console.warn(`No se encontró la región: ${regionSolicitada} en el GeoJSON.`);
         }
       } catch (error) {
-        console.error("Error al cargar la silueta de San Martín:", error);
+        console.error("Error al cargar la silueta de la región:", error);
       }
     };
 
-    fetchSanMartin();
-  }, []);
+    fetchRegion();
+  }, [territorio]); // Se vuelve a ejecutar si el candidato/territorio cambia
 
   if (!territorio) return null;
 
-  const sanMartinPosition = [-7.0, -76.5];
+  // Centro de Perú por defecto (solo como valor inicial rápido antes del auto-centrado)
+  const defaultCenter = [-9.19, -75.01];
 
   // 1. Estilo base (Blanco normal)
   const baseStyle = {
@@ -45,24 +70,24 @@ export default function TerritorioSection({ territorio }) {
     className: 'transition-all duration-300 cursor-pointer outline-none'
   };
 
-  // 2. Estilo al pasar el cursor (Rojo de la bandera / campaña. Si prefieres verde usa: '#008A3D')
+  // 2. Estilo al pasar el cursor
   const hoverStyle = {
     fillColor: '#D72638', 
     fillOpacity: 1,
     color: '#0D1B2A',
-    weight: 3, // Borde ligeramente más grueso al hacer hover
+    weight: 3, 
   };
 
   // 3. Función para inyectar los eventos de hover al GeoJSON
   const onEachFeature = (feature, layer) => {
     layer.on({
       mouseover: (e) => {
-        setIsHovered(true); // Activa el fondo del logo
-        e.target.setStyle(hoverStyle); // Cambia el color del mapa
+        setIsHovered(true); 
+        e.target.setStyle(hoverStyle); 
       },
       mouseout: (e) => {
-        setIsHovered(false); // Oculta el fondo del logo
-        e.target.setStyle(baseStyle); // Regresa al color original
+        setIsHovered(false); 
+        e.target.setStyle(baseStyle); 
       }
     });
   };
@@ -104,15 +129,17 @@ export default function TerritorioSection({ territorio }) {
               className="absolute inset-0 bg-no-repeat bg-center bg-contain transition-all duration-500 ease-in-out z-0"
               style={{ 
                 backgroundImage: `url('/logo-sol-pbg.png')`,
-                opacity: isHovered ? 0.6 : 0, // Se hace visible (20% opacidad) al hacer hover
-                transform: isHovered ? 'scale(1.05)' : 'scale(0.95)' // Pequeño efecto de zoom
+                opacity: isHovered ? 0.6 : 0, 
+                transform: isHovered ? 'scale(1.05)' : 'scale(0.95)' 
               }}
             />
 
-            {sanMartinGeoJSON ? (
+            {regionGeoJSON ? (
               <MapContainer 
-                center={sanMartinPosition} 
-                zoom={6.5} 
+                // Añadimos key dinámica para forzar a Leaflet a reiniciar si cambias de región
+                key={territorio.mapa} 
+                center={defaultCenter} 
+                zoom={5} 
                 zoomControl={false}
                 dragging={false}
                 attributionControl={false}
@@ -123,17 +150,20 @@ export default function TerritorioSection({ territorio }) {
                 keyboard={false}
                 className="w-full h-full outline-none relative z-10" 
                 style={{ background: 'transparent' }} 
-                >
+              >
+                {/* Esto se encarga de encuadrar perfectamente la región automáticamente */}
+                <FitBounds data={regionGeoJSON} />
+
                 <GeoJSON 
-                    data={sanMartinGeoJSON} 
+                    data={regionGeoJSON} 
                     style={baseStyle} 
-                    onEachFeature={onEachFeature} // <--- Inyectamos la interactividad aquí
+                    onEachFeature={onEachFeature} 
                 />
-            </MapContainer>
+              </MapContainer>
             ) : (
               <div className="animate-pulse flex flex-col items-center justify-center opacity-50 relative z-10">
                 <Map size={48} className="text-[#0D1B2A] mb-4" />
-                <p className="text-sm font-bold uppercase tracking-widest text-[#0D1B2A]">Cargando mapa...</p>
+                <p className="text-sm font-bold uppercase tracking-widest text-[#0D1B2A]">Cargando región...</p>
               </div>
             )}
 
