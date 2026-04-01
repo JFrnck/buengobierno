@@ -203,7 +203,7 @@ export default function HeroSection({ candidato }) {
         className="bg-[#F5C800] text-[#0D1B2A] min-h-[110vh] flex items-center pb-20 overflow-hidden relative"
       >
         <div className="container mx-auto px-4 z-10 pt-10 md:pt-0">
-          <div className="flex flex-col md:grid md:grid-cols-2 gap-8 md:gap-12 items-center max-w-7xl mx-auto">
+          <div className="flex flex-col md:grid md:grid-cols-2 gap-16 md:gap-12 items-center max-w-7xl mx-auto">
 
             {/* ── COLUMNA IZQUIERDA ─────────────────────────────────────────── */}
             <div className="contents md:flex md:flex-col md:order-1 space-y-0 md:space-y-8">
@@ -305,7 +305,7 @@ export default function HeroSection({ candidato }) {
                     }}
                   >
                     <p className="text-[#0D1B2A] font-black text-xl md:text-2xl mb-6 text-center tracking-tight uppercase">
-                      ¡Escanea para sumarte!
+                      ¡Comparte para lograr un Buen Gobierno!
                     </p>
                     
                     <img 
