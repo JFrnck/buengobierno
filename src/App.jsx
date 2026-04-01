@@ -25,6 +25,7 @@ const DiputadosLayout = () => {
     <>
       {/* No ponemos el Navbar aquí */}
       <Outlet /> {/* Aquí se renderizará DiputadosPage y DiputadoPage */}
+      <CoquitoChat /> {/* Puedes dejar el chat si quieres que siga apareciendo */}
     </>
   )
 }

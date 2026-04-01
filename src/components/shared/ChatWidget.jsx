@@ -98,7 +98,7 @@ export default function CoquitoChat() {
       
       {/* Tooltip flotante "¡Pregúntame!" */}
       <div 
-        className={`absolute bottom-[85px] right-[-5px] bg-white text-[#D72638] border-2 border-[#F5C800] px-4 py-2 rounded-full font-bold text-sm whitespace-nowrap shadow-md pointer-events-none animate-bounce transition-all duration-300 ${isOpen ? 'opacity-0 invisible' : 'opacity-100 visible'}`}
+        className={`absolute bottom-[85px] right-[-5px] bg-white/20 text-[#D72638] border-2 border-[#F5C800] px-4 py-2 rounded-full font-bold text-sm whitespace-nowrap shadow-md pointer-events-none animate-bounce transition-all duration-300 ${isOpen ? 'opacity-0 invisible' : 'opacity-100 visible'}`}
       >
         ¡Pregúntame!
         {/* Triangulito del globo de texto */}
