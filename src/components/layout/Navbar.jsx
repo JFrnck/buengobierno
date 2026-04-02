@@ -3,6 +3,7 @@ import { Link, useLocation } from 'react-router-dom'
 import { gsap } from 'gsap'
 import { useGSAP } from '@gsap/react'
 
+
 const WA_LINK = 'https://chat.whatsapp.com/tucodigo'
 
 export default function Navbar() {
@@ -71,6 +72,7 @@ export default function Navbar() {
       ref={navRef}
       className="fixed top-0 left-0 right-0 z-[100] px-6 md:px-12 flex items-center justify-center transition-all"
     >
+       
       <div className="max-w-7xl w-full flex items-center justify-between">
         {/* Logo Section */}
         <Link to="/" ref={logoRef} className="flex items-center gap-3 group relative z-10 shrink-0">
@@ -100,9 +102,16 @@ export default function Navbar() {
               WhatsApp
             </a>
           </div> */}
+
         </div>
 
         {/* Mobile Menu */}
+        <div className="nav-item flex justify-center items-center">
+            <a href="https://www.youtube.com/live/eVRKUjJwQ40?si=_gDFElLIVu5I9-Y9" className="bg-white text-[#d72539] py-2 px-4 rounded-3xl font-semibold inline-flex justify-center items-center gap-1 ">
+                <h2 className='animate-pulse'>DEBATE EN VIVO</h2>
+                <span className="text-[#d72539] text-3xl animate-pulse leading-none pb-1">•</span>
+            </a>
+        </div>
         <div ref={ctaRef} className="flex items-center gap-4">
           <MobileMenu location={location} />
         </div>
