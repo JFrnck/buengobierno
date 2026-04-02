@@ -309,7 +309,7 @@ export default function HeroSection({ candidato }) {
                       transform: 'rotateY(180deg)' 
                     }}
                   >
-                    <p className="text-[#0D1B2A] font-black text-lg md:text-2xl mb-6 text-center tracking-tight uppercase">
+                    <p className="text-[#0D1B2A] font-black text-lg md:text-2xl my-6 text-center tracking-tight uppercase">
                       ¡Comparte para lograr un Buen Gobierno!
                     </p>
                     
