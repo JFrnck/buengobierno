@@ -292,11 +292,7 @@
     
     "hero_resumen": "Soy cusqueña de nacimiento y arequipeña por elección, candidata a diputada por Arequipa con el N.° 4 del Partido del Buen Gobierno. Soy ingeniera comercial con especialidad en finanzas, y mi trayectoria en administración, ventas y gestión inmobiliaria me ha dado experiencia directa en el trabajo con personas, patrimonio y desarrollo familiar. Asumo esta candidatura con preparación técnica, experiencia laboral y compromiso con una representación cercana y responsable para Arequipa.",
     
-    "hero_image": {
-        "src": "/jakelin-carrion.png",
-        "width" : "525px",
-        "height" : "448px"
-    },
+    "hero_image": "/jakelin-carrion.png",
     "partido_logo": "/logo-sol-pbg.png",
     "qr_image": "/jakelin-carrion-qr.png",
     
