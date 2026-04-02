@@ -7,11 +7,13 @@ import CoquitoChat from './components/shared/ChatWidget'
 
 import DiputadosPage from './components/Diputados/DisputadosPage'
 import DiputadoPage from './components/Diputados/Diputado/DiputadoPage'
+import PromoBanner from './components/home/PromoBanner'
 
 // 1. Creamos un Layout para las páginas normales (CON Navbar)
 const MainLayout = () => {
   return (
     <>
+      <PromoBanner/>
       <Navbar />
       <Outlet /> {/* Aquí adentro se renderizará Home, Voluntarios, etc. */}
       <CoquitoChat />

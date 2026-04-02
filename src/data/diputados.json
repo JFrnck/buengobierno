@@ -177,13 +177,10 @@
     "numero_lista": "1",
     "slogan_principal": "Experiencia, gestión y compromiso para servir a Ayacucho.",
     "lemas": ["Experiencia", "Gestión", "Compromiso"],
-
     "hero_resumen": "Soy Juan José Villarroel Cárdenas, ingeniero de minas ayacuchano y candidato a diputado por Ayacucho. Mi trayectoria en gestión pública, saneamiento, fiscalización ambiental y trabajo de campo me ha preparado para representar con seriedad, experiencia y compromiso a nuestra región.",
-
     "hero_image": "/juan-villarroel.png",
     "partido_logo": "/logo-sol-pbg.png",
     "qr_image": "/juan-jose-villarroel-qr.png",
-
     "biografia": {
       "titulo": "Conóceme",
       "subtitulo": "De Ayacucho, con experiencia y compromiso para servir.",
@@ -195,63 +192,27 @@
       ],
       "hitos_academicos": [
         {
-          "anio": "",
-          "titulo": "Ingeniero de Minas - Universidad Nacional de San Cristóbal de Huamanga"
+          "anio": "2004",
+          "titulo": "Bachiller en Ciencias de la Ingeniería de Minas - Universidad Nacional de San Cristóbal de Huamanga"
+        },
+        {
+          "anio": "2006",
+          "titulo": "Título de Ingeniero de Minas - Universidad Nacional de San Cristóbal de Huamanga"
+        },
+        {
+          "anio": "2020",
+          "titulo": "Diplomado en Gestión Pública Moderna - Instituto Peruano de Asuntos Públicos, Política y Gobierno"
+        },
+        {
+          "anio": "2020",
+          "titulo": "Diplomado en Sistema Nacional de Programación Multianual y Gestión de Inversiones (Invierte.pe) - Instituto Peruano de Asuntos Públicos, Política y Gobierno"
+        },
+        {
+          "anio": "2019",
+          "titulo": "Diplomado en Contrataciones del Estado - Escuela Global de Educación Continua"
         }
       ]
     },
-
-    "linea_tiempo": [
-      {
-        "anio": "1984",
-        "titulo": "Dibujante técnico y asistente topográfico en Electro Perú"
-      },
-      {
-        "anio": "1990",
-        "titulo": "Dibujante y topógrafo en Proyecto Especial Sierra Centro Sur"
-      },
-      {
-        "anio": "2004",
-        "titulo": "Consultor en agua y saneamiento en Proyecto AMARES"
-      },
-      {
-        "anio": "2007",
-        "titulo": "Consultor en agua y saneamiento de emergencia para UNICEF en Ica"
-      },
-      {
-        "anio": "2009",
-        "titulo": "Consultor en agua y saneamiento en Proyecto Crecer Wari"
-      },
-      {
-        "anio": "2010",
-        "titulo": "Consultor en agua y saneamiento para UNICEF en Cusco"
-      },
-      {
-        "anio": "2011",
-        "titulo": "Gerente de Desarrollo Social de la Municipalidad Provincial de Huamanga"
-      },
-      {
-        "anio": "2012",
-        "titulo": "Consultor externo de DIGESA en evaluación técnica ambiental"
-      },
-      {
-        "anio": "2013",
-        "titulo": "Especialista de DIGESA en evaluación, supervisión y fiscalización"
-      },
-      {
-        "anio": "2019",
-        "titulo": "Consultor externo en formalización minera para GORE Ayacucho y CONAID"
-      },
-      {
-        "anio": "2021",
-        "titulo": "Evaluador de estudios y proyectista en GORE Ayacucho"
-      },
-      {
-        "anio": "2022",
-        "titulo": "Gerente General de CONAID S.A.C. en consultoría de ingeniería y desarrollo social"
-      }
-    ],
-
     "propuestas": [
       {
         "icon": "Droplets",
@@ -290,33 +251,21 @@
         "como_mejorara": "Permitirá ejecutar obras mejor ubicadas, más seguras y realmente necesarias para las comunidades altoandinas y rurales de la región."
       }
     ],
-
     "territorio": {
       "nombre": "Región de Ayacucho",
       "mapa": "AYACUCHO",
-      "descripcion": "Cuna de la Libertad y rincón de retablos eternos. Ayacucho no solo es el latido histórico donde nació la independencia de América, sino el refugio donde las manos de sus artesanos transforman el barro y la piedra en poesía. Es la tierra de las 33 iglesias que guardan siglos de fe y de huaynos que cantan con el alma. Ser ayacuchano es llevar en la sangre el orgullo de un pueblo que es guardián de la memoria y esencia viva de la identidad peruana.",
+      "descripcion": "Cuna de la Libertad y rincón de retablos eternos. Ayacucho no solo es el latido histórico donde nació la independencia de América, sino el refugio donde las hands de sus artesanos transforman el barro y la piedra en poesía. Es la tierra de las 33 iglesias que guardan siglos de fe y de huaynos que cantan con el alma. Ser ayacuchano es llevar en la sangre el orgullo de un pueblo que es guardián de la memoria y esencia viva de la identidad peruana.",
       "estadisticas": [
-        {
-          "valor": "612,489+",
-          "etiqueta": "Habitantes"
-        },
-        {
-          "valor": "11",
-          "etiqueta": "Provincias"
-        },
-        {
-          "valor": "124",
-          "etiqueta": "Distritos"
-        }
+        {"valor": "612,489+", "etiqueta": "Habitantes"},
+        {"valor": "11", "etiqueta": "Provincias"},
+        {"valor": "124", "etiqueta": "Distritos"}
       ]
     },
-
     "redes_sociales": {
       "facebook": "https://www.facebook.com/share/1B2LaZ7zWL/?mibextid=wwXIfr",
       "instagram": "https://www.instagram.com/juanjosevillarroelcardenas?igsh=MTdmanNqOXVyd2xlbA==",
       "tiktok": "https://www.tiktok.com/@juan.jose.villarr11?_r=1&_t=ZS-95AB09tJxKO"
     },
-
     "enlaces_importantes": [
       {
         "titulo": "Plan de Trabajo Detallado",
@@ -325,7 +274,6 @@
         "tipo": "pdf"
       }
     ],
-
     "multimedia": {
       "videos": [],
       "galeria_fotos": []
