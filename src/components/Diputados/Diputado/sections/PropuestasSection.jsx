@@ -28,7 +28,7 @@ export default function PropuestasSection({ propuestas }) {
                 
                 <div className="space-y-4 flex-grow">
                   <div className="bg-gray-50 p-4 rounded-xl border border-gray-100">
-                    <p className="text-sm font-bold text-[#D72638] uppercase tracking-wider mb-2">¿Qué proponemos?</p>
+                    <p className="text-sm font-bold text-[#D72638] uppercase tracking-wider mb-2">¿Qué propongo?</p>
                     <p className="text-gray-700 leading-relaxed">{p.que_proponemos}</p>
                   </div>
                   <div className="p-4 border-l-4 border-[#0D1B2A]">
