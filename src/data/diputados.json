@@ -372,5 +372,104 @@
       "videos": [],
       "galeria_fotos": []
     }
+  },
+  {
+  "id": 4,
+  "slug": "ayde-molina",
+  "nombre": "AYDE MARGARITA",
+  "apellidoHighlighted": "MOLINA VERGARA",
+  "rol": "Candidata a la camara de Diputados",
+  "distrito": "Región Áncash",
+  "numero_lista": "2",
+  "slogan_principal": "Por un Áncash desarrollado, con oportunidades para todos.",
+  "lemas": [],
+  "hero_resumen": "Soy Ayde Molina Vergara, hija de Raquia, orgullosa de mis raíces agricultoras. Sé lo que es luchar día a día por salir adelante, como madre, trabajadora y parte de mi comunidad. Hoy doy un paso al frente como candidata a diputada por Áncash para ser la voz de quienes han sido olvidados y trabajar por oportunidades reales para todos.",
+  "hero_image": "/ayde-molina.png",
+  "partido_logo": "/logo-sol-pbg.png",
+  "qr_image": "",
+  "biografia": {
+    "titulo": "Conóceme",
+    "galeria": [
+    ],
+    "subtitulo": "Hija de Raquia, comprometida con Áncash.",
+    "historia": [
+      "Soy Ayde Molina Vergara, hija del pueblo de Raquia, en el Valle Fortaleza, provincia de Bolognesi. Mi historia nace en una familia de agricultores, donde cada centavo se gana con esfuerzo, dignidad y trabajo constante. Esas raíces me enseñaron el valor de la perseverancia y el compromiso con mi gente.",
+      "Me casé joven y formé una familia. Ser madre me permitió conocer de cerca las dificultades reales que enfrentan miles de peruanos día a día. Impulsada por el amor a mis hijos, asumí distintos emprendimientos y trabajos, siempre con un objetivo claro: brindarles una mejor calidad de vida y salir adelante con honestidad.",
+      "En ese camino, construí lazos con mi comunidad. Conocí a hombres y mujeres valiosos que me enseñaron que cuando nos unimos, somos capaces de lograr grandes cambios. Participé activamente en iniciativas locales, incluyendo la capacitación de adultos sin escolaridad formal, una experiencia que reforzó mi vocación de servicio y mi compromiso con la educación.",
+      "Mi formación académica inició con el apoyo de mi esposo, estudiando Derecho. Aunque las dificultades económicas no me permitieron obtener el grado, continué preparándome y desarrollé estudios técnicos en confección de vestimenta, consolidando así una visión práctica del trabajo y el emprendimiento.",
+      "Hoy doy un paso al frente para servir no solo a mi entorno cercano, sino a toda mi región y mi país. Postulo como diputada con el Partido del Buen Gobierno, con el número 2, convencida de que es momento de representar a quienes han sido olvidados, especialmente a las comunidades más alejadas."
+    ],
+    "hitos_academicos": [
+      {
+        "anio": "2001",
+        "titulo": "Estudios de derecho"
+      },
+      {
+        "anio": "2023",
+        "titulo": "Técnico en industria del vestido"
+      }
+    ]
+  },
+  "propuestas": [
+    {
+      "icon": null,
+      "titulo": "1. Fiscalización real para una salud digna en Áncash",
+      "que_proponemos": "Ejercer una labor de fiscalización activa desde la cámara de diputados sobre la construcción y ejecución de hospitales y centros de salud en la región, promoviendo mecanismos de control, seguimiento de presupuestos y sanción a obras paralizadas o mal ejecutadas.",
+      "como_mejorara": "Fortalece el sistema de salud desde las regiones, garantizando que los recursos públicos lleguen a quienes más lo necesitan, mejorando la atención médica y recuperando la confianza en el Estado."
+    },
+    {
+      "icon": null,
+      "titulo": "2. Escuelas seguras para el futuro de Áncash",
+      "que_proponemos": "Impulsar leyes y acciones de fiscalización que aseguren que los colegios en Áncash cumplan con estándares de calidad, infraestructura segura y condiciones adecuadas para el aprendizaje.",
+      "como_mejorara": "Una educación en espacios dignos permite formar ciudadanos mejor preparados, reduciendo brechas educativas y promoviendo igualdad de oportunidades en todo el país."
+    },
+    {
+      "icon": null,
+      "titulo": "3. Más inversión para nuestras universidades públicas",
+      "que_proponemos": "Promover desde la cámara de diputados iniciativas legislativas que incrementen y garanticen el presupuesto para universidades públicas de la región, como la Universidad Nacional del Santa y la Universidad Nacional Santiago Antúnez de Mayolo, orientándolo a investigación, innovación y mejora de infraestructura.",
+      "como_mejorara": "Impulsa el desarrollo científico y tecnológico, fortalece la formación profesional y genera oportunidades reales para los jóvenes, contribuyendo al crecimiento del país."
+    },
+    {
+      "icon": null,
+      "titulo": "4. Defensa de la identidad cultural ancashina",
+      "que_proponemos": "Impulsar leyes e iniciativas que reconozcan, preserven y promuevan las costumbres, festividades y tradiciones de las comunidades de Áncash, integrándolas como parte del desarrollo regional.",
+      "como_mejorara": "Fortalece la identidad nacional, promueve el turismo y genera desarrollo económico sostenible basado en la riqueza cultural de nuestras regiones."
+    },
+    {
+      "icon": null,
+      "titulo": "5. Educación práctica para el desarrollo de nuestros pueblos",
+      "que_proponemos": "Impulsar iniciativas desde el Congreso que promuevan programas de capacitación descentralizados en comunidades y zonas rurales, dirigidos a ciudadanos con experiencia en sus propios rubros, como agricultura, ganadería, comercio y oficios locales. Estos programas incluirán formación en técnicas productivas, ventas, emprendimiento y administración del dinero, adaptados a la realidad de cada comunidad.",
+      "como_mejorara": "Fortalece las capacidades de la población, mejora la productividad y fomenta la independencia económica de las familias. Permite que más peruanos no solo generen ingresos, sino que los mantengan y hagan crecer, construyendo un desarrollo sostenible desde las propias comunidades."
+    }
+  ],
+  "territorio": {
+    "nombre": "Región de Áncash",
+    "mapa": "ANCASH",
+    "descripcion": "Donde los nevados tocan a Dios y el mar acaricia la historia. Desde el imponente Huascarán en la Cordillera Blanca hasta sus ricas costas, Áncash es el contraste perfecto de fiereza y belleza. Tierra de la milenaria cultura Chavín, cuna de nuestra identidad andina. Ser ancashino es tener la fuerza de las cumbres y la nobleza de un espíritu inquebrantable, motor agrícola, pesquero y turístico del país.",
+    "estadisticas": [
+      {
+        "valor": "1,190,000",
+        "etiqueta": "Habitantes"
+      },
+      {
+        "valor": "20",
+        "etiqueta": "Provincias"
+      },
+      {
+        "valor": "166",
+        "etiqueta": "Distritos"
+      }
+    ]
+  },
+  "redes_sociales": {
+    "facebook": "https://www.facebook.com/share/1BMqtsRgCw/",
+    "instagram": "",
+    "tiktok": "https://www.tiktok.com/@margaritaayde?_r=1&_t=ZS-95C4RL8ehT3"
+  },
+  "enlaces_importantes": [],
+  "multimedia": {
+    "videos": [],
+    "galeria_fotos": []
   }
+}
 ]

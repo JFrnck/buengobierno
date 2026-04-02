@@ -326,7 +326,7 @@ const EjeSection = ({ data }) => {
 
   }, { scope: sectionRef });
 
-  const bgClass = isDark ? 'bg-[#1A1A1A] text-white' : 'bg-white text-[#1A1A1A]';
+  const bgClass = isDark ? 'bg-[#D72638] text-white' : 'bg-white text-[#1A1A1A]';
   const accentClass = isDark ? 'text-[#F5C800]' : 'text-[#D72638]';
   const accentBg = isDark ? 'bg-[#F5C800]' : 'bg-[#D72638]';
   const cardBg = isDark ? 'bg-white/5 border-white/10' : 'bg-black/5 border-black/10';
@@ -472,7 +472,7 @@ const CompromisosMeta = () => {
   }, { scope: sectionRef });
 
   return (
-    <section ref={sectionRef} className="py-16 sm:py-24 bg-[#D72638] text-white px-4 sm:px-6 md:px-12 lg:px-20 relative overflow-hidden">
+    <section ref={sectionRef} className="py-16 sm:py-24 bg-white text-[#1a1a1a] px-4 sm:px-6 md:px-12 lg:px-20 relative overflow-hidden">
       <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-10 sm:gap-16 items-center">
         
         {/* Compromisos */}
@@ -489,7 +489,7 @@ const CompromisosMeta = () => {
               "Participación ciudadana activa en el control y evaluación de políticas públicas.",
               "Enfoques transversales: género, interculturalidad, sostenibilidad climática y digitalización estatal."
             ].map((text, i) => (
-              <div key={i} className="comp-card bg-white/10 backdrop-blur-md p-4 sm:p-5 rounded-2xl flex items-start gap-3 sm:gap-4 hover:bg-white/20 transition-colors">
+              <div key={i} className="comp-card bg-[#1a1a1a]/10 backdrop-blur-md p-4 sm:p-5 rounded-2xl flex items-start gap-3 sm:gap-4 hover:bg-white/20 transition-colors">
                 <Target className="text-[#F5C800] shrink-0 mt-0.5 sm:mt-1" size={18} />
                 <p className="font-medium text-sm sm:text-lg leading-snug break-words">{text}</p>
               </div>
