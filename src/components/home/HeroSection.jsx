@@ -90,7 +90,7 @@ export default function HeroSection() {
     <section
         ref={sectionRef}
         // Cambiado a min-h-[100dvh] para mejor comportamiento en navegadores móviles
-        className="relative min-h-[100dvh] lg:h-screen py-20 lg:py-0 bg-[#F5C800] flex items-center overflow-hidden"
+        className="relative min-h-[100dvh] lg:h-screen py-0 lg:py-0 bg-[#F5C800] flex items-center overflow-hidden"
       >
 
         {/* Background geometric elements */}
