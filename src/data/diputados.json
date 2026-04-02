@@ -278,5 +278,103 @@
       "videos": [],
       "galeria_fotos": []
     }
+  },
+  {
+    "id": 3,
+    "slug": "jakelin-carrion",
+    "nombre": "JAKELIN MILAGROS",
+    "apellidoHighlighted": "CARRION LIMA",
+    "rol": "Candidata a la camara de Diputados",
+    "distrito": "Región Arequipa",
+    "numero_lista": "4",
+    "slogan_principal": "Preparación técnica, cercanía con la gente y compromiso con Arequipa.",
+    "lemas": ["Preparación", "Gestión", "Cercanía"],
+    
+    "hero_resumen": "Soy cusqueña de nacimiento y arequipeña por elección, candidata a diputada por Arequipa con el N.° 4 del Partido del Buen Gobierno. Soy ingeniera comercial con especialidad en finanzas, y mi trayectoria en administración, ventas y gestión inmobiliaria me ha dado experiencia directa en el trabajo con personas, patrimonio y desarrollo familiar. Asumo esta candidatura con preparación técnica, experiencia laboral y compromiso con una representación cercana y responsable para Arequipa.",
+    
+    "hero_image": {
+        "src": "/jakelin-carrion.png",
+        "width" : "525px",
+        "height" : "448px"
+    },
+    "partido_logo": "/logo-sol-pbg.png",
+    "qr_image": "/jakelin-carrion-qr.png",
+    
+    "biografia": {
+      "titulo": "Conóceme",
+      "subtitulo": "De Cusco a Arequipa, con experiencia en gestión y cercanía con la gente.",
+      "historia": [
+        "Soy Jakelin Milagros Carrión Lima. Nací en Cusco y resido en Miraflores, Arequipa, una ciudad desde la que he construido mi trayectoria personal y profesional. Esa experiencia me ha permitido conocer de cerca el esfuerzo de las familias, el valor del trabajo y la importancia de generar oportunidades reales.",
+        "Soy bachiller en Ingeniería Comercial por la Universidad Católica de Santa María y cuento con formación profesional en esa misma especialidad, con mención en finanzas. Mi preparación académica me ha dado herramientas para entender la gestión, la planificación y la toma de decisiones con responsabilidad.",
+        "Mi trayectoria laboral combina experiencia en administración, ventas y gestión inmobiliaria. He trabajado como administradora, en el área de ventas y también como agente inmobiliaria independiente registrada ante el Ministerio de Vivienda, desarrollando una labor vinculada al patrimonio, la inversión y la atención directa a las personas.",
+        "A lo largo de estos años he fortalecido una experiencia práctica centrada en la organización, la responsabilidad y el contacto permanente con las necesidades de la población. Hoy quiero llevar esa experiencia al Congreso para representar a Arequipa con seriedad, orden y compromiso con su desarrollo."
+      ],
+      "hitos_academicos": [
+        {
+          "anio": "2008",
+          "titulo": "Bachiller en Ingeniería Comercial"
+        },
+        {
+          "anio": "2018",
+          "titulo": "Ingeniera Comercial, especialidad en Finanzas"
+        }
+      ]
+    },
+    
+    "propuestas": [
+      {
+        "icon": "HardHat",
+        "titulo": "1. Fiscalización de Obras y Control Eficiente del Gasto Público",
+        "que_proponemos": "Impulsaré la Ley de Transparencia y Control Eficiente del Gasto Público para crear una nueva institución superior al actual esquema de control, con fiscalización concurrente obligatoria en proyectos de inversión pública, fortalecimiento de la Contraloría y sistemas digitales de transparencia en tiempo real.",
+        "como_mejorara": "Permitirá reducir la corrupción, los sobrecostos y la paralización de obras, asegurando que los recursos públicos sí se conviertan en empleo, infraestructura y desarrollo para Arequipa."
+      },
+      {
+        "icon": "Scale",
+        "titulo": "2. Lealtad Patriota y Representación sin Intereses Particulares",
+        "que_proponemos": "Me comprometo a mantener lealtad con los ciudadanos y no con intereses particulares ni consignas ilegítimas de cúpulas partidarias que pretendan someter a los representantes elegidos.",
+        "como_mejorara": "Garantizará una representación responsable, basada en principios democráticos, estado de derecho, justicia, libertad y decisiones que respondan al bienestar de la población."
+      },
+      {
+        "icon": "Lightbulb",
+        "titulo": "3. Promoción de Energías Renovables",
+        "que_proponemos": "Impulsaré la Ley de Promoción de las Energías Renovables para fomentar el desarrollo, la inversión y el uso eficiente de energía solar, eólica y otras fuentes limpias, con beneficios tributarios para los proyectos vinculados a esta transición.",
+        "como_mejorara": "Ayudará a reducir la dependencia energética tradicional, estabilizar precios, aliviar el gasto de las familias y fortalecer la sostenibilidad ambiental del país."
+      },
+      {
+        "icon": "School",
+        "titulo": "4. Garantía de Calidad en la Educación Superior",
+        "que_proponemos": "Promoveré la Ley de Garantía de la Calidad en la Educación Superior para devolver atribuciones, bases y autonomía técnica a la SUNEDU, eliminando conflictos de interés en su supervisión.",
+        "como_mejorara": "Fortalecerá la calidad educativa, recuperará la meritocracia en la regulación universitaria y dará mayores garantías a los estudiantes y sus familias."
+      }
+    ],
+
+    "territorio": {
+      "nombre": "Región de Arequipa",
+      "mapa": "AREQUIPA",
+      "descripcion": "La Ciudad Blanca que ruge al pie de los volcanes. Custodiada por el Misti, Arequipa está tallada en sillar y esculpida con un carácter orgulloso, rebelde y profundamente patriota. Es la cuna de revoluciones, juristas y poetas. Con el cañón más profundo y una gastronomía de fuego, Arequipa es un pilar económico e intelectual; el León del Sur que siempre defiende al Perú.",
+      "estadisticas": [
+        { "valor": "1,550,000", "etiqueta": "Habitantes" },
+        { "valor": "8", "etiqueta": "Provincias" },
+        { "valor": "109", "etiqueta": "Distritos" }
+      ]
+    },
+
+    "redes_sociales": {
+      "tiktok": "https://www.tiktok.com/@jakelin.carrion?_r=1&_t=ZS-95AGMOT99OO"
+    },
+
+    "enlaces_importantes": [
+      {
+        "titulo": "Propuestas Legislativas Arequipa",
+        "url": "/documentos/jakelin-propuestas-arequipa.pdf",
+        "icon": "FileCheck",
+        "tipo": "pdf"
+      }
+    ],
+
+    "multimedia": {
+      "videos": [],
+      "galeria_fotos": []
+    }
   }
 ]

@@ -290,12 +290,14 @@ export default function HeroSection({ candidato }) {
                 >
                   {/* Lado A: FRENTE */}
                   <div 
-                    className="absolute inset-0 w-full h-full"
+                    className="inset-0 w-full h-full"
                     style={{ backfaceVisibility: 'hidden', WebkitBackfaceVisibility: 'hidden' }}
                   >
                     <img
-                      src={candidato.hero_image}
+                      src={candidato.hero_image.src}
                       alt={`${candidato.nombre} ${candidato.apellidoHighlighted}`}
+                      width={candidato.hero_image.width} 
+                      height={candidato.hero_image.height}
                       className="w-full h-full object-contain rounded-lg"
                     />
                   </div>

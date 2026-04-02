@@ -106,12 +106,6 @@ export default function Navbar() {
         </div>
 
         {/* Mobile Menu */}
-        <div className="nav-item flex justify-center items-center">
-            <a href="https://www.youtube.com/live/eVRKUjJwQ40?si=_gDFElLIVu5I9-Y9" className="bg-white text-[#d72539] py-2 px-4 rounded-3xl font-semibold inline-flex justify-center items-center gap-1 ">
-                <h2 className='animate-pulse'>DEBATE EN VIVO</h2>
-                <span className="text-[#d72539] text-3xl animate-pulse leading-none pb-1">•</span>
-            </a>
-        </div>
         <div ref={ctaRef} className="flex items-center gap-4">
           <MobileMenu location={location} />
         </div>

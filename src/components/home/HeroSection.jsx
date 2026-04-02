@@ -101,7 +101,7 @@ export default function HeroSection() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             
             {/* Text content */}
-            <div className="flex flex-col justify-center z-10 pt-12 lg:pt-0">
+            <div className="flex flex-col justify-center z-10 pt-20 lg:pt-20">
               <div ref={tagRef} className="inline-flex items-center gap-2 my-4 md:my-6" style={{ opacity: 0 }}>
                 <span className="w-6 md:w-8 h-0.5 bg-[#D72638]" />
                 <span className="text-[#D72638] font-bold text-[10px] md:text-xs tracking-[0.2em] uppercase">

@@ -10,79 +10,79 @@ gsap.registerPlugin(ScrollTrigger, SplitText)
 const PANELS = [
   {
     num: '01',
-    title: 'Economía para el Bienestar',
-    subtitle: 'Productividad con inclusión',
-    body: 'Promovemos una economía moderna, diversificada y sostenible que genere empleo, fortalezca a las MYPE, impulse el agro y convierta la innovación en motor del desarrollo nacional.',
+    title: 'Diversidad y Territorio',
+    subtitle: 'Integración territorial sostenible',
+    body: 'Reconocemos la diversidad cultural, lingüística y ecológica del país. Impulsamos un desarrollo equilibrado entre costa, sierra y selva, con enfoque territorial, integración ferroviaria y descentralización efectiva.',
     items: [
-      'Diversificación productiva',
-      'Innovación y tecnología',
-      'Formalización con incentivos',
-      'Impulso al agro y las MYPE'
+      'Desarrollo equilibrado costa–sierra–selva',
+      'Integración ferroviaria nacional',
+      'Ordenamiento territorial efectivo',
+      'Descentralización real y participativa'
     ],
     accent: '#D72638',
   },
   {
     num: '02',
-    title: 'Seguridad y Justicia Firme',
-    subtitle: 'Orden con autoridad democrática',
-    body: 'Recuperaremos la paz social con una política firme frente al crimen, una justicia más ágil e independiente y una estrategia de prevención que proteja especialmente a nuestros jóvenes.',
+    title: 'Estado y Gobernabilidad',
+    subtitle: 'Reforma integral del Estado',
+    body: 'Reformaremos el Estado con meritocracia, transparencia y eficiencia. Fortaleceremos los entes reguladores, lucharemos de frente contra la corrupción y el centralismo, y promoveremos la participación ciudadana activa.',
     items: [
-      'Recuperación del control territorial',
-      'Justicia independiente y eficaz',
-      'Lucha contra mafias y economías criminales',
-      'Prevención del delito juvenil'
+      'Meritocracia y reforma del servicio civil',
+      'Lucha frontal contra la corrupción',
+      'Fortalecimiento de entes reguladores',
+      'Reforma del sistema de partidos políticos'
     ],
     accent: '#1A1A1A',
   },
   {
     num: '03',
-    title: 'Estado Íntegro y Cercano',
-    subtitle: 'Gestión pública al servicio de la gente',
-    body: 'Queremos un Estado honesto, eficiente y descentralizado, capaz de rendir cuentas, usar bien los recursos públicos y responder con resultados concretos en cada región del país.',
+    title: 'Economía para el Bienestar',
+    subtitle: 'Del extractivismo a la diversificación',
+    body: 'Transitaremos de un modelo extractivo a una economía diversificada e inclusiva. Apostamos por la industrialización sostenible, la ciencia, tecnología e innovación, y la formalización laboral con metas concretas al 2031.',
     items: [
-      'Meritocracia en el servicio público',
-      'Presupuesto con trazabilidad total',
-      'Auditoría y control digital',
-      'Descentralización efectiva'
+      'Industrialización sostenible y CTI',
+      'Fondo Soberano de Riqueza',
+      'Formalización laboral: informalidad ≤ 50%',
+      'Crecimiento del PBI ≥ 5% anual'
     ],
     accent: '#D72638',
   },
   {
     num: '04',
-    title: 'Desarrollo Humano Integral',
-    subtitle: 'Oportunidades para todos',
-    body: 'Nuestro gobierno pondrá a las personas en el centro: educación de calidad, salud preventiva, protección social y defensa efectiva de los derechos de quienes más lo necesitan.',
+    title: 'Transición Energética y Medioambiente',
+    subtitle: 'Independencia energética verde',
+    body: 'Alcanzaremos la independencia energética mediante fuentes renovables: solar, eólica e hidrógeno verde. Eliminaremos progresivamente subsidios fósiles, recuperaremos ecosistemas y pondremos la educación ambiental en el centro.',
     items: [
-      'Educación para el siglo XXI',
-      'Salud universal y preventiva',
-      'Protección de mujeres y juventudes',
-      'Inclusión de poblaciones vulnerables'
+      'Energía solar, eólica e hidrógeno verde',
+      'Impuestos verdes y econegocios',
+      'Recuperación de ecosistemas degradados',
+      'Lucha contra la deforestación y contaminación'
     ],
     accent: '#1A1A1A',
   },
   {
     num: '05',
-    title: 'Sostenibilidad y Futuro Verde',
-    subtitle: 'Crecimiento con responsabilidad',
-    body: 'Impulsamos un desarrollo que cuide nuestros recursos, promueva energías limpias, proteja la biodiversidad y prepare al país para enfrentar el cambio climático con resiliencia.',
+    title: 'Educación y Salud de Calidad',
+    subtitle: 'Derechos universales garantizados',
+    body: 'Garantizaremos educación inclusiva, equitativa y científica centrada en el pensamiento crítico y la interculturalidad, junto a una salud universal con enfoque intercultural, digitalización del sistema sanitario y metas medibles al 2031.',
     items: [
-      'Transición energética',
-      'Defensa del patrimonio natural',
-      'Bioeconomía amazónica',
-      'Adaptación climática'
+      'Fortalecimiento de la carrera docente',
+      'Universalización de la educación superior',
+      'Anemia infantil < 10% al 2031',
+      'Cobertura de salud efectiva: 100%'
     ],
     accent: '#D72638',
   },
   {
     num: '06',
-    title: 'Integración y Conectividad',
-    subtitle: 'Un país que avanza unido',
-    body: 'Integraremos el territorio con infraestructura, conectividad digital y planificación urbana sostenible para reducir brechas, dinamizar la economía y acercar oportunidades a todos.',
+    title: 'Amazonía, Sierra y Mar',
+    subtitle: 'Motores estratégicos del desarrollo',
+    body: 'Protegeremos la Amazonía y aprovecharemos sosteniblemente su biodiversidad. Impulsaremos una política de tierras que respete los derechos indígenas, y garantizaremos la pesca sostenible y la soberanía alimentaria sobre el mar peruano.',
     items: [
-      'Infraestructura estratégica',
-      'Transporte multimodal',
-      'Cierre de brecha digital',
-      'Ciudades seguras y resilientes'
+      'Protección y bioeconomía amazónica',
+      'Derechos indígenas y política de tierras',
+      'Pesca sostenible y soberanía marina',
+      'Seguridad alimentaria territorial'
     ],
     accent: '#1A1A1A',
   },
@@ -137,7 +137,6 @@ export default function PlanSection() {
 
       return () => {
         splitTitle?.revert()
-        // Limpiar animaciones de GSAP para que no interfieran con el scroll de CSS
         gsap.set(trackRef.current, { clearProps: 'transform' })
         const panels = trackRef.current?.querySelectorAll('.plan-panel')
         if (panels) gsap.set(panels, { clearProps: 'transform,opacity,visibility' })
@@ -185,8 +184,7 @@ export default function PlanSection() {
         force3D: true,
         scrollTrigger: {
           trigger: sectionRef.current,
-          // CAMBIO AQUÍ: Inicia cuando el centro de la sección llega al centro de la pantalla
-          start: 'center center', 
+          start: 'center center',
           pin: true,
           scrub: 1,
           end: () => `+=${getScrollAmount()}`,
@@ -242,7 +240,7 @@ export default function PlanSection() {
         <div className="flex flex-col md:flex-row md:items-end gap-2 md:justify-between">
           <h2
             ref={titleRef}
-            className="font-black text-[#D72638] leading-tight w-full md:w-[50%]"
+            className="font-black text-[#D72638] leading-tight w-full md:w-[55%]"
             style={{
               fontSize: 'clamp(2.2rem, 4.5vw, 3.5rem)',
               letterSpacing: '0.030em',
@@ -252,6 +250,9 @@ export default function PlanSection() {
           >
             6 EJES QUE DEFINEN UN BUEN GOBIERNO
           </h2>
+          <p className="text-[#1A1A1A]/60 font-medium text-sm md:text-base max-w-xs leading-snug">
+            Perú justo, competitivo, verde e inclusivo al 2031
+          </p>
         </div>
       </div>
 
@@ -266,7 +267,7 @@ export default function PlanSection() {
           {PANELS.map((p, i) => (
             <PlanPanel key={i} panel={p} index={i} />
           ))}
-          
+
           <div className="w-[85vw] md:w-[calc(100vw-10rem)] flex-shrink-0 flex items-center justify-center snap-center md:snap-align-none">
             <div className="text-center">
               <div className="text-[#1A1A1A]/30 font-black text-7xl md:text-8xl tracking-tighter mb-4 leading-none">FIN</div>
@@ -281,7 +282,7 @@ export default function PlanSection() {
           </div>
         </div>
       </div>
-      
+
       <style>{`
         .hide-scrollbar::-webkit-scrollbar {
           display: none;
@@ -304,7 +305,7 @@ function PlanPanel({ panel, index }) {
       style={{
         background: isLight ? '#D72638' : 'white',
         boxShadow: '0 8px 40px rgba(0,0,0,0.12)',
-        willChange: 'transform, opacity', 
+        willChange: 'transform, opacity',
       }}
     >
       <div className="panel-content flex-grow flex flex-col p-6 md:p-10">
