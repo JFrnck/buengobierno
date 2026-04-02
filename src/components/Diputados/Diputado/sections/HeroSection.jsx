@@ -55,6 +55,7 @@ export default function HeroSection({ candidato }) {
   const xPath1Ref      = useRef(null);
   const xPath2Ref      = useRef(null);
   const wipeMaskRef    = useRef(null);
+  const numeroRef      = useRef(null); // <-- Referencia agregada aquí
 
   // Estado para la foto volteada
   const [isFlipped, setIsFlipped] = useState(false);
@@ -106,52 +107,59 @@ export default function HeroSection({ candidato }) {
         "-=0.8" // Inician casi junto con los botones sociales para mayor fluidez
       );
 
-      // ─── LÍNEA DE TIEMPO CICLO TARJETAS (Marcar y Escribir Mejorado) ───
-      if (xPath1Ref.current && xPath2Ref.current && wipeMaskRef.current) {
+      // ─── LÍNEA DE TIEMPO CICLO TARJETAS (Sincronización Perfecta) ───
+      if (xPath1Ref.current && xPath2Ref.current && wipeMaskRef.current && numeroRef.current) {
         const BUFFER = 30; 
         const xLengths = [
           xPath1Ref.current.getTotalLength() + BUFFER,
           xPath2Ref.current.getTotalLength() + BUFFER
         ];
 
-        // Se retrasa el inicio la PRIMERA VEZ para asegurar que la animación de entrada terminó
         const masterTl = gsap.timeline({ repeat: -1, delay: 2.0 });
 
-        masterTl.set([xPath1Ref.current, xPath2Ref.current], { opacity: 0 });
+        // 1. ESTADO INICIAL: Todo oculto y la máscara tapando el número
+        masterTl.set([xPath1Ref.current, xPath2Ref.current, numeroRef.current], { opacity: 0 });
         masterTl.set(wipeMaskRef.current, { xPercent: 0 }); 
 
         masterTl.set(xPath1Ref.current, { strokeDasharray: xLengths[0], strokeDashoffset: xLengths[0] });
         masterTl.set(xPath2Ref.current, { strokeDasharray: xLengths[1], strokeDashoffset: xLengths[1] });
 
-        // Tarda solo 0.5s en iniciar el nuevo ciclo (antes 1.5s)
+        // 2. SINCRONIZACIÓN EN EL SEGUNDO 0.5
+        
+        // Hacemos visible el número (aunque la máscara lo sigue tapando)
+        masterTl.to(numeroRef.current, { opacity: 1, duration: 0.01 }, 0.5);
+        
+        // Inicia a dibujarse la primera línea de la X
         masterTl.to(xPath1Ref.current, { opacity: 1, duration: 0.01 }, 0.5);
         masterTl.to(xPath1Ref.current, { strokeDashoffset: 0, duration: 0.8, ease: 'power2.inOut' }, 0.5);
 
-        // La segunda línea de la X (ajustado para ser más rápido)
+        // ¡CLAVE! Inicia la máscara a destapar el número al mismo tiempo (0.5)
+        // Le damos duración de 1.6s para que termine exacto cuando termina la segunda línea de la X
+        masterTl.to(wipeMaskRef.current, { 
+          xPercent: 100, 
+          duration: 1.6, 
+          ease: 'power2.inOut' 
+        }, 0.5);
+
+        // La segunda línea de la X sigue normal en el segundo 1.3
         masterTl.to(xPath2Ref.current, { opacity: 1, duration: 0.01 }, 1.3);
         masterTl.to(xPath2Ref.current, { strokeDashoffset: 0, duration: 0.8, ease: 'power2.inOut' }, 1.3);
 
-        // BARRIDO (ajustado para que fluya justo después de la X)
-        masterTl.to(wipeMaskRef.current, { 
-          xPercent: 100, 
-          duration: 2.0, 
-          ease: 'power1.inOut' 
-        }, 2.1);
-
-        // Permanece a la vista y luego se oculta 
-        masterTl.to([xPath1Ref.current, xPath2Ref.current], {
+        // 3. SE VAN JUNTOS EN EL SEGUNDO 7.0
+        masterTl.to([xPath1Ref.current, xPath2Ref.current, numeroRef.current], {
           opacity: 0,
           duration: 0.8, 
           ease: 'power1.inOut'
         }, 7.0);
         
+        // La máscara regresa a cubrir el espacio para el siguiente ciclo
         masterTl.to(wipeMaskRef.current, {
            xPercent: 0,
            duration: 0.8,
            ease: 'power1.inOut'
         }, 7.0);
 
-        // Rebobinar en secreto apenas termine de ocultarse (para que esté listo para el siguiente ciclo de inmediato)
+        // Rebobinar en secreto
         masterTl.set([xPath1Ref.current, xPath2Ref.current], {
           strokeDashoffset: (i) => xLengths[i]
         }, 7.9);
@@ -373,8 +381,8 @@ export default function HeroSection({ candidato }) {
                   <div className="w-full h-full bg-[#F5C800] flex items-center justify-center p-2 mb-3 border border-black">
                     
                     <div className="relative overflow-hidden w-full flex items-center justify-center h-16 md:h-24">
-                       {/* Se aplica la fuente Inter y un tamaño más grande al número */}
-                       <span className="text-7xl md:text-8xl font-number text-[#0D1B2A]">
+                       {/* Aquí agregamos el ref={numeroRef} */}
+                       <span ref={numeroRef} className="text-7xl md:text-8xl font-number text-[#0D1B2A]">
                           {candidato.numero_lista}
                        </span>
                        
