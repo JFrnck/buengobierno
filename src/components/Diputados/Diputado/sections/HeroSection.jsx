@@ -114,7 +114,7 @@ export default function HeroSection({ candidato }) {
           xPath2Ref.current.getTotalLength() + BUFFER
         ];
 
-        // Se retrasa el inicio para asegurar que la animación de entrada terminó
+        // Se retrasa el inicio la PRIMERA VEZ para asegurar que la animación de entrada terminó
         const masterTl = gsap.timeline({ repeat: -1, delay: 2.0 });
 
         masterTl.set([xPath1Ref.current, xPath2Ref.current], { opacity: 0 });
@@ -123,41 +123,38 @@ export default function HeroSection({ candidato }) {
         masterTl.set(xPath1Ref.current, { strokeDasharray: xLengths[0], strokeDashoffset: xLengths[0] });
         masterTl.set(xPath2Ref.current, { strokeDasharray: xLengths[1], strokeDashoffset: xLengths[1] });
 
-        // Tarda 1.5s antes de hacer la primera línea de la X
-        masterTl.to(xPath1Ref.current, { opacity: 1, duration: 0.01 }, 1.5);
-        masterTl.to(xPath1Ref.current, { strokeDashoffset: 0, duration: 0.8, ease: 'power2.inOut' }, 1.5);
+        // Tarda solo 0.5s en iniciar el nuevo ciclo (antes 1.5s)
+        masterTl.to(xPath1Ref.current, { opacity: 1, duration: 0.01 }, 0.5);
+        masterTl.to(xPath1Ref.current, { strokeDashoffset: 0, duration: 0.8, ease: 'power2.inOut' }, 0.5);
 
-        // La segunda línea de la X
-        masterTl.to(xPath2Ref.current, { opacity: 1, duration: 0.01 }, 2.3);
-        masterTl.to(xPath2Ref.current, { strokeDashoffset: 0, duration: 0.8, ease: 'power2.inOut' }, 2.3);
+        // La segunda línea de la X (ajustado para ser más rápido)
+        masterTl.to(xPath2Ref.current, { opacity: 1, duration: 0.01 }, 1.3);
+        masterTl.to(xPath2Ref.current, { strokeDashoffset: 0, duration: 0.8, ease: 'power2.inOut' }, 1.3);
 
-        // BARRIDO MÁS LENTO Y NOTORIO (Dura 2 segundos)
+        // BARRIDO (ajustado para que fluya justo después de la X)
         masterTl.to(wipeMaskRef.current, { 
           xPercent: 100, 
           duration: 2.0, 
           ease: 'power1.inOut' 
-        }, 3.1);
+        }, 2.1);
 
-        // Permanece a la vista por 3 segundos más antes de ocultarse
+        // Permanece a la vista y luego se oculta 
         masterTl.to([xPath1Ref.current, xPath2Ref.current], {
           opacity: 0,
           duration: 0.8, 
           ease: 'power1.inOut'
-        }, 8.0);
+        }, 7.0);
         
         masterTl.to(wipeMaskRef.current, {
            xPercent: 0,
            duration: 0.8,
            ease: 'power1.inOut'
-        }, 8.0);
+        }, 7.0);
 
-        // Rebobinar en secreto
+        // Rebobinar en secreto apenas termine de ocultarse (para que esté listo para el siguiente ciclo de inmediato)
         masterTl.set([xPath1Ref.current, xPath2Ref.current], {
           strokeDashoffset: (i) => xLengths[i]
-        }, 9.0);
-
-        // Fin del ciclo
-        masterTl.set({}, {}, 9.5); 
+        }, 7.9);
       }
     }, sectionRef);
 
