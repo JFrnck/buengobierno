@@ -18,23 +18,8 @@ export default function BiografiaSection({ biografia }) {
   const badgeRef      = useRef(null);
 
   const [activeImage, setActiveImage] = useState(null);
-  const [mousePos, setMousePos]       = useState({ x: 50, y: 50 });
 
   const hasGaleria = biografia?.galeria && biografia.galeria.length > 0;
-
-  /* ─── Mouse spotlight ─── */
-  useEffect(() => {
-    const handleMouse = (e) => {
-      if (!sectionRef.current) return;
-      const rect = sectionRef.current.getBoundingClientRect();
-      setMousePos({
-        x: ((e.clientX - rect.left) / rect.width) * 100,
-        y: ((e.clientY - rect.top) / rect.height) * 100,
-      });
-    };
-    window.addEventListener('mousemove', handleMouse);
-    return () => window.removeEventListener('mousemove', handleMouse);
-  }, []);
 
   /* ─── GSAP Animations ─── */
   useEffect(() => {
@@ -218,9 +203,6 @@ export default function BiografiaSection({ biografia }) {
       <section
         ref={sectionRef}
         className="bio-font-body relative overflow-hidden bg-white py-28 md:py-36"
-        style={{
-          backgroundImage: `radial-gradient(ellipse 60% 50% at ${mousePos.x}% ${mousePos.y}%, rgba(215,38,56,0.07) 0%, transparent 70%)`,
-        }}
       >
         {/* Grid sutil de fondo */}
         <div
