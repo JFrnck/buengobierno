@@ -13,6 +13,7 @@
     "@gsap/react": "^2.1.2",
     "@microsoft/fetch-event-source": "^2.0.1",
     "@n8n/chat": "^1.14.0",
+    "framer-motion": "^12.38.0",
     "gsap": "^3.14.2",
     "leaflet": "^1.9.4",
     "lucide-react": "^1.7.0",

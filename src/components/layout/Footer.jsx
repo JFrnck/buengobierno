@@ -4,7 +4,7 @@ const WA_LINK = 'https://chat.whatsapp.com/pbg-grupo'
 
 export default function Footer() {
   return (
-    <footer className="bg-[#1A1A1A] text-white">
+    <footer className="bg-white text-[#1A1A1A]">
       {/* Top CTA bar */}
       <div className="bg-[#D72638] py-6 px-6 md:px-12 lg:px-20">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
@@ -33,11 +33,11 @@ export default function Footer() {
             <div className="md:col-span-2">
               <div className="flex items-center gap-3 mb-5">
                 <div className="w-10 h-10 rounded-full bg-[#F5C800] flex items-center justify-center shrink-0">
-                  <span className="text-[#1A1A1A] font-black text-sm">PBG</span>
+                  <img src="/logo-sol-pbg.png" alt="" />
                 </div>
-                <span className="font-black text-white text-lg tracking-tight">Partido del Buen Gobierno</span>
+                <span className="font-black text-[#1A1A1A] text-lg tracking-tight">Partido del Buen Gobierno</span>
               </div>
-              <p className="text-white/45 text-sm leading-relaxed font-medium max-w-xs">
+              <p className="text-[#1A1A1A]/45 text-sm leading-relaxed font-medium max-w-xs">
                 Un movimiento ciudadano comprometido con la transparencia, la participación y el desarrollo sostenible de nuestra región.
               </p>
               <div className="flex gap-4 mt-6">
@@ -50,7 +50,7 @@ export default function Footer() {
                       s === 'twitter' ? 'https://x.com/buengobiernope?s=21' : '' | 
                       s === 'youtube' ? 'https://www.youtube.com/@pbg-peru' : '' 
                     }
-                    className="w-9 h-9 rounded-full bg-white/8 flex items-center justify-center text-white/40 hover:bg-[#F5C800] hover:text-[#1A1A1A] transition-all duration-200 shrink-0"
+                    className="w-9 h-9 rounded-full bg-white/8 flex items-center justify-center text-[#1A1A1A]/40 hover:bg-[#F5C800] hover:text-[#1A1A1A] transition-all duration-200 shrink-0"
                     aria-label={s}
                   >
                     <SocialIcon name={s} />
@@ -61,7 +61,7 @@ export default function Footer() {
 
             {/* Nav */}
             <div>
-              <h4 className="text-white font-bold text-xs tracking-widest uppercase mb-5">Navegación</h4>
+              <h4 className="text-[#1A1A1A] font-bold text-xs tracking-widest uppercase mb-5">Navegación</h4>
               <ul className="flex flex-col gap-3">
                 {[
                   { to: '/', label: 'Inicio' },
@@ -70,7 +70,7 @@ export default function Footer() {
 
                 ].map(l => (
                   <li key={l.label}>
-                    <Link to={l.to} className="text-white/45 font-medium text-sm hover:text-[#F5C800] transition-colors duration-200">
+                    <Link to={l.to} className="text-[#1A1A1A]/45 font-medium text-sm hover:text-[#1A1A1A] transition-colors duration-200">
                       {l.label}
                     </Link>
                   </li>
@@ -81,12 +81,12 @@ export default function Footer() {
 
           {/* Bottom bar */}
           <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
-            <p className="text-white/30 text-xs font-medium text-center md:text-left">
+            <p className="text-[#1A1A1A]/30 text-xs font-medium text-center md:text-left">
               © 2026 Partido del Buen Gobierno. Todos los derechos reservados.
             </p>
             <div className="flex flex-wrap justify-center md:justify-end gap-4 md:gap-6">
-              <p className="text-white/30 text-xs font-medium">@JFrnck </p>
-              <p className="text-white/30 text-xs font-medium">Hecho por cocolovers 💛</p>
+              <p className="text-[#1A1A1A]/30 text-xs font-medium">@JFrnck </p>
+              <p className="text-[#1A1A1A]/30 text-xs font-medium">Hecho por cocolovers 💛</p>
             </div>
           </div>
         </div>
