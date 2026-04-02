@@ -106,12 +106,12 @@ export default function Navbar() {
         </div>
 
         {/* Mobile Menu */}
-        <div className="nav-item flex justify-center items-center">
+        {/* <div className="nav-item flex justify-center items-center">
             <a href="https://www.tiktok.com/@nietooficial/live?_r=1&_svg=1&checksum=e0126fa223c564ca82494552c5f6e913622ef1b6d79a7a0ab3ea2b87ae896334&enter_from_merge=share&enter_method=share&sec_user_id=MS4wLjABAAAAstUsSJDrPXq_lW2-mf3RmI7-ujRse4XB_R6rUmOXrTjM_DCvbnLTgVWXqS-vSQpr&share_app_id=1233&share_from_user_id=7126522013896147973&share_link_id=4967c7be-91a7-4ce6-a81c-5f9b23037eaf&share_region=PE&social_share_type=10&source=h5_m&timestamp=1775156521&ug_btm=b2001%2Cb4180&ugbiz_name=LIVE&user_id=7126522013896147973&utm_campaign=client_share&utm_medium=android&utm_source=whatsapp" className="bg-white text-[#d72539] py-2 px-4 rounded-3xl font-semibold inline-flex justify-center items-center gap-1 ">
                 <h2 className='animate-pulse'>EN VIVO</h2>
                 <span className="text-[#d72539] text-3xl animate-pulse leading-none pb-1">•</span>
             </a>
-        </div>
+        </div> */}
         <div ref={ctaRef} className="flex items-center gap-4">
           <MobileMenu location={location} />
         </div>
