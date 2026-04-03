@@ -106,7 +106,7 @@ export default function Navbar() {
             </div>
           </div>
 
-          <a 
+          {/* <a 
             href="https://www.tiktok.com/@nietooficial/live?_r=1&_svg=1&checksum=95f00e5fd1e94f55af360a81bec80632d6d07784b9a7051e39547c2396d8dd9e&enter_from_merge=share&enter_method=share&sec_user_id=MS4wLjABAAAAOhCUWWTugcZRRRNdMz5-aEXZgb25zFWvmB5965crCDabjQ9Io3CCBghMfksJfgdT&share_app_id=1233&share_from_user_id=245756048685285376&share_link_id=60419d96-1c00-402f-87b8-e87c3a5e224f&share_region=PE&social_share_type=10&source=h5_m&timestamp=1775237168&ug_btm=b2001%2Cb4180&ugbiz_name=LIVE&user_id=245756048685285376&utm_campaign=client_share&utm_medium=android&utm_source=whatsapp" 
             className="inline-flex items-center gap-1.5 bg-white text-red-600 font-bold text-sm px-4 py-2 rounded-full shadow-sm border border-gray-100 hover:shadow-md transition-all"
           >
@@ -114,7 +114,7 @@ export default function Navbar() {
             <span className="animate-pulse text-red-600 text-xl leading-[0] pb-0.5">
               •
             </span>
-          </a>
+          </a> */}
 
           <div ref={ctaRef} className="flex items-center gap-4">
             <MobileMenu location={location} openGuide={() => setIsGuideOpen(true)} />
@@ -239,11 +239,18 @@ function VotingGuideModal({ isOpen, onClose }) {
 
   // Reemplaza estas rutas con las imágenes reales que tengas
   const guideSteps = [
-    { image: '/instruccion-1.jpg', title: 'Paso 1', text: 'Selecciona tu departamento o región.' },
-    { image: '/instruccion-2.jpg', title: 'Paso 2', text: 'Ubica el símbolo del Partido del Buen Gobierno.' },
-    { image: '/instruccion-3.jpg', title: 'Paso 3', text: 'Marca con una aspa (X) o cruz (+) dentro del recuadro.' },
-    { image: '/instruccion-4.jpg', title: 'Paso 4', text: 'Si deseas, escribe el número de tu diputado preferido.' },
-    { image: '/instruccion-5.jpg', title: 'Paso 5', text: '¡Revisa tu voto y listo!' },
+    { image: '/instructivo-votacion-1.jpg', title: 'Paso 1', text: 'Selecciona tu departamento o región.' },
+    { image: '/instructivo-votacion-2.jpg', title: 'Paso 2', text: 'Ubica el símbolo del Partido del Buen Gobierno.' },
+    { image: '/instructivo-votacion-3.jpg', title: 'Paso 3', text: 'Marca con una aspa (X) o cruz (+) dentro del recuadro.' },
+    { image: '/instructivo-votacion-4.jpg', title: 'Paso 4', text: 'Si deseas, escribe el número de tu diputado preferido.' },
+    { image: '/instructivo-votacion-5.jpg', title: 'Paso 5', text: '¡Revisa tu voto y listo!' },
+    { image: '/instructivo-votacion-6.jpg', title: 'Paso 6', text: '¡Revisa tu voto y listo!' },
+    { image: '/instructivo-votacion-7.jpg', title: 'Paso 7', text: '¡Revisa tu voto y listo!' },
+    { image: '/instructivo-votacion-8.jpg', title: 'Paso 8', text: '¡Revisa tu voto y listo!' },
+    { image: '/instructivo-votacion-9.jpg', title: 'Paso 9', text: '¡Revisa tu voto y listo!' },
+    { image: '/instructivo-votacion-10.jpg', title: 'Paso 10', text: '¡Revisa tu voto y listo!' },
+    { image: '/instructivo-votacion-11.jpg', title: 'Paso 11', text: '¡Revisa tu voto y listo!' },
+    { image: '/instructivo-votacion-12.jpg', title: 'Paso 12', text: '¡Revisa tu voto y listo!' },
   ]
 
   // Animación de entrada/salida del modal
@@ -319,10 +326,10 @@ function VotingGuideModal({ isOpen, onClose }) {
             {/* Imagen Placeholder (Cambiar el src por guideSteps[step].image) */}
             <div className="w-full aspect-video bg-gray-100 rounded-xl mb-6 flex items-center justify-center border border-gray-200 overflow-hidden">
                {/* Aquí debes usar tu etiqueta <img /> */}
-               <span className="text-gray-400 font-bold">
+               {/* <span className="text-gray-400 font-bold">
                  [ Imagen: {guideSteps[step].title} ]
-               </span>
-               {/* <img src={guideSteps[step].image} alt={`Paso ${step + 1}`} className="w-full h-full object-cover" /> */}
+               </span> */}
+               <img src={guideSteps[step].image} alt={`Paso ${step + 1}`} className="w-full h-full object-cover" />
             </div>
 
             <h3 className="text-2xl font-black text-[#1A1A1A] mb-2">
