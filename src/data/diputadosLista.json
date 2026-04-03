@@ -1,0 +1,1934 @@
+[
+  {
+    "departamento": "AMAZONAS",
+    "tipo": "Diputado",
+    "candidatos": [
+      {
+        "posicion": 1,
+        "nombre": "EDIS LILIANA CESPEDES MENDOZA",
+        "dni": "40477053",
+        "sexo": "F",
+        "cargo_postula": "DIPUTADO",
+        "lugar_nacimiento": "CAJAMARCA, JAEN, JAEN",
+        "lugar_domicilio": "AMAZONAS, UTCUBAMBA, BAGUA GRANDE",
+        "region_original_pdf": "AMAZONAS",
+        "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/40477053/253733",
+        "imagen": ""
+      },
+      {
+        "posicion": 2,
+        "nombre": "FRANKI EDISON SANCHEZ PEREZ",
+        "dni": "77157970",
+        "sexo": "M",
+        "cargo_postula": "DIPUTADO",
+        "lugar_nacimiento": "LAMBAYEQUE, CHICLAYO, CHICLAYO",
+        "lugar_domicilio": null,
+        "region_original_pdf": "LAMBAYEQUE",
+        "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/77157970/247412",
+        "imagen": ""
+      },
+      {
+        "posicion": 3,
+        "nombre": "ELVIA NUÑEZ CHACHAPOYAS",
+        "dni": "42570235",
+        "sexo": "F",
+        "cargo_postula": "DIPUTADO",
+        "lugar_nacimiento": "CAJAMARCA, SANTA CRUZ, CHANCAYBAÑOS",
+        "lugar_domicilio": "AMAZONAS, UTCUBAMBA, CAJARURO",
+        "region_original_pdf": "AMAZONAS",
+        "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/42570235/253242",
+        "imagen": ""
+      },
+      {
+        "posicion": 4,
+        "nombre": "DANIEL VILLAFANA BUSICHE",
+        "dni": "15746510",
+        "sexo": "M",
+        "cargo_postula": "DIPUTADO",
+        "lugar_nacimiento": "LIMA, HUARAL, HUARAL",
+        "lugar_domicilio": "LIMA, HUARAL, HUARAL",
+        "region_original_pdf": "LIMA",
+        "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/15746510/243476",
+        "imagen": ""
+      }
+    ]
+  },
+  {
+    "departamento": "ANCASH",
+    "tipo": "Diputado",
+    "candidatos": [
+      {
+        "posicion": 1,
+        "nombre": "DANTE ANIBAL MORENO NEGLIA",
+        "dni": "07821615",
+        "sexo": "M",
+        "cargo_postula": "DIPUTADO",
+        "lugar_nacimiento": "ANCASH, HUARAZ, INDEPENDENCIA",
+        "lugar_domicilio": "ANCASH, HUARAZ, INDEPENDENCIA",
+        "region_original_pdf": "ANCASH",
+        "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/07821615/254867",
+        "imagen": ""
+      },
+      {
+        "posicion": 2,
+        "nombre": "AYDE MARGARITA MOLINA VERGARA",
+        "dni": "31925799",
+        "sexo": "F",
+        "cargo_postula": "DIPUTADO",
+        "lugar_nacimiento": "ANCASH, BOLOGNESI, ANTONIO RAIMONDI",
+        "lugar_domicilio": "ANCASH, HUARAZ, INDEPENDENCIA",
+        "region_original_pdf": "ANCASH",
+        "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/31925799/254388",
+        "imagen": ""
+      },
+      {
+        "posicion": 3,
+        "nombre": "BLADEMIR DONATO ANAYA COTILLO",
+        "dni": "31614873",
+        "sexo": "M",
+        "cargo_postula": "DIPUTADO",
+        "lugar_nacimiento": "ANCASH, HUARAZ, HUARAZ",
+        "lugar_domicilio": "ANCASH, HUARAZ, HUARAZ",
+        "region_original_pdf": "ANCASH",
+        "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/31614873/249938",
+        "imagen": ""
+      },
+      {
+        "posicion": 4,
+        "nombre": "DIANA LIZBETH AQUINO ANAYA",
+        "dni": "78551477",
+        "sexo": "F",
+        "cargo_postula": "DIPUTADO",
+        "lugar_nacimiento": "LAMBAYEQUE, CHICLAYO, CHICLAYO",
+        "lugar_domicilio": "LAMBAYEQUE, CHICLAYO, CHICLAYO",
+        "region_original_pdf": "LAMBAYEQUE",
+        "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/78551477/249612",
+        "imagen": ""
+      },
+      {
+        "posicion": 5,
+        "nombre": "GIAN ANTHONY ZAPATA SERNAQUE",
+        "dni": "73148275",
+        "sexo": "M",
+        "cargo_postula": "DIPUTADO",
+        "lugar_nacimiento": "TUMBES, TUMBES, TUMBES",
+        "lugar_domicilio": "TUMBES, TUMBES, TUMBES",
+        "region_original_pdf": "TUMBES",
+        "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/73148275/248907",
+        "imagen": ""
+      },
+      {
+        "posicion": 6,
+        "nombre": "ANTONELLA ARIANA OVIEDO FEIJOO",
+        "dni": "74500543",
+        "sexo": "F",
+        "cargo_postula": "DIPUTADO",
+        "lugar_nacimiento": "TUMBES, TUMBES, TUMBES",
+        "lugar_domicilio": "TUMBES, TUMBES, TUMBES",
+        "region_original_pdf": "TUMBES",
+        "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/74500543/245557",
+        "imagen": ""
+      }
+    ]
+  },
+  {
+    "departamento": "APURIMAC",
+    "tipo": "Diputado",
+    "candidatos": [
+      {
+        "posicion": 1,
+        "nombre": "DANNY MARK PAIRA CESPEDES",
+        "dni": "44035661",
+        "sexo": "M",
+        "cargo_postula": "DIPUTADO",
+        "lugar_nacimiento": "LIMA, CAÑETE, SAN VICENTE DE CAÑETE",
+        "lugar_domicilio": "APURIMAC, ABANCAY, ABANCAY",
+        "region_original_pdf": "APURIMAC",
+        "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/44035661/247636",
+        "imagen": ""
+      },
+      {
+        "posicion": 2,
+        "nombre": "LARIZA CHUHUI ARBILDO",
+        "dni": "46105072",
+        "sexo": "F",
+        "cargo_postula": "DIPUTADO",
+        "lugar_nacimiento": "APURIMAC, ANDAHUAYLAS, HUANCARAMA",
+        "lugar_domicilio": "APURIMAC, ABANCAY, ABANCAY",
+        "region_original_pdf": "APURIMAC",
+        "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/46105072/249962",
+        "imagen": ""
+      },
+      {
+        "posicion": 3,
+        "nombre": "VICTOR APOLONIO YAURI SAMANIEGO",
+        "dni": "45714841",
+        "sexo": "M",
+        "cargo_postula": "DIPUTADO",
+        "lugar_nacimiento": "JUNIN, CHANCHAMAYO, PERENE",
+        "lugar_domicilio": "JUNIN, CHANCHAMAYO, PICHANAQUI",
+        "region_original_pdf": "JUNIN",
+        "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/45714841/248166",
+        "imagen": ""
+      },
+      {
+        "posicion": 4,
+        "nombre": "JULEMI SOLIS NAVIO",
+        "dni": "46464431",
+        "sexo": "F",
+        "cargo_postula": "DIPUTADO",
+        "lugar_nacimiento": "APURIMAC, ABANCAY, ABANCAY",
+        "lugar_domicilio": "APURIMAC, ABANCAY, ABANCAY",
+        "region_original_pdf": "APURIMAC",
+        "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/46464431/246748",
+        "imagen": ""
+      }
+    ]
+  },
+  {
+    "departamento": "AREQUIPA",
+    "tipo": "Diputado",
+    "candidatos": [
+      {
+        "posicion": 1,
+        "nombre": "EDGAR DEMBER GONZALES POLAR",
+        "dni": "29715400",
+        "sexo": "M",
+        "cargo_postula": "DIPUTADO",
+        "lugar_nacimiento": "AREQUIPA, AREQUIPA, AREQUIPA",
+        "lugar_domicilio": "AREQUIPA, AREQUIPA, JOSE LUIS BUSTAMANTE Y RIVERO",
+        "region_original_pdf": "AREQUIPA",
+        "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/29715400/249145",
+        "imagen": ""
+      },
+      {
+        "posicion": 2,
+        "nombre": "GLORIA CHARITO HIRACHE PIZARRO",
+        "dni": "29311981",
+        "sexo": "F",
+        "cargo_postula": "DIPUTADO",
+        "lugar_nacimiento": "AREQUIPA, CONDESUYOS, CHICHAS",
+        "lugar_domicilio": "AREQUIPA, CAYLLOMA, MAJES",
+        "region_original_pdf": "AREQUIPA",
+        "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/29311981/252662",
+        "imagen": ""
+      },
+      {
+        "posicion": 3,
+        "nombre": "RAFAEL ANGEL ARAGON ARAMBURU",
+        "dni": "29279669",
+        "sexo": "M",
+        "cargo_postula": "DIPUTADO",
+        "lugar_nacimiento": "AREQUIPA, AREQUIPA, AREQUIPA",
+        "lugar_domicilio": "AREQUIPA, AREQUIPA, AREQUIPA",
+        "region_original_pdf": "AREQUIPA",
+        "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/29279669/247361",
+        "imagen": ""
+      },
+      {
+        "posicion": 4,
+        "nombre": "JAKELIN MILAGROS CARRION LIMA",
+        "dni": "41980348",
+        "sexo": "F",
+        "cargo_postula": "DIPUTADO",
+        "lugar_nacimiento": "CUSCO, CUSCO, CUSCO",
+        "lugar_domicilio": "AREQUIPA, AREQUIPA, MIRAFLORES",
+        "region_original_pdf": "AREQUIPA",
+        "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/41980348/248052",
+        "imagen": ""
+      },
+      {
+        "posicion": 5,
+        "nombre": "RICARDO JULIAN SILVA AMANQUI",
+        "dni": "25712308",
+        "sexo": "M",
+        "cargo_postula": "DIPUTADO",
+        "lugar_nacimiento": "ANCASH, CARHUAZ, CARHUAZ",
+        "lugar_domicilio": "LIMA, LIMA, SAN MARTIN DE PORRES",
+        "region_original_pdf": "LIMA",
+        "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/25712308/250313",
+        "imagen": ""
+      },
+      {
+        "posicion": 6,
+        "nombre": "FLOR ELISA ROXANA NEIRA TEJADA",
+        "dni": "29215220",
+        "sexo": "F",
+        "cargo_postula": "DIPUTADO",
+        "lugar_nacimiento": "AREQUIPA, AREQUIPA, AREQUIPA",
+        "lugar_domicilio": "AREQUIPA, AREQUIPA, JOSE LUIS BUSTAMANTE Y RIVERO",
+        "region_original_pdf": "AREQUIPA",
+        "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/29215220/243460",
+        "imagen": ""
+      }
+    ]
+  },
+  {
+    "departamento": "AYACUCHO",
+    "tipo": "Diputado",
+    "candidatos": [
+      {
+        "posicion": 1,
+        "nombre": "JUAN JOSE VILLARROEL CARDENAS",
+        "dni": "28263924",
+        "sexo": "M",
+        "cargo_postula": "DIPUTADO",
+        "lugar_nacimiento": "AYACUCHO, HUANTA, HUANTA",
+        "lugar_domicilio": "AYACUCHO, HUAMANGA, AYACUCHO",
+        "region_original_pdf": "AYACUCHO",
+        "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/28263924/251463",
+        "imagen": ""
+      },
+      {
+        "posicion": 2,
+        "nombre": "KARINA SAUÑE GAMBOA",
+        "dni": "44406806",
+        "sexo": "F",
+        "cargo_postula": "DIPUTADO",
+        "lugar_nacimiento": "AYACUCHO, HUAMANGA, AYACUCHO",
+        "lugar_domicilio": "AYACUCHO, HUAMANGA, AYACUCHO",
+        "region_original_pdf": "AYACUCHO",
+        "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/44406806/251456",
+        "imagen": ""
+      },
+      {
+        "posicion": 3,
+        "nombre": "JOAN OLIVER HUAMAN BASALDUA",
+        "dni": "28577034",
+        "sexo": "M",
+        "cargo_postula": "DIPUTADO",
+        "lugar_nacimiento": "ICA, PISCO, PISCO",
+        "lugar_domicilio": "AYACUCHO, HUANTA, HUANTA",
+        "region_original_pdf": "AYACUCHO",
+        "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/28577034/245358",
+        "imagen": ""
+      },
+      {
+        "posicion": 4,
+        "nombre": "PILAR BARRIENTOS MARTINEZ",
+        "dni": "48850968",
+        "sexo": "F",
+        "cargo_postula": "DIPUTADO",
+        "lugar_nacimiento": "AYACUCHO, VILCAS HUAMAN, VILCAS HUAMAN",
+        "lugar_domicilio": "AYACUCHO, VILCAS HUAMAN, VILCAS HUAMAN",
+        "region_original_pdf": "AYACUCHO",
+        "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/48850968/246993",
+        "imagen": ""
+      }
+    ]
+  },
+  {
+    "departamento": "CAJAMARCA",
+    "tipo": "Diputado",
+    "candidatos": [
+      {
+        "posicion": 1,
+        "nombre": "RONAL MIKE HUACHEZ MONTALVAN",
+        "dni": "44591413",
+        "sexo": "M",
+        "cargo_postula": "DIPUTADO",
+        "lugar_nacimiento": "CAJAMARCA, SAN IGNACIO, LA COIPA",
+        "lugar_domicilio": "CAJAMARCA, SAN IGNACIO, LA COIPA",
+        "region_original_pdf": "CAJAMARCA",
+        "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/44591413/253493",
+        "imagen": ""
+      },
+      {
+        "posicion": 2,
+        "nombre": "LILY BEATRIZ GALLARDO PASTOR",
+        "dni": "41843569",
+        "sexo": "F",
+        "cargo_postula": "DIPUTADO",
+        "lugar_nacimiento": "CAJAMARCA, CAJAMARCA, MATARA",
+        "lugar_domicilio": "CAJAMARCA, CAJAMARCA, CAJAMARCA",
+        "region_original_pdf": "CAJAMARCA",
+        "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/41843569/243600",
+        "imagen": ""
+      },
+      {
+        "posicion": 3,
+        "nombre": "RONALD CABRERA ESTRADA",
+        "dni": "40909111",
+        "sexo": "M",
+        "cargo_postula": "DIPUTADO",
+        "lugar_nacimiento": "CAJAMARCA, CAJAMARCA, CAJAMARCA",
+        "lugar_domicilio": "CAJAMARCA, CAJAMARCA, CAJAMARC",
+        "region_original_pdf": "CAJAMARCA",
+        "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/40909111/250239",
+        "imagen": ""
+      },
+      {
+        "posicion": 4,
+        "nombre": "EMMA GARCIA SALDAÑA",
+        "dni": "44678794",
+        "sexo": "F",
+        "cargo_postula": "DIPUTADO",
+        "lugar_nacimiento": "PIURA, MORROPON, CHALACO",
+        "lugar_domicilio": "CAJAMARCA, SAN IGNACIO, LA COIPA",
+        "region_original_pdf": "CAJAMARCA",
+        "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/44678794/250943",
+        "imagen": ""
+      },
+      {
+        "posicion": 5,
+        "nombre": "JESUS EDUARDO SANCHEZ SALAZAR",
+        "dni": "26733239",
+        "sexo": "M",
+        "cargo_postula": "DIPUTADO",
+        "lugar_nacimiento": "CAJAMARCA, CAJAMARCA, CAJAMARCA",
+        "lugar_domicilio": "CAJAMARCA, CAJAMARCA, ENCAÑADA",
+        "region_original_pdf": "CAJAMARCA",
+        "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/26733239/245605",
+        "imagen": ""
+      },
+      {
+        "posicion": 6,
+        "nombre": "JANET CABRERA ESTRADA",
+        "dni": "41620497",
+        "sexo": "F",
+        "cargo_postula": "DIPUTADO",
+        "lugar_nacimiento": "CAJAMARCA, CAJAMARCA, CAJAMARCA",
+        "lugar_domicilio": "CAJAMARCA, CAJAMARCA, CAJAMARCA",
+        "region_original_pdf": "CAJAMARCA",
+        "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/41620497/252955",
+        "imagen": ""
+      }
+    ]
+  },
+  {
+    "departamento": "CALLAO",
+    "tipo": "Diputado",
+    "candidatos": [
+      {
+        "posicion": 1,
+        "nombre": "FERNANDO ALBERTO GARCIA HUBY",
+        "dni": "08573694",
+        "sexo": "M",
+        "cargo_postula": "DIPUTADO",
+        "lugar_nacimiento": "LIMA, LIMA, LIMA",
+        "lugar_domicilio": "CALLAO, CALLAO, CALLAO",
+        "region_original_pdf": "CALLAO",
+        "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/08573694/253527",
+        "imagen": ""
+      },
+      {
+        "posicion": 2,
+        "nombre": "MARLENE ISABEL CHECA RODAS",
+        "dni": "25566407",
+        "sexo": "F",
+        "cargo_postula": "DIPUTADO",
+        "lugar_nacimiento": "CALLAO, CALLAO, BELLAVISTA",
+        "lugar_domicilio": "CALLAO, CALLAO, CALLAO",
+        "region_original_pdf": "CALLAO",
+        "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/25566407/247577",
+        "imagen": ""
+      },
+      {
+        "posicion": 3,
+        "nombre": "HUGO ENRIQUE ZEVALLOS LAMILLA",
+        "dni": "44034029",
+        "sexo": "M",
+        "cargo_postula": "DIPUTADO",
+        "lugar_nacimiento": "CALLAO, CALLAO, BELLAVISTA",
+        "lugar_domicilio": "CALLAO, CALLAO, CALLAO",
+        "region_original_pdf": "CALLAO",
+        "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/44034029/252277",
+        "imagen": ""
+      },
+      {
+        "posicion": 4,
+        "nombre": "RUBY ESTEPHANI ZEVALLOS LAMILLA",
+        "dni": "42671383",
+        "sexo": "F",
+        "cargo_postula": "DIPUTADO",
+        "lugar_nacimiento": "CALLAO, CALLAO, BELLAVISTA",
+        "lugar_domicilio": "CALLAO, CALLAO, CALLAO",
+        "region_original_pdf": "CALLAO",
+        "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/42671383/253176",
+        "imagen": ""
+      }
+    ]
+  },
+  {
+    "departamento": "CUSCO",
+    "tipo": "Diputado",
+    "candidatos": [
+      {
+        "posicion": 1,
+        "nombre": "EDWIN ESPINOZA HUILLCA",
+        "dni": "41678124",
+        "sexo": "M",
+        "cargo_postula": "DIPUTADO",
+        "lugar_nacimiento": "CUSCO, CANCHIS, SICUANI",
+        "lugar_domicilio": "CUSCO, CANCHIS, SICUANI",
+        "region_original_pdf": "CUSCO",
+        "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/41678124/244528",
+        "imagen": ""
+      },
+      {
+        "posicion": 2,
+        "nombre": "AYDE MEZA FERNANDEZ",
+        "dni": "44026002",
+        "sexo": "F",
+        "cargo_postula": "DIPUTADO",
+        "lugar_nacimiento": "CUSCO, CANCHIS, MARANGANI",
+        "lugar_domicilio": "CUSCO, CUSCO, WANCHAQ",
+        "region_original_pdf": "CUSCO",
+        "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/44026002/248673",
+        "imagen": ""
+      },
+      {
+        "posicion": 3,
+        "nombre": "NATIVIDAD ADRIAN CUSIHUAMAN MAÑACCASA",
+        "dni": "24367431",
+        "sexo": "M",
+        "cargo_postula": "DIPUTADO",
+        "lugar_nacimiento": "CUSCO, URUBAMBA, CHINCHERO",
+        "lugar_domicilio": "CUSCO, ANTA, CACHIMAYO",
+        "region_original_pdf": "CUSCO",
+        "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/24367431/245307",
+        "imagen": ""
+      },
+      {
+        "posicion": 4,
+        "nombre": "JESSICA DAFNE AUCCAPUMA BELLIDO",
+        "dni": "73038682",
+        "sexo": "F",
+        "cargo_postula": "DIPUTADO",
+        "lugar_nacimiento": "CUSCO, CUSCO, SANTIAGO",
+        "lugar_domicilio": "CUSCO, CUSCO, POROY",
+        "region_original_pdf": "CUSCO",
+        "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/73038682/246058",
+        "imagen": ""
+      },
+      {
+        "posicion": 5,
+        "nombre": "ABRAHAM SOLORZANO SANTOS",
+        "dni": "00075383",
+        "sexo": "M",
+        "cargo_postula": "DIPUTADO",
+        "lugar_nacimiento": "UCAYALI, CORONEL PORTILLO, CALLERIA",
+        "lugar_domicilio": "UCAYALI, CORONEL PORTILLO, MANANTAY",
+        "region_original_pdf": "UCAYALI",
+        "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/00075383/248966",
+        "imagen": ""
+      },
+      {
+        "posicion": 6,
+        "nombre": "CRESENSIA DORA QUILLAY PALOMARES",
+        "dni": "76652185",
+        "sexo": "F",
+        "cargo_postula": "DIPUTADO",
+        "lugar_nacimiento": "LIMA, HUARAL, CHANCAY",
+        "lugar_domicilio": "LIMA, HUARAL, HUARAL",
+        "region_original_pdf": "LIMA",
+        "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/76652185/247566",
+        "imagen": ""
+      }
+    ]
+  },
+  {
+    "departamento": "HUANCAVELICA",
+    "tipo": "Diputado",
+    "candidatos": [
+      {
+        "posicion": 1,
+        "nombre": "RICARDO DANIEL RODRIGUEZ MUNGUIA",
+        "dni": "08650000",
+        "sexo": "M",
+        "cargo_postula": "DIPUTADO",
+        "lugar_nacimiento": "HUANCAVELICA, TAYACAJA, PAMPAS",
+        "lugar_domicilio": "HUANCAVELICA, TAYACAJA, DANIEL HERNANDEZ",
+        "region_original_pdf": "HUANCAVELICA",
+        "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/08650000/254498",
+        "imagen": ""
+      },
+      {
+        "posicion": 2,
+        "nombre": "RUTH NAYDA CCENTE ROJAS",
+        "dni": "45307529",
+        "sexo": "F",
+        "cargo_postula": "DIPUTADO",
+        "lugar_nacimiento": "HUANCAVELICA, HUANCAVELICA, PALCA",
+        "lugar_domicilio": "HUANCAVELICA, HUANCAVELICA, HUANCAVELICA",
+        "region_original_pdf": "HUANCAVELICA",
+        "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/45307529/249273",
+        "imagen": ""
+      },
+      {
+        "posicion": 3,
+        "nombre": "NICANOR ROLANDO PRADO CAYRO",
+        "dni": "21438223",
+        "sexo": "M",
+        "cargo_postula": "DIPUTADO",
+        "lugar_nacimiento": "AREQUIPA, AREQUIPA, AREQUIPA",
+        "lugar_domicilio": "ICA, ICA, ICA",
+        "region_original_pdf": "ICA",
+        "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/21438223/247368",
+        "imagen": ""
+      },
+      {
+        "posicion": 4,
+        "nombre": "LEYDY VELA ARMAS",
+        "dni": "63480269",
+        "sexo": "F",
+        "cargo_postula": "DIPUTADO",
+        "lugar_nacimiento": "UCAYALI, ATALAYA, RAIMONDI",
+        "lugar_domicilio": "HUANCAVELICA, HUANCAVELICA, HUANCAVELICA",
+        "region_original_pdf": "HUANCAVELICA",
+        "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/63480269/251343",
+        "imagen": ""
+      }
+    ]
+  },
+  {
+    "departamento": "HUANUCO",
+    "tipo": "Diputado",
+    "candidatos": [
+      {
+        "posicion": 1,
+        "nombre": "SCHILLER ANDRES JUSTO",
+        "dni": "44658351",
+        "sexo": "M",
+        "cargo_postula": "DIPUTADO",
+        "lugar_nacimiento": "HUANUCO, DOS DE MAYO, CHUQUIS",
+        "lugar_domicilio": "HUANUCO, DOS DE MAYO, CHUQUIS",
+        "region_original_pdf": "HUANUCO",
+        "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/44658351/253741",
+        "imagen": ""
+      },
+      {
+        "posicion": 2,
+        "nombre": "JANET YAURI SAMANIEGO",
+        "dni": "40283180",
+        "sexo": "F",
+        "cargo_postula": "DIPUTADO",
+        "lugar_nacimiento": "JUNIN, CHANCHAMAYO, PICHANAQUI",
+        "lugar_domicilio": "JUNIN, CHANCHAMAYO, PERENE",
+        "region_original_pdf": "JUNIN",
+        "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/40283180/248584",
+        "imagen": ""
+      },
+      {
+        "posicion": 3,
+        "nombre": "FERNANDO CONDEZO AMBROSIO",
+        "dni": "10423594",
+        "sexo": "M",
+        "cargo_postula": "DIPUTADO",
+        "lugar_nacimiento": "LIMA, LIMA, LIMA",
+        "lugar_domicilio": "LIMA, LIMA, ATE",
+        "region_original_pdf": "LIMA",
+        "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/10423594/250953",
+        "imagen": ""
+      },
+      {
+        "posicion": 4,
+        "nombre": "KENY PINCO MENDOZA",
+        "dni": "75838690",
+        "sexo": "F",
+        "cargo_postula": "DIPUTADO",
+        "lugar_nacimiento": "JUNIN, CHANCHAMAYO, PICHANAQUI",
+        "lugar_domicilio": "JUNIN, CHANCHAMAYO, PICHANAQUI",
+        "region_original_pdf": "JUNIN",
+        "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/75838690/243467",
+        "imagen": ""
+      }
+    ]
+  },
+  {
+    "departamento": "ICA",
+    "tipo": "Diputado",
+    "candidatos": [
+      {
+        "posicion": 1,
+        "nombre": "LILA MARIANELA PRADO VALLEJOS",
+        "dni": "45741388",
+        "sexo": "F",
+        "cargo_postula": "DIPUTADO",
+        "lugar_nacimiento": "ICA, ICA, ICA",
+        "lugar_domicilio": "ICA, ICA, ICA",
+        "region_original_pdf": "ICA",
+        "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/45741388/251130",
+        "imagen": ""
+      },
+      {
+        "posicion": 2,
+        "nombre": "ULISES PABLO MENDIETA QUISPE",
+        "dni": "21410145",
+        "sexo": "M",
+        "cargo_postula": "DIPUTADO",
+        "lugar_nacimiento": "ICA, NASCA, MARCONA",
+        "lugar_domicilio": "ICA, ICA, ICA",
+        "region_original_pdf": "ICA",
+        "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/21410145/253835",
+        "imagen": ""
+      },
+      {
+        "posicion": 3,
+        "nombre": "DORABETH VALENTINA ROCHA CABRERA",
+        "dni": "62794539",
+        "sexo": "F",
+        "cargo_postula": "DIPUTADO",
+        "lugar_nacimiento": "ICA, ICA, ICA",
+        "lugar_domicilio": "ICA, ICA, ICA",
+        "region_original_pdf": "ICA",
+        "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/62794539/253972",
+        "imagen": ""
+      },
+      {
+        "posicion": 4,
+        "nombre": "EDWIN RAMIREZ VILLAGARAY",
+        "dni": "22074333",
+        "sexo": "M",
+        "cargo_postula": "DIPUTADO",
+        "lugar_nacimiento": "AYACUCHO, VILCAS HUAMAN, ACCOMARCA",
+        "lugar_domicilio": "ICA, ICA, ICA",
+        "region_original_pdf": "ICA",
+        "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/22074333/244966",
+        "imagen": ""
+      }
+    ]
+  },
+  {
+    "departamento": "JUNIN",
+    "tipo": "Diputado",
+    "candidatos": [
+      {
+        "posicion": 1,
+        "nombre": "CARMEN GEORGINA DUARTE PATIÑO DE PEZET",
+        "dni": "10277219",
+        "sexo": "F",
+        "cargo_postula": "DIPUTADO",
+        "lugar_nacimiento": "JUNIN, HUANCAYO, HUANCAYO",
+        "lugar_domicilio": "JUNIN, SATIPO, SATIPO",
+        "region_original_pdf": "JUNIN",
+        "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/10277219/249970",
+        "imagen": ""
+      },
+      {
+        "posicion": 2,
+        "nombre": "NAHUN DEMOSTENES GARCIA DIAZ",
+        "dni": "42725868",
+        "sexo": "M",
+        "cargo_postula": "DIPUTADO",
+        "lugar_nacimiento": "CAJAMARCA, SANTA CRUZ, ANDABAMBA",
+        "lugar_domicilio": "JUNIN, CHANCHAMAYO, PERENE",
+        "region_original_pdf": "JUNIN",
+        "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/42725868/251667",
+        "imagen": ""
+      },
+      {
+        "posicion": 3,
+        "nombre": "NATALIE SOLEDAD MARCAS GARCIA",
+        "dni": "42984579",
+        "sexo": "F",
+        "cargo_postula": "DIPUTADO",
+        "lugar_nacimiento": "JUNIN, HUANCAYO, HUANCAYO",
+        "lugar_domicilio": "LIMA, LIMA, LA VICTORIA",
+        "region_original_pdf": "LIMA",
+        "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/42984579/253970",
+        "imagen": ""
+      },
+      {
+        "posicion": 4,
+        "nombre": "MANUEL JESUS LOLI QUINCHO",
+        "dni": "41548344",
+        "sexo": "M",
+        "cargo_postula": "DIPUTADO",
+        "lugar_nacimiento": "HUANCAVELICA, TAYACAJA, SALCAHUASI",
+        "lugar_domicilio": "JUNIN, HUANCAYO, EL TAMBO",
+        "region_original_pdf": "JUNIN",
+        "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/41548344/253558",
+        "imagen": ""
+      },
+      {
+        "posicion": 5,
+        "nombre": "ROCIO AUGUSTA SALAZAR MANDUJANO",
+        "dni": "21297867",
+        "sexo": "F",
+        "cargo_postula": "DIPUTADO",
+        "lugar_nacimiento": "JUNIN, YAULI, LA OROYA",
+        "lugar_domicilio": "JUNIN, HUANCAYO, PILCOMAYO",
+        "region_original_pdf": "JUNIN",
+        "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/21297867/252768",
+        "imagen": ""
+      },
+      {
+        "posicion": 6,
+        "nombre": "JOSE AQUILES CASAS CORDOVA",
+        "dni": "20012822",
+        "sexo": "M",
+        "cargo_postula": "DIPUTADO",
+        "lugar_nacimiento": "JUNIN, YAULI, YAULI",
+        "lugar_domicilio": "JUNIN, HUANCAYO, EL TAMBO",
+        "region_original_pdf": "JUNIN",
+        "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/20012822/253105",
+        "imagen": ""
+      }
+    ]
+  },
+  {
+    "departamento": "LA LIBERTAD",
+    "tipo": "Diputado",
+    "candidatos": [
+      {
+        "posicion": 1,
+        "nombre": "NORA MARIA LLAQUE LINARES",
+        "dni": "06296745",
+        "sexo": "F",
+        "cargo_postula": "DIPUTADO",
+        "lugar_nacimiento": "LIMA, LIMA, PUEBLO LIBRE",
+        "lugar_domicilio": "LIMA, LIMA, SAN ISIDRO",
+        "region_original_pdf": "LIMA",
+        "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/06296745/254958",
+        "imagen": ""
+      },
+      {
+        "posicion": 2,
+        "nombre": "MARTIN RETO OTERO",
+        "dni": "17916104",
+        "sexo": "M",
+        "cargo_postula": "DIPUTADO",
+        "lugar_nacimiento": "PIURA, TALARA, PARIÑAS",
+        "lugar_domicilio": "LA LIBERTAD, TRUJILLO, TRUJILLO",
+        "region_original_pdf": "LA LIBERTAD",
+        "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/17916104/247863",
+        "imagen": ""
+      },
+      {
+        "posicion": 3,
+        "nombre": "MILAGROS YESENIA PAREDES SANCHEZ",
+        "dni": "43312931",
+        "sexo": "F",
+        "cargo_postula": "DIPUTADO",
+        "lugar_nacimiento": "LAMBAYEQUE, CHICLAYO, CHICLAYO",
+        "lugar_domicilio": "LA LIBERTAD, TRUJILLO, TRUJILLO",
+        "region_original_pdf": "LA LIBERTAD",
+        "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/43312931/248412",
+        "imagen": ""
+      },
+      {
+        "posicion": 4,
+        "nombre": "JUAN ANDRES VILLALOBOS TORRES",
+        "dni": "17814922",
+        "sexo": "M",
+        "cargo_postula": "DIPUTADO",
+        "lugar_nacimiento": "LA LIBERTAD, TRUJILLO, TRUJILLO",
+        "lugar_domicilio": "LA LIBERTAD, TRUJILLO, TRUJILLO",
+        "region_original_pdf": "LA LIBERTAD",
+        "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/17814922/252752",
+        "imagen": ""
+      },
+      {
+        "posicion": 7,
+        "nombre": "CHRIS LIZETH QUIROZ SORALUZ",
+        "dni": "77161342",
+        "sexo": "F",
+        "cargo_postula": "DIPUTADO",
+        "lugar_nacimiento": "LAMBAYEQUE, CHICLAYO, CHICLAYO",
+        "lugar_domicilio": "LAMBAYEQUE, CHICLAYO, CHICLAYO",
+        "region_original_pdf": "LAMBAYEQUE",
+        "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/77161342/245248",
+        "imagen": ""
+      }
+    ]
+  },
+  {
+    "departamento": "LAMBAYEQUE",
+    "tipo": "Diputado",
+    "candidatos": [
+      {
+        "posicion": 1,
+        "nombre": "SEGUNDO JUAN CASTREJON FERNANDEZ",
+        "dni": "16629849",
+        "sexo": "M",
+        "cargo_postula": "DIPUTADO",
+        "lugar_nacimiento": "LAMBAYEQUE, CHICLAYO, CHICLAYO",
+        "lugar_domicilio": "LAMBAYEQUE, CHICLAYO, LA VICTORIA",
+        "region_original_pdf": "LAMBAYEQUE",
+        "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/16629849/243635",
+        "imagen": ""
+      },
+      {
+        "posicion": 2,
+        "nombre": "DALIA YANEHT REYES FLORES",
+        "dni": "16703732",
+        "sexo": "F",
+        "cargo_postula": "DIPUTADO",
+        "lugar_nacimiento": "LAMBAYEQUE, CHICLAYO, CHICLAYO",
+        "lugar_domicilio": "LAMBAYEQUE, CHICLAYO, CHICLAYO",
+        "region_original_pdf": "LAMBAYEQUE",
+        "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/16703732/247770",
+        "imagen": ""
+      },
+      {
+        "posicion": 3,
+        "nombre": "PAVEL CESAR VARGAS UGAZ",
+        "dni": "43174984",
+        "sexo": "M",
+        "cargo_postula": "DIPUTADO",
+        "lugar_nacimiento": "LAMBAYEQUE, CHICLAYO, CHICLAYO",
+        "lugar_domicilio": "LAMBAYEQUE, CHICLAYO, LA VICTORIA",
+        "region_original_pdf": "LAMBAYEQUE",
+        "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/43174984/254467",
+        "imagen": ""
+      },
+      {
+        "posicion": 4,
+        "nombre": "DEBORATH MAYRA BALDERRAMA ESPARZA",
+        "dni": "16477390",
+        "sexo": "F",
+        "cargo_postula": "DIPUTADO",
+        "lugar_nacimiento": "LAMBAYEQUE, CHICLAYO, CHICLAYO",
+        "lugar_domicilio": "LAMBAYEQUE, CHICLAYO, CHICLAYO",
+        "region_original_pdf": "LAMBAYEQUE",
+        "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/16477390/253302",
+        "imagen": ""
+      },
+      {
+        "posicion": 5,
+        "nombre": "LUIS ANGEL SANCHEZ SANDOVAL",
+        "dni": "77085615",
+        "sexo": "M",
+        "cargo_postula": "DIPUTADO",
+        "lugar_nacimiento": "LAMBAYEQUE, LAMBAYEQUE, LAMBAYEQUE",
+        "lugar_domicilio": "LAMBAYEQUE, LAMBAYEQUE, MORROPE",
+        "region_original_pdf": "LAMBAYEQUE",
+        "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/77085615/252961",
+        "imagen": ""
+      },
+      {
+        "posicion": 6,
+        "nombre": "GINA YVONE CASTRO CALLE",
+        "dni": "47228475",
+        "sexo": "F",
+        "cargo_postula": "DIPUTADO",
+        "lugar_nacimiento": "LAMBAYEQUE, LAMBAYEQUE, OLMOS",
+        "lugar_domicilio": "LIMA, LIMA, PUENTE PIEDRA",
+        "region_original_pdf": "LIMA",
+        "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/47228475/248329",
+        "imagen": ""
+      }
+    ]
+  },
+  {
+    "departamento": "LIMA METROPOLITANA",
+    "tipo": "Diputado",
+    "candidatos": [
+      {
+        "posicion": 1,
+        "nombre": "OSCAR DE JESUS RETO OTERO",
+        "dni": "43348625",
+        "sexo": "M",
+        "cargo_postula": "DIPUTADO",
+        "lugar_nacimiento": "TUMBES, CONTRALMIRANTE VILLAR, ZORRITOS",
+        "lugar_domicilio": "LIMA, LIMA, SANTIAGO DE SURCO",
+        "region_original_pdf": "LIMA",
+        "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/43348625/248814",
+        "imagen": ""
+      },
+      {
+        "posicion": 2,
+        "nombre": "HILDA JUDIT FERNANDEZ DE LA TORRE",
+        "dni": "31038213",
+        "sexo": "F",
+        "cargo_postula": "DIPUTADO",
+        "lugar_nacimiento": "APURIMAC, AYMARAES, CHALHUANCA",
+        "lugar_domicilio": "LIMA, LIMA, SANTIAGO DE SURCO",
+        "region_original_pdf": "LIMA",
+        "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/31038213/254069",
+        "imagen": ""
+      },
+      {
+        "posicion": 3,
+        "nombre": "LUIS GIOVANNY AVILA CARDENAS",
+        "dni": "45874235",
+        "sexo": "M",
+        "cargo_postula": "DIPUTADO",
+        "lugar_nacimiento": "LIMA, LIMA, MIRAFLORES",
+        "lugar_domicilio": "LIMA, LIMA, SANTIAGO DE SURCO",
+        "region_original_pdf": "LIMA",
+        "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/45874235/247748",
+        "imagen": ""
+      },
+      {
+        "posicion": 4,
+        "nombre": "MARTHA DORIS PARI PARIAPAZA",
+        "dni": "07625048",
+        "sexo": "F",
+        "cargo_postula": "DIPUTADO",
+        "lugar_nacimiento": "LIMA, LIMA, LIMA",
+        "lugar_domicilio": "LIMA, LIMA, SAN JUAN DE LURIGANCHO",
+        "region_original_pdf": "LIMA",
+        "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/07625048/246135",
+        "imagen": ""
+      },
+      {
+        "posicion": 5,
+        "nombre": "LUIS ELISEO QUISPE CANDIA",
+        "dni": "40067839",
+        "sexo": "M",
+        "cargo_postula": "DIPUTADO",
+        "lugar_nacimiento": "CUSCO, QUISPICANCHI, QUIQUIJANA",
+        "lugar_domicilio": "LIMA, LIMA, BREÑA",
+        "region_original_pdf": "LIMA",
+        "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/40067839/254419",
+        "imagen": ""
+      },
+      {
+        "posicion": 6,
+        "nombre": "JESSICA BENITEZ BARRIONUEVO",
+        "dni": "41356710",
+        "sexo": "F",
+        "cargo_postula": "DIPUTADO",
+        "lugar_nacimiento": "LIMA, LIMA, PUEBLO LIBRE",
+        "lugar_domicilio": "LIMA, LIMA, BREÑA",
+        "region_original_pdf": "LIMA",
+        "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/41356710/253701",
+        "imagen": ""
+      },
+      {
+        "posicion": 7,
+        "nombre": "JESUS TUPAC YUPANQUI CHUMIOQUE",
+        "dni": "47000449",
+        "sexo": "M",
+        "cargo_postula": "DIPUTADO",
+        "lugar_nacimiento": "LIMA, LIMA, LIMA",
+        "lugar_domicilio": "CALLAO, CALLAO, CALLAO",
+        "region_original_pdf": "CALLAO",
+        "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/47000449/254385",
+        "imagen": ""
+      },
+      {
+        "posicion": 8,
+        "nombre": "ROSSANA HERMINIA ALAYZA MACCERA",
+        "dni": "43478989",
+        "sexo": "F",
+        "cargo_postula": "DIPUTADO",
+        "lugar_nacimiento": "LIMA, LIMA, MIRAFLORES",
+        "lugar_domicilio": "LIMA, LIMA, MIRAFLORES",
+        "region_original_pdf": "LIMA",
+        "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/43478989/254358",
+        "imagen": ""
+      },
+      {
+        "posicion": 9,
+        "nombre": "ERNESTO ALONSO NIETO VEGA",
+        "dni": "46042704",
+        "sexo": "M",
+        "cargo_postula": "DIPUTADO",
+        "lugar_nacimiento": "LIMA, HUAURA, HUACHO",
+        "lugar_domicilio": "LIMA, LIMA, JESUS MARIA",
+        "region_original_pdf": "LIMA",
+        "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/46042704/247089",
+        "imagen": ""
+      },
+      {
+        "posicion": 10,
+        "nombre": "MARINA CAROLINA BENDEZU YZAGUIRRE",
+        "dni": "47504586",
+        "sexo": "F",
+        "cargo_postula": "DIPUTADO",
+        "lugar_nacimiento": "LIMA, LIMA, LA VICTORIA",
+        "lugar_domicilio": "LIMA, LIMA, MIRAFLORES",
+        "region_original_pdf": "LIMA",
+        "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/47504586/251834",
+        "imagen": ""
+      },
+      {
+        "posicion": 13,
+        "nombre": "SIXTO ESCARCENA LERMA",
+        "dni": "10014542",
+        "sexo": "M",
+        "cargo_postula": "DIPUTADO",
+        "lugar_nacimiento": "PUNO, PUNO, CAPACHICA",
+        "lugar_domicilio": "LIMA, LIMA, ATE",
+        "region_original_pdf": "LIMA",
+        "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/10014542/243496",
+        "imagen": ""
+      },
+      {
+        "posicion": 14,
+        "nombre": "LESLI LISBETH MOLINA SOTO",
+        "dni": "46528336",
+        "sexo": "F",
+        "cargo_postula": "DIPUTADO",
+        "lugar_nacimiento": "LIMA, LIMA, LIMA",
+        "lugar_domicilio": "LIMA, LIMA, ATE",
+        "region_original_pdf": "LIMA",
+        "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/46528336/245145",
+        "imagen": ""
+      },
+      {
+        "posicion": 15,
+        "nombre": "JAVIER AUGUSTO VEGA CABIESES",
+        "dni": "43100670",
+        "sexo": "M",
+        "cargo_postula": "DIPUTADO",
+        "lugar_nacimiento": "LIMA, LIMA, JESUS MARIA",
+        "lugar_domicilio": "LIMA, LIMA, JESUS MARIA",
+        "region_original_pdf": "LIMA",
+        "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/43100670/243497",
+        "imagen": ""
+      },
+      {
+        "posicion": 16,
+        "nombre": "BEATRIZ SOLEDAD VALVERDE MANRIQUE",
+        "dni": "10159076",
+        "sexo": "F",
+        "cargo_postula": "DIPUTADO",
+        "lugar_nacimiento": "LIMA, LIMA, LIMA",
+        "lugar_domicilio": "LIMA, LIMA, SAN ISIDRO",
+        "region_original_pdf": "LIMA",
+        "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/10159076/254663",
+        "imagen": ""
+      },
+      {
+        "posicion": 17,
+        "nombre": "ALAN DARYN STEVEN CENTENO BELLO",
+        "dni": "70333861",
+        "sexo": "M",
+        "cargo_postula": "DIPUTADO",
+        "lugar_nacimiento": "LIMA, LIMA, SANTIAGO DE SURCO",
+        "lugar_domicilio": null,
+        "region_original_pdf": "LIMA",
+        "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/70333861/249845",
+        "imagen": ""
+      },
+      {
+        "posicion": 18,
+        "nombre": "ROMINA ALEJANDRA URIBE SAENZ",
+        "dni": "75421660",
+        "sexo": "F",
+        "cargo_postula": "DIPUTADO",
+        "lugar_nacimiento": "BUENOS AIRES, ,",
+        "lugar_domicilio": "LIMA, LIMA, RIMAC",
+        "region_original_pdf": "LIMA",
+        "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/75421660/246869",
+        "imagen": ""
+      },
+      {
+        "posicion": 19,
+        "nombre": "CHRISTIAN CCONAYA BERMEJO",
+        "dni": "45102985",
+        "sexo": "M",
+        "cargo_postula": "DIPUTADO",
+        "lugar_nacimiento": "LIMA, LIMA, SAN JUAN DE LURIGANCHO",
+        "lugar_domicilio": "LIMA, LIMA, SAN JUAN DE LURIGANCHO",
+        "region_original_pdf": "LIMA",
+        "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/45102985/252415",
+        "imagen": ""
+      },
+      {
+        "posicion": 20,
+        "nombre": "ORFA SOLEDAD TURIN NARVAEZ",
+        "dni": "08445213",
+        "sexo": "F",
+        "cargo_postula": "DIPUTADO",
+        "lugar_nacimiento": "LIMA, LIMA, LIMA",
+        "lugar_domicilio": "LIMA, LIMA, SAN MARTIN DE PORRES",
+        "region_original_pdf": "LIMA",
+        "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/08445213/253829",
+        "imagen": ""
+      },
+      {
+        "posicion": 22,
+        "nombre": "NATHALY MILAGROS MOLINA SOTO",
+        "dni": "76871362",
+        "sexo": "F",
+        "cargo_postula": "DIPUTADO",
+        "lugar_nacimiento": "LIMA, LIMA, SAN JUAN DE LURIGANCHO",
+        "lugar_domicilio": "LIMA, LIMA, ATE",
+        "region_original_pdf": "LIMA",
+        "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/76871362/252382",
+        "imagen": ""
+      },
+      {
+        "posicion": 23,
+        "nombre": "MARTIN JOSE PALOMINO CORDOVA",
+        "dni": "40380951",
+        "sexo": "M",
+        "cargo_postula": "DIPUTADO",
+        "lugar_nacimiento": "LIMA, LIMA, BREÑA",
+        "lugar_domicilio": "LIMA, LIMA, SAN JUAN DE MIRAFLORES",
+        "region_original_pdf": "LIMA",
+        "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/40380951/253904",
+        "imagen": ""
+      },
+      {
+        "posicion": 24,
+        "nombre": "ELVI MAYLEE CALDERON TORRES",
+        "dni": "77079186",
+        "sexo": "F",
+        "cargo_postula": "DIPUTADO",
+        "lugar_nacimiento": "LIMA, LIMA, LIMA",
+        "lugar_domicilio": "LIMA, LIMA, SAN MARTIN DE PORRES",
+        "region_original_pdf": "LIMA",
+        "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/77079186/252407",
+        "imagen": ""
+      },
+      {
+        "posicion": 25,
+        "nombre": "LEONARDO SEGUNDO PORTAL ANAYA",
+        "dni": "78550868",
+        "sexo": "M",
+        "cargo_postula": "DIPUTADO",
+        "lugar_nacimiento": "LAMBAYEQUE, CHICLAYO, CHICLAYO",
+        "lugar_domicilio": "LIMA, LIMA, RIMAC",
+        "region_original_pdf": "LIMA",
+        "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/78550868/244696",
+        "imagen": ""
+      },
+      {
+        "posicion": 26,
+        "nombre": "MARIA DEL CARMEN ZELAYA ARMIJO",
+        "dni": "73176025",
+        "sexo": "F",
+        "cargo_postula": "DIPUTADO",
+        "lugar_nacimiento": "CALLAO, CALLAO, CALLAO",
+        "lugar_domicilio": "CALLAO, CALLAO, CALLAO",
+        "region_original_pdf": "CALLAO",
+        "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/73176025/247035",
+        "imagen": ""
+      },
+      {
+        "posicion": 27,
+        "nombre": "DIEGO WALTER GONZALES SANCHEZ",
+        "dni": "46160710",
+        "sexo": "M",
+        "cargo_postula": "DIPUTADO",
+        "lugar_nacimiento": "LIMA, LIMA, ATE",
+        "lugar_domicilio": "LIMA, LIMA, ATE",
+        "region_original_pdf": "LIMA",
+        "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/46160710/246580",
+        "imagen": ""
+      },
+      {
+        "posicion": 28,
+        "nombre": "MAGDA ROXANA PASCUAL BALVIN",
+        "dni": "46654312",
+        "sexo": "F",
+        "cargo_postula": "DIPUTADO",
+        "lugar_nacimiento": "LIMA, YAUYOS, YAUYOS",
+        "lugar_domicilio": "LIMA, LIMA, ATE",
+        "region_original_pdf": "LIMA",
+        "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/46654312/246891",
+        "imagen": ""
+      },
+      {
+        "posicion": 29,
+        "nombre": "EDUARDO DANIEL CASTRO MENDOZA",
+        "dni": "10773046",
+        "sexo": "M",
+        "cargo_postula": "DIPUTADO",
+        "lugar_nacimiento": "LIMA, LIMA, MIRAFLORES",
+        "lugar_domicilio": "LIMA, LIMA, MAGDALENA DEL MAR",
+        "region_original_pdf": "LIMA",
+        "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/10773046/252209",
+        "imagen": ""
+      },
+      {
+        "posicion": 30,
+        "nombre": "CARMEN NOELIA YURIVILCA DEL VILLAR",
+        "dni": "40793738",
+        "sexo": "F",
+        "cargo_postula": "DIPUTADO",
+        "lugar_nacimiento": "LIMA, LIMA, MIRAFLORES",
+        "lugar_domicilio": "LIMA, LIMA, SAN JUAN DE LURIGANCHO",
+        "region_original_pdf": "LIMA",
+        "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/40793738/245444",
+        "imagen": ""
+      },
+      {
+        "posicion": 31,
+        "nombre": "DERICK CALEB NOA LINO",
+        "dni": "73971527",
+        "sexo": "M",
+        "cargo_postula": "DIPUTADO",
+        "lugar_nacimiento": "LIMA, LIMA, LIMA",
+        "lugar_domicilio": "LIMA, LIMA, ATE",
+        "region_original_pdf": "LIMA",
+        "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/73971527/249586",
+        "imagen": ""
+      },
+      {
+        "posicion": 31,
+        "nombre": "VIVIAN LISSETH RIVERA AYQUIPA",
+        "dni": "70026559",
+        "sexo": "F",
+        "cargo_postula": "DIPUTADO",
+        "lugar_nacimiento": "LIMA, LIMA, JESUS MARIA",
+        "lugar_domicilio": "LIMA, LIMA, VILLA EL SALVADOR",
+        "region_original_pdf": "LIMA",
+        "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/70026559/245067",
+        "imagen": ""
+      }
+    ]
+  },
+  {
+    "departamento": "LIMA PROVINCIAS",
+    "tipo": "Diputado",
+    "candidatos": [
+      {
+        "posicion": 1,
+        "nombre": "MILAGROS KARINA SANTANA VERA",
+        "dni": "15750425",
+        "sexo": "F",
+        "cargo_postula": "DIPUTADO",
+        "lugar_nacimiento": "LIMA, LIMA, LIMA",
+        "lugar_domicilio": "LIMA, HUARAL, HUARAL",
+        "region_original_pdf": "LIMA",
+        "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/15750425/251625",
+        "imagen": ""
+      },
+      {
+        "posicion": 2,
+        "nombre": "JULIAN FELIPE ARELLANO MATA",
+        "dni": "15708720",
+        "sexo": "M",
+        "cargo_postula": "DIPUTADO",
+        "lugar_nacimiento": "LIMA, BARRANCA, SUPE",
+        "lugar_domicilio": "LIMA, BARRANCA, SUPE",
+        "region_original_pdf": "LIMA",
+        "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/15708720/248995",
+        "imagen": ""
+      },
+      {
+        "posicion": 3,
+        "nombre": "ANA PATRICIA CARRIZALES JUNCO",
+        "dni": "44993858",
+        "sexo": "F",
+        "cargo_postula": "DIPUTADO",
+        "lugar_nacimiento": "LIMA, HUARAL, CHANCAY",
+        "lugar_domicilio": "LIMA, HUARAL, HUARAL",
+        "region_original_pdf": "LIMA",
+        "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/44993858/250766",
+        "imagen": ""
+      },
+      {
+        "posicion": 4,
+        "nombre": "PERCY LUIS PAUCAR MAGUIÑA",
+        "dni": "42021511",
+        "sexo": "M",
+        "cargo_postula": "DIPUTADO",
+        "lugar_nacimiento": "LIMA, BARRANCA, SUPE",
+        "lugar_domicilio": "LIMA, BARRANCA, SUPE",
+        "region_original_pdf": "LIMA",
+        "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/42021511/250511",
+        "imagen": ""
+      }
+    ]
+  },
+  {
+    "departamento": "LORETO",
+    "tipo": "Diputado",
+    "candidatos": [
+      {
+        "posicion": 1,
+        "nombre": "KATTIA CAROLY JIMENEZ VILLACORTA",
+        "dni": "40935744",
+        "sexo": "F",
+        "cargo_postula": "DIPUTADO",
+        "lugar_nacimiento": "LORETO, MAYNAS, IQUITOS",
+        "lugar_domicilio": "LORETO, MAYNAS, IQUITOS",
+        "region_original_pdf": "LORETO",
+        "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/40935744/253754",
+        "imagen": ""
+      },
+      {
+        "posicion": 2,
+        "nombre": "RAFAEL ALBERTO VELA PINEDO",
+        "dni": "05285604",
+        "sexo": "M",
+        "cargo_postula": "DIPUTADO",
+        "lugar_nacimiento": "LORETO, MAYNAS, IQUITOS",
+        "lugar_domicilio": "LORETO, MAYNAS, IQUITOS",
+        "region_original_pdf": "LORETO",
+        "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/05285604/252693",
+        "imagen": ""
+      },
+      {
+        "posicion": 3,
+        "nombre": "BERTA NICOLAS FLORES",
+        "dni": "75757837",
+        "sexo": "F",
+        "cargo_postula": "DIPUTADO",
+        "lugar_nacimiento": "LAMBAYEQUE, LAMBAYEQUE, SALAS",
+        "lugar_domicilio": "LAMBAYEQUE, CHICLAYO, CHICLAYO",
+        "region_original_pdf": "LAMBAYEQUE",
+        "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/75757837/249018",
+        "imagen": ""
+      },
+      {
+        "posicion": 4,
+        "nombre": "CESAR GONZALES ARROYO",
+        "dni": "41278289",
+        "sexo": "M",
+        "cargo_postula": "DIPUTADO",
+        "lugar_nacimiento": "LAMBAYEQUE, LAMBAYEQUE, OLMOS",
+        "lugar_domicilio": "LAMBAYEQUE, LAMBAYEQUE, OLMOS",
+        "region_original_pdf": "LAMBAYEQUE",
+        "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/41278289/248106",
+        "imagen": ""
+      }
+    ]
+  },
+  {
+    "departamento": "MADRE DE DIOS",
+    "tipo": "Diputado",
+    "candidatos": [
+      {
+        "posicion": 1,
+        "nombre": "EDSON JAVIER SOTA ESCOBAR",
+        "dni": "04824993",
+        "sexo": "M",
+        "cargo_postula": "DIPUTADO",
+        "lugar_nacimiento": "MADRE DE DIOS, TAMBOPATA, TAMBOPATA",
+        "lugar_domicilio": "MADRE DE DIOS, TAMBOPATA, TAMBOPATA",
+        "region_original_pdf": "MADRE DE DIOS",
+        "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/04824993/246589",
+        "imagen": ""
+      },
+      {
+        "posicion": 2,
+        "nombre": "KEIMER RIOS LOZANO",
+        "dni": "04804763",
+        "sexo": "F",
+        "cargo_postula": "DIPUTADO",
+        "lugar_nacimiento": "MADRE DE DIOS, TAHUAMANU, IBERIA",
+        "lugar_domicilio": "MADRE DE DIOS, TAMBOPATA, TAMBOPATA",
+        "region_original_pdf": "MADRE DE DIOS",
+        "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/04804763/253772",
+        "imagen": ""
+      },
+      {
+        "posicion": 3,
+        "nombre": "WILLY RONALD RUBIN DE CELIS VICENTE",
+        "dni": "42501406",
+        "sexo": "M",
+        "cargo_postula": "DIPUTADO",
+        "lugar_nacimiento": "MADRE DE DIOS, TAMBOPATA, TAMBOPATA",
+        "lugar_domicilio": "MADRE DE DIOS, TAMBOPATA, TAMBOPATA",
+        "region_original_pdf": "MADRE DE DIOS",
+        "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/42501406/248951",
+        "imagen": ""
+      },
+      {
+        "posicion": 4,
+        "nombre": "ANA MARGARITA PORTAL PEREZ",
+        "dni": "75239578",
+        "sexo": "F",
+        "cargo_postula": "DIPUTADO",
+        "lugar_nacimiento": "LA LIBERTAD, TRUJILLO, LA ESPERANZA",
+        "lugar_domicilio": "LA LIBERTAD, TRUJILLO, TRUJILLO",
+        "region_original_pdf": "LA LIBERTAD",
+        "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/75239578/251094",
+        "imagen": ""
+      }
+    ]
+  },
+  {
+    "departamento": "MOQUEGUA",
+    "tipo": "Diputado",
+    "candidatos": [
+      {
+        "posicion": 1,
+        "nombre": "NERY RODOLFO FERNANDEZ NINA",
+        "dni": "04647591",
+        "sexo": "M",
+        "cargo_postula": "DIPUTADO",
+        "lugar_nacimiento": "MOQUEGUA, MARISCAL NIETO, SAMEGUA",
+        "lugar_domicilio": "MOQUEGUA, ILO, ILO",
+        "region_original_pdf": "MOQUEGUA",
+        "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/04647591/246719",
+        "imagen": ""
+      },
+      {
+        "posicion": 2,
+        "nombre": "FIORELLA DINA VIZCARRA TIPO",
+        "dni": "72810243",
+        "sexo": "F",
+        "cargo_postula": "DIPUTADO",
+        "lugar_nacimiento": "MOQUEGUA, MARISCAL NIETO, MOQUEGUA",
+        "lugar_domicilio": "MOQUEGUA, MARISCAL NIETO, SAN ANTONIO",
+        "region_original_pdf": "MOQUEGUA",
+        "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/72810243/252246",
+        "imagen": ""
+      },
+      {
+        "posicion": 3,
+        "nombre": "JUAN VALENCIA URIBE",
+        "dni": "04624152",
+        "sexo": "M",
+        "cargo_postula": "DIPUTADO",
+        "lugar_nacimiento": "MOQUEGUA, ILO, ILO",
+        "lugar_domicilio": "MOQUEGUA, ILO, ILO",
+        "region_original_pdf": "MOQUEGUA",
+        "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/04624152/250697",
+        "imagen": ""
+      },
+      {
+        "posicion": 4,
+        "nombre": "YESICA YUREMA QUISPE MAMANI",
+        "dni": "48098939",
+        "sexo": "F",
+        "cargo_postula": "DIPUTADO",
+        "lugar_nacimiento": "PUNO, CHUCUITO, JULI",
+        "lugar_domicilio": "MOQUEGUA, MARISCAL NIETO, SAN ANTONIO",
+        "region_original_pdf": "MOQUEGUA",
+        "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/48098939/245052",
+        "imagen": ""
+      }
+    ]
+  },
+  {
+    "departamento": "PEX",
+    "tipo": "Diputado",
+    "candidatos": [
+      {
+        "posicion": 1,
+        "nombre": "CARMEN ESTHER BENITEZ GAMBIRAZIO",
+        "dni": "07330501",
+        "sexo": "F",
+        "cargo_postula": "DIPUTADO",
+        "lugar_nacimiento": "LIMA, LIMA, LINCE",
+        "lugar_domicilio": "LIMA, LIMA, MIRAFLORES",
+        "region_original_pdf": "LIMA",
+        "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/07330501/253690",
+        "imagen": ""
+      },
+      {
+        "posicion": 2,
+        "nombre": "OSCAR FERNANDEZ ANAYA",
+        "dni": "73022252",
+        "sexo": "M",
+        "cargo_postula": "DIPUTADO",
+        "lugar_nacimiento": "LAMBAYEQUE, CHICLAYO, CHONGOYAPE",
+        "lugar_domicilio": "LAMBAYEQUE, CHICLAYO, CHICLAYO",
+        "region_original_pdf": "LAMBAYEQUE",
+        "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/73022252/247039",
+        "imagen": ""
+      },
+      {
+        "posicion": 3,
+        "nombre": "HELE MARIA EUGENIA SACO VERTIZ ENDE",
+        "dni": "10547134",
+        "sexo": "F",
+        "cargo_postula": "DIPUTADO",
+        "lugar_nacimiento": "LIMA, LIMA, JESUS MARIA",
+        "lugar_domicilio": "LIMA, LIMA, SURQUILLO",
+        "region_original_pdf": "LIMA",
+        "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/10547134/254810",
+        "imagen": ""
+      },
+      {
+        "posicion": 4,
+        "nombre": "SEGUNDO GONZALO RAMIREZ DAVILA",
+        "dni": "77387095",
+        "sexo": "M",
+        "cargo_postula": "DIPUTADO",
+        "lugar_nacimiento": "LAMBAYEQUE, CHICLAYO, CHICLAYO",
+        "lugar_domicilio": "LAMBAYEQUE, CHICLAYO, CHICLAYO",
+        "region_original_pdf": "LAMBAYEQUE",
+        "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/77387095/252738",
+        "imagen": ""
+      }
+    ]
+  },
+  {
+    "departamento": "PIURA",
+    "tipo": "Diputado",
+    "candidatos": [
+      {
+        "posicion": 1,
+        "nombre": "MIGUEL FELIX HUAMAN CORNEJO",
+        "dni": "02819812",
+        "sexo": "M",
+        "cargo_postula": "DIPUTADO",
+        "lugar_nacimiento": "PIURA, PIURA, PIURA",
+        "lugar_domicilio": "PIURA, PIURA, VEINTISEIS DE OCTUBRE",
+        "region_original_pdf": "PIURA",
+        "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/02819812/243723",
+        "imagen": ""
+      },
+      {
+        "posicion": 2,
+        "nombre": "JULLIANA ELENA NIÑO CHUQUIMARCA",
+        "dni": "47041226",
+        "sexo": "F",
+        "cargo_postula": "DIPUTADO",
+        "lugar_nacimiento": "PIURA, PIURA, PIURA",
+        "lugar_domicilio": "PIURA, PIURA, PIURA",
+        "region_original_pdf": "PIURA",
+        "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/47041226/245890",
+        "imagen": ""
+      },
+      {
+        "posicion": 3,
+        "nombre": "ALADINO MEGO PALMER",
+        "dni": "16792650",
+        "sexo": "M",
+        "cargo_postula": "DIPUTADO",
+        "lugar_nacimiento": "LAMBAYEQUE, CHICLAYO, CHICLAYO",
+        "lugar_domicilio": "LAMBAYEQUE, CHICLAYO, CHONGOYAPE",
+        "region_original_pdf": "LAMBAYEQUE",
+        "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/16792650/250146",
+        "imagen": ""
+      },
+      {
+        "posicion": 4,
+        "nombre": "DEYSI MARIBEL LUDEÑA COVEÑAS",
+        "dni": "02876617",
+        "sexo": "F",
+        "cargo_postula": "DIPUTADO",
+        "lugar_nacimiento": "PIURA, PIURA, LAS LOMAS",
+        "lugar_domicilio": "PIURA, PIURA, CASTILLA",
+        "region_original_pdf": "PIURA",
+        "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/02876617/252585",
+        "imagen": ""
+      },
+      {
+        "posicion": 5,
+        "nombre": "VLADIMIR IGOR RAMIREZ MIÑAN",
+        "dni": "42640855",
+        "sexo": "M",
+        "cargo_postula": "DIPUTADO",
+        "lugar_nacimiento": "PIURA, TALARA, PARIÑAS",
+        "lugar_domicilio": "PIURA, TALARA, PARIÑAS",
+        "region_original_pdf": "PIURA",
+        "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/42640855/253763",
+        "imagen": ""
+      },
+      {
+        "posicion": 6,
+        "nombre": "MARGARITA PATRICIA JIMENEZ CORONADO",
+        "dni": "80534121",
+        "sexo": "F",
+        "cargo_postula": "DIPUTADO",
+        "lugar_nacimiento": "PIURA, PIURA, PIURA",
+        "lugar_domicilio": "PIURA, PIURA, VEINTISEIS DE OCTUBRE",
+        "region_original_pdf": "PIURA",
+        "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/80534121/244536",
+        "imagen": ""
+      },
+      {
+        "posicion": 7,
+        "nombre": "JHON PAUL VASQUEZ SOSA",
+        "dni": "43067186",
+        "sexo": "M",
+        "cargo_postula": "DIPUTADO",
+        "lugar_nacimiento": "PIURA, SULLANA, IGNACIO ESCUDERO",
+        "lugar_domicilio": "PIURA, PIURA, VEINTISEIS DE OCTUBRE",
+        "region_original_pdf": "PIURA",
+        "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/43067186/251337",
+        "imagen": ""
+      },
+      {
+        "posicion": 8,
+        "nombre": "CONSUELO SOLEDAD PINTADO HERREROS",
+        "dni": "02840465",
+        "sexo": "F",
+        "cargo_postula": "DIPUTADO",
+        "lugar_nacimiento": "PIURA, PIURA, PIURA",
+        "lugar_domicilio": "PIURA, PIURA, VEINTISEIS DE OCTUBRE",
+        "region_original_pdf": "PIURA",
+        "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/02840465/244357",
+        "imagen": ""
+      }
+    ]
+  },
+  {
+    "departamento": "PUNO",
+    "tipo": "Diputado",
+    "candidatos": [
+      {
+        "posicion": 2,
+        "nombre": "ABEL CARLOS HUARCAYA MONTAÑO",
+        "dni": "40348330",
+        "sexo": "M",
+        "cargo_postula": "DIPUTADO",
+        "lugar_nacimiento": "PUNO, AZANGARO, AZANGARO",
+        "lugar_domicilio": "PUNO, PUNO, PUNO",
+        "region_original_pdf": "PUNO",
+        "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/40348330/247684",
+        "imagen": ""
+      },
+      {
+        "posicion": 2,
+        "nombre": "JULIA JUAQUINA FRISANCHO SANTANDER",
+        "dni": "43677261",
+        "sexo": "F",
+        "cargo_postula": "DIPUTADO",
+        "lugar_nacimiento": "PUNO, MELGAR, LLALLI",
+        "lugar_domicilio": "PUNO, MELGAR, AYAVIRI",
+        "region_original_pdf": "PUNO",
+        "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/43677261/254801",
+        "imagen": ""
+      },
+      {
+        "posicion": 3,
+        "nombre": "JHONATAN DANIEL APAZA MAMANI",
+        "dni": "42190169",
+        "sexo": "M",
+        "cargo_postula": "DIPUTADO",
+        "lugar_nacimiento": "PUNO, SAN ROMAN, JULIACA",
+        "lugar_domicilio": "LIMA, LIMA, CHACLACAYO",
+        "region_original_pdf": "LIMA",
+        "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/42190169/255460",
+        "imagen": ""
+      },
+      {
+        "posicion": 4,
+        "nombre": "YANET QUIMBER CHAMBI",
+        "dni": "44731333",
+        "sexo": "F",
+        "cargo_postula": "DIPUTADO",
+        "lugar_nacimiento": "PUNO, SAN ROMAN, CABANILLAS",
+        "lugar_domicilio": "PUNO, SAN ROMAN, JULIACA",
+        "region_original_pdf": "PUNO",
+        "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/44731333/249751",
+        "imagen": ""
+      },
+      {
+        "posicion": 5,
+        "nombre": "LUIS ALBERTO CODARLUPO SAENZ",
+        "dni": "02792059",
+        "sexo": "M",
+        "cargo_postula": "DIPUTADO",
+        "lugar_nacimiento": "PIURA, PIURA, CASTILLA",
+        "lugar_domicilio": "PIURA, PIURA, VEINTISEIS DE OCTUBRE",
+        "region_original_pdf": "PIURA",
+        "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/44731333/249751",
+        "imagen": ""
+      },
+      {
+        "posicion": 6,
+        "nombre": "NANCY YANET CRUZ ZEGARRA",
+        "dni": "48300275",
+        "sexo": "F",
+        "cargo_postula": "DIPUTADO",
+        "lugar_nacimiento": "LAMBAYEQUE, LAMBAYEQUE, OLMOS",
+        "lugar_domicilio": "LAMBAYEQUE, LAMBAYEQUE, OLMO",
+        "region_original_pdf": "LAMBAYEQUE",
+        "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/48300275/245759",
+        "imagen": ""
+      }
+    ]
+  },
+  {
+    "departamento": "SAN MARTIN",
+    "tipo": "Diputado",
+    "candidatos": [
+      {
+        "posicion": 1,
+        "nombre": "JEHU DANIEL PEZO SHAPIAMA",
+        "dni": "70657094",
+        "sexo": "M",
+        "cargo_postula": "DIPUTADO",
+        "lugar_nacimiento": "SAN MARTIN, SAN MARTIN, TARAPOTO",
+        "lugar_domicilio": "SAN MARTIN, SAN MARTIN, TARAPOTO",
+        "region_original_pdf": "SAN MARTIN",
+        "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/70657094/250870",
+        "imagen": "/jehu-pezo-jne.jpg"
+      },
+      {
+        "posicion": 2,
+        "nombre": "CLOTILDE REYMERA VELEZ USHIÑAHUA",
+        "dni": "70932295",
+        "sexo": "F",
+        "cargo_postula": "DIPUTADO",
+        "lugar_nacimiento": "SAN MARTIN, PICOTA, SAN CRISTOBAL",
+        "lugar_domicilio": "SAN MARTIN, PICOTA, SAN CRISTOBAL",
+        "region_original_pdf": "SAN MARTIN",
+        "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/70932295/252019",
+        "imagen": ""
+      },
+      {
+        "posicion": 3,
+        "nombre": "ADOLFO AMASIFUEN ARMAS",
+        "dni": "41697655",
+        "sexo": "M",
+        "cargo_postula": "DIPUTADO",
+        "lugar_nacimiento": "SAN MARTIN, SAN MARTIN, TARAPOTO",
+        "lugar_domicilio": "SAN MARTIN, SAN MARTIN, TARAPOTO",
+        "region_original_pdf": "SAN MARTIN",
+        "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/41697655/252764",
+        "imagen": ""
+      },
+      {
+        "posicion": 4,
+        "nombre": "HAIDY PIERINA CASTRO CALLE",
+        "dni": "75543214",
+        "sexo": "F",
+        "cargo_postula": "DIPUTADO",
+        "lugar_nacimiento": "LAMBAYEQUE, LAMBAYEQUE, OLMOS",
+        "lugar_domicilio": "LAMBAYEQUE, LAMBAYEQUE, OLMOS",
+        "region_original_pdf": "LAMBAYEQUE",
+        "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/75543214/248267",
+        "imagen": ""
+      }
+    ]
+  },
+  {
+    "departamento": "TACNA",
+    "tipo": "Diputado",
+    "candidatos": [
+      {
+        "posicion": 1,
+        "nombre": "JORGE RAMOS MAMANI",
+        "dni": "45866892",
+        "sexo": "M",
+        "cargo_postula": "DIPUTADO",
+        "lugar_nacimiento": "CUSCO, ESPINAR, ESPINAR",
+        "lugar_domicilio": "TACNA, JORGE BASADRE, ILABAYA",
+        "region_original_pdf": "TACNA",
+        "url": "https://votoinformado.jne.gob.pe/diputados?partido=2961",
+        "imagen": ""
+      },
+      {
+        "posicion": 2,
+        "nombre": "ANYELA MACARENA CUETO MAMANI",
+        "dni": "42212593",
+        "sexo": "F",
+        "cargo_postula": "DIPUTADO",
+        "lugar_nacimiento": "TACNA, TACNA, TACNA",
+        "lugar_domicilio": "TACNA, TACNA, TACNA",
+        "region_original_pdf": "TACNA",
+        "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/42212593/255569",
+        "imagen": ""
+      },
+      {
+        "posicion": 3,
+        "nombre": "EDGAR PAREDES HUANCA",
+        "dni": "00506828",
+        "sexo": "M",
+        "cargo_postula": "DIPUTADO",
+        "lugar_nacimiento": "TACNA, TACNA, TACNA",
+        "lugar_domicilio": "TACNA, TACNA, TACNA",
+        "region_original_pdf": "TACNA",
+        "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/00506828/255571",
+        "imagen": ""
+      },
+      {
+        "posicion": 4,
+        "nombre": "VANESSA TONE GOMEZ",
+        "dni": "40346522",
+        "sexo": "F",
+        "cargo_postula": "DIPUTADO",
+        "lugar_nacimiento": "TACNA, TACNA, TACNA",
+        "lugar_domicilio": "TACNA, TACNA, LA YARADA LOS PALOS",
+        "region_original_pdf": "TACNA",
+        "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/40346522/244267",
+        "imagen": ""
+      }
+    ]
+  },
+  {
+    "departamento": "TUMBES",
+    "tipo": "Diputado",
+    "candidatos": [
+      {
+        "posicion": 1,
+        "nombre": "EMMA ROSA FEIJOO MERINO",
+        "dni": "00205719",
+        "sexo": "F",
+        "cargo_postula": "DIPUTADO",
+        "lugar_nacimiento": "TUMBES, TUMBES, TUMBES",
+        "lugar_domicilio": "TUMBES, TUMBES, TUMBES",
+        "region_original_pdf": "TUMBES",
+        "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/00205719/250921",
+        "imagen": ""
+      },
+      {
+        "posicion": 2,
+        "nombre": "JOSE MIGUEL ZAPATA SERNAQUE",
+        "dni": "73148276",
+        "sexo": "M",
+        "cargo_postula": "DIPUTADO",
+        "lugar_nacimiento": "TUMBES, TUMBES, TUMBES",
+        "lugar_domicilio": "TUMBES, TUMBES, TUMBES",
+        "region_original_pdf": "TUMBES",
+        "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/73148276/247724",
+        "imagen": ""
+      },
+      {
+        "posicion": 3,
+        "nombre": "MONICA LISETH ALEMAN ZARATE",
+        "dni": "73428669",
+        "sexo": "F",
+        "cargo_postula": "DIPUTADO",
+        "lugar_nacimiento": "TUMBES, TUMBES, TUMBES",
+        "lugar_domicilio": "TUMBES, TUMBES, TUMBES",
+        "region_original_pdf": "TUMBES",
+        "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/73428669/245906",
+        "imagen": ""
+      },
+      {
+        "posicion": 4,
+        "nombre": "CRISTIAN ERNESTO MONTALBAN ARRUNATEGUI",
+        "dni": "43060906",
+        "sexo": "M",
+        "cargo_postula": "DIPUTADO",
+        "lugar_nacimiento": "PIURA, MORROPON, MORROPON",
+        "lugar_domicilio": "TUMBES, TUMBES, TUMBES",
+        "region_original_pdf": "TUMBES",
+        "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/43060906/243697",
+        "imagen": ""
+      }
+    ]
+  },
+  {
+    "departamento": "UCAYALI",
+    "tipo": "Diputado",
+    "candidatos": [
+      {
+        "posicion": 1,
+        "nombre": "ERNESTO HONORIO ESPEJO CASAVERDE",
+        "dni": "40587243",
+        "sexo": "M",
+        "cargo_postula": "DIPUTADO",
+        "lugar_nacimiento": "LIMA, LIMA, JESUS MARIA",
+        "lugar_domicilio": "UCAYALI, CORONEL PORTILLO, YARINACOCHA",
+        "region_original_pdf": "UCAYALI",
+        "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/40587243/245200",
+        "imagen": ""
+      },
+      {
+        "posicion": 2,
+        "nombre": "ITATY GIOVANNA VASQUEZ FLORES",
+        "dni": "73357093",
+        "sexo": "F",
+        "cargo_postula": "DIPUTADO",
+        "lugar_nacimiento": "LORETO, MAYNAS, PUTUMAYO",
+        "lugar_domicilio": "UCAYALI, CORONEL PORTILLO, YARINACOCHA",
+        "region_original_pdf": "UCAYALI",
+        "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/73357093/245373",
+        "imagen": ""
+      },
+      {
+        "posicion": 3,
+        "nombre": "RAUL ANGELO SOLORZANO BENANCINO",
+        "dni": "74892747",
+        "sexo": "M",
+        "cargo_postula": "DIPUTADO",
+        "lugar_nacimiento": "UCAYALI, CORONEL PORTILLO, YARINACOCHA",
+        "lugar_domicilio": "UCAYALI, CORONEL PORTILLO, MANANTAY",
+        "region_original_pdf": "UCAYALI",
+        "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/74892747/253475",
+        "imagen": ""
+      },
+      {
+        "posicion": 4,
+        "nombre": "ROSARIO DEL CARMEN REATEGUI FLORES",
+        "dni": "45904401",
+        "sexo": "F",
+        "cargo_postula": "DIPUTADO",
+        "lugar_nacimiento": "LORETO, MAYNAS, PUTUMAYO",
+        "lugar_domicilio": "LIMA, LIMA, ATE",
+        "region_original_pdf": "LIMA",
+        "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/45904401/252849",
+        "imagen": ""
+      }
+    ]
+  }
+]

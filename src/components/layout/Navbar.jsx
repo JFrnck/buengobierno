@@ -89,6 +89,9 @@ export default function Navbar() {
             <NavLink to="/plan-de-gobierno" active={isActive('/plan-de-gobierno')}>Plan de Gobierno</NavLink>
           </div>
           <div className="nav-item">
+            <NavLink to="/diputados" active={isActive('/diputados')}>Lista de Diputados</NavLink>
+          </div>
+          <div className="nav-item">
             <NavLink to="https://mapa.partidodelbuengobierno.com/" active={isActive('/plan-de-gobierno')}>Mapa de dolencias</NavLink>
           </div>
           {/* <div className="nav-item">
