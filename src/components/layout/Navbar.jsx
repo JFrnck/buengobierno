@@ -239,18 +239,18 @@ function VotingGuideModal({ isOpen, onClose }) {
 
   // Reemplaza estas rutas con las imágenes reales que tengas
   const guideSteps = [
-    { image: '/instructivo-votacion-1.jpg', title: 'Paso 1', text: 'Selecciona tu departamento o región.' },
-    { image: '/instructivo-votacion-2.jpg', title: 'Paso 2', text: 'Ubica el símbolo del Partido del Buen Gobierno.' },
-    { image: '/instructivo-votacion-3.jpg', title: 'Paso 3', text: 'Marca con una aspa (X) o cruz (+) dentro del recuadro.' },
-    { image: '/instructivo-votacion-4.jpg', title: 'Paso 4', text: 'Si deseas, escribe el número de tu diputado preferido.' },
-    { image: '/instructivo-votacion-5.jpg', title: 'Paso 5', text: '¡Revisa tu voto y listo!' },
-    { image: '/instructivo-votacion-6.jpg', title: 'Paso 6', text: '¡Revisa tu voto y listo!' },
-    { image: '/instructivo-votacion-7.jpg', title: 'Paso 7', text: '¡Revisa tu voto y listo!' },
-    { image: '/instructivo-votacion-8.jpg', title: 'Paso 8', text: '¡Revisa tu voto y listo!' },
-    { image: '/instructivo-votacion-9.jpg', title: 'Paso 9', text: '¡Revisa tu voto y listo!' },
-    { image: '/instructivo-votacion-10.jpg', title: 'Paso 10', text: '¡Revisa tu voto y listo!' },
-    { image: '/instructivo-votacion-11.jpg', title: 'Paso 11', text: '¡Revisa tu voto y listo!' },
-    { image: '/instructivo-votacion-12.jpg', title: 'Paso 12', text: '¡Revisa tu voto y listo!' },
+    { image: '/instructivo-votacion-1.jpg', title: 'Paso 1', text: '' },
+    { image: '/instructivo-votacion-2.jpg', title: 'Paso 2', text: '' },
+    { image: '/instructivo-votacion-3.jpg', title: 'Paso 3', text: '' },
+    { image: '/instructivo-votacion-4.jpg', title: 'Paso 4', text: '' },
+    { image: '/instructivo-votacion-5.jpg', title: 'Paso 5', text: '' },
+    { image: '/instructivo-votacion-6.jpg', title: 'Paso 6', text: '' },
+    { image: '/instructivo-votacion-7.jpg', title: 'Paso 7', text: '' },
+    { image: '/instructivo-votacion-8.jpg', title: 'Paso 8', text: '' },
+    { image: '/instructivo-votacion-9.jpg', title: 'Paso 9', text: '' },
+    { image: '/instructivo-votacion-10.jpg', title: 'Paso 10', text: '' },
+    { image: '/instructivo-votacion-11.jpg', title: 'Paso 11', text: '' },
+    { image: '/instructivo-votacion-12.jpg', title: 'Paso 12', text: '' },
   ]
 
   // Animación de entrada/salida del modal
@@ -300,7 +300,7 @@ function VotingGuideModal({ isOpen, onClose }) {
     >
       <div 
         ref={modalBoxRef} 
-        className="bg-white rounded-3xl shadow-2xl w-full max-w-2xl overflow-hidden relative"
+        className="bg-white rounded-3xl shadow-2xl w-full h-full max-w-2xl overflow-hidden relative"
       >
         {/* Botón de cerrar */}
         <button 
@@ -311,7 +311,7 @@ function VotingGuideModal({ isOpen, onClose }) {
         </button>
 
         {/* Contenido Cambiante */}
-        <div className="p-6 md:p-8">
+        <div className="p-6 md:p-8 h-[90%]">
           {/* Indicador de Pasos */}
           <div className="flex justify-center gap-2 mb-6">
             {guideSteps.map((_, i) => (
@@ -322,14 +322,14 @@ function VotingGuideModal({ isOpen, onClose }) {
             ))}
           </div>
 
-          <div ref={contentRef} className="flex flex-col items-center text-center">
+          <div ref={contentRef} className="flex flex-col h-[90%] lg:h-full items-center text-center">
             {/* Imagen Placeholder (Cambiar el src por guideSteps[step].image) */}
-            <div className="w-full aspect-video bg-gray-100 rounded-xl mb-6 flex items-center justify-center border border-gray-200 overflow-hidden">
+            <div className="w-full h-full aspect-video bg-gray-100 rounded-xl mb-6 flex items-center justify-center border border-gray-200 overflow-hidden">
                {/* Aquí debes usar tu etiqueta <img /> */}
                {/* <span className="text-gray-400 font-bold">
                  [ Imagen: {guideSteps[step].title} ]
                </span> */}
-               <img src={guideSteps[step].image} alt={`Paso ${step + 1}`} className="w-full h-full object-cover" />
+               <img src={guideSteps[step].image} alt={`Paso ${step + 1}`} className="w-[85%] h-auto lg:w-[70%] object-cover" />
             </div>
 
             <h3 className="text-2xl font-black text-[#1A1A1A] mb-2">
