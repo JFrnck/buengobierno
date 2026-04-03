@@ -296,7 +296,7 @@ function VotingGuideModal({ isOpen, onClose }) {
     <div 
       ref={overlayRef} 
       style={{ display: 'none' }}
-      className="fixed inset-0 z-[200] bg-black/60 backdrop-blur-sm items-center justify-center p-4"
+      className="fixed inset-0 z-[9999] bg-black/60 backdrop-blur-sm items-center justify-center p-4"
     >
       <div 
         ref={modalBoxRef} 

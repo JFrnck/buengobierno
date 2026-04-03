@@ -94,7 +94,7 @@ export default function CoquitoChat() {
   };
 
   return (
-    <div className="fixed bottom-5 right-5 z-[9999] font-sans">
+    <div className="fixed bottom-5 right-5 z-[7999] font-sans">
       
       {/* Tooltip flotante "¡Pregúntame!" */}
       <div 
