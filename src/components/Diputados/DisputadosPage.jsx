@@ -332,7 +332,7 @@ export default function DiputadosPBG() {
       </section>
 
       {/* Barra de Filtros */}
-      <div className="sticky top-[73px] sm:top-[77px] z-30 bg-white/95 backdrop-blur-xl border-b border-gray-600 py-4 px-4 sm:px-6 md:px-12 shadow-sm">
+      <div className="sticky top-[73px] sm:top-[77px] z-30 bg-[#D72638]/95 backdrop-blur-xl border-b border-gray-600 py-4 px-4 sm:px-6 md:px-12 shadow-sm">
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row gap-4 justify-between items-center">
           
           <div className="relative w-full sm:w-80">
