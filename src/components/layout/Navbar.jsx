@@ -96,7 +96,7 @@ export default function Navbar() {
             <NavLink to="https://mapa.partidodelbuengobierno.com/" active={isActive('/mapa-de-dolencias')}>Mapa de dolencias</NavLink>
           </div>
           <div className="nav-item">
-            <NavLink to="https://simuladordevotoperu.com/simulador/" active={isActive('/mapa-de-dolencias')}>Simulador de Votación</NavLink>
+            <NavLink to="https://simuladordevotoperu.com/simulador/" >Simulador de Votación</NavLink>
           </div>
         </div>
 
@@ -186,7 +186,7 @@ function MobileMenu({ location, waLink }) {
         <MobileItem to="/plan-de-gobierno" active={location.pathname === '/plan-de-gobierno'} onClick={() => setOpen(false)}>Plan de Gobierno</MobileItem>
         <MobileItem to="/diputados" active={location.pathname === '/diputados'} onClick={() => setOpen(false)}>Lista de Diputados</MobileItem>
         <MobileItem to="https://mapa.partidodelbuengobierno.com/">Mapa de dolencias 🇵🇪</MobileItem>
-        <MobileItem to="https://mapa.partidodelbuengobierno.com/">Simulador de Votación</MobileItem>
+        <MobileItem to="https://simuladordevotoperu.com/simulador/">Simulador de Votación</MobileItem>
       </div>
     </div>
   )
