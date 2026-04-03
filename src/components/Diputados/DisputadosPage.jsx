@@ -389,7 +389,7 @@ export default function DiputadosPBG() {
               <Award className="text-white" size={16} />
             </div>
             <span className="text-[#1A1A1A] font-black text-sm tracking-widest uppercase">
-              Partido del Buen Gobierno | 2026 - 2031
+              Buen Gobierno | 2026 - 2031
             </span>
           </div>
           <p className="text-gray-500 font-bold text-xs tracking-wider uppercase text-center sm:text-right">
