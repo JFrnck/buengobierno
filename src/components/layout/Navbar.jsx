@@ -189,6 +189,7 @@ function MobileMenu({ location, waLink }) {
       >
         <MobileItem to="/" active={location.pathname === '/'} onClick={() => setOpen(false)}>PBG</MobileItem>
         <MobileItem to="/plan-de-gobierno" active={location.pathname === '/plan-de-gobierno'} onClick={() => setOpen(false)}>Plan de Gobierno</MobileItem>
+        <MobileItem to="/diputados" active={location.pathname === '/diputados'} onClick={() => setOpen(false)}>Lista de Diputados</MobileItem>
         <a href="https://mapa.partidodelbuengobierno.com/">Mapa de dolencias 🇵🇪</a>
       </div>
     </div>
