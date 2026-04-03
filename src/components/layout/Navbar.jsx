@@ -329,15 +329,15 @@ function VotingGuideModal({ isOpen, onClose }) {
                {/* <span className="text-gray-400 font-bold">
                  [ Imagen: {guideSteps[step].title} ]
                </span> */}
-               <img src={guideSteps[step].image} alt={`Paso ${step + 1}`} className="w-[85%] h-auto lg:w-[70%] object-cover" />
+               <img src={guideSteps[step].image} alt={`Paso ${step + 1}`} className="w-full h-auto lg:w-[85%] object-cover" />
             </div>
 
-            <h3 className="text-2xl font-black text-[#1A1A1A] mb-2">
+            {/* <h3 className="text-2xl font-black text-[#1A1A1A] mb-2">
               {guideSteps[step].title}
             </h3>
             <p className="text-gray-600 mb-8 min-h-[48px]">
               {guideSteps[step].text}
-            </p>
+            </p> */}
           </div>
 
           {/* Controles de Navegación */}
