@@ -106,15 +106,15 @@ export default function Navbar() {
             </div>
           </div>
 
-          {/* <a 
-            href="https://www.tiktok.com/@nietooficial/live?_r=1&_svg=1&checksum=95f00e5fd1e94f55af360a81bec80632d6d07784b9a7051e39547c2396d8dd9e&enter_from_merge=share&enter_method=share&sec_user_id=MS4wLjABAAAAOhCUWWTugcZRRRNdMz5-aEXZgb25zFWvmB5965crCDabjQ9Io3CCBghMfksJfgdT&share_app_id=1233&share_from_user_id=245756048685285376&share_link_id=60419d96-1c00-402f-87b8-e87c3a5e224f&share_region=PE&social_share_type=10&source=h5_m&timestamp=1775237168&ug_btm=b2001%2Cb4180&ugbiz_name=LIVE&user_id=245756048685285376&utm_campaign=client_share&utm_medium=android&utm_source=whatsapp" 
+          <a 
+            href="https://www.tiktok.com/@nietooficial/live" 
             className="inline-flex items-center gap-1.5 bg-white text-red-600 font-bold text-sm px-4 py-2 rounded-full shadow-sm border border-gray-100 hover:shadow-md transition-all"
           >
             EN VIVO 
             <span className="animate-pulse text-red-600 text-xl leading-[0] pb-0.5">
               •
             </span>
-          </a> */}
+          </a>
 
           <div ref={ctaRef} className="flex items-center gap-4">
             <MobileMenu location={location} openGuide={() => setIsGuideOpen(true)} />
