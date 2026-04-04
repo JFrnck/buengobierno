@@ -106,7 +106,7 @@ export default function Navbar() {
             </div>
           </div>
 
-          <a 
+          {/* <a 
             href="https://www.tiktok.com/@nietooficial/live" 
             className="inline-flex items-center gap-1.5 bg-white text-red-600 font-bold text-sm px-4 py-2 rounded-full shadow-sm border border-gray-100 hover:shadow-md transition-all"
           >
@@ -114,7 +114,7 @@ export default function Navbar() {
             <span className="animate-pulse text-red-600 text-xl leading-[0] pb-0.5">
               •
             </span>
-          </a>
+          </a> */}
 
           <div ref={ctaRef} className="flex items-center gap-4">
             <MobileMenu location={location} openGuide={() => setIsGuideOpen(true)} />

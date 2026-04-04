@@ -13,7 +13,7 @@ import PromoBanner from './components/home/PromoBanner'
 const MainLayout = () => {
   return (
     <>
-      <PromoBanner/>
+      {/* <PromoBanner/> */}
       <Navbar />
       <Outlet /> {/* Aquí adentro se renderizará Home, Voluntarios, etc. */}
       <CoquitoChat />
