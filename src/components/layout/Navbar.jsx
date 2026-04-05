@@ -140,7 +140,16 @@ export default function Navbar() {
             </span>
           </a>
 
-          <div ref={ctaRef} className="flex items-center gap-4">
+          <div ref={ctaRef} className="flex items-center gap-2 sm:gap-3">
+            <a
+              href="https://vt.tiktok.com/ZS98p3qVvVJbB-zbxhO"
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-1.5 rounded-full border border-red-200 bg-white px-3 py-2 text-[11px] font-extrabold text-red-600 shadow-[0_10px_24px_rgba(215,38,56,0.2)] transition-all hover:-translate-y-0.5 hover:shadow-[0_14px_30px_rgba(215,38,56,0.28)] lg:hidden"
+            >
+              EN VIVO
+              <span className="animate-pulse text-lg leading-[0] text-red-600">•</span>
+            </a>
             <MobileMenu location={location} openGuide={() => setIsGuideOpen(true)} />
           </div>
         </div>
@@ -222,6 +231,8 @@ function MobileMenu({ location, openGuide }) {
         <span className={`w-6 h-0.5 bg-[#1A1A1A] transition-all duration-300 ${open ? '-rotate-45 -translate-y-2' : ''}`} />
       </button>
 
+      
+
       <div
         ref={menuRef}
         style={{ display: 'none' }}
@@ -263,14 +274,9 @@ function MobileMenu({ location, openGuide }) {
           Simulador de Votación
         </button>
 
-        <a 
-          href="vt.tiktok.com/ZS98p3qVvVJbB-zbxhO"
-          className="inline-flex items-center justify-center gap-1.5 bg-white text-red-600 font-bold text-sm px-4 py-3 rounded-xl shadow-sm border border-gray-200 mt-2"
-        >
-          TIKTOK EN VIVO 
-          <span className="animate-pulse text-red-600 text-xl leading-[0] pb-0.5">•</span>
-        </a>
       </div>
+      
+   
     </div>
   )
 }
