@@ -11,7 +11,7 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const location = useLocation()
   
-  // NUEVO: Estado para controlar el modal del simulador
+  // Estado para controlar el modal del simulador
   const [isGuideOpen, setIsGuideOpen] = useState(false)
 
   // 1. Animación de entrada
@@ -81,22 +81,46 @@ export default function Navbar() {
           </Link>
 
           {/* Desktop Links */}
-          <div ref={linksRef} className="hidden md:flex items-center gap-10">
+          <div ref={linksRef} className="hidden md:flex items-center gap-8 lg:gap-10">
             <div className="nav-item">
               <NavLink to="/" active={isActive('/')}>PBG</NavLink>
             </div>
             <div className="nav-item">
               <NavLink to="/plan-de-gobierno" active={isActive('/plan-de-gobierno')}>Plan de Gobierno</NavLink>
             </div>
+            
+            {/* NUEVO: Dropdown Fórmula de Candidatos */}
+            <div className="nav-item relative group">
+              <button className="nav-link-text flex items-center gap-1 font-bold text-sm tracking-tight transition-colors duration-300 text-[#1A1A1A] group-hover:text-[#D72638] py-2">
+                Fórmula de Candidatos
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mt-0.5 group-hover:rotate-180 transition-transform duration-300">
+                  <path d="m6 9 6 6 6-6"/>
+                </svg>
+              </button>
+              
+              {/* Caja del submenú (Desktop) */}
+              <div className="absolute left-0 top-full pt-2 opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 z-50">
+                <div className="w-56 bg-white border border-gray-100 rounded-xl shadow-lg overflow-hidden">
+                  <Link 
+                    to="/diputados" 
+                    className={`block px-5 py-3.5 text-sm font-bold border-b border-gray-100 transition-colors ${isActive('/diputados') ? 'text-[#D72638] bg-gray-50' : 'text-[#1A1A1A] hover:bg-gray-50 hover:text-[#D72638]'}`}
+                  >
+                    Lista de Diputados
+                  </Link>
+                  <Link 
+                    to="/senadores" 
+                    className={`block px-5 py-3.5 text-sm font-bold transition-colors ${isActive('/senadores') ? 'text-[#D72638] bg-gray-50' : 'text-[#1A1A1A] hover:bg-gray-50 hover:text-[#D72638]'}`}
+                  >
+                    Lista de Senadores
+                  </Link>
+                </div>
+              </div>
+            </div>
+
             <div className="nav-item">
-              <NavLink to="/diputados" active={isActive('/diputados')}>Lista de Diputados</NavLink>
+              <a href="https://mapa.partidodelbuengobierno.com/" target="_blank" rel="noreferrer" className="nav-link-text font-bold text-sm hover:text-[#D72638] transition-colors duration-300">Mapa de dolencias</a>
             </div>
             <div className="nav-item">
-              {/* Ajustado para ser enlace externo, abre en otra pestaña */}
-              <a href="https://mapa.partidodelbuengobierno.com/" target="_blank" rel="noreferrer" className="nav-link-text font-bold text-sm">Mapa de dolencias</a>
-            </div>
-            <div className="nav-item">
-              {/* NUEVO: Botón que abre el modal en lugar de redirigir directamente */}
               <button 
                 onClick={() => setIsGuideOpen(true)}
                 className="nav-link-text relative font-bold text-sm tracking-tight transition-colors duration-300 text-[#1A1A1A] hover:text-[#D72638]"
@@ -107,10 +131,8 @@ export default function Navbar() {
           </div>
 
           <a 
-            // href="https://www.tiktok.com/@nietooficial/live" 
             href="vt.tiktok.com/ZS98p3qVvVJbB-zbxhO"
-            // href="https://vt.tiktok.com/ZS98qLtxbyBEc-NAPdu/" 
-            className="inline-flex items-center gap-1.5 bg-white text-red-600 font-bold text-sm px-4 py-2 rounded-full shadow-sm border border-gray-100 hover:shadow-md transition-all"
+            className="hidden lg:inline-flex items-center gap-1.5 bg-white text-red-600 font-bold text-sm px-4 py-2 rounded-full shadow-sm border border-gray-100 hover:shadow-md transition-all"
           >
             EN VIVO 
             <span className="animate-pulse text-red-600 text-xl leading-[0] pb-0.5">
@@ -124,7 +146,7 @@ export default function Navbar() {
         </div>
       </nav>
 
-      {/* NUEVO: Modal renderizado fuera del nav para evitar problemas de z-index */}
+      {/* Modal del Simulador */}
       <VotingGuideModal isOpen={isGuideOpen} onClose={() => setIsGuideOpen(false)} />
     </>
   )
@@ -168,6 +190,7 @@ function NavLink({ to, active, children }) {
 
 function MobileMenu({ location, openGuide }) {
   const [open, setOpen] = useState(false)
+  const [isFormulaOpen, setIsFormulaOpen] = useState(false) // Estado para el submenú móvil
   const menuRef = useRef(null)
 
   useGSAP(() => {
@@ -179,7 +202,10 @@ function MobileMenu({ location, openGuide }) {
     } else {
       gsap.to(menuRef.current, { 
         opacity: 0, y: -20, pointerEvents: 'none', duration: 0.3, 
-        onComplete: () => { if (menuRef.current) menuRef.current.style.display = 'none' } 
+        onComplete: () => { 
+          if (menuRef.current) menuRef.current.style.display = 'none'
+          setIsFormulaOpen(false) // Cerrar submenú al cerrar el menú principal
+        } 
       })
     }
   }, [open])
@@ -199,20 +225,51 @@ function MobileMenu({ location, openGuide }) {
       <div
         ref={menuRef}
         style={{ display: 'none' }}
-        className="absolute top-14 right-0 w-[calc(100vw-3rem)] max-w-sm bg-white rounded-3xl shadow-2xl p-6 flex-col gap-5 border border-gray-100"
+        className="absolute top-14 right-0 w-[calc(100vw-3rem)] max-w-sm bg-white rounded-3xl shadow-2xl p-6 flex-col gap-5 border border-gray-100 max-h-[80vh] overflow-y-auto"
       >
         <MobileItem to="/" active={location.pathname === '/'} onClick={() => setOpen(false)}>PBG</MobileItem>
         <MobileItem to="/plan-de-gobierno" active={location.pathname === '/plan-de-gobierno'} onClick={() => setOpen(false)}>Plan de Gobierno</MobileItem>
-        <MobileItem to="/diputados" active={location.pathname === '/diputados'} onClick={() => setOpen(false)}>Lista de Diputados</MobileItem>
+        
+        {/* NUEVO: Dropdown móvil Fórmula de Candidatos */}
+        <div className="flex flex-col gap-3">
+          <button 
+            onClick={() => setIsFormulaOpen(!isFormulaOpen)}
+            className="flex items-center justify-between text-lg font-bold text-[#1A1A1A] w-full"
+          >
+            Fórmula de Candidatos
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={`transition-transform duration-300 ${isFormulaOpen ? 'rotate-180 text-[#D72638]' : ''}`}>
+              <path d="m6 9 6 6 6-6"/>
+            </svg>
+          </button>
+          
+          {isFormulaOpen && (
+            <div className="flex flex-col gap-4 pl-4 border-l-2 border-gray-100 mt-1 overflow-hidden">
+              <MobileItem to="/diputados" active={location.pathname === '/diputados'} onClick={() => setOpen(false)}>
+                Lista de Diputados
+              </MobileItem>
+              <MobileItem to="/senadores" active={location.pathname === '/senadores'} onClick={() => setOpen(false)}>
+                Lista de Senadores
+              </MobileItem>
+            </div>
+          )}
+        </div>
+
         <a href="https://mapa.partidodelbuengobierno.com/" target="_blank" rel="noreferrer" className="text-lg font-bold text-[#1A1A1A]">Mapa de dolencias 🇵🇪</a>
         
-        {/* NUEVO: Botón móvil para abrir el modal */}
         <button 
           onClick={() => { setOpen(false); openGuide(); }} 
           className="text-left text-lg font-bold text-[#1A1A1A]"
         >
           Simulador de Votación
         </button>
+
+        <a 
+          href="vt.tiktok.com/ZS98p3qVvVJbB-zbxhO"
+          className="inline-flex items-center justify-center gap-1.5 bg-white text-red-600 font-bold text-sm px-4 py-3 rounded-xl shadow-sm border border-gray-200 mt-2"
+        >
+          TIKTOK EN VIVO 
+          <span className="animate-pulse text-red-600 text-xl leading-[0] pb-0.5">•</span>
+        </a>
       </div>
     </div>
   )
@@ -231,15 +288,14 @@ function MobileItem({ to, children, active, onClick }) {
 }
 
 // =====================================================================
-// NUEVO COMPONENTE: Modal Interactivo Paso a Paso (Wizard)
+// COMPONENTE: Modal Interactivo Paso a Paso (Wizard)
 // =====================================================================
 function VotingGuideModal({ isOpen, onClose }) {
   const [step, setStep] = useState(0)
   const overlayRef = useRef(null)
   const modalBoxRef = useRef(null)
-  const contentRef = useRef(null) // Para animar el cambio de paso
+  const contentRef = useRef(null)
 
-  // Reemplaza estas rutas con las imágenes reales que tengas
   const guideSteps = [
     { image: '/instructivo-votacion-1.jpg', title: 'Paso 1', text: '' },
     { image: '/instructivo-votacion-2.jpg', title: 'Paso 2', text: '' },
@@ -255,10 +311,9 @@ function VotingGuideModal({ isOpen, onClose }) {
     { image: '/instructivo-votacion-12.jpg', title: 'Paso 12', text: '' },
   ]
 
-  // Animación de entrada/salida del modal
   useGSAP(() => {
     if (isOpen) {
-      setStep(0) // Resetear al paso 1 al abrir
+      setStep(0)
       gsap.to(overlayRef.current, { opacity: 1, pointerEvents: 'auto', duration: 0.3, display: 'flex' })
       gsap.fromTo(modalBoxRef.current,
         { scale: 0.8, y: 20, opacity: 0 },
@@ -273,7 +328,6 @@ function VotingGuideModal({ isOpen, onClose }) {
     }
   }, [isOpen])
 
-  // Animación al cambiar de paso
   useEffect(() => {
     if (isOpen) {
       gsap.fromTo(contentRef.current,
@@ -304,7 +358,6 @@ function VotingGuideModal({ isOpen, onClose }) {
         ref={modalBoxRef} 
         className="bg-white rounded-3xl shadow-2xl w-full h-full max-w-2xl overflow-hidden relative"
       >
-        {/* Botón de cerrar */}
         <button 
           onClick={onClose}
           className="absolute top-4 right-4 w-8 h-8 flex items-center justify-center bg-gray-100 hover:bg-gray-200 rounded-full z-10 transition-colors"
@@ -312,9 +365,7 @@ function VotingGuideModal({ isOpen, onClose }) {
           ✕
         </button>
 
-        {/* Contenido Cambiante */}
         <div className="p-6 md:p-8 h-[90%]">
-          {/* Indicador de Pasos */}
           <div className="flex justify-center gap-2 mb-6">
             {guideSteps.map((_, i) => (
               <div 
@@ -325,24 +376,11 @@ function VotingGuideModal({ isOpen, onClose }) {
           </div>
 
           <div ref={contentRef} className="flex flex-col h-[90%] lg:h-full items-center text-center">
-            {/* Imagen Placeholder (Cambiar el src por guideSteps[step].image) */}
             <div className="w-full h-full aspect-video bg-gray-100 rounded-xl mb-6 flex items-center justify-center border border-gray-200 overflow-hidden">
-               {/* Aquí debes usar tu etiqueta <img /> */}
-               {/* <span className="text-gray-400 font-bold">
-                 [ Imagen: {guideSteps[step].title} ]
-               </span> */}
                <img src={guideSteps[step].image} alt={`Paso ${step + 1}`} className="w-full h-auto lg:w-[85%] object-cover" />
             </div>
-
-            {/* <h3 className="text-2xl font-black text-[#1A1A1A] mb-2">
-              {guideSteps[step].title}
-            </h3>
-            <p className="text-gray-600 mb-8 min-h-[48px]">
-              {guideSteps[step].text}
-            </p> */}
           </div>
 
-          {/* Controles de Navegación */}
           <div className="flex items-center justify-between mt-4">
             <button 
               onClick={prevStep}

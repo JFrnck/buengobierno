@@ -7,8 +7,8 @@ import {
   ChevronDown, Award, Search, Home 
 } from "lucide-react";
 
-// 1. IMPORTACIÓN DEL JSON DIRECTAMENTE EN EL COMPONENTE
-import datosDiputados from "../../data/diputadosLista.json";
+// 1. IMPORTACIÓN DEL JSON DE SENADORES
+import datosSenadores from "../../data/senadoresLista.json";
 import Navbar from "../layout/Navbar";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -94,7 +94,7 @@ function CandidateCard({ candidato, onSelect }) {
             {toTitleCase(nombre)}
           </p>
           <p className="text-[#D72638] text-[10px] font-black uppercase tracking-[0.15em] mb-1">
-            Diputado/a
+            Senador/a
           </p>
           <p className="text-gray-500 text-xs font-medium">
             {sexo === "F" ? "Mujer" : "Hombre"}
@@ -206,12 +206,9 @@ function Modal({ candidato, onClose }) {
 // 3. SECCIÓN DE DEPARTAMENTO Y ANIMACIÓN
 // ==========================================
 
-// ✅ CAMBIO 1: Recibimos `selectedDep` como prop para usarlo en el array de dependencias
 function DepartamentoSection({ departamento, candidatos, onSelect, selectedDep }) {
   const sectionRef = useRef(null);
 
-  // ✅ CAMBIO 2: Agregamos `selectedDep` al array de dependencias.
-  // Esto obliga a GSAP a recalcular y reiniciar la animación cuando el filtro cambia.
   useGSAP(() => {
     gsap.fromTo(
       sectionRef.current.querySelectorAll('.candidate-card'),
@@ -224,7 +221,7 @@ function DepartamentoSection({ departamento, candidatos, onSelect, selectedDep }
         ease: 'power3.out',
         scrollTrigger: {
           trigger: sectionRef.current,
-          start: 'top 95%', // Ajustado a 95% para que dispare incluso si queda muy arriba
+          start: 'top 95%',
         }
       }
     );
@@ -259,16 +256,43 @@ function DepartamentoSection({ departamento, candidatos, onSelect, selectedDep }
 // 4. COMPONENTE PRINCIPAL (EXPORT)
 // ==========================================
 
-export default function DiputadosPBG() {
+export default function SenadoresPBG() {
   const [selectedDep, setSelectedDep] = useState("TODOS");
   const [activeCandidate, setActiveCandidate] = useState(null);
   const heroRef = useRef(null);
 
-  const departamentos = useMemo(() => datosDiputados.map((d) => d.departamento), []);
+  // AGRUPACIÓN DINÁMICA DEL JSON PLANO
+  const datosAgrupados = useMemo(() => {
+    const mapaDatos = new Map();
+    
+    datosSenadores.forEach((senador) => {
+      // Si no tiene región o es del PDF de distrito único, lo asignamos a "DISTRITO ÚNICO"
+      const region = senador.region_original_pdf || "DISTRITO ÚNICO";
+      
+      if (!mapaDatos.has(region)) {
+        mapaDatos.set(region, []);
+      }
+      mapaDatos.get(region).push(senador);
+    });
+
+    // Convertir a Array y ordenar (priorizando Distrito Único al inicio, luego alfabético)
+    return Array.from(mapaDatos.entries())
+      .map(([departamento, candidatos]) => ({
+        departamento,
+        candidatos: candidatos.sort((a, b) => a.posicion - b.posicion)
+      }))
+      .sort((a, b) => {
+        if (a.departamento === "DISTRITO ÚNICO") return -1;
+        if (b.departamento === "DISTRITO ÚNICO") return 1;
+        return a.departamento.localeCompare(b.departamento);
+      });
+  }, []);
+
+  const departamentos = useMemo(() => datosAgrupados.map((d) => d.departamento), [datosAgrupados]);
   
   const visible = useMemo(
-    () => (selectedDep === "TODOS" ? datosDiputados : datosDiputados.filter((d) => d.departamento === selectedDep)),
-    [selectedDep]
+    () => (selectedDep === "TODOS" ? datosAgrupados : datosAgrupados.filter((d) => d.departamento === selectedDep)),
+    [selectedDep, datosAgrupados]
   );
   
   const total = useMemo(
@@ -276,11 +300,10 @@ export default function DiputadosPBG() {
     [visible]
   );
 
-  // ✅ CAMBIO 3: Forzamos a ScrollTrigger a recalcular toda la página cuando el layout se achica/agranda
   useEffect(() => {
     const timeoutId = setTimeout(() => {
       ScrollTrigger.refresh();
-    }, 100); // Pequeño retraso para asegurar que React ya pintó el nuevo DOM
+    }, 100);
     
     return () => clearTimeout(timeoutId);
   }, [selectedDep]);
@@ -322,11 +345,11 @@ export default function DiputadosPBG() {
           
           <h1 className="hero-title flex flex-col font-black leading-[0.9] tracking-[-0.03em] text-5xl sm:text-7xl md:text-8xl mb-6">
             <span className="text-[#1A1A1A]">CANDIDATOS A</span>
-            <span className="text-[#D72638] drop-shadow-sm">DIPUTADOS</span>
+            <span className="text-[#D72638] drop-shadow-sm">SENADORES</span>
           </h1>
           
           <p className="hero-text text-[#1A1A1A]/80 font-bold text-base sm:text-lg md:text-xl max-w-2xl mx-auto">
-            Conoce a los representantes del pacto social que transformarán el Perú. Profesionales íntegros orientados al bienestar de sus regiones.
+            Conoce a los representantes del pacto social que transformarán el Perú. Profesionales íntegros orientados al bienestar de sus regiones y del país.
           </p>
         </div>
       </section>
@@ -341,7 +364,7 @@ export default function DiputadosPBG() {
               onChange={(e) => setSelectedDep(e.target.value)}
               className="w-full appearance-none pl-5 pr-10 py-3 rounded-xl text-sm font-bold text-[#1A1A1A] bg-gray-50 border border-gray-600 focus:outline-none focus:border-[#F5C800] focus:ring-2 focus:ring-[#F5C800]/20 transition-all cursor-pointer shadow-sm"
             >
-              <option value="TODOS">Todos los Departamentos</option>
+              <option value="TODOS">Todos los Distritos Electorales</option>
               {departamentos.map((d) => (
                 <option key={d} value={d}>{d}</option>
               ))}
@@ -376,7 +399,7 @@ export default function DiputadosPBG() {
             departamento={departamento}
             candidatos={candidatos}
             onSelect={setActiveCandidate}
-            selectedDep={selectedDep} // ✅ CAMBIO 4: Pasamos el filtro actual como prop
+            selectedDep={selectedDep}
           />
         ))}
       </main>

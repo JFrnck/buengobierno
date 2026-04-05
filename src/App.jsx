@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route, Outlet } from 'react-router-dom'
 import Home from './pages/Home'
-import Voluntarios from './pages/Voluntarios'
+// import Voluntarios from './pages/Voluntarios'
 import Navbar from './components/layout/Navbar'
 import PlanGobiernoPage  from './pages/PlanDeGobierno'
 import CoquitoChat from './components/shared/ChatWidget'
@@ -9,25 +9,27 @@ import DiputadosPage from './components/Diputados/DisputadosPage'
 import DiputadoPage from './components/Diputados/Diputado/DiputadoPage'
 import PromoBanner from './components/home/PromoBanner'
 
-// 1. Creamos un Layout para las páginas normales (CON Navbar)
+// 1. IMPORTAMOS LA NUEVA VISTA DE SENADORES
+import SenadoresPage from './components/Senadores/SenadoresPage' // Ajusta la ruta según donde hayas guardado el archivo
+
 const MainLayout = () => {
   return (
     <>
       <PromoBanner/>
       <Navbar />
-      <Outlet /> {/* Aquí adentro se renderizará Home, Voluntarios, etc. */}
+      <Outlet /> 
       <CoquitoChat />
     </>
   )
 }
 
-// 2. Creamos un Layout para las páginas de Diputados (SIN Navbar)
-const DiputadosLayout = () => {
+// Renombramos DiputadosLayout a CandidatosLayout para mayor claridad
+const CandidatosLayout = () => {
   return (
     <>
       {/* No ponemos el Navbar aquí */}
-      <Outlet /> {/* Aquí se renderizará DiputadosPage y DiputadoPage */}
-      <CoquitoChat /> {/* Puedes dejar el chat si quieres que siga apareciendo */}
+      <Outlet /> 
+      <CoquitoChat /> 
     </>
   )
 }
@@ -41,13 +43,16 @@ export default function App() {
         <Route element={<MainLayout />}>
           <Route path="/" element={<Home />} />
           <Route path="/plan-de-gobierno" element={<PlanGobiernoPage />} />
-          <Route path="/voluntarios" element={<Voluntarios />} />
+          {/* <Route path="/voluntarios" element={<Voluntarios />} /> */}
         </Route>
 
-        {/* --- GRUPO 2: Páginas de Diputados (SIN Navbar) --- */}
-        <Route element={<DiputadosLayout />}>
+        {/* --- GRUPO 2: Páginas de Candidatos (SIN Navbar) --- */}
+        <Route element={<CandidatosLayout />}>
           <Route path="/diputados" element={<DiputadosPage />} />
           <Route path="/diputados/:slug" element={<DiputadoPage />} />
+          
+          {/* 2. AGREGAMOS LA RUTA DE SENADORES */}
+          <Route path="/senadores" element={<SenadoresPage />} />
         </Route>
 
       </Routes>
