@@ -107,7 +107,8 @@ export default function Navbar() {
           </div>
 
           <a 
-            href="https://www.tiktok.com/@nietooficial/live" 
+            // href="https://www.tiktok.com/@nietooficial/live" 
+            href="vt.tiktok.com/ZS98p3qVvVJbB-zbxhO"
             // href="https://vt.tiktok.com/ZS98qLtxbyBEc-NAPdu/" 
             className="inline-flex items-center gap-1.5 bg-white text-red-600 font-bold text-sm px-4 py-2 rounded-full shadow-sm border border-gray-100 hover:shadow-md transition-all"
           >
