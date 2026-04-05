@@ -130,26 +130,28 @@ export default function Navbar() {
             </div>
           </div>
 
-          <a 
-            href="vt.tiktok.com/ZS98p3qVvVJbB-zbxhO"
+          {/* <a 
+            // href="vt.tiktok.com/ZS98p3qVvVJbB-zbxhO"
+            href="vt.tiktok.com/ZS98syXeRafHK-7wYhE/"
             className="hidden lg:inline-flex items-center gap-1.5 bg-white text-red-600 font-bold text-sm px-4 py-2 rounded-full shadow-sm border border-gray-100 hover:shadow-md transition-all"
           >
             EN VIVO 
             <span className="animate-pulse text-red-600 text-xl leading-[0] pb-0.5">
               •
             </span>
-          </a>
+          </a> */}
 
           <div ref={ctaRef} className="flex items-center gap-2 sm:gap-3">
-            <a
-              href="https://vt.tiktok.com/ZS98p3qVvVJbB-zbxhO"
+            {/* <a
+              // href="https://vt.tiktok.com/ZS98p3qVvVJbB-zbxhO"
+              href="https://vt.tiktok.com/ZS98syXeRafHK-7wYhE/"
               target="_blank"
               rel="noreferrer"
               className="inline-flex items-center gap-1.5 rounded-full border border-red-200 bg-white px-3 py-2 text-[11px] font-extrabold text-red-600 shadow-[0_10px_24px_rgba(215,38,56,0.2)] transition-all hover:-translate-y-0.5 hover:shadow-[0_14px_30px_rgba(215,38,56,0.28)] lg:hidden"
             >
               EN VIVO
               <span className="animate-pulse text-lg leading-[0] text-red-600">•</span>
-            </a>
+            </a> */}
             <MobileMenu location={location} openGuide={() => setIsGuideOpen(true)} />
           </div>
         </div>
