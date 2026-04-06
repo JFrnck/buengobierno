@@ -9,13 +9,10 @@
     "numero_lista": "1",
     "slogan_principal": "Con raíces en San Martín, con compromiso por su gente.",
     "lemas": ["Preparación", "Trabajo", "Cercanía"],
-    
     "hero_resumen": "Soy abogado Sanmartinense y candidato a diputado por San Martín con el N° 1 del Partido del Buen Gobierno. Mi trayectoria en gestión, derecho y trabajo de campo me ha preparado para este reto. Asumo esta candidatura con identidad regional, formación jurídica y experiencia laboral para ofrecer una representación seria, responsable y comprometida con nuestra Amazonía.",
-    
     "hero_image": "/jehu-pezo.png", 
     "partido_logo": "/logo-sol-pbg.png",
     "qr_image" : "/jehu-pezo-qr.png",
-    
     "biografia": {
       "titulo": "Conóceme",
       "subtitulo": "De la región, para la región.",
@@ -36,7 +33,6 @@
         }
       ]
     },
-    
     "propuestas": [
       {
         "icon": "ShieldBan",
@@ -135,24 +131,47 @@
         "como_mejorara": "Un gran ahorro para el país. Dejaremos de gastar millones organizando elecciones y pagando sueldos a representantes de una institución que no genera beneficios prácticos para el desarrollo de nuestro país."
       }
     ],
-
     "territorio": {
       "nombre": "Región de San Martín",
       "mapa": "SAN MARTIN",
-      "descripcion": "Ubicada en la Amazonía peruana, San Martín está conformada por 10 provincias y 78 distritos. Según las proyecciones oficiales del INEI, su población alcanzó 899,648 habitantes en 2020.",
+      "descripcion": "Nuestra Amazonía enfrenta abandono histórico, inseguridad creciente y obras paralizadas. Selecciona los puntos en el mapa para conocer mi plan de acción para devolverle el orden y desarrollo a San Martín.",
       "estadisticas": [
-        { "valor": "899,648", "etiqueta": "Habitantes" },
+        { "valor": "899K", "etiqueta": "Habitantes" },
         { "valor": "10", "etiqueta": "Provincias" },
         { "valor": "78", "etiqueta": "Distritos" }
+      ],
+      "puntos_criticos": [
+        {
+          "id": 1,
+          "lat": -6.4800,
+          "lng": -76.3600,
+          "zona": "Tarapoto y Zonas Urbanas",
+          "problema": "Crecimiento de la criminalidad, tala ilegal y leyes que favorecen a las mafias en lugar de proteger al ciudadano.",
+          "solucion": "Derogaremos las leyes pro crimen y aprobaremos la Ley de Rondas Urbanas dándoles voz y voto en la seguridad."
+        },
+        {
+          "id": 2,
+          "lat": -7.0000,
+          "lng": -76.0000,
+          "zona": "Provincias y Conectividad Rural",
+          "problema": "Constantes obras paralizadas y sobrevaloradas debido a la corrupción desde los expedientes técnicos.",
+          "solucion": "Nueva entidad exclusiva para expedientes técnicos con vigilancia obligatoria de colegios profesionales y sociedad civil."
+        },
+        {
+          "id": 3,
+          "lat": -6.0300,
+          "lng": -76.9700,
+          "zona": "Moyobamba / Eje Productivo",
+          "problema": "Trabajadores y jóvenes emprendedores marginados del mercado laboral por falta de títulos formales.",
+          "solucion": "Creación del 'Registro Nacional de Competencias Empíricas' para certificar oficios y fomentar la empleabilidad."
+        }
       ]
     },
-
     "redes_sociales": {
       "facebook": "https://www.facebook.com/JehuDaniel/",
       "instagram": "https://www.instagram.com/pezojehu?igsh=MXBuc2t4bGo3bWNrZA%3D%3D",
       "tiktok": "https://www.tiktok.com/@jehupezo?_r=1&_t=ZS-95A2UJkCJXg"
     },
-
     "enlaces_importantes": [
       {
         "titulo": "Plan de Trabajo Detallado",
@@ -161,7 +180,6 @@
         "tipo": "pdf"
       }
     ],
-
     "multimedia": {
       "videos": [],
       "galeria_fotos": []
@@ -254,11 +272,37 @@
     "territorio": {
       "nombre": "Región de Ayacucho",
       "mapa": "AYACUCHO",
-      "descripcion": "Cuna de la Libertad y rincón de retablos eternos. Ayacucho no solo es el latido histórico donde nació la independencia de América, sino el refugio donde las hands de sus artesanos transforman el barro y la piedra en poesía. Es la tierra de las 33 iglesias que guardan siglos de fe y de huaynos que cantan con el alma. Ser ayacuchano es llevar en la sangre el orgullo de un pueblo que es guardián de la memoria y esencia viva de la identidad peruana.",
+      "descripcion": "Ayacucho necesita obras útiles y planificadas que lleguen verdaderamente a la población. Explora el mapa para descubrir las problemáticas de saneamiento e infraestructura en nuestra región y las soluciones técnicas que planteamos.",
       "estadisticas": [
-        {"valor": "612,489+", "etiqueta": "Habitantes"},
+        {"valor": "612K", "etiqueta": "Habitantes"},
         {"valor": "11", "etiqueta": "Provincias"},
         {"valor": "124", "etiqueta": "Distritos"}
+      ],
+      "puntos_criticos": [
+        {
+          "id": 1,
+          "lat": -13.1500,
+          "lng": -74.2200,
+          "zona": "Huamanga y Zonas Urbanas",
+          "problema": "Obras paralizadas y deficiente formulación de estudios de inversión pública que retrasan el desarrollo.",
+          "solucion": "Promover la formulación estricta de proyectos viables bajo la norma Invierte.pe, erradicando los expedientes técnicos mal diseñados."
+        },
+        {
+          "id": 2,
+          "lat": -14.6900,
+          "lng": -74.1200,
+          "zona": "Lucanas / Zonas Rurales Sur",
+          "problema": "Falta de acceso a agua potable y saneamiento básico, elevando los índices de desnutrición infantil.",
+          "solucion": "Impulsar proyectos de agua y saneamiento con tecnologías apropiadas para comunidades rurales y altoandinas."
+        },
+        {
+          "id": 3,
+          "lat": -13.5000,
+          "lng": -74.0000,
+          "zona": "Corredores de Actividad Productiva",
+          "problema": "Contaminación de recursos hídricos por falta de control en actividades mineras e industriales.",
+          "solucion": "Fortalecer la fiscalización y evaluación ambiental para asegurar el cumplimiento estricto de los instrumentos de gestión."
+        }
       ]
     },
     "redes_sociales": {
@@ -289,13 +333,10 @@
     "numero_lista": "4",
     "slogan_principal": "Preparación técnica, cercanía con la gente y compromiso con Arequipa.",
     "lemas": ["Preparación", "Gestión", "Cercanía"],
-    
     "hero_resumen": "Soy cusqueña de nacimiento y arequipeña por elección, candidata a diputada por Arequipa con el N.° 4 del Partido del Buen Gobierno. Soy ingeniera comercial con especialidad en finanzas, y mi trayectoria en administración, ventas y gestión inmobiliaria me ha dado experiencia directa en el trabajo con personas, patrimonio y desarrollo familiar. Asumo esta candidatura con preparación técnica, experiencia laboral y compromiso con una representación cercana y responsable para Arequipa.",
-    
     "hero_image": "/jakelin-carrion.png",
     "partido_logo": "/logo-sol-pbg.png",
     "qr_image": "/jakelin-carrion-qr.png",
-    
     "biografia": {
       "titulo": "Conóceme",
       "subtitulo": "De Cusco a Arequipa, con experiencia en gestión y cercanía con la gente.",
@@ -316,7 +357,6 @@
         }
       ]
     },
-    
     "propuestas": [
       {
         "icon": "HardHat",
@@ -343,22 +383,45 @@
         "como_mejorara": "Fortalecerá la calidad educativa, recuperará la meritocracia en la regulación universitaria y dará mayores garantías a los estudiantes y sus familias."
       }
     ],
-
     "territorio": {
       "nombre": "Región de Arequipa",
       "mapa": "AREQUIPA",
-      "descripcion": "La Ciudad Blanca que ruge al pie de los volcanes. Custodiada por el Misti, Arequipa está tallada en sillar y esculpida con un carácter orgulloso, rebelde y profundamente patriota. Es la cuna de revoluciones, juristas y poetas. Con el cañón más profundo y una gastronomía de fuego, Arequipa es un pilar económico e intelectual; el León del Sur que siempre defiende al Perú.",
+      "descripcion": "El León del Sur necesita recuperar el control de su desarrollo. Selecciona los puntos interactivos en el mapa para descubrir cómo fiscalizaremos los grandes proyectos y promoveremos energías limpias.",
       "estadisticas": [
-        { "valor": "1,550,000", "etiqueta": "Habitantes" },
+        { "valor": "1.55M", "etiqueta": "Habitantes" },
         { "valor": "8", "etiqueta": "Provincias" },
         { "valor": "109", "etiqueta": "Distritos" }
+      ],
+      "puntos_criticos": [
+        {
+          "id": 1,
+          "lat": -16.4000,
+          "lng": -71.5300,
+          "zona": "Arequipa Metropolitana y Proyectos Macro",
+          "problema": "Grandes obras paralizadas (como Majes Siguas II) atrapadas en sobrecostos y escaso control del gasto público.",
+          "solucion": "Aprobación de la Ley de Transparencia y Control Eficiente con fiscalización concurrente obligatoria."
+        },
+        {
+          "id": 2,
+          "lat": -15.6300,
+          "lng": -71.8000,
+          "zona": "Zonas de Alto Potencial Energético",
+          "problema": "Dependencia energética costosa y nulos incentivos para aprovechar el sol y viento de la región.",
+          "solucion": "Ley de Promoción de Energías Renovables con beneficios tributarios directos a la inversión limpia."
+        },
+        {
+          "id": 3,
+          "lat": -16.4300,
+          "lng": -71.5000,
+          "zona": "Polo Académico del Sur",
+          "problema": "Calidad de la educación superior en riesgo constante por injerencia de intereses particulares.",
+          "solucion": "Devolver atribuciones y autonomía técnica total a la SUNEDU para blindar la educación de nuestros jóvenes."
+        }
       ]
     },
-
     "redes_sociales": {
       "tiktok": "https://www.tiktok.com/@jakelin.carrion?_r=1&_t=ZS-95AGMOT99OO"
     },
-
     "enlaces_importantes": [
       {
         "titulo": "Propuestas Legislativas Arequipa",
@@ -367,109 +430,422 @@
         "tipo": "pdf"
       }
     ],
-
     "multimedia": {
       "videos": [],
       "galeria_fotos": []
     }
   },
   {
-  "id": 4,
-  "slug": "ayde-molina",
-  "nombre": "AYDE MARGARITA",
-  "apellidoHighlighted": "MOLINA VERGARA",
-  "rol": "Candidata a la camara de Diputados",
-  "distrito": "Región Áncash",
-  "numero_lista": "2",
-  "slogan_principal": "Por un Áncash desarrollado, con oportunidades para todos.",
-  "lemas": [],
-  "hero_resumen": "Soy Ayde Molina Vergara, hija de Raquia, orgullosa de mis raíces agricultoras. Sé lo que es luchar día a día por salir adelante, como madre, trabajadora y parte de mi comunidad. Hoy doy un paso al frente como candidata a diputada por Áncash para ser la voz de quienes han sido olvidados y trabajar por oportunidades reales para todos.",
-  "hero_image": "/ayde-molina.png",
-  "partido_logo": "/logo-sol-pbg.png",
-  "qr_image": "/ayde-molina-qr.png",
-  "biografia": {
-    "titulo": "Conóceme",
-    "galeria": [
-    ],
-    "subtitulo": "Hija de Raquia, comprometida con Áncash.",
-    "historia": [
-      "Soy Ayde Molina Vergara, hija del pueblo de Raquia, en el Valle Fortaleza, provincia de Bolognesi. Mi historia nace en una familia de agricultores, donde cada centavo se gana con esfuerzo, dignidad y trabajo constante. Esas raíces me enseñaron el valor de la perseverancia y el compromiso con mi gente.",
-      "Me casé joven y formé una familia. Ser madre me permitió conocer de cerca las dificultades reales que enfrentan miles de peruanos día a día. Impulsada por el amor a mis hijos, asumí distintos emprendimientos y trabajos, siempre con un objetivo claro: brindarles una mejor calidad de vida y salir adelante con honestidad.",
-      "En ese camino, construí lazos con mi comunidad. Conocí a hombres y mujeres valiosos que me enseñaron que cuando nos unimos, somos capaces de lograr grandes cambios. Participé activamente en iniciativas locales, incluyendo la capacitación de adultos sin escolaridad formal, una experiencia que reforzó mi vocación de servicio y mi compromiso con la educación.",
-      "Mi formación académica inició con el apoyo de mi esposo, estudiando Derecho. Aunque las dificultades económicas no me permitieron obtener el grado, continué preparándome y desarrollé estudios técnicos en confección de vestimenta, consolidando así una visión práctica del trabajo y el emprendimiento.",
-      "Hoy doy un paso al frente para servir no solo a mi entorno cercano, sino a toda mi región y mi país. Postulo como diputada con el Partido del Buen Gobierno, con el número 2, convencida de que es momento de representar a quienes han sido olvidados, especialmente a las comunidades más alejadas."
-    ],
-    "hitos_academicos": [
+    "id": 4,
+    "slug": "ayde-molina",
+    "nombre": "AYDE MARGARITA",
+    "apellidoHighlighted": "MOLINA VERGARA",
+    "rol": "Candidata a la camara de Diputados",
+    "distrito": "Región Áncash",
+    "numero_lista": "2",
+    "slogan_principal": "Por un Áncash desarrollado, con oportunidades para todos.",
+    "lemas": [],
+    "hero_resumen": "Soy Ayde Molina Vergara, hija de Raquia, orgullosa de mis raíces agricultoras. Sé lo que es luchar día a día por salir adelante, como madre, trabajadora y parte de mi comunidad. Hoy doy un paso al frente como candidata a diputada por Áncash para ser la voz de quienes han sido olvidados y trabajar por oportunidades reales para todos.",
+    "hero_image": "/ayde-molina.png",
+    "partido_logo": "/logo-sol-pbg.png",
+    "qr_image": "/ayde-molina-qr.png",
+    "biografia": {
+      "titulo": "Conóceme",
+      "galeria": [],
+      "subtitulo": "Hija de Raquia, comprometida con Áncash.",
+      "historia": [
+        "Soy Ayde Molina Vergara, hija del pueblo de Raquia, en el Valle Fortaleza, provincia de Bolognesi. Mi historia nace en una familia de agricultores, donde cada centavo se gana con esfuerzo, dignidad y trabajo constante. Esas raíces me enseñaron el valor de la perseverancia y el compromiso con mi gente.",
+        "Me casé joven y formé una familia. Ser madre me permitió conocer de cerca las dificultades reales que enfrentan miles de peruanos día a día. Impulsada por el amor a mis hijos, asumí distintos emprendimientos y trabajos, siempre con un objetivo claro: brindarles una mejor calidad de vida y salir adelante con honestidad.",
+        "En ese camino, construí lazos con mi comunidad. Conocí a hombres y mujeres valiosos que me enseñaron que cuando nos unimos, somos capaces de lograr grandes cambios. Participé activamente en iniciativas locales, incluyendo la capacitación de adultos sin escolaridad formal, una experiencia que reforzó mi vocación de servicio y mi compromiso con la educación.",
+        "Mi formación académica inició con el apoyo de mi esposo, estudiando Derecho. Aunque las dificultades económicas no me permitieron obtener el grado, continué preparándome y desarrollé estudios técnicos en confección de vestimenta, consolidando así una visión práctica del trabajo y el emprendimiento.",
+        "Hoy doy un paso al frente para servir no solo a mi entorno cercano, sino a toda mi región y mi país. Postulo como diputada con el Partido del Buen Gobierno, con el número 2, convencida de que es momento de representar a quienes han sido olvidados, especialmente a las comunidades más alejadas."
+      ],
+      "hitos_academicos": [
+        {
+          "anio": "2001",
+          "titulo": "Estudios de derecho"
+        },
+        {
+          "anio": "2023",
+          "titulo": "Técnico en industria del vestido"
+        }
+      ]
+    },
+    "propuestas": [
       {
-        "anio": "2001",
-        "titulo": "Estudios de derecho"
+        "icon": null,
+        "titulo": "1. Fiscalización real para una salud digna en Áncash",
+        "que_proponemos": "Ejercer una labor de fiscalización activa desde la cámara de diputados sobre la construcción y ejecución de hospitales y centros de salud en la región, promoviendo mecanismos de control, seguimiento de presupuestos y sanción a obras paralizadas o mal ejecutadas.",
+        "como_mejorara": "Fortalece el sistema de salud desde las regiones, garantizando que los recursos públicos lleguen a quienes más lo necesitan, mejorando la atención médica y recuperando la confianza en el Estado."
       },
       {
-        "anio": "2023",
-        "titulo": "Técnico en industria del vestido"
+        "icon": null,
+        "titulo": "2. Escuelas seguras para el futuro de Áncash",
+        "que_proponemos": "Impulsar leyes y acciones de fiscalización que aseguren que los colegios en Áncash cumplan con estándares de calidad, infraestructura segura y condiciones adecuadas para el aprendizaje.",
+        "como_mejorara": "Una educación en espacios dignos permite formar ciudadanos mejor preparados, reduciendo brechas educativas y promoviendo igualdad de oportunidades en todo el país."
+      },
+      {
+        "icon": null,
+        "titulo": "3. Más inversión para nuestras universidades públicas",
+        "que_proponemos": "Promover desde la cámara de diputados iniciativas legislativas que incrementen y garanticen el presupuesto para universidades públicas de la región, como la Universidad Nacional del Santa y la Universidad Nacional Santiago Antúnez de Mayolo, orientándolo a investigación, innovación y mejora de infraestructura.",
+        "como_mejorara": "Impulsa el desarrollo científico y tecnológico, fortalece la formación profesional y genera oportunidades reales para los jóvenes, contribuyendo al crecimiento del país."
+      },
+      {
+        "icon": null,
+        "titulo": "4. Defensa de la identidad cultural ancashina",
+        "que_proponemos": "Impulsar leyes e iniciativas que reconozcan, preserven y promuevan las costumbres, festividades y tradiciones de las comunidades de Áncash, integrándolas como parte del desarrollo regional.",
+        "como_mejorara": "Fortalece la identidad nacional, promueve el turismo y genera desarrollo económico sostenible basado en la riqueza cultural de nuestras regiones."
+      },
+      {
+        "icon": null,
+        "titulo": "5. Educación práctica para el desarrollo de nuestros pueblos",
+        "que_proponemos": "Impulsar iniciativas desde el Congreso que promuevan programas de capacitación descentralizados en comunidades y zonas rurales, dirigidos a ciudadanos con experiencia en sus propios rubros, como agricultura, ganadería, comercio y oficios locales. Estos programas incluirán formación en técnicas productivas, ventas, emprendimiento y administración del dinero, adaptados a la realidad de cada comunidad.",
+        "como_mejorara": "Fortalece las capacidades de la población, mejora la productividad y fomenta la independencia económica de las familias. Permite que más peruanos no solo generen ingresos, sino que los mantengan y hagan crecer, construyendo un desarrollo sostenible desde las propias comunidades."
       }
-    ]
-  },
-  "propuestas": [
-    {
-      "icon": null,
-      "titulo": "1. Fiscalización real para una salud digna en Áncash",
-      "que_proponemos": "Ejercer una labor de fiscalización activa desde la cámara de diputados sobre la construcción y ejecución de hospitales y centros de salud en la región, promoviendo mecanismos de control, seguimiento de presupuestos y sanción a obras paralizadas o mal ejecutadas.",
-      "como_mejorara": "Fortalece el sistema de salud desde las regiones, garantizando que los recursos públicos lleguen a quienes más lo necesitan, mejorando la atención médica y recuperando la confianza en el Estado."
+    ],
+    "territorio": {
+      "nombre": "Región de Áncash",
+      "mapa": "ANCASH",
+      "descripcion": "Áncash es fuerza y resiliencia, pero necesita una fiscalización de hierro. Haz clic en el mapa para ver cómo defenderemos nuestra salud, educación y las oportunidades en las comunidades más alejadas.",
+      "estadisticas": [
+        { "valor": "1.19M", "etiqueta": "Habitantes" },
+        { "valor": "20", "etiqueta": "Provincias" },
+        { "valor": "166", "etiqueta": "Distritos" }
+      ],
+      "puntos_criticos": [
+        {
+          "id": 1,
+          "lat": -9.0700,
+          "lng": -78.5900,
+          "zona": "Chimbote y la Franja Costera",
+          "problema": "Hospitales paralizados y centros de salud con infraestructura precaria dejando desamparadas a las familias.",
+          "solucion": "Fiscalización activa para destrabar obras médicas, con sanciones penales a constructoras y autoridades por abandono."
+        },
+        {
+          "id": 2,
+          "lat": -9.5200,
+          "lng": -77.5200,
+          "zona": "Huaraz / Callejón de Huaylas",
+          "problema": "Colegios con infraestructura insegura y universidades nacionales sin presupuesto suficiente para investigación.",
+          "solucion": "Incrementar inversión blindada para la UNASAM e impulsar estándares estrictos en la reconstrucción de escuelas."
+        },
+        {
+          "id": 3,
+          "lat": -10.1500,
+          "lng": -77.4500,
+          "zona": "Raquia / Valle Fortaleza",
+          "problema": "Falta de apoyo técnico para agricultores y ciudadanos que tienen oficios pero no herramientas de negocio.",
+          "solucion": "Creación de programas de educación práctica y comercial descentralizada para impulsar la economía de cada pueblo."
+        }
+      ]
     },
-    {
-      "icon": null,
-      "titulo": "2. Escuelas seguras para el futuro de Áncash",
-      "que_proponemos": "Impulsar leyes y acciones de fiscalización que aseguren que los colegios en Áncash cumplan con estándares de calidad, infraestructura segura y condiciones adecuadas para el aprendizaje.",
-      "como_mejorara": "Una educación en espacios dignos permite formar ciudadanos mejor preparados, reduciendo brechas educativas y promoviendo igualdad de oportunidades en todo el país."
+    "redes_sociales": {
+      "facebook": "https://www.facebook.com/share/1BMqtsRgCw/",
+      "instagram": "",
+      "tiktok": "https://www.tiktok.com/@margaritaayde?_r=1&_t=ZS-95C4RL8ehT3"
     },
-    {
-      "icon": null,
-      "titulo": "3. Más inversión para nuestras universidades públicas",
-      "que_proponemos": "Promover desde la cámara de diputados iniciativas legislativas que incrementen y garanticen el presupuesto para universidades públicas de la región, como la Universidad Nacional del Santa y la Universidad Nacional Santiago Antúnez de Mayolo, orientándolo a investigación, innovación y mejora de infraestructura.",
-      "como_mejorara": "Impulsa el desarrollo científico y tecnológico, fortalece la formación profesional y genera oportunidades reales para los jóvenes, contribuyendo al crecimiento del país."
-    },
-    {
-      "icon": null,
-      "titulo": "4. Defensa de la identidad cultural ancashina",
-      "que_proponemos": "Impulsar leyes e iniciativas que reconozcan, preserven y promuevan las costumbres, festividades y tradiciones de las comunidades de Áncash, integrándolas como parte del desarrollo regional.",
-      "como_mejorara": "Fortalece la identidad nacional, promueve el turismo y genera desarrollo económico sostenible basado en la riqueza cultural de nuestras regiones."
-    },
-    {
-      "icon": null,
-      "titulo": "5. Educación práctica para el desarrollo de nuestros pueblos",
-      "que_proponemos": "Impulsar iniciativas desde el Congreso que promuevan programas de capacitación descentralizados en comunidades y zonas rurales, dirigidos a ciudadanos con experiencia en sus propios rubros, como agricultura, ganadería, comercio y oficios locales. Estos programas incluirán formación en técnicas productivas, ventas, emprendimiento y administración del dinero, adaptados a la realidad de cada comunidad.",
-      "como_mejorara": "Fortalece las capacidades de la población, mejora la productividad y fomenta la independencia económica de las familias. Permite que más peruanos no solo generen ingresos, sino que los mantengan y hagan crecer, construyendo un desarrollo sostenible desde las propias comunidades."
+    "enlaces_importantes": [],
+    "multimedia": {
+      "videos": [],
+      "galeria_fotos": []
     }
-  ],
-  "territorio": {
-    "nombre": "Región de Áncash",
-    "mapa": "ANCASH",
-    "descripcion": "Donde los nevados tocan a Dios y el mar acaricia la historia. Desde el imponente Huascarán en la Cordillera Blanca hasta sus ricas costas, Áncash es el contraste perfecto de fiereza y belleza. Tierra de la milenaria cultura Chavín, cuna de nuestra identidad andina. Ser ancashino es tener la fuerza de las cumbres y la nobleza de un espíritu inquebrantable, motor agrícola, pesquero y turístico del país.",
-    "estadisticas": [
+  },
+  {
+    "id": 5,
+    "slug": "rossana-alayza",
+    "nombre": "ROSSANA",
+    "apellidoHighlighted": "ALAYZA",
+    "rol": "Candidata a la camara de Diputados",
+    "distrito": "Lima Metropolitana",
+    "numero_lista": "8",
+    "slogan_principal": "Por un Estado más eficiente, más humano y más cercano.",
+    "lemas": [],
+    "hero_resumen": "Rossana Alayza es politóloga, comunicadora y empresaria. Candidata a diputada por Lima con el N.° 8 del Partido del Buen Gobierno, combina formación en ciencia política y marketing con experiencia en gestión pública, desarrollo de proyectos sociales y creación de negocios propios. Su trayectoria le ha permitido conocer tanto las oportunidades del Perú como los obstáculos que frenan al ciudadano cuando el Estado no responde. Apuesta por una política con principios, reglas claras y resultados concretos. Su propuesta pone en el centro la salud, la educación, la transparencia, la reactivación económica y la lucha contra la corrupción, con una visión clara: construir un Estado más eficiente, más humano y más cercano, que facilite la vida de las personas en lugar de complicarla.",
+    "hero_image": "/rossana-alayza.png",
+    "partido_logo": "/logo-sol-pbg.png",
+    "qr_image": "/rossana-alayza-qr.png",
+    "biografia": {
+      "titulo": "Conóceme",
+      "subtitulo": "Principios, gestión y visión de país para una política útil.",
+      "historia": [
+        "Soy Rossana Alayza y he decidido postular a la cámara de diputados porque no me resigno a ver cómo el Perú sigue desperdiciando su talento, su esfuerzo y sus oportunidades por culpa de un Estado que muchas veces no funciona como debería. He trabajado en gestión pública, en el sector privado y como emprendedora, y desde todos esos espacios confirmé algo que millones de peruanos sienten todos los días: cuando el Estado falla, quien paga el costo es la familia, el estudiante, la madre, el emprendedor y el ciudadano de a pie.",
+        "Creo en una política seria, con principios, con diálogo y con capacidad de ejecución. Me he preparado para aportar con ideas, gestión y visión de país. Soy bachiller en Ciencia Política por la PUCP y tengo una maestría en Comunicación y Marketing por la Rome Business School. He desarrollado proyectos sociales, educativos y empresariales, y también he construido mi propio camino como empresaria, creando una marca peruana con reconocimiento internacional.",
+        "Quiero llevar al Congreso una forma distinta de hacer política: más clara, más honesta y más útil para la gente. Una política que piense primero en salud, educación, transparencia, justicia y oportunidades reales. Una política que no se conforme con prometer, sino que trabaje para que el Perú funcione mejor. Estoy aquí porque creo que sí se puede construir un país más ordenado, más humano y con más futuro para todos."
+      ],
+      "hitos_academicos": [
+        {
+          "anio": "",
+          "titulo": "Bachiller en Ciencia Política por la PUCP"
+        },
+        {
+          "anio": "",
+          "titulo": "Maestría en Comunicación y Marketing por la Rome Business School"
+        }
+      ]
+    },
+    "propuestas": [
       {
-        "valor": "1,190,000",
-        "etiqueta": "Habitantes"
+        "icon": null,
+        "titulo": "1. Anular el voto secreto en el Congreso",
+        "que_proponemos": "Eliminar el voto secreto en el Congreso para que todas las decisiones de los congresistas sean públicas y puedan rendir cuentas ante sus electores.",
+        "como_mejorara": "Permitirá mayor transparencia, fortalecerá la rendición de cuentas y ayudará a que la ciudadanía conozca con claridad cómo votan sus representantes."
       },
       {
-        "valor": "20",
-        "etiqueta": "Provincias"
+        "icon": null,
+        "titulo": "2. Elecciones a mitad de periodo",
+        "que_proponemos": "Implementar elecciones a mitad de periodo para que el voto ciudadano no sea un cheque en blanco y los electores puedan renovar su confianza o expresar su disconformidad.",
+        "como_mejorara": "Fortalecerá el control ciudadano sobre sus autoridades y generará mayores incentivos para que los representantes cumplan sus compromisos durante el ejercicio del cargo."
       },
       {
-        "valor": "166",
-        "etiqueta": "Distritos"
+        "icon": null,
+        "titulo": "3. Integración del sistema de salud",
+        "que_proponemos": "Integrar el sistema de salud entre MINSA, ESSALUD y el hospital de la PNP.",
+        "como_mejorara": "Permitirá un sistema más articulado, con mejor coordinación entre instituciones de salud y una atención más ordenada para la población."
+      },
+      {
+        "icon": null,
+        "titulo": "4. Anemia cero como pilar de salud",
+        "que_proponemos": "Impulsar la meta de anemia cero como pilar central de salud, para que todos los niños puedan alcanzar su máximo potencial cognitivo.",
+        "como_mejorara": "Contribuirá al desarrollo integral de la niñez y ayudará a que más niños crezcan con mejores condiciones para aprender y desarrollar sus capacidades."
+      },
+      {
+        "icon": null,
+        "titulo": "5. Becas por impuestos (BxI)",
+        "que_proponemos": "Crear becas por impuestos en beneficio de los alumnos que han quedado desamparados en PRONABEC.",
+        "como_mejorara": "Ampliará oportunidades educativas para estudiantes que hoy no cuentan con respaldo, ayudando a que más jóvenes continúen su formación."
+      },
+      {
+        "icon": null,
+        "titulo": "6. Replanteo de infraestructura escolar",
+        "que_proponemos": "Replantear la infraestructura escolar mediante un concurso nacional de arquitectos, con diseños fáciles, económicos, rápidos, durables y modulares, que puedan crecer de manera eficiente y a bajo costo usando materiales modernos.",
+        "como_mejorara": "Permitirá contar con infraestructura escolar más funcional y escalable, facilitando mejores espacios para el aprendizaje con soluciones más eficientes."
+      },
+      {
+        "icon": null,
+        "titulo": "7. Repatriación estratégica del talento",
+        "que_proponemos": "Impulsar la repatriación estratégica del talento peruano para reconstruir el Estado.",
+        "como_mejorara": "Ayudará a fortalecer la capacidad del Estado con profesionales peruanos preparados, aportando conocimiento y experiencia para mejorar la gestión pública."
+      },
+      {
+        "icon": null,
+        "titulo": "8. Derogación de las leyes pro crimen",
+        "que_proponemos": "Derogar las leyes pro crimen.",
+        "como_mejorara": "Permitirá enfrentar con mayor firmeza la delincuencia y corregir normas que hoy favorecen al crimen en lugar de proteger a la ciudadanía."
+      },
+      {
+        "icon": null,
+        "titulo": "9. Acceso a la justicia de familia",
+        "que_proponemos": "Eliminar barreras de acceso que impiden acelerar los procesos de justicia de familia, como las tasas judiciales y la defensa cautiva, y fortalecer los juzgados especializados con mayor presupuesto.",
+        "como_mejorara": "Facilitará el acceso a la justicia para más familias, permitirá procesos más ágiles y fortalecerá la capacidad de los juzgados especializados."
+      },
+      {
+        "icon": null,
+        "titulo": "10. Defensa de los espacios públicos",
+        "que_proponemos": "Impulsar una ley de defensa de los espacios públicos para promover más parques y playas para más peruanos y hacer de Lima una Surf City.",
+        "como_mejorara": "Contribuirá a recuperar y proteger espacios de uso común, ampliando el acceso ciudadano a áreas recreativas y fortaleciendo el vínculo de Lima con el mar."
+      },
+      {
+        "icon": null,
+        "titulo": "11. Reactivación del turismo",
+        "que_proponemos": "Impulsar la reactivación del sector turismo como fuente generadora de empleo.",
+        "como_mejorara": "Ayudará a dinamizar la economía y a generar más oportunidades laborales a través del fortalecimiento de una actividad clave para muchas regiones del país."
+      },
+      {
+        "icon": null,
+        "titulo": "12. Sistema nacional de protección animal",
+        "que_proponemos": "Crear un sistema nacional de protección animal.",
+        "como_mejorara": "Permitirá contar con una estructura más clara para atender la protección animal y darle mayor prioridad a este tema a nivel nacional."
+      },
+      {
+        "icon": null,
+        "titulo": "13. Ley Integral de Bienestar Animal",
+        "que_proponemos": "Promover y hacer realmente ejecutable la Ley Integral de Bienestar Animal.",
+        "como_mejorara": "Ayudará a que la protección y el bienestar animal no queden solo en la norma, sino que puedan aplicarse de manera efectiva."
       }
-    ]
+    ],
+    "territorio": {
+      "nombre": "Lima Metropolitana",
+      "mapa": "LIMA",
+      "descripcion": "Lima necesita un Estado que facilite la vida y no que la complique. Toca el mapa para conocer cómo integraremos la salud, protegeremos nuestros espacios públicos y transformaremos la educación.",
+      "estadisticas": [
+        { "valor": "10.1M", "etiqueta": "Habitantes" },
+        { "valor": "1", "etiqueta": "Provincia" },
+        { "valor": "43", "etiqueta": "Distritos" }
+      ],
+      "puntos_criticos": [
+        {
+          "id": 1,
+          "lat": -12.0400,
+          "lng": -77.0200,
+          "zona": "Lima Centro / Parlamento",
+          "problema": "Congresistas que toman decisiones de espaldas al ciudadano sin rendir cuentas de sus actos.",
+          "solucion": "Anular el voto secreto en el Congreso y aplicar elecciones a mitad de periodo para revocar a los ineficientes."
+        },
+        {
+          "id": 2,
+          "lat": -11.9500,
+          "lng": -76.9900,
+          "zona": "Límites Urbanos y Conos",
+          "problema": "Sistemas de salud fragmentados (MINSA vs ESSALUD) e infraestructura escolar abandonada.",
+          "solucion": "Integración total del sistema de salud y concurso nacional para diseño de escuelas modulares, rápidas y económicas."
+        },
+        {
+          "id": 3,
+          "lat": -12.1200,
+          "lng": -77.0300,
+          "zona": "Costa Verde y Áreas Recreativas",
+          "problema": "Pérdida acelerada de espacios públicos de calidad que impacta en el bienestar de las familias.",
+          "solucion": "Ley estricta de defensa de parques y playas para devolverle el espacio libre a la ciudadanía."
+        }
+      ]
+    },
+    "redes_sociales": {
+      "facebook": "https://www.facebook.com/profile.php?id=61586773063213",
+      "instagram": "https://www.instagram.com/rossana.alayza/",
+      "tiktok": "https://www.tiktok.com/@rossana.alayza?lang=es"
+    },
+    "enlaces_importantes": [
+      {
+        "titulo": "Web personal",
+        "url": "https://rossanaalayza.pe/"
+      },
+      {
+        "titulo": "Canal de difusión WhatsApp",
+        "url": "https://whatsapp.com/channel/0029VbBxBjv6xCSOZoizVV3h"
+      },
+      {
+        "titulo": "X",
+        "url": "https://x.com/rossanaalayza"
+      }
+    ],
+    "multimedia": {
+      "videos": [],
+      "galeria_fotos": []
+    }
   },
-  "redes_sociales": {
-    "facebook": "https://www.facebook.com/share/1BMqtsRgCw/",
-    "instagram": "",
-    "tiktok": "https://www.tiktok.com/@margaritaayde?_r=1&_t=ZS-95C4RL8ehT3"
-  },
-  "enlaces_importantes": [],
-  "multimedia": {
-    "videos": [],
-    "galeria_fotos": []
+  {
+    "id": 6,
+    "slug": "luis-quispe",
+    "nombre": "LUIS ELISEO",
+    "apellidoHighlighted": "QUISPE CANDIA",
+    "rol": "Candidato a la camara de Diputados",
+    "distrito": "Lima Metropolitana",
+    "numero_lista": "5",
+    "slogan_principal": "Por un transporte seguro, ordenado y justo para Lima.",
+    "lemas": [],
+    "hero_resumen": "Soy abogado especializado en tránsito, transporte terrestre y seguridad vial, y candidato a diputado por Lima con el N.° 5 del Partido del Buen Gobierno. Mi experiencia en consultoría, capacitación e investigación me ha permitido conocer de cerca los problemas que viven miles de ciudadanos en su día a día. Hoy asumo esta candidatura con preparación profesional, experiencia técnica y compromiso real para representar a Lima con seriedad, impulsar un transporte más seguro y eficiente, y trabajar por soluciones que mejoren de verdad la vida de la gente.",
+    "hero_image": "/luis-quispe.png",
+    "partido_logo": "/logo-sol-pbg.png",
+    "qr_image": "/luis-quispe-qr.png",
+    "biografia": {
+      "titulo": "Conóceme",
+      "subtitulo": "Experiencia técnica y compromiso real por Lima.",
+      "historia": [
+        "Soy Luis Quispe Candia, abogado, especialista en tránsito, transporte terrestre y seguridad vial, y he dedicado mi vida profesional a estudiar, denunciar y proponer soluciones frente a uno de los problemas que más golpea a Lima: el caos en las vías, la inseguridad y el abuso contra el ciudadano.",
+        "No vengo a improvisar ni a aprender en el cargo. Tengo formación en Derecho, estudios en Psicología, estudios de maestría en el Nuevo Código Procesal Penal con mención en Litigación Oral y actualmente continúo mi preparación doctoral. Pero, además de los títulos, tengo algo más importante: experiencia real. He defendido víctimas de siniestros de tránsito, he elaborado informes legales y técnicos, he capacitado a ciudadanos e instituciones, y durante años he sido una voz reconocida en medios nacionales e internacionales como especialista en estos temas.",
+        "He fundado y liderado instituciones como Luz Ámbar, he sido delegado del Perú en una reunión preparatoria de APEC, he dirigido una revista especializada y soy autor de obras sobre seguridad vial y tránsito. Es decir, no solo conozco el problema: lo he estudiado, lo he explicado y lo he enfrentado.",
+        "Quiero ser diputado porque Lima necesita representantes con preparación, autoridad técnica y valentía para defender a la gente. Si buscas alguien con experiencia, solvencia profesional y compromiso real, soy una opción seria para representarte."
+      ],
+      "hitos_academicos": [
+        {
+          "anio": "1968",
+          "titulo": "Estudios secundarios en el Seminario Menor y estudios superiores en Filosofía y Letras del Seminario Mayor San Antonio Abad del Cusco"
+        },
+        {
+          "anio": "1983",
+          "titulo": "Egresado de la Facultad de Psicología de la Universidad Inca Garcilaso de la Vega"
+        },
+        {
+          "anio": "2019",
+          "titulo": "Egresado de maestría sobre el Nuevo Código Procesal Penal con mención en Litigación Oral"
+        },
+        {
+          "anio": "2022",
+          "titulo": "Doctorado en Derecho, III ciclo, en la Escuela de Posgrado de la Universidad Inca Garcilaso de la Vega"
+        }
+      ]
+    },
+    "propuestas": [
+      {
+        "icon": null,
+        "titulo": "1. Sistema Integrado de Transporte para Lima",
+        "que_proponemos": "Implementar un sistema integrado de transporte, con una red ordenada de buses conectada con el Metro, para que los ciudadanos se movilicen usando una sola tarjeta, pagando un solo pasaje y haciendo transbordos entre bus y metro.",
+        "como_mejorara": "Permitirá llegar más rápido al destino, reducir gastos en transporte, ahorrar tiempo en los traslados y ordenar el sistema de movilidad."
+      },
+      {
+        "icon": null,
+        "titulo": "2. Regulación del servicio de taxi",
+        "que_proponemos": "Impulsar una ley que regule el servicio de taxi convencional, y que formalice y ordene el servicio de taxi por aplicativo, frente a la sobreoferta de taxis en Lima que genera desorden y falta de control.",
+        "como_mejorara": "Brindará mayor seguridad para los usuarios, mejores condiciones para conductors y un servicio más eficiente y confiable."
+      },
+      {
+        "icon": null,
+        "titulo": "3. Alto a los abusos en multas y ordenanzas",
+        "que_proponemos": "Corregir el mal uso de las ordenanzas municipales, eliminar multas indebidas y defender los derechos de los ciudadanos frente a sanciones injustas con fines recaudatorios.",
+        "como_mejorara": "Las autoridades deben hacer cumplir la ley, pero nunca abusar de ella."
+      },
+      {
+        "icon": null,
+        "titulo": "4. Educación vial desde la infancia",
+        "que_proponemos": "Hacer que la educación vial sea obligatoria en nivel inicial, primaria y secundaria, y extenderla a empresas privadas, instituciones públicas y la comunidad en general.",
+        "como_mejorara": "Permitirá cambiar la conducta en las calles, fomentar el respeto entre ciudadanos y reducir accidentes de tránsito."
+      },
+      {
+        "icon": null,
+        "titulo": "5. Cultura de respeto y convivencia en las vías",
+        "que_proponemos": "Generar un cambio profundo en cómo usamos las vías y construir ciudades donde exista respeto entre conductores y peatones, orden en el tránsito y seguridad para todos.",
+        "como_mejorara": "La vía pública debe dejar de ser un espacio de caos y convertirse en un espacio de convivencia."
+      }
+    ],
+    "territorio": {
+      "nombre": "Lima Metropolitana",
+      "mapa": "LIMA",
+      "descripcion": "La Ciudad de los Reyes enfrenta retos gigantescos. El caos en el transporte, los abusos municipales y la inseguridad vial exigen soluciones técnicas urgentes. Selecciona los puntos en el mapa para conocer mi plan de acción.",
+      "estadisticas": [
+        { "valor": "10.1M", "etiqueta": "Habitantes afectados" },
+        { "valor": "1", "etiqueta": "Sist. de Transporte Roto" }
+      ],
+      "puntos_criticos": [
+        {
+          "id": 1,
+          "lat": -11.9300,
+          "lng": -77.0400,
+          "zona": "Lima Norte (Eje Túpac Amaru / Panamericana)",
+          "problema": "Tiempos de traslado que superan las 3 horas diarias y fragmentación del transporte público.",
+          "solucion": "Implementaremos un Sistema Integrado de Transporte real, conectando buses con el Metro mediante una tarifa única."
+        },
+        {
+          "id": 2,
+          "lat": -12.0464,
+          "lng": -77.0428,
+          "zona": "Lima Centro (Cercado y vías principales)",
+          "problema": "Caos vehicular extremo y sobreoferta de taxis informales que generan desorden e inseguridad.",
+          "solucion": "Impulsaremos una ley para regular estrictamente los taxis de aplicativo y formalizar a los convencionales."
+        },
+        {
+          "id": 3,
+          "lat": -12.2000,
+          "lng": -76.9300,
+          "zona": "Lima Sur (Panamericana Sur / Vía de Evitamiento)",
+          "problema": "Imposición abusiva de fotopapeletas sin sustento técnico con un fin puramente recaudatorio.",
+          "solucion": "Legislaremos para detener el abuso municipal con multas injustificadas y priorizaremos la educación vial obligatoria."
+        }
+      ]
+    },
+    "redes_sociales": {
+      "facebook": "https://www.facebook.com/profile.php?id=61587604679496",
+      "instagram": "https://www.instagram.com/lquispecandia/",
+      "tiktok": "https://www.tiktok.com/@lquispecandia"
+    },
+    "enlaces_importantes": [
+      {
+        "titulo": "Perfil web",
+        "url": "https://luisquispecandia.net.pe"
+      }
+    ],
+    "multimedia": {
+      "videos": [],
+      "galeria_fotos": []
+    }
   }
-}
 ]
