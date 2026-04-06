@@ -169,6 +169,7 @@ export default function TerritorioSection({ territorio }) {
                 center={[-9.19, -75.01]} 
                 zoom={5} 
                 zoomControl={false}
+                attributionControl={false}
                 dragging={false}
                 touchZoom={false}
                 scrollWheelZoom={false}
