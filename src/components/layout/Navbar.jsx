@@ -130,28 +130,30 @@ export default function Navbar() {
             </div>
           </div>
 
-          {/* <a 
+          <a 
             // href="vt.tiktok.com/ZS98p3qVvVJbB-zbxhO"
-            href="vt.tiktok.com/ZS98syXeRafHK-7wYhE/"
+            // href="vt.tiktok.com/ZS98syXeRafHK-7wYhE/"
+            href="https://vt.tiktok.com/ZS98GDDUfJLhq-K4oJx/"
             className="hidden lg:inline-flex items-center gap-1.5 bg-white text-red-600 font-bold text-sm px-4 py-2 rounded-full shadow-sm border border-gray-100 hover:shadow-md transition-all"
           >
             EN VIVO 
             <span className="animate-pulse text-red-600 text-xl leading-[0] pb-0.5">
               •
             </span>
-          </a> */}
+          </a>
 
           <div ref={ctaRef} className="flex items-center gap-2 sm:gap-3">
-            {/* <a
+            <a
               // href="https://vt.tiktok.com/ZS98p3qVvVJbB-zbxhO"
-              href="https://vt.tiktok.com/ZS98syXeRafHK-7wYhE/"
+              // href="https://vt.tiktok.com/ZS98syXeRafHK-7wYhE/"
+              href="https://vt.tiktok.com/ZS98GDDUfJLhq-K4oJx/"
               target="_blank"
               rel="noreferrer"
               className="inline-flex items-center gap-1.5 rounded-full border border-red-200 bg-white px-3 py-2 text-[11px] font-extrabold text-red-600 shadow-[0_10px_24px_rgba(215,38,56,0.2)] transition-all hover:-translate-y-0.5 hover:shadow-[0_14px_30px_rgba(215,38,56,0.28)] lg:hidden"
             >
               EN VIVO
               <span className="animate-pulse text-lg leading-[0] text-red-600">•</span>
-            </a> */}
+            </a>
             <MobileMenu location={location} openGuide={() => setIsGuideOpen(true)} />
           </div>
         </div>
@@ -305,18 +307,18 @@ function VotingGuideModal({ isOpen, onClose }) {
   const contentRef = useRef(null)
 
   const guideSteps = [
-    { image: '/instructivo-votacion-1.jpg', title: 'Paso 1', text: '' },
-    { image: '/instructivo-votacion-2.jpg', title: 'Paso 2', text: '' },
-    { image: '/instructivo-votacion-3.jpg', title: 'Paso 3', text: '' },
-    { image: '/instructivo-votacion-4.jpg', title: 'Paso 4', text: '' },
-    { image: '/instructivo-votacion-5.jpg', title: 'Paso 5', text: '' },
-    { image: '/instructivo-votacion-6.jpg', title: 'Paso 6', text: '' },
-    { image: '/instructivo-votacion-7.jpg', title: 'Paso 7', text: '' },
-    { image: '/instructivo-votacion-8.jpg', title: 'Paso 8', text: '' },
-    { image: '/instructivo-votacion-9.jpg', title: 'Paso 9', text: '' },
-    { image: '/instructivo-votacion-10.jpg', title: 'Paso 10', text: '' },
-    { image: '/instructivo-votacion-11.jpg', title: 'Paso 11', text: '' },
-    { image: '/instructivo-votacion-12.jpg', title: 'Paso 12', text: '' },
+    { image: '/instructivo_votacion/instructivo-votacion-1.jpg', title: 'Paso 1', text: '' },
+    { image: '/instructivo_votacion/instructivo-votacion-2.jpg', title: 'Paso 2', text: '' },
+    { image: '/instructivo_votacion/instructivo-votacion-3.jpg', title: 'Paso 3', text: '' },
+    { image: '/instructivo_votacion/instructivo-votacion-4.jpg', title: 'Paso 4', text: '' },
+    { image: '/instructivo_votacion/instructivo-votacion-5.jpg', title: 'Paso 5', text: '' },
+    { image: '/instructivo_votacion/instructivo-votacion-6.jpg', title: 'Paso 6', text: '' },
+    { image: '/instructivo_votacion/instructivo-votacion-7.jpg', title: 'Paso 7', text: '' },
+    { image: '/instructivo_votacion/instructivo-votacion-8.jpg', title: 'Paso 8', text: '' },
+    { image: '/instructivo_votacion/instructivo-votacion-9.jpg', title: 'Paso 9', text: '' },
+    { image: '/instructivo_votacion/instructivo-votacion-10.jpg', title: 'Paso 10', text: '' },
+    { image: '/instructivo_votacion/instructivo-votacion-11.jpg', title: 'Paso 11', text: '' },
+    { image: '/instructivo_votacion/instructivo-votacion-12.jpg', title: 'Paso 12', text: '' },
   ]
 
   useGSAP(() => {
