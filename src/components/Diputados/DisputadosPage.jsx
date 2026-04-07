@@ -193,7 +193,7 @@ function Modal({ candidato, onClose }) {
           <div className="mt-8 flex justify-end gap-3">
             {slug ? (
               <Link
-                to={`${slug}`}
+                to={`/diputados${slug}`}
                 className="bg-gray-100 hover:bg-[#D72638] hover:text-white text-[#1A1A1A] text-sm font-bold px-6 py-2.5 rounded-full transition-colors text-center"
               >
                 Ver Propuestas
