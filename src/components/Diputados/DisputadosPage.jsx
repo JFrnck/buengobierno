@@ -1,11 +1,12 @@
-import React, { useState, useMemo, useRef, useEffect } from "react";
+import { useState, useMemo, useRef, useEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 import { 
   Users, MapPin, IdCard, User, X, 
-  ChevronDown, Award, Search, Home 
+  ChevronDown, Award, Search, Home
 } from "lucide-react";
+import { Link } from "react-router-dom"; 
 
 // 1. IMPORTACIÓN DEL JSON DIRECTAMENTE EN EL COMPONENTE
 import datosDiputados from "../../data/diputadosLista.json";
@@ -113,7 +114,7 @@ function CandidateCard({ candidato, onSelect }) {
 
 function Modal({ candidato, onClose }) {
   if (!candidato) return null;
-  const { posicion, nombre, sexo, dni, lugar_nacimiento, lugar_domicilio, imagen } = candidato;
+  const { posicion, nombre, sexo, dni, lugar_nacimiento, lugar_domicilio, imagen, slug, url } = candidato; // Añadí 'slug' y 'url' a la desestructuración
 
   const rows = [
     { icon: IdCard, label: "DNI", value: dni },
@@ -161,7 +162,7 @@ function Modal({ candidato, onClose }) {
           </div>
 
           <a 
-            href={candidato.url} 
+            href={url} 
             target="_blank" 
             rel="noreferrer"
             className="flex items-center gap-3 mb-8 px-4 py-3 rounded-xl bg-[#F5C800] border border-[#F5C800]/20 transition-colors cursor-pointer animate-pulse"
@@ -188,14 +189,25 @@ function Modal({ candidato, onClose }) {
             ))}
           </div>
 
-          <div className="mt-8 flex justify-end">
-            <button
-              onClick={onClose}
-              className="bg-gray-100 hover:bg-[#D72638] hover:text-white text-[#1A1A1A] text-sm font-bold px-6 py-2.5 rounded-full transition-colors"
-            >
-              Cerrar Perfil
-            </button>
+          {/* RENDERING CONDICIONAL */}
+          <div className="mt-8 flex justify-end gap-3">
+            {slug ? (
+              <Link
+                to={`${slug}`}
+                className="bg-gray-100 hover:bg-[#D72638] hover:text-white text-[#1A1A1A] text-sm font-bold px-6 py-2.5 rounded-full transition-colors text-center"
+              >
+                Ver Propuestas
+              </Link>
+            ) : (
+              <button
+                onClick={onClose}
+                className="bg-gray-100 hover:bg-[#D72638] hover:text-white text-[#1A1A1A] text-sm font-bold px-6 py-2.5 rounded-full transition-colors"
+              >
+                Cerrar Perfil
+              </button>
+            )}
           </div>
+
         </div>
       </div>
     </div>

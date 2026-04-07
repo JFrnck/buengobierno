@@ -13,7 +13,8 @@
         "lugar_domicilio": "AMAZONAS, UTCUBAMBA, BAGUA GRANDE",
         "region_original_pdf": "AMAZONAS",
         "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/40477053/253733",
-        "imagen": "/fotos_diputados/edis-cespedes.jpg"
+        "imagen": "/fotos_diputados/edis-cespedes.jpg",
+        "slug": ""
       },
       {
         "posicion": 2,
@@ -25,7 +26,8 @@
         "lugar_domicilio": null,
         "region_original_pdf": "LAMBAYEQUE",
         "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/77157970/247412",
-        "imagen": "/fotos_diputados/franki-sanchez.jpg"
+        "imagen": "/fotos_diputados/franki-sanchez.jpg",
+        "slug": ""
       },
       {
         "posicion": 3,
@@ -37,7 +39,8 @@
         "lugar_domicilio": "AMAZONAS, UTCUBAMBA, CAJARURO",
         "region_original_pdf": "AMAZONAS",
         "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/42570235/253242",
-        "imagen": "/fotos_diputados/elvia-nunez.jpg"
+        "imagen": "/fotos_diputados/elvia-nunez.jpg",
+        "slug": ""
       },
       {
         "posicion": 4,
@@ -49,7 +52,8 @@
         "lugar_domicilio": "LIMA, HUARAL, HUARAL",
         "region_original_pdf": "LIMA",
         "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/15746510/243476",
-        "imagen": "/fotos_diputados/daniel-villafana.jpg"
+        "imagen": "/fotos_diputados/daniel-villafana.jpg",
+        "slug": ""
       }
     ]
   },
@@ -67,7 +71,8 @@
         "lugar_domicilio": "ANCASH, HUARAZ, INDEPENDENCIA",
         "region_original_pdf": "ANCASH",
         "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/07821615/254867",
-        "imagen": "/fotos_diputados/dante-moreno.jpg"
+        "imagen": "/fotos_diputados/dante-moreno.jpg",
+        "slug": ""
       },
       {
         "posicion": 2,
@@ -79,7 +84,8 @@
         "lugar_domicilio": "ANCASH, HUARAZ, INDEPENDENCIA",
         "region_original_pdf": "ANCASH",
         "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/31925799/254388",
-        "imagen": "/fotos_diputados/ayde-molina.jpg"
+        "imagen": "/fotos_diputados/ayde-molina.jpg",
+        "slug": ""
       },
       {
         "posicion": 3,
@@ -91,7 +97,8 @@
         "lugar_domicilio": "ANCASH, HUARAZ, HUARAZ",
         "region_original_pdf": "ANCASH",
         "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/31614873/249938",
-        "imagen": "/fotos_diputados/blademir-anaya.jpg"
+        "imagen": "/fotos_diputados/blademir-anaya.jpg",
+        "slug": ""
       },
       {
         "posicion": 4,
@@ -103,7 +110,8 @@
         "lugar_domicilio": "LAMBAYEQUE, CHICLAYO, CHICLAYO",
         "region_original_pdf": "LAMBAYEQUE",
         "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/78551477/249612",
-        "imagen": "/fotos_diputados/diana-aquino.jpg"
+        "imagen": "/fotos_diputados/diana-aquino.jpg",
+        "slug": ""
       },
       {
         "posicion": 5,
@@ -115,7 +123,8 @@
         "lugar_domicilio": "TUMBES, TUMBES, TUMBES",
         "region_original_pdf": "TUMBES",
         "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/73148275/248907",
-        "imagen": "/fotos_diputados/gian-zapata.jpg"
+        "imagen": "/fotos_diputados/gian-zapata.jpg",
+        "slug": ""
       },
       {
         "posicion": 6,
@@ -127,7 +136,8 @@
         "lugar_domicilio": "TUMBES, TUMBES, TUMBES",
         "region_original_pdf": "TUMBES",
         "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/74500543/245557",
-        "imagen": "/fotos_diputados/antonella-oviedo.jpg"
+        "imagen": "/fotos_diputados/antonella-oviedo.jpg",
+        "slug": ""
       }
     ]
   },
@@ -145,7 +155,8 @@
         "lugar_domicilio": "APURIMAC, ABANCAY, ABANCAY",
         "region_original_pdf": "APURIMAC",
         "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/44035661/247636",
-        "imagen": "/fotos_diputados/danny-paira.jpg"
+        "imagen": "/fotos_diputados/danny-paira.jpg",
+        "slug": ""
       },
       {
         "posicion": 2,
@@ -157,7 +168,8 @@
         "lugar_domicilio": "APURIMAC, ABANCAY, ABANCAY",
         "region_original_pdf": "APURIMAC",
         "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/46105072/249962",
-        "imagen": "/fotos_diputados/lariza-chuhui.jpg"
+        "imagen": "/fotos_diputados/lariza-chuhui.jpg",
+        "slug": ""
       },
       {
         "posicion": 3,
@@ -169,7 +181,8 @@
         "lugar_domicilio": "JUNIN, CHANCHAMAYO, PICHANAQUI",
         "region_original_pdf": "JUNIN",
         "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/45714841/248166",
-        "imagen": "/fotos_diputados/victor-yauri.jpg"
+        "imagen": "/fotos_diputados/victor-yauri.jpg",
+        "slug": ""
       },
       {
         "posicion": 4,
@@ -181,7 +194,8 @@
         "lugar_domicilio": "APURIMAC, ABANCAY, ABANCAY",
         "region_original_pdf": "APURIMAC",
         "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/46464431/246748",
-        "imagen": "/fotos_diputados/julemi-solis.jpg"
+        "imagen": "/fotos_diputados/julemi-solis.jpg",
+        "slug": ""
       }
     ]
   },
@@ -199,7 +213,8 @@
         "lugar_domicilio": "AREQUIPA, AREQUIPA, JOSE LUIS BUSTAMANTE Y RIVERO",
         "region_original_pdf": "AREQUIPA",
         "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/29715400/249145",
-        "imagen": "/fotos_diputados/edgar-gonzales.jpg"
+        "imagen": "/fotos_diputados/edgar-gonzales.jpg",
+        "slug": ""
       },
       {
         "posicion": 2,
@@ -211,7 +226,8 @@
         "lugar_domicilio": "AREQUIPA, CAYLLOMA, MAJES",
         "region_original_pdf": "AREQUIPA",
         "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/29311981/252662",
-        "imagen": "/fotos_diputados/gloria-hirache.jpg"
+        "imagen": "/fotos_diputados/gloria-hirache.jpg",
+        "slug": ""
       },
       {
         "posicion": 3,
@@ -223,7 +239,8 @@
         "lugar_domicilio": "AREQUIPA, AREQUIPA, AREQUIPA",
         "region_original_pdf": "AREQUIPA",
         "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/29279669/247361",
-        "imagen": "/fotos_diputados/rafael-aragon.jpg"
+        "imagen": "/fotos_diputados/rafael-aragon.jpg",
+        "slug": ""
       },
       {
         "posicion": 4,
@@ -235,7 +252,8 @@
         "lugar_domicilio": "AREQUIPA, AREQUIPA, MIRAFLORES",
         "region_original_pdf": "AREQUIPA",
         "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/41980348/248052",
-        "imagen": "/fotos_diputados/jakelin-carrion.jpg"
+        "imagen": "/fotos_diputados/jakelin-carrion.jpg",
+        "slug": "/jakelin-carrion"
       },
       {
         "posicion": 5,
@@ -247,7 +265,8 @@
         "lugar_domicilio": "LIMA, LIMA, SAN MARTIN DE PORRES",
         "region_original_pdf": "LIMA",
         "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/25712308/250313",
-        "imagen": "/fotos_diputados/ricardo-silva.jpg"
+        "imagen": "/fotos_diputados/ricardo-silva.jpg",
+        "slug": ""
       },
       {
         "posicion": 6,
@@ -259,7 +278,8 @@
         "lugar_domicilio": "AREQUIPA, AREQUIPA, JOSE LUIS BUSTAMANTE Y RIVERO",
         "region_original_pdf": "AREQUIPA",
         "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/29215220/243460",
-        "imagen": "/fotos_diputados/flor-neira.jpg"
+        "imagen": "/fotos_diputados/flor-neira.jpg",
+        "slug": ""
       }
     ]
   },
@@ -277,7 +297,8 @@
         "lugar_domicilio": "AYACUCHO, HUAMANGA, AYACUCHO",
         "region_original_pdf": "AYACUCHO",
         "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/28263924/251463",
-        "imagen": "/fotos_diputados/juan-villarroel.jpeg"
+        "imagen": "/fotos_diputados/juan-villarroel.jpeg",
+        "slug": "/juan-villarroel"
       },
       {
         "posicion": 2,
@@ -289,7 +310,8 @@
         "lugar_domicilio": "AYACUCHO, HUAMANGA, AYACUCHO",
         "region_original_pdf": "AYACUCHO",
         "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/44406806/251456",
-        "imagen": "/fotos_diputados/karina-saune.jpg"
+        "imagen": "/fotos_diputados/karina-saune.jpg",
+        "slug": ""
       },
       {
         "posicion": 3,
@@ -301,7 +323,8 @@
         "lugar_domicilio": "AYACUCHO, HUANTA, HUANTA",
         "region_original_pdf": "AYACUCHO",
         "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/28577034/245358",
-        "imagen": "/fotos_diputados/joan-huaman.jpg"
+        "imagen": "/fotos_diputados/joan-huaman.jpg",
+        "slug": ""
       },
       {
         "posicion": 4,
@@ -313,7 +336,8 @@
         "lugar_domicilio": "AYACUCHO, VILCAS HUAMAN, VILCAS HUAMAN",
         "region_original_pdf": "AYACUCHO",
         "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/48850968/246993",
-        "imagen": "/fotos_diputados/pilar-barrientos.jpg"
+        "imagen": "/fotos_diputados/pilar-barrientos.jpg",
+        "slug": ""
       }
     ]
   },
@@ -331,7 +355,8 @@
         "lugar_domicilio": "CAJAMARCA, SAN IGNACIO, LA COIPA",
         "region_original_pdf": "CAJAMARCA",
         "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/44591413/253493",
-        "imagen": "/fotos_diputados/ronal-huachez.jpg"
+        "imagen": "/fotos_diputados/ronal-huachez.jpg",
+        "slug": ""
       },
       {
         "posicion": 2,
@@ -343,7 +368,8 @@
         "lugar_domicilio": "CAJAMARCA, CAJAMARCA, CAJAMARCA",
         "region_original_pdf": "CAJAMARCA",
         "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/41843569/243600",
-        "imagen": "/fotos_diputados/lily-gallardo.jpg"
+        "imagen": "/fotos_diputados/lily-gallardo.jpg",
+        "slug": ""
       },
       {
         "posicion": 3,
@@ -355,7 +381,8 @@
         "lugar_domicilio": "CAJAMARCA, CAJAMARCA, CAJAMARC",
         "region_original_pdf": "CAJAMARCA",
         "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/40909111/250239",
-        "imagen": "/fotos_diputados/ronald-cabrera.jpg"
+        "imagen": "/fotos_diputados/ronald-cabrera.jpg",
+        "slug": ""
       },
       {
         "posicion": 4,
@@ -367,7 +394,8 @@
         "lugar_domicilio": "CAJAMARCA, SAN IGNACIO, LA COIPA",
         "region_original_pdf": "CAJAMARCA",
         "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/44678794/250943",
-        "imagen": "/fotos_diputados/emma-garcia.jpg"
+        "imagen": "/fotos_diputados/emma-garcia.jpg",
+        "slug": ""
       },
       {
         "posicion": 5,
@@ -379,7 +407,8 @@
         "lugar_domicilio": "CAJAMARCA, CAJAMARCA, ENCAÑADA",
         "region_original_pdf": "CAJAMARCA",
         "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/26733239/245605",
-        "imagen": "/fotos_diputados/jesus-sanchez.jpg"
+        "imagen": "/fotos_diputados/jesus-sanchez.jpg",
+        "slug": ""
       },
       {
         "posicion": 6,
@@ -391,7 +420,8 @@
         "lugar_domicilio": "CAJAMARCA, CAJAMARCA, CAJAMARCA",
         "region_original_pdf": "CAJAMARCA",
         "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/41620497/252955",
-        "imagen": "/fotos_diputados/janet-cabrera.jpg"
+        "imagen": "/fotos_diputados/janet-cabrera.jpg",
+        "slug": ""
       }
     ]
   },
@@ -409,7 +439,8 @@
         "lugar_domicilio": "CALLAO, CALLAO, CALLAO",
         "region_original_pdf": "CALLAO",
         "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/08573694/253527",
-        "imagen": "/fotos_diputados/fernando-garcia.jpg"
+        "imagen": "/fotos_diputados/fernando-garcia.jpg",
+        "slug": ""
       },
       {
         "posicion": 2,
@@ -421,7 +452,8 @@
         "lugar_domicilio": "CALLAO, CALLAO, CALLAO",
         "region_original_pdf": "CALLAO",
         "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/25566407/247577",
-        "imagen": "/fotos_diputados/marlene-checa.jpg"
+        "imagen": "/fotos_diputados/marlene-checa.jpg",
+        "slug": ""
       },
       {
         "posicion": 3,
@@ -433,7 +465,8 @@
         "lugar_domicilio": "CALLAO, CALLAO, CALLAO",
         "region_original_pdf": "CALLAO",
         "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/44034029/252277",
-        "imagen": "/fotos_diputados/hugo-zevallos.jpg"
+        "imagen": "/fotos_diputados/hugo-zevallos.jpg",
+        "slug": ""
       },
       {
         "posicion": 4,
@@ -445,7 +478,8 @@
         "lugar_domicilio": "CALLAO, CALLAO, CALLAO",
         "region_original_pdf": "CALLAO",
         "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/42671383/253176",
-        "imagen": "/fotos_diputados/ruby-zevallos.jpg"
+        "imagen": "/fotos_diputados/ruby-zevallos.jpg",
+        "slug": ""
       }
     ]
   },
@@ -463,7 +497,8 @@
         "lugar_domicilio": "CUSCO, CANCHIS, SICUANI",
         "region_original_pdf": "CUSCO",
         "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/41678124/244528",
-        "imagen": "/fotos_diputados/edwin-espinoza.jpg"
+        "imagen": "/fotos_diputados/edwin-espinoza.jpg",
+        "slug": ""
       },
       {
         "posicion": 2,
@@ -475,7 +510,8 @@
         "lugar_domicilio": "CUSCO, CUSCO, WANCHAQ",
         "region_original_pdf": "CUSCO",
         "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/44026002/248673",
-        "imagen": "/fotos_diputados/ayde-meza.jpg"
+        "imagen": "/fotos_diputados/ayde-meza.jpg",
+        "slug": ""
       },
       {
         "posicion": 3,
@@ -487,7 +523,8 @@
         "lugar_domicilio": "CUSCO, ANTA, CACHIMAYO",
         "region_original_pdf": "CUSCO",
         "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/24367431/245307",
-        "imagen": "/fotos_diputados/natividad-cusihuaman.jpg"
+        "imagen": "/fotos_diputados/natividad-cusihuaman.jpg",
+        "slug": ""
       },
       {
         "posicion": 4,
@@ -499,7 +536,8 @@
         "lugar_domicilio": "CUSCO, CUSCO, POROY",
         "region_original_pdf": "CUSCO",
         "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/73038682/246058",
-        "imagen": "/fotos_diputados/jessica-auccapuma.jpg"
+        "imagen": "/fotos_diputados/jessica-auccapuma.jpg",
+        "slug": ""
       },
       {
         "posicion": 5,
@@ -511,7 +549,8 @@
         "lugar_domicilio": "UCAYALI, CORONEL PORTILLO, MANANTAY",
         "region_original_pdf": "UCAYALI",
         "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/00075383/248966",
-        "imagen": "/fotos_diputados/abraham-solorzano.jpg"
+        "imagen": "/fotos_diputados/abraham-solorzano.jpg",
+        "slug": ""
       },
       {
         "posicion": 6,
@@ -523,7 +562,8 @@
         "lugar_domicilio": "LIMA, HUARAL, HUARAL",
         "region_original_pdf": "LIMA",
         "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/76652185/247566",
-        "imagen": "/fotos_diputados/cresensia-quillay.jpg"
+        "imagen": "/fotos_diputados/cresensia-quillay.jpg",
+        "slug": ""
       }
     ]
   },
@@ -541,7 +581,8 @@
         "lugar_domicilio": "HUANCAVELICA, TAYACAJA, DANIEL HERNANDEZ",
         "region_original_pdf": "HUANCAVELICA",
         "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/08650000/254498",
-        "imagen": "/fotos_diputados/ricardo-rodriguez.jpg"
+        "imagen": "/fotos_diputados/ricardo-rodriguez.jpg",
+        "slug": ""
       },
       {
         "posicion": 2,
@@ -553,7 +594,8 @@
         "lugar_domicilio": "HUANCAVELICA, HUANCAVELICA, HUANCAVELICA",
         "region_original_pdf": "HUANCAVELICA",
         "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/45307529/249273",
-        "imagen": "/fotos_diputados/ruth-ccente.jpg"
+        "imagen": "/fotos_diputados/ruth-ccente.jpg",
+        "slug": ""
       },
       {
         "posicion": 3,
@@ -565,7 +607,8 @@
         "lugar_domicilio": "ICA, ICA, ICA",
         "region_original_pdf": "ICA",
         "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/21438223/247368",
-        "imagen": "/fotos_diputados/nicanor-prado.jpg"
+        "imagen": "/fotos_diputados/nicanor-prado.jpg",
+        "slug": ""
       },
       {
         "posicion": 4,
@@ -577,7 +620,8 @@
         "lugar_domicilio": "HUANCAVELICA, HUANCAVELICA, HUANCAVELICA",
         "region_original_pdf": "HUANCAVELICA",
         "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/63480269/251343",
-        "imagen": "/fotos_diputados/leydy-vela.jpg"
+        "imagen": "/fotos_diputados/leydy-vela.jpg",
+        "slug": ""
       }
     ]
   },
@@ -595,7 +639,8 @@
         "lugar_domicilio": "HUANUCO, DOS DE MAYO, CHUQUIS",
         "region_original_pdf": "HUANUCO",
         "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/44658351/253741",
-        "imagen": "/fotos_diputados/schiller-justo.jpg"
+        "imagen": "/fotos_diputados/schiller-justo.jpg",
+        "slug": ""
       },
       {
         "posicion": 2,
@@ -607,7 +652,8 @@
         "lugar_domicilio": "JUNIN, CHANCHAMAYO, PERENE",
         "region_original_pdf": "JUNIN",
         "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/40283180/248584",
-        "imagen": "/fotos_diputados/janet-yauri.jpg"
+        "imagen": "/fotos_diputados/janet-yauri.jpg",
+        "slug": ""
       },
       {
         "posicion": 3,
@@ -619,7 +665,8 @@
         "lugar_domicilio": "LIMA, LIMA, ATE",
         "region_original_pdf": "LIMA",
         "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/10423594/250953",
-        "imagen": "/fotos_diputados/fernando-condezo.jpg"
+        "imagen": "/fotos_diputados/fernando-condezo.jpg",
+        "slug": ""
       },
       {
         "posicion": 4,
@@ -631,7 +678,8 @@
         "lugar_domicilio": "JUNIN, CHANCHAMAYO, PICHANAQUI",
         "region_original_pdf": "JUNIN",
         "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/75838690/243467",
-        "imagen": "/fotos_diputados/keny-pinco.jpg"
+        "imagen": "/fotos_diputados/keny-pinco.jpg",
+        "slug": ""
       }
     ]
   },
@@ -649,7 +697,8 @@
         "lugar_domicilio": "ICA, ICA, ICA",
         "region_original_pdf": "ICA",
         "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/45741388/251130",
-        "imagen": "/fotos_diputados/lila-prado.jpg"
+        "imagen": "/fotos_diputados/lila-prado.jpg",
+        "slug": ""
       },
       {
         "posicion": 2,
@@ -661,7 +710,8 @@
         "lugar_domicilio": "ICA, ICA, ICA",
         "region_original_pdf": "ICA",
         "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/21410145/253835",
-        "imagen": "/fotos_diputados/ulises-mendieta.jpg"
+        "imagen": "/fotos_diputados/ulises-mendieta.jpg",
+        "slug": ""
       },
       {
         "posicion": 3,
@@ -673,7 +723,8 @@
         "lugar_domicilio": "ICA, ICA, ICA",
         "region_original_pdf": "ICA",
         "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/62794539/253972",
-        "imagen": "/fotos_diputados/dorabeth-rocha.jpg"
+        "imagen": "/fotos_diputados/dorabeth-rocha.jpg",
+        "slug": ""
       },
       {
         "posicion": 4,
@@ -685,7 +736,8 @@
         "lugar_domicilio": "ICA, ICA, ICA",
         "region_original_pdf": "ICA",
         "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/22074333/244966",
-        "imagen": "/fotos_diputados/edwin-ramirez.jpg"
+        "imagen": "/fotos_diputados/edwin-ramirez.jpg",
+        "slug": ""
       }
     ]
   },
@@ -703,7 +755,8 @@
         "lugar_domicilio": "JUNIN, SATIPO, SATIPO",
         "region_original_pdf": "JUNIN",
         "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/10277219/249970",
-        "imagen": "/fotos_diputados/carmen-duarte.jpg"
+        "imagen": "/fotos_diputados/carmen-duarte.jpg",
+        "slug": ""
       },
       {
         "posicion": 2,
@@ -715,7 +768,8 @@
         "lugar_domicilio": "JUNIN, CHANCHAMAYO, PERENE",
         "region_original_pdf": "JUNIN",
         "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/42725868/251667",
-        "imagen": "/fotos_diputados/nahun-garcia.jpg"
+        "imagen": "/fotos_diputados/nahun-garcia.jpg",
+        "slug": ""
       },
       {
         "posicion": 3,
@@ -727,7 +781,8 @@
         "lugar_domicilio": "LIMA, LIMA, LA VICTORIA",
         "region_original_pdf": "LIMA",
         "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/42984579/253970",
-        "imagen": "/fotos_diputados/natalie-marcas.jpg"
+        "imagen": "/fotos_diputados/natalie-marcas.jpg",
+        "slug": ""
       },
       {
         "posicion": 4,
@@ -739,7 +794,8 @@
         "lugar_domicilio": "JUNIN, HUANCAYO, EL TAMBO",
         "region_original_pdf": "JUNIN",
         "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/41548344/253558",
-        "imagen": "/fotos_diputados/manuel-loli.jpg"
+        "imagen": "/fotos_diputados/manuel-loli.jpg",
+        "slug": ""
       },
       {
         "posicion": 5,
@@ -751,7 +807,8 @@
         "lugar_domicilio": "JUNIN, HUANCAYO, PILCOMAYO",
         "region_original_pdf": "JUNIN",
         "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/21297867/252768",
-        "imagen": "/fotos_diputados/rocio-salazar.jpg"
+        "imagen": "/fotos_diputados/rocio-salazar.jpg",
+        "slug": ""
       },
       {
         "posicion": 6,
@@ -763,7 +820,8 @@
         "lugar_domicilio": "JUNIN, HUANCAYO, EL TAMBO",
         "region_original_pdf": "JUNIN",
         "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/20012822/253105",
-        "imagen": "/fotos_diputados/jose-casas.jpg"
+        "imagen": "/fotos_diputados/jose-casas.jpg",
+        "slug": ""
       }
     ]
   },
@@ -781,7 +839,8 @@
         "lugar_domicilio": "LIMA, LIMA, SAN ISIDRO",
         "region_original_pdf": "LIMA",
         "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/06296745/254958",
-        "imagen": "/fotos_diputados/nora-llaque.jpg"
+        "imagen": "/fotos_diputados/nora-llaque.jpg",
+        "slug": ""
       },
       {
         "posicion": 2,
@@ -793,7 +852,8 @@
         "lugar_domicilio": "LA LIBERTAD, TRUJILLO, TRUJILLO",
         "region_original_pdf": "LA LIBERTAD",
         "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/17916104/247863",
-        "imagen": "/fotos_diputados/martin-reto.jpg"
+        "imagen": "/fotos_diputados/martin-reto.jpg",
+        "slug": ""
       },
       {
         "posicion": 3,
@@ -805,7 +865,8 @@
         "lugar_domicilio": "LA LIBERTAD, TRUJILLO, TRUJILLO",
         "region_original_pdf": "LA LIBERTAD",
         "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/43312931/248412",
-        "imagen": "/fotos_diputados/milagros-paredes.jpg"
+        "imagen": "/fotos_diputados/milagros-paredes.jpg",
+        "slug": ""
       },
       {
         "posicion": 4,
@@ -817,7 +878,8 @@
         "lugar_domicilio": "LA LIBERTAD, TRUJILLO, TRUJILLO",
         "region_original_pdf": "LA LIBERTAD",
         "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/17814922/252752",
-        "imagen": "/fotos_diputados/juan-villalobos.jpg"
+        "imagen": "/fotos_diputados/juan-villalobos.jpg",
+        "slug": ""
       },
       {
         "posicion": 7,
@@ -829,7 +891,8 @@
         "lugar_domicilio": "LAMBAYEQUE, CHICLAYO, CHICLAYO",
         "region_original_pdf": "LAMBAYEQUE",
         "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/77161342/245248",
-        "imagen": "/fotos_diputados/chris-quiroz.jpg"
+        "imagen": "/fotos_diputados/chris-quiroz.jpg",
+        "slug": ""
       }
     ]
   },
@@ -847,7 +910,8 @@
         "lugar_domicilio": "LAMBAYEQUE, CHICLAYO, LA VICTORIA",
         "region_original_pdf": "LAMBAYEQUE",
         "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/16629849/243635",
-        "imagen": "/fotos_diputados/segundo-castrejon.jpg"
+        "imagen": "/fotos_diputados/segundo-castrejon.jpg",
+        "slug": ""
       },
       {
         "posicion": 2,
@@ -859,7 +923,8 @@
         "lugar_domicilio": "LAMBAYEQUE, CHICLAYO, CHICLAYO",
         "region_original_pdf": "LAMBAYEQUE",
         "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/16703732/247770",
-        "imagen": "/fotos_diputados/dalia-reyes.jpg"
+        "imagen": "/fotos_diputados/dalia-reyes.jpg",
+        "slug": ""
       },
       {
         "posicion": 3,
@@ -871,7 +936,8 @@
         "lugar_domicilio": "LAMBAYEQUE, CHICLAYO, LA VICTORIA",
         "region_original_pdf": "LAMBAYEQUE",
         "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/43174984/254467",
-        "imagen": "/fotos_diputados/pavel-vargas.jpg"
+        "imagen": "/fotos_diputados/pavel-vargas.jpg",
+        "slug": ""
       },
       {
         "posicion": 4,
@@ -883,7 +949,8 @@
         "lugar_domicilio": "LAMBAYEQUE, CHICLAYO, CHICLAYO",
         "region_original_pdf": "LAMBAYEQUE",
         "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/16477390/253302",
-        "imagen": "/fotos_diputados/deborath-balderrama.jpg"
+        "imagen": "/fotos_diputados/deborath-balderrama.jpg",
+        "slug": ""
       },
       {
         "posicion": 5,
@@ -895,7 +962,8 @@
         "lugar_domicilio": "LAMBAYEQUE, LAMBAYEQUE, MORROPE",
         "region_original_pdf": "LAMBAYEQUE",
         "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/77085615/252961",
-        "imagen": "/fotos_diputados/luis-sanchez.jpg"
+        "imagen": "/fotos_diputados/luis-sanchez.jpg",
+        "slug": ""
       },
       {
         "posicion": 6,
@@ -907,7 +975,8 @@
         "lugar_domicilio": "LIMA, LIMA, PUENTE PIEDRA",
         "region_original_pdf": "LIMA",
         "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/47228475/248329",
-        "imagen": "/fotos_diputados/gina-castro.jpg"
+        "imagen": "/fotos_diputados/gina-castro.jpg",
+        "slug": ""
       }
     ]
   },
@@ -925,7 +994,8 @@
         "lugar_domicilio": "LIMA, LIMA, SANTIAGO DE SURCO",
         "region_original_pdf": "LIMA",
         "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/43348625/248814",
-        "imagen": "/fotos_diputados/oscar-reto.jpg"
+        "imagen": "/fotos_diputados/oscar-reto.jpg",
+        "slug": ""
       },
       {
         "posicion": 2,
@@ -937,7 +1007,8 @@
         "lugar_domicilio": "LIMA, LIMA, SANTIAGO DE SURCO",
         "region_original_pdf": "LIMA",
         "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/31038213/254069",
-        "imagen": "/fotos_diputados/hilda-fernandez.jpg"
+        "imagen": "/fotos_diputados/hilda-fernandez.jpg",
+        "slug": ""
       },
       {
         "posicion": 3,
@@ -949,7 +1020,8 @@
         "lugar_domicilio": "LIMA, LIMA, SANTIAGO DE SURCO",
         "region_original_pdf": "LIMA",
         "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/45874235/247748",
-        "imagen": "/fotos_diputados/luis-avila.jpg"
+        "imagen": "/fotos_diputados/luis-avila.jpg",
+        "slug": ""
       },
       {
         "posicion": 4,
@@ -961,7 +1033,8 @@
         "lugar_domicilio": "LIMA, LIMA, SAN JUAN DE LURIGANCHO",
         "region_original_pdf": "LIMA",
         "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/07625048/246135",
-        "imagen": "/fotos_diputados/martha-pari.jpg"
+        "imagen": "/fotos_diputados/martha-pari.jpg",
+        "slug": ""
       },
       {
         "posicion": 5,
@@ -973,7 +1046,8 @@
         "lugar_domicilio": "LIMA, LIMA, BREÑA",
         "region_original_pdf": "LIMA",
         "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/40067839/254419",
-        "imagen": "/fotos_diputados/luis-quispe.jpg"
+        "imagen": "/fotos_diputados/luis-quispe.jpg",
+        "slug": "/luis-quispe"
       },
       {
         "posicion": 6,
@@ -985,7 +1059,8 @@
         "lugar_domicilio": "LIMA, LIMA, BREÑA",
         "region_original_pdf": "LIMA",
         "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/41356710/253701",
-        "imagen": "/fotos_diputados/jessica-benitez.jpg"
+        "imagen": "/fotos_diputados/jessica-benitez.jpg",
+        "slug": ""
       },
       {
         "posicion": 7,
@@ -997,7 +1072,8 @@
         "lugar_domicilio": "CALLAO, CALLAO, CALLAO",
         "region_original_pdf": "CALLAO",
         "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/47000449/254385",
-        "imagen": "/fotos_diputados/jesus-yupanqui.jpg"
+        "imagen": "/fotos_diputados/jesus-yupanqui.jpg",
+        "slug": ""
       },
       {
         "posicion": 8,
@@ -1009,7 +1085,8 @@
         "lugar_domicilio": "LIMA, LIMA, MIRAFLORES",
         "region_original_pdf": "LIMA",
         "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/43478989/254358",
-        "imagen": "/fotos_diputados/rossana-alayza.jpg"
+        "imagen": "/fotos_diputados/rossana-alayza.jpg",
+        "slug": "/rossana-alayza"
       },
       {
         "posicion": 9,
@@ -1021,7 +1098,8 @@
         "lugar_domicilio": "LIMA, LIMA, JESUS MARIA",
         "region_original_pdf": "LIMA",
         "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/46042704/247089",
-        "imagen": "/fotos_diputados/ernesto-nieto.jpg"
+        "imagen": "/fotos_diputados/ernesto-nieto.jpg",
+        "slug": ""
       },
       {
         "posicion": 10,
@@ -1033,7 +1111,8 @@
         "lugar_domicilio": "LIMA, LIMA, MIRAFLORES",
         "region_original_pdf": "LIMA",
         "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/47504586/251834",
-        "imagen": "/fotos_diputados/marina-bendezu.jpg"
+        "imagen": "/fotos_diputados/marina-bendezu.jpg",
+        "slug": ""
       },
       {
         "posicion": 13,
@@ -1045,7 +1124,8 @@
         "lugar_domicilio": "LIMA, LIMA, ATE",
         "region_original_pdf": "LIMA",
         "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/10014542/243496",
-        "imagen": "/fotos_diputados/sixto-escarcena.jpg"
+        "imagen": "/fotos_diputados/sixto-escarcena.jpg",
+        "slug": ""
       },
       {
         "posicion": 14,
@@ -1057,7 +1137,8 @@
         "lugar_domicilio": "LIMA, LIMA, ATE",
         "region_original_pdf": "LIMA",
         "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/46528336/245145",
-        "imagen": "/fotos_diputados/lesli-molina.jpg"
+        "imagen": "/fotos_diputados/lesli-molina.jpg",
+        "slug": ""
       },
       {
         "posicion": 15,
@@ -1069,7 +1150,8 @@
         "lugar_domicilio": "LIMA, LIMA, JESUS MARIA",
         "region_original_pdf": "LIMA",
         "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/43100670/243497",
-        "imagen": "/fotos_diputados/javier-vega.jpg"
+        "imagen": "/fotos_diputados/javier-vega.jpg",
+        "slug": ""
       },
       {
         "posicion": 16,
@@ -1081,7 +1163,8 @@
         "lugar_domicilio": "LIMA, LIMA, SAN ISIDRO",
         "region_original_pdf": "LIMA",
         "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/10159076/254663",
-        "imagen": "/fotos_diputados/beatriz-valverde.jpg"
+        "imagen": "/fotos_diputados/beatriz-valverde.jpg",
+        "slug": ""
       },
       {
         "posicion": 17,
@@ -1093,7 +1176,8 @@
         "lugar_domicilio": null,
         "region_original_pdf": "LIMA",
         "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/70333861/249845",
-        "imagen": "/fotos_diputados/alan-centeno.jpg"
+        "imagen": "/fotos_diputados/alan-centeno.jpg",
+        "slug": ""
       },
       {
         "posicion": 18,
@@ -1105,7 +1189,8 @@
         "lugar_domicilio": "LIMA, LIMA, RIMAC",
         "region_original_pdf": "LIMA",
         "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/75421660/246869",
-        "imagen": "/fotos_diputados/romina-uribe.jpg"
+        "imagen": "/fotos_diputados/romina-uribe.jpg",
+        "slug": ""
       },
       {
         "posicion": 19,
@@ -1117,7 +1202,8 @@
         "lugar_domicilio": "LIMA, LIMA, SAN JUAN DE LURIGANCHO",
         "region_original_pdf": "LIMA",
         "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/45102985/252415",
-        "imagen": "/fotos_diputados/christian-cconaya.jpg"
+        "imagen": "/fotos_diputados/christian-cconaya.jpg",
+        "slug": ""
       },
       {
         "posicion": 20,
@@ -1129,7 +1215,8 @@
         "lugar_domicilio": "LIMA, LIMA, SAN MARTIN DE PORRES",
         "region_original_pdf": "LIMA",
         "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/08445213/253829",
-        "imagen": "/fotos_diputados/orfa-turin.jpg"
+        "imagen": "/fotos_diputados/orfa-turin.jpg",
+        "slug": ""
       },
       {
         "posicion": 22,
@@ -1141,7 +1228,8 @@
         "lugar_domicilio": "LIMA, LIMA, ATE",
         "region_original_pdf": "LIMA",
         "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/76871362/252382",
-        "imagen": "/fotos_diputados/nathaly-molina.jpg"
+        "imagen": "/fotos_diputados/nathaly-molina.jpg",
+        "slug": ""
       },
       {
         "posicion": 23,
@@ -1153,7 +1241,8 @@
         "lugar_domicilio": "LIMA, LIMA, SAN JUAN DE MIRAFLORES",
         "region_original_pdf": "LIMA",
         "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/40380951/253904",
-        "imagen": "/fotos_diputados/martin-palomino.jpg"
+        "imagen": "/fotos_diputados/martin-palomino.jpg",
+        "slug": ""
       },
       {
         "posicion": 24,
@@ -1165,7 +1254,8 @@
         "lugar_domicilio": "LIMA, LIMA, SAN MARTIN DE PORRES",
         "region_original_pdf": "LIMA",
         "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/77079186/252407",
-        "imagen": "/fotos_diputados/elvi-calderon.jpg"
+        "imagen": "/fotos_diputados/elvi-calderon.jpg",
+        "slug": ""
       },
       {
         "posicion": 25,
@@ -1177,7 +1267,8 @@
         "lugar_domicilio": "LIMA, LIMA, RIMAC",
         "region_original_pdf": "LIMA",
         "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/78550868/244696",
-        "imagen": "/fotos_diputados/leonardo-portal.jpg"
+        "imagen": "/fotos_diputados/leonardo-portal.jpg",
+        "slug": ""
       },
       {
         "posicion": 26,
@@ -1189,7 +1280,8 @@
         "lugar_domicilio": "CALLAO, CALLAO, CALLAO",
         "region_original_pdf": "CALLAO",
         "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/73176025/247035",
-        "imagen": "/fotos_diputados/maria-zelaya.jpg"
+        "imagen": "/fotos_diputados/maria-zelaya.jpg",
+        "slug": ""
       },
       {
         "posicion": 27,
@@ -1201,7 +1293,8 @@
         "lugar_domicilio": "LIMA, LIMA, ATE",
         "region_original_pdf": "LIMA",
         "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/46160710/246580",
-        "imagen": "/fotos_diputados/diego-gonzales.jpg"
+        "imagen": "/fotos_diputados/diego-gonzales.jpg",
+        "slug": ""
       },
       {
         "posicion": 28,
@@ -1213,7 +1306,8 @@
         "lugar_domicilio": "LIMA, LIMA, ATE",
         "region_original_pdf": "LIMA",
         "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/46654312/246891",
-        "imagen": "/fotos_diputados/magda-pascual.jpg"
+        "imagen": "/fotos_diputados/magda-pascual.jpg",
+        "slug": ""
       },
       {
         "posicion": 29,
@@ -1225,7 +1319,8 @@
         "lugar_domicilio": "LIMA, LIMA, MAGDALENA DEL MAR",
         "region_original_pdf": "LIMA",
         "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/10773046/252209",
-        "imagen": "/fotos_diputados/eduardo-castro.jpg"
+        "imagen": "/fotos_diputados/eduardo-castro.jpg",
+        "slug": ""
       },
       {
         "posicion": 30,
@@ -1237,7 +1332,8 @@
         "lugar_domicilio": "LIMA, LIMA, SAN JUAN DE LURIGANCHO",
         "region_original_pdf": "LIMA",
         "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/40793738/245444",
-        "imagen": "/fotos_diputados/carmen-yurivilca.jpg"
+        "imagen": "/fotos_diputados/carmen-yurivilca.jpg",
+        "slug": ""
       },
       {
         "posicion": 31,
@@ -1249,7 +1345,8 @@
         "lugar_domicilio": "LIMA, LIMA, ATE",
         "region_original_pdf": "LIMA",
         "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/73971527/249586",
-        "imagen": "/fotos_diputados/derick-noa.jpg"
+        "imagen": "/fotos_diputados/derick-noa.jpg",
+        "slug": ""
       },
       {
         "posicion": 31,
@@ -1261,7 +1358,8 @@
         "lugar_domicilio": "LIMA, LIMA, VILLA EL SALVADOR",
         "region_original_pdf": "LIMA",
         "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/70026559/245067",
-        "imagen": "/fotos_diputados/vivian-rivera.jpg"
+        "imagen": "/fotos_diputados/vivian-rivera.jpg",
+        "slug": ""
       }
     ]
   },
@@ -1279,7 +1377,8 @@
         "lugar_domicilio": "LIMA, HUARAL, HUARAL",
         "region_original_pdf": "LIMA",
         "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/15750425/251625",
-        "imagen": "/fotos_diputados/milagros-santana.jpg"
+        "imagen": "/fotos_diputados/milagros-santana.jpg",
+        "slug": ""
       },
       {
         "posicion": 2,
@@ -1291,7 +1390,8 @@
         "lugar_domicilio": "LIMA, BARRANCA, SUPE",
         "region_original_pdf": "LIMA",
         "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/15708720/248995",
-        "imagen": "/fotos_diputados/julian-arellano.jpg"
+        "imagen": "/fotos_diputados/julian-arellano.jpg",
+        "slug": ""
       },
       {
         "posicion": 3,
@@ -1303,7 +1403,8 @@
         "lugar_domicilio": "LIMA, HUARAL, HUARAL",
         "region_original_pdf": "LIMA",
         "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/44993858/250766",
-        "imagen": "/fotos_diputados/ana-carrizales.jpg"
+        "imagen": "/fotos_diputados/ana-carrizales.jpg",
+        "slug": ""
       },
       {
         "posicion": 4,
@@ -1315,7 +1416,8 @@
         "lugar_domicilio": "LIMA, BARRANCA, SUPE",
         "region_original_pdf": "LIMA",
         "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/42021511/250511",
-        "imagen": "/fotos_diputados/percy-paucar.jpg"
+        "imagen": "/fotos_diputados/percy-paucar.jpg",
+        "slug": ""
       }
     ]
   },
@@ -1333,7 +1435,8 @@
         "lugar_domicilio": "LORETO, MAYNAS, IQUITOS",
         "region_original_pdf": "LORETO",
         "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/40935744/253754",
-        "imagen": "/fotos_diputados/kattia-jimenez.jpg"
+        "imagen": "/fotos_diputados/kattia-jimenez.jpg",
+        "slug": ""
       },
       {
         "posicion": 2,
@@ -1345,7 +1448,8 @@
         "lugar_domicilio": "LORETO, MAYNAS, IQUITOS",
         "region_original_pdf": "LORETO",
         "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/05285604/252693",
-        "imagen": "/fotos_diputados/rafael-vela.jpg"
+        "imagen": "/fotos_diputados/rafael-vela.jpg",
+        "slug": ""
       },
       {
         "posicion": 3,
@@ -1357,7 +1461,8 @@
         "lugar_domicilio": "LAMBAYEQUE, CHICLAYO, CHICLAYO",
         "region_original_pdf": "LAMBAYEQUE",
         "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/75757837/249018",
-        "imagen": "/fotos_diputados/berta-nicolas.jpg"
+        "imagen": "/fotos_diputados/berta-nicolas.jpg",
+        "slug": ""
       },
       {
         "posicion": 4,
@@ -1369,7 +1474,8 @@
         "lugar_domicilio": "LAMBAYEQUE, LAMBAYEQUE, OLMOS",
         "region_original_pdf": "LAMBAYEQUE",
         "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/41278289/248106",
-        "imagen": "/fotos_diputados/cesar-gonzales.jpg"
+        "imagen": "/fotos_diputados/cesar-gonzales.jpg",
+        "slug": ""
       }
     ]
   },
@@ -1387,7 +1493,8 @@
         "lugar_domicilio": "MADRE DE DIOS, TAMBOPATA, TAMBOPATA",
         "region_original_pdf": "MADRE DE DIOS",
         "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/04824993/246589",
-        "imagen": "/fotos_diputados/edson-sota.jpg"
+        "imagen": "/fotos_diputados/edson-sota.jpg",
+        "slug": ""
       },
       {
         "posicion": 2,
@@ -1399,7 +1506,8 @@
         "lugar_domicilio": "MADRE DE DIOS, TAMBOPATA, TAMBOPATA",
         "region_original_pdf": "MADRE DE DIOS",
         "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/04804763/253772",
-        "imagen": "/fotos_diputados/keimer-rios.jpg"
+        "imagen": "/fotos_diputados/keimer-rios.jpg",
+        "slug": ""
       },
       {
         "posicion": 3,
@@ -1411,7 +1519,8 @@
         "lugar_domicilio": "MADRE DE DIOS, TAMBOPATA, TAMBOPATA",
         "region_original_pdf": "MADRE DE DIOS",
         "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/42501406/248951",
-        "imagen": "/fotos_diputados/willy-rubin.jpg"
+        "imagen": "/fotos_diputados/willy-rubin.jpg",
+        "slug": ""
       },
       {
         "posicion": 4,
@@ -1423,7 +1532,8 @@
         "lugar_domicilio": "LA LIBERTAD, TRUJILLO, TRUJILLO",
         "region_original_pdf": "LA LIBERTAD",
         "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/75239578/251094",
-        "imagen": "/fotos_diputados/ana-portal.jpg"
+        "imagen": "/fotos_diputados/ana-portal.jpg",
+        "slug": ""
       }
     ]
   },
@@ -1441,7 +1551,8 @@
         "lugar_domicilio": "MOQUEGUA, ILO, ILO",
         "region_original_pdf": "MOQUEGUA",
         "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/04647591/246719",
-        "imagen": "/fotos_diputados/nery-fernandez.jpg"
+        "imagen": "/fotos_diputados/nery-fernandez.jpg",
+        "slug": ""
       },
       {
         "posicion": 2,
@@ -1453,7 +1564,8 @@
         "lugar_domicilio": "MOQUEGUA, MARISCAL NIETO, SAN ANTONIO",
         "region_original_pdf": "MOQUEGUA",
         "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/72810243/252246",
-        "imagen": "/fotos_diputados/fiorella-vizcarra.jpg"
+        "imagen": "/fotos_diputados/fiorella-vizcarra.jpg",
+        "slug": ""
       },
       {
         "posicion": 3,
@@ -1465,7 +1577,8 @@
         "lugar_domicilio": "MOQUEGUA, ILO, ILO",
         "region_original_pdf": "MOQUEGUA",
         "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/04624152/250697",
-        "imagen": "/fotos_diputados/juan-valencia.jpg"
+        "imagen": "/fotos_diputados/juan-valencia.jpg",
+        "slug": ""
       },
       {
         "posicion": 4,
@@ -1477,7 +1590,8 @@
         "lugar_domicilio": "MOQUEGUA, MARISCAL NIETO, SAN ANTONIO",
         "region_original_pdf": "MOQUEGUA",
         "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/48098939/245052",
-        "imagen": "/fotos_diputados/yesica-quispe.jpg"
+        "imagen": "/fotos_diputados/yesica-quispe.jpg",
+        "slug": ""
       }
     ]
   },
@@ -1495,7 +1609,8 @@
         "lugar_domicilio": "LIMA, LIMA, MIRAFLORES",
         "region_original_pdf": "LIMA",
         "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/07330501/253690",
-        "imagen": "/fotos_diputados/carmen-benitez.jpg"
+        "imagen": "/fotos_diputados/carmen-benitez.jpg",
+        "slug": ""
       },
       {
         "posicion": 2,
@@ -1507,7 +1622,8 @@
         "lugar_domicilio": "LAMBAYEQUE, CHICLAYO, CHICLAYO",
         "region_original_pdf": "LAMBAYEQUE",
         "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/73022252/247039",
-        "imagen": "/fotos_diputados/oscar-fernandez.jpg"
+        "imagen": "/fotos_diputados/oscar-fernandez.jpg",
+        "slug": ""
       },
       {
         "posicion": 3,
@@ -1519,7 +1635,8 @@
         "lugar_domicilio": "LIMA, LIMA, SURQUILLO",
         "region_original_pdf": "LIMA",
         "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/10547134/254810",
-        "imagen": "/fotos_diputados/hele-saco.jpg"
+        "imagen": "/fotos_diputados/hele-saco.jpg",
+        "slug": ""
       },
       {
         "posicion": 4,
@@ -1531,7 +1648,8 @@
         "lugar_domicilio": "LAMBAYEQUE, CHICLAYO, CHICLAYO",
         "region_original_pdf": "LAMBAYEQUE",
         "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/77387095/252738",
-        "imagen": "/fotos_diputados/segundo-ramirez.jpg"
+        "imagen": "/fotos_diputados/segundo-ramirez.jpg",
+        "slug": ""
       }
     ]
   },
@@ -1549,7 +1667,8 @@
         "lugar_domicilio": "PIURA, PIURA, VEINTISEIS DE OCTUBRE",
         "region_original_pdf": "PIURA",
         "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/02819812/243723",
-        "imagen": "/fotos_diputados/miguel-huaman.jpg"
+        "imagen": "/fotos_diputados/miguel-huaman.jpg",
+        "slug": ""
       },
       {
         "posicion": 2,
@@ -1561,7 +1680,8 @@
         "lugar_domicilio": "PIURA, PIURA, PIURA",
         "region_original_pdf": "PIURA",
         "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/47041226/245890",
-        "imagen": "/fotos_diputados/julliana-nino.jpg"
+        "imagen": "/fotos_diputados/julliana-nino.jpg",
+        "slug": ""
       },
       {
         "posicion": 3,
@@ -1573,7 +1693,8 @@
         "lugar_domicilio": "LAMBAYEQUE, CHICLAYO, CHONGOYAPE",
         "region_original_pdf": "LAMBAYEQUE",
         "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/16792650/250146",
-        "imagen": "/fotos_diputados/aladino-mego.jpg"
+        "imagen": "/fotos_diputados/aladino-mego.jpg",
+        "slug": ""
       },
       {
         "posicion": 4,
@@ -1585,7 +1706,8 @@
         "lugar_domicilio": "PIURA, PIURA, CASTILLA",
         "region_original_pdf": "PIURA",
         "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/02876617/252585",
-        "imagen": "/fotos_diputados/deysi-ludena.jpg"
+        "imagen": "/fotos_diputados/deysi-ludena.jpg",
+        "slug": ""
       },
       {
         "posicion": 5,
@@ -1597,7 +1719,8 @@
         "lugar_domicilio": "PIURA, TALARA, PARIÑAS",
         "region_original_pdf": "PIURA",
         "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/42640855/253763",
-        "imagen": "/fotos_diputados/vladimir-ramirez.jpg"
+        "imagen": "/fotos_diputados/vladimir-ramirez.jpg",
+        "slug": ""
       },
       {
         "posicion": 6,
@@ -1609,7 +1732,8 @@
         "lugar_domicilio": "PIURA, PIURA, VEINTISEIS DE OCTUBRE",
         "region_original_pdf": "PIURA",
         "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/80534121/244536",
-        "imagen": "/fotos_diputados/margarita-jimenez.jpg"
+        "imagen": "/fotos_diputados/margarita-jimenez.jpg",
+        "slug": ""
       },
       {
         "posicion": 7,
@@ -1621,7 +1745,8 @@
         "lugar_domicilio": "PIURA, PIURA, VEINTISEIS DE OCTUBRE",
         "region_original_pdf": "PIURA",
         "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/43067186/251337",
-        "imagen": "/fotos_diputados/jhon-vasquez.jpg"
+        "imagen": "/fotos_diputados/jhon-vasquez.jpg",
+        "slug": ""
       },
       {
         "posicion": 8,
@@ -1633,7 +1758,8 @@
         "lugar_domicilio": "PIURA, PIURA, VEINTISEIS DE OCTUBRE",
         "region_original_pdf": "PIURA",
         "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/02840465/244357",
-        "imagen": "/fotos_diputados/consuelo-pintado.jpg"
+        "imagen": "/fotos_diputados/consuelo-pintado.jpg",
+        "slug": ""
       }
     ]
   },
@@ -1651,7 +1777,8 @@
         "lugar_domicilio": "PUNO, PUNO, PUNO",
         "region_original_pdf": "PUNO",
         "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/40348330/247684",
-        "imagen": "/fotos_diputados/abel-huarcaya.jpg"
+        "imagen": "/fotos_diputados/abel-huarcaya.jpg",
+        "slug": ""
       },
       {
         "posicion": 2,
@@ -1663,7 +1790,8 @@
         "lugar_domicilio": "PUNO, MELGAR, AYAVIRI",
         "region_original_pdf": "PUNO",
         "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/43677261/254801",
-        "imagen": "/fotos_diputados/julia-frisancho.jpg"
+        "imagen": "/fotos_diputados/julia-frisancho.jpg",
+        "slug": ""
       },
       {
         "posicion": 3,
@@ -1675,7 +1803,8 @@
         "lugar_domicilio": "LIMA, LIMA, CHACLACAYO",
         "region_original_pdf": "LIMA",
         "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/42190169/255460",
-        "imagen": "/fotos_diputados/jhonatan-apaza.jpg"
+        "imagen": "/fotos_diputados/jhonatan-apaza.jpg",
+        "slug": ""
       },
       {
         "posicion": 4,
@@ -1687,7 +1816,8 @@
         "lugar_domicilio": "PUNO, SAN ROMAN, JULIACA",
         "region_original_pdf": "PUNO",
         "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/44731333/249751",
-        "imagen": "/fotos_diputados/yanet-quimber.jpg"
+        "imagen": "/fotos_diputados/yanet-quimber.jpg",
+        "slug": ""
       },
       {
         "posicion": 5,
@@ -1699,7 +1829,8 @@
         "lugar_domicilio": "PIURA, PIURA, VEINTISEIS DE OCTUBRE",
         "region_original_pdf": "PIURA",
         "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/44731333/249751",
-        "imagen": "/fotos_diputados/luis-codarlupo.jpg"
+        "imagen": "/fotos_diputados/luis-codarlupo.jpg",
+        "slug": ""
       },
       {
         "posicion": 6,
@@ -1711,7 +1842,8 @@
         "lugar_domicilio": "LAMBAYEQUE, LAMBAYEQUE, OLMO",
         "region_original_pdf": "LAMBAYEQUE",
         "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/48300275/245759",
-        "imagen": "/fotos_diputados/nancy-cruz.jpg"
+        "imagen": "/fotos_diputados/nancy-cruz.jpg",
+        "slug": ""
       }
     ]
   },
@@ -1729,7 +1861,8 @@
         "lugar_domicilio": "SAN MARTIN, SAN MARTIN, TARAPOTO",
         "region_original_pdf": "SAN MARTIN",
         "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/70657094/250870",
-        "imagen": "/fotos_diputados/jehu-pezo.jpg"
+        "imagen": "/fotos_diputados/jehu-pezo.jpg",
+        "slug": "/jehu-pezo"
       },
       {
         "posicion": 2,
@@ -1741,7 +1874,8 @@
         "lugar_domicilio": "SAN MARTIN, PICOTA, SAN CRISTOBAL",
         "region_original_pdf": "SAN MARTIN",
         "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/70932295/252019",
-        "imagen": "/fotos_diputados/clotilde-velez.jpg"
+        "imagen": "/fotos_diputados/clotilde-velez.jpg",
+        "slug": ""
       },
       {
         "posicion": 3,
@@ -1753,7 +1887,8 @@
         "lugar_domicilio": "SAN MARTIN, SAN MARTIN, TARAPOTO",
         "region_original_pdf": "SAN MARTIN",
         "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/41697655/252764",
-        "imagen": "/fotos_diputados/adolfo-amasifuen.jpg"
+        "imagen": "/fotos_diputados/adolfo-amasifuen.jpg",
+        "slug": ""
       },
       {
         "posicion": 4,
@@ -1765,7 +1900,8 @@
         "lugar_domicilio": "LAMBAYEQUE, LAMBAYEQUE, OLMOS",
         "region_original_pdf": "LAMBAYEQUE",
         "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/75543214/248267",
-        "imagen": "/fotos_diputados/haidy-castro.jpg"
+        "imagen": "/fotos_diputados/haidy-castro.jpg",
+        "slug": ""
       }
     ]
   },
@@ -1783,7 +1919,8 @@
         "lugar_domicilio": "TACNA, JORGE BASADRE, ILABAYA",
         "region_original_pdf": "TACNA",
         "url": "https://votoinformado.jne.gob.pe/diputados?partido=2961",
-        "imagen": "/fotos_diputados/jorge-ramos.jpg"
+        "imagen": "/fotos_diputados/jorge-ramos.jpg",
+        "slug": ""
       },
       {
         "posicion": 2,
@@ -1795,7 +1932,8 @@
         "lugar_domicilio": "TACNA, TACNA, TACNA",
         "region_original_pdf": "TACNA",
         "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/42212593/255569",
-        "imagen": "/fotos_diputados/anyela-cueto.jpg"
+        "imagen": "/fotos_diputados/anyela-cueto.jpg",
+        "slug": ""
       },
       {
         "posicion": 3,
@@ -1807,7 +1945,8 @@
         "lugar_domicilio": "TACNA, TACNA, TACNA",
         "region_original_pdf": "TACNA",
         "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/00506828/255571",
-        "imagen": "/fotos_diputados/edgar-paredes.jpg"
+        "imagen": "/fotos_diputados/edgar-paredes.jpg",
+        "slug": ""
       },
       {
         "posicion": 4,
@@ -1819,7 +1958,8 @@
         "lugar_domicilio": "TACNA, TACNA, LA YARADA LOS PALOS",
         "region_original_pdf": "TACNA",
         "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/40346522/244267",
-        "imagen": "/fotos_diputados/vanessa-tone.jpg"
+        "imagen": "/fotos_diputados/vanessa-tone.jpg",
+        "slug": ""
       }
     ]
   },
@@ -1837,7 +1977,8 @@
         "lugar_domicilio": "TUMBES, TUMBES, TUMBES",
         "region_original_pdf": "TUMBES",
         "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/00205719/250921",
-        "imagen": "/fotos_diputados/emma-feijoo.jpg"
+        "imagen": "/fotos_diputados/emma-feijoo.jpg",
+        "slug": ""
       },
       {
         "posicion": 2,
@@ -1849,7 +1990,8 @@
         "lugar_domicilio": "TUMBES, TUMBES, TUMBES",
         "region_original_pdf": "TUMBES",
         "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/73148276/247724",
-        "imagen": "/fotos_diputados/jose-zapata.jpg"
+        "imagen": "/fotos_diputados/jose-zapata.jpg",
+        "slug": ""
       },
       {
         "posicion": 3,
@@ -1861,7 +2003,8 @@
         "lugar_domicilio": "TUMBES, TUMBES, TUMBES",
         "region_original_pdf": "TUMBES",
         "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/73428669/245906",
-        "imagen": "/fotos_diputados/monica-aleman.jpg"
+        "imagen": "/fotos_diputados/monica-aleman.jpg",
+        "slug": ""
       },
       {
         "posicion": 4,
@@ -1873,7 +2016,8 @@
         "lugar_domicilio": "TUMBES, TUMBES, TUMBES",
         "region_original_pdf": "TUMBES",
         "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/43060906/243697",
-        "imagen": "/fotos_diputados/cristian-montalban.jpg"
+        "imagen": "/fotos_diputados/cristian-montalban.jpg",
+        "slug": ""
       }
     ]
   },
@@ -1891,7 +2035,8 @@
         "lugar_domicilio": "UCAYALI, CORONEL PORTILLO, YARINACOCHA",
         "region_original_pdf": "UCAYALI",
         "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/40587243/245200",
-        "imagen": "/fotos_diputados/ernesto-espejo.jpg"
+        "imagen": "/fotos_diputados/ernesto-espejo.jpg",
+        "slug": ""
       },
       {
         "posicion": 2,
@@ -1903,7 +2048,8 @@
         "lugar_domicilio": "UCAYALI, CORONEL PORTILLO, YARINACOCHA",
         "region_original_pdf": "UCAYALI",
         "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/73357093/245373",
-        "imagen": "/fotos_diputados/itaty-vasquez.jpg"
+        "imagen": "/fotos_diputados/itaty-vasquez.jpg",
+        "slug": ""
       },
       {
         "posicion": 3,
@@ -1915,7 +2061,8 @@
         "lugar_domicilio": "UCAYALI, CORONEL PORTILLO, MANANTAY",
         "region_original_pdf": "UCAYALI",
         "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/74892747/253475",
-        "imagen": "/fotos_diputados/raul-solorzano.jpg"
+        "imagen": "/fotos_diputados/raul-solorzano.jpg",
+        "slug": ""
       },
       {
         "posicion": 4,
@@ -1927,7 +2074,8 @@
         "lugar_domicilio": "LIMA, LIMA, ATE",
         "region_original_pdf": "LIMA",
         "url": "https://votoinformado.jne.gob.pe/hoja-vida/2961/45904401/252849",
-        "imagen": "/fotos_diputados/rosario-reategui.jpg"
+        "imagen": "/fotos_diputados/rosario-reategui.jpg",
+        "slug": ""
       }
     ]
   }
