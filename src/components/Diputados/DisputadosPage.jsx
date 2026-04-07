@@ -190,7 +190,7 @@ function Modal({ candidato, onClose }) {
           </div>
 
           {/* RENDERING CONDICIONAL */}
-          <div className="mt-8 flex justify-end gap-3">
+          <div className="mt-8 flex justify-start gap-3">
             {slug ? (
               <Link
                 to={`/diputados${slug}`}
