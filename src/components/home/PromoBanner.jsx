@@ -27,7 +27,7 @@ const PromoBanner = () => {
         {/* Enlace e Imagen */}
         <a href="/plan-de-gobierno" className="block w-full cursor-pointer">
           <img 
-            src="/comunicados/comunicado-9.jpg" 
+            src="/comunicados/comunicado-10.jpg" 
             alt="Anuncio de Campaña" 
             className="w-full h-auto object-contain max-h-[80vh] rounded-xl"
           />
