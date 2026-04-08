@@ -42,11 +42,8 @@ const PromoBanner = () => {
         </button>
 
         {/* Enlace e Imagen */}
-          <a href="/plan-de-gobierno" className="block  w-full cursor-pointer">
-          {images.map(
-            (image) => (
-            <img className='' key={image.id} src={`/comunicados/comunicado-${bannerTime}.jpg`} />
-          ))}
+          <a href="/plan-de-gobierno" className="flex justify-center items-center w-full cursor-pointer">
+            <img className='w-[80%]' src={`/comunicados/comunicado-${bannerTime}.jpg`} />
           </a>
       </div>
     </div>
