@@ -1,10 +1,27 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { X } from 'lucide-react'; 
 
 const PromoBanner = () => {
   const [isVisible, setIsVisible] = useState(true);
 
   if (!isVisible) return null;
+
+  const images = [
+    {id: 11},
+    {id: 12},
+    {id: 13},
+  ]
+
+  const [bannerTime, setBannerTime] = useState(11)
+
+  useEffect(() => {
+    const timeID = setTimeout(() => {
+        setBannerTime( prev => (prev < 13 ? prev + 1 : 11) )
+    }, 3000)
+
+    return () => clearTimeout(timeID)
+  }, [bannerTime])
+  
 
   return (
     // ¡AQUÍ ESTÁ EL CAMBIO! Pasamos de z-[100] a z-[9999] 
@@ -25,14 +42,12 @@ const PromoBanner = () => {
         </button>
 
         {/* Enlace e Imagen */}
-        <a href="/plan-de-gobierno" className="block w-full cursor-pointer">
-          <img 
-            src="/comunicados/comunicado-9.jpg" 
-            alt="Anuncio de Campaña" 
-            className="w-full h-auto object-contain max-h-[80vh] rounded-xl"
-          />
-        </a>
-        
+          <a href="/plan-de-gobierno" className="block  w-full cursor-pointer">
+          {images.map(
+            (image) => (
+            <img className='' key={image.id} src={`/comunicados/comunicado-${bannerTime}.jpg`} />
+          ))}
+          </a>
       </div>
     </div>
   );
