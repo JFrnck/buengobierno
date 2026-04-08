@@ -6,7 +6,7 @@ const PromoBanner = () => {
   const [bannerTime, setBannerTime] = useState(11)
   
   useEffect(() => {
-    if (!isVisible) return null;
+    if (!isVisible) return ;
     const timeID = setTimeout(() => {
         setBannerTime( prev => (prev < 13 ? prev + 1 : 11) )
     }, 3000)
