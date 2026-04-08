@@ -1,9 +1,11 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import { MapPin, Link } from 'lucide-react';
 import { gsap } from 'gsap';
 import { useGSAP } from '@gsap/react';
 // 1. Importamos SplitText
 import { SplitText } from 'gsap/SplitText';
+// 2. Importamos el generador de QR
+import { QRCodeSVG } from 'qrcode.react';
 
 // Registramos el plugin
 gsap.registerPlugin(SplitText);
@@ -48,31 +50,35 @@ export default function HeroSection({ candidato }) {
   const titleRef       = useRef(null);
   const subtitleRef    = useRef(null);
   const socialRef      = useRef(null);
-  const imageContainerRef = useRef(null); // Ref para la foto
+  const imageContainerRef = useRef(null);
   
   const marcaCardRef   = useRef(null);
   const escribeCardRef = useRef(null);
   const xPath1Ref      = useRef(null);
   const xPath2Ref      = useRef(null);
   const wipeMaskRef    = useRef(null);
-  const numeroRef      = useRef(null); // <-- Referencia agregada aquí
+  const numeroRef      = useRef(null);
 
-  // Estado para la foto volteada
   const [isFlipped, setIsFlipped] = useState(false);
+  
+  // Estado para capturar la URL actual y generar el QR dinámicamente
+  const [currentUrl, setCurrentUrl] = useState('');
+
+  useEffect(() => {
+    // Nos aseguramos de que window exista (útil para Next.js / SSR)
+    if (typeof window !== 'undefined') {
+      setCurrentUrl(window.location.href);
+    }
+  }, []);
 
   useGSAP(() => {
-    // 1. Configuramos el SplitText para animar las letras del título
     const splitTitle = new SplitText(titleRef.current, { type: "words,chars" });
 
     const ctx = gsap.context(() => {
       
-      // ─── LÍNEA DE TIEMPO DE ENTRADA (Coreografía Inicial) ───
       const initTl = gsap.timeline({ defaults: { ease: 'power3.out' } });
 
-      // Animamos la info superior (Slide)
       initTl.fromTo(infoRef.current, { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.8, delay: 0.2 })
-      
-      // Animamos cada letra del título (Aparecen y rotan)
       .from(splitTitle.chars, {
         opacity: 0,
         y: 40,
@@ -81,18 +87,12 @@ export default function HeroSection({ candidato }) {
         duration: 0.8,
         ease: "back.out(1.5)"
       }, "-=0.4")
-      
-      // Animamos el resumen (Slide)
       .fromTo(subtitleRef.current, { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.8 }, "-=0.6")
-      
-      // Animamos los botones sociales (Pop)
       .fromTo(socialRef.current?.children ? Array.from(socialRef.current.children) : [], 
         { opacity: 0, scale: 0 }, 
         { opacity: 1, scale: 1, stagger: 0.1, duration: 0.5, ease: "back.out(1.5)" }, 
         "-=0.6"
       )
-      
-      // ─── IMAGEN Y TARJETAS APARECEN JUNTAS ───
       .fromTo(
         [imageContainerRef.current, marcaCardRef.current, escribeCardRef.current],
         { opacity: 0, y: 50, scale: 0.95 },
@@ -104,10 +104,9 @@ export default function HeroSection({ candidato }) {
           stagger: 0.1, 
           ease: 'back.out(1.2)',
         },
-        "-=0.8" // Inician casi junto con los botones sociales para mayor fluidez
+        "-=0.8"
       );
 
-      // ─── LÍNEA DE TIEMPO CICLO TARJETAS (Sincronización Perfecta) ───
       if (xPath1Ref.current && xPath2Ref.current && wipeMaskRef.current && numeroRef.current) {
         const BUFFER = 30; 
         const xLengths = [
@@ -117,49 +116,32 @@ export default function HeroSection({ candidato }) {
 
         const masterTl = gsap.timeline({ repeat: -1, delay: 2.0 });
 
-        // 1. ESTADO INICIAL: Todo oculto y la máscara tapando el número
         masterTl.set([xPath1Ref.current, xPath2Ref.current, numeroRef.current], { opacity: 0 });
         masterTl.set(wipeMaskRef.current, { xPercent: 0 }); 
 
         masterTl.set(xPath1Ref.current, { strokeDasharray: xLengths[0], strokeDashoffset: xLengths[0] });
         masterTl.set(xPath2Ref.current, { strokeDasharray: xLengths[1], strokeDashoffset: xLengths[1] });
-
-        // 2. SINCRONIZACIÓN EN EL SEGUNDO 0.5
         
-        // Hacemos visible el número (aunque la máscara lo sigue tapando)
         masterTl.to(numeroRef.current, { opacity: 1, duration: 0.01 }, 0.5);
-        
-        // Inicia a dibujarse la primera línea de la X
         masterTl.to(xPath1Ref.current, { opacity: 1, duration: 0.01 }, 0.5);
         masterTl.to(xPath1Ref.current, { strokeDashoffset: 0, duration: 0.8, ease: 'power2.inOut' }, 0.5);
+        masterTl.to(wipeMaskRef.current, { xPercent: 100, duration: 1.6, ease: 'power2.inOut' }, 0.5);
 
-        // ¡CLAVE! Inicia la máscara a destapar el número al mismo tiempo (0.5)
-        // Le damos duración de 1.6s para que termine exacto cuando termina la segunda línea de la X
-        masterTl.to(wipeMaskRef.current, { 
-          xPercent: 100, 
-          duration: 1.6, 
-          ease: 'power2.inOut' 
-        }, 0.5);
-
-        // La segunda línea de la X sigue normal en el segundo 1.3
         masterTl.to(xPath2Ref.current, { opacity: 1, duration: 0.01 }, 1.3);
         masterTl.to(xPath2Ref.current, { strokeDashoffset: 0, duration: 0.8, ease: 'power2.inOut' }, 1.3);
 
-        // 3. SE VAN JUNTOS EN EL SEGUNDO 7.0
         masterTl.to([xPath1Ref.current, xPath2Ref.current, numeroRef.current], {
           opacity: 0,
           duration: 0.8, 
           ease: 'power1.inOut'
         }, 7.0);
         
-        // La máscara regresa a cubrir el espacio para el siguiente ciclo
         masterTl.to(wipeMaskRef.current, {
            xPercent: 0,
            duration: 0.8,
            ease: 'power1.inOut'
         }, 7.0);
 
-        // Rebobinar en secreto
         masterTl.set([xPath1Ref.current, xPath2Ref.current], {
           strokeDashoffset: (i) => xLengths[i]
         }, 7.9);
@@ -172,7 +154,6 @@ export default function HeroSection({ candidato }) {
     };
   }, []);
 
-  // ── 3. Normalizador Dinámico de Redes ──
   let redesValidas = [];
   const datosRedes = candidato?.redes_sociales;
 
@@ -190,9 +171,11 @@ export default function HeroSection({ candidato }) {
 
   redesValidas = redesValidas.filter(r => r.url && typeof r.url === 'string' && r.url.trim() !== '');
 
+  // Determinar qué URL irá en el QR (prioriza si envías una url específica por props, si no, usa la actual)
+  const qrUrlValue = `https://partidodelbuengobierno.com/diputados/${candidato.slug}`;
+
   return (
     <>
-      {/* Importamos la fuente 'Inter' para el número */}
       <style>
         {`
           @import url('https://fonts.googleapis.com/css2?family=Inter:wght@900&display=swap');
@@ -228,11 +211,9 @@ export default function HeroSection({ candidato }) {
 
               <div className="order-2 md:order-none flex flex-col" style={{ perspective: "1000px" }}>
                 <div ref={titleRef} className="text-5xl md:text-7xl lg:text-[90px] font-black leading-[0.9] tracking-tight uppercase">
-                  {/* Contenedor del Nombre */}
                   <div className="text-[#0D1B2A]">
                     {candidato.nombre}
                   </div>
-                  {/* Contenedor del Apellido */}
                   <div className="text-[#D72638]">
                     {candidato.apellidoHighlighted}
                   </div>
@@ -279,7 +260,6 @@ export default function HeroSection({ candidato }) {
             {/* ── COLUMNA DERECHA ───────────────────────────────────────────── */}
             <div className="order-3 md:order-2 flex flex-col items-center justify-end relative h-auto -mt-10 md:-mt-10">
 
-              {/* ── CONTENEDOR FLIP DE LA FOTO ── */}
               <div 
                 ref={imageContainerRef}
                 className="relative z-10 w-full md:w-[64%] h-[40vh] md:h-[65vh] max-w-lg -mb-14 cursor-pointer group"
@@ -295,7 +275,7 @@ export default function HeroSection({ candidato }) {
                 >
                   {/* Lado A: FRENTE */}
                   <div 
-                    className="inset-0 w-full h-full"
+                    className="inset-0 w-full h-full mt-7"
                     style={{ backfaceVisibility: 'hidden', WebkitBackfaceVisibility: 'hidden' }}
                   >
                     <img
@@ -318,11 +298,25 @@ export default function HeroSection({ candidato }) {
                       ¡Comparte para lograr un Buen Gobierno!
                     </p>
                     
-                    <img 
-                      src={candidato.qr_image || candidato.partido_logo} 
-                      alt="Código QR" 
-                      className="w-full max-w-[200px] aspect-square object-contain" 
+                    {/* Generador Dinámico de QR */}
+                    <div className="w-full max-w-[200px] aspect-square flex items-center justify-center bg-white p-2 rounded-lg shadow-inner">
+                    <QRCodeSVG 
+                      value={qrUrlValue}
+                      width="100%"
+                      height="100%"
+                      fgColor="#0D1B2A"
+                      bgColor="transparent"
+                      level="H" /* Alto nivel de corrección de errores (necesario y perfecto para incrustar logos) */
+                      imageSettings={{
+                        src: "/logo-sol-pbg.png",
+                        x: undefined,
+                        y: undefined,
+                        height: 48, // Ajusta este tamaño según qué tan grande quieras el logo
+                        width: 48,  // Ajusta este tamaño para mantener la proporción
+                        excavate: true, // Borra los puntos del QR detrás del logo para mayor legibilidad
+                      }}
                     />
+                  </div>
                     
                     <p className="text-[#0D1B2A]/60 text-sm mt-6 font-bold uppercase tracking-wider">
                       Toca para volver
@@ -381,7 +375,6 @@ export default function HeroSection({ candidato }) {
                   <div className="w-full h-full bg-[#F5C800] flex items-center justify-center p-2 mb-3 border border-black">
                     
                     <div className="relative overflow-hidden w-full flex items-center justify-center h-16 md:h-24">
-                       {/* Aquí agregamos el ref={numeroRef} */}
                        <span ref={numeroRef} className="text-7xl md:text-8xl font-number text-[#0D1B2A]">
                           {candidato.numero_lista}
                        </span>

@@ -847,5 +847,152 @@
       "videos": [],
       "galeria_fotos": []
     }
+  },
+  {
+  "id": 6,
+  "slug": "romina-uribe",
+  "nombre": "ROMINA",
+  "apellidoHighlighted": "URIBE",
+  "rol": "Candidata a la camara de Diputados",
+  "distrito": "Lima Metropolitana",
+  "numero_lista": "18",
+  "slogan_principal": "Por un Congreso más humano, más responsable y más conectado con las urgencias del país.",
+  "lemas": [],
+  "hero_resumen": "Soy Romina Uribe, abogada especializada en derechos humanos y candidata a diputada por Lima con el N.° 18 del Partido del Buen Gobierno. Mi trayectoria combina formación jurídica, compromiso con las causas sociales y participación activa en espacios vinculados a juventud, democracia y políticas públicas. Hoy asumo esta candidatura con preparación, vocación de servicio y una visión cercana a los problemas reales que enfrentan miles de peruanos, especialmente mujeres y jóvenes.",
+  "hero_image": "/romina-uribe.png",
+  "partido_logo": "/logo-sol-pbg.png",
+  "qr_image": "",
+  "biografia": {
+    "titulo": "Conóceme",
+    "subtitulo": "Una candidatura fresca, preparada y con vocación de servicio.",
+    "historia": [
+      "Soy Romina Uribe y he decidido postular a la Cámara de Diputados porque no acepto que en el Perú millones de personas —especialmente mujeres y jóvenes— sigan viendo vulnerados sus derechos por un Estado que llega tarde, llega mal o simplemente no llega. Como abogada especializada en derechos humanos, he visto de cerca cómo las fallas del sistema impactan en la vida cotidiana: en la violencia que no se previene, en las oportunidades que no llegan y en la desconfianza que crece cuando las instituciones no responden.",
+      "Creo en una política con principios, basada en evidencia, con diálogo y capacidad real de generar cambios. Soy abogada por la Universidad de San Martín de Porres y actualmente curso una maestría en gestión pública. He sido becaria de la Escuela de Gobierno de la Organización de los Estados Americanos y he tenido el honor de representar a la juventud peruana en la Cumbre del Futuro en Nueva York.",
+      "Mi compromiso con lo público comenzó desde temprana edad, participando activamente en espacios de representación: fui alcaldesa escolar del Primer Colegio Nacional de Mujeres del Perú “Rosa de Santa María” y formé parte del primer Consejo Consultivo de Niños, Niñas y Adolescentes de Lima Metropolitana, entre otros espacios de participación.",
+      "Estas experiencias han marcado mi vocación de servicio y han fortalecido mi convicción de trabajar por un país más justo, inclusivo y con oportunidades reales para todas y todos."
+    ],
+    "hitos_academicos": [
+      {
+        "anio": "",
+        "titulo": "Abogada por la Universidad de San Martín de Porres"
+      },
+      {
+        "anio": "",
+        "titulo": "Actualmente cursando una maestría en gestión pública"
+      },
+      {
+        "anio": "",
+        "titulo": "Becaria de la Escuela de Gobierno de la Organización de los Estados Americanos"
+      },
+      {
+        "anio": "",
+        "titulo": "Representó a la juventud peruana en la Cumbre del Futuro en Nueva York"
+      }
+    ]
+  },
+  "propuestas": [
+    {
+      "icon": null,
+      "titulo": "1. Mayor presupuesto y ampliación para Beca 18",
+      "que_proponemos": "Mayor presupuesto y ampliación para Beca 18, garantizando que el 60% de estas becas sean destinadas exclusivamente a hijos de trabajadores independientes y madres solteras.",
+      "como_mejorara": "Cerrará brechas históricas de desigualdad. Al enfocar el apoyo en familias económicamente vulnerables y sin ingresos fijos, se fomenta la movilidad social y se rompe el ciclo de la pobreza. El Perú ganará una fuerza laboral más profesional, competitiva y equitativa, aprovechando el talento de jóvenes que de otro modo no podrían costear estudios superiores."
+    },
+    {
+      "icon": null,
+      "titulo": "2. Supervisión rigurosa de la ley contra el castigo físico y humillante",
+      "que_proponemos": "Una supervisión rigurosa de la ley contra el castigo físico y humillante para garantizar infancias libres de violencia.",
+      "como_mejorara": "Formaremos generaciones emocionalmente más sanas. Al erradicar la violencia desde el hogar y la crianza, se reducen los futuros índices de violencia social, agresividad y delincuencia. Un niño que crece en un entorno seguro se convierte en un ciudadano más empático, productivo y con mejor desarrollo cognitivo."
+    },
+    {
+      "icon": null,
+      "titulo": "3. Superintendencia de Desarrollo y Supervisión de Inteligencia Artificial",
+      "que_proponemos": "La creación de una Superintendencia de Desarrollo y Supervisión de Inteligencia Artificial.",
+      "como_mejorara": "Posicionará al país a la par de los líderes tecnológicos globales, garantizando que el uso de la Inteligencia Artificial se dé de forma ética, segura y productiva. Esto protegerá los derechos y datos de los peruanos, a la vez que fomentará la innovación, atraerá inversión tecnológica y modernizará tanto el Estado como el sector privado, evitando que el Perú quede rezagado en la nueva economía digital."
+    },
+    {
+      "icon": null,
+      "titulo": "4. Educación Sexual Integral y gratuidad de la vacuna contra el VPH",
+      "que_proponemos": "Implementar Educación Sexual Integral (ESI) en las escuelas de acuerdo con la madurez y necesidad de los alumnos, y garantizar la gratuidad de la vacuna contra el VPH para jóvenes de 19 a 30 años.",
+      "como_mejorara": "Protegerá directamente la vida y el futuro de los jóvenes. La educación preventiva reducirá drásticamente las cifras de embarazo adolescente, deserción escolar y violencia de género. Por su parte, la ampliación de la vacuna contra el VPH salvará miles de vidas al prevenir distintos tipos de cáncer, lo que a largo plazo también descongestionará y aliviará los costos del sistema de salud pública."
+    },
+    {
+      "icon": null,
+      "titulo": "5. Defensa y promoción del espacio público para una cultura viva",
+      "que_proponemos": "La defensa y promoción del espacio público para una cultura viva, garantizando lugares seguros para expresiones como el arte, danzas, anime, K-pop y música.",
+      "como_mejorara": "Recuperará las calles para la ciudadanía y alejará a los jóvenes de la delincuencia o las adicciones al ofrecerles espacios de esparcimiento sano y creatividad. Fomentar estas comunidades culturales mejora la salud mental, promueve la tolerancia a la diversidad y fortalece el tejido social, haciendo que nuestras ciudades sean lugares más seguros, dinámicos y habitables."
+    }
+  ],
+  "territorio": {
+    "nombre": "Lima Metropolitana",
+    "mapa": "LIMA",
+    "descripcion": "La Ciudad de los Reyes y el crisol de todas las sangres. Lima no es solo la capital; es el gran abrazo del Perú, el lugar donde todas nuestras culturas, sabores y sueños se encuentran frente al Océano Pacífico. Custodia de balcones coloniales y huacas milenarias, es el centro político, financiero y gastronómico del país. En sus calles bulliciosas, cada día se construye el futuro de nuestra nación.",
+    "estadisticas": [
+      {
+        "valor": "10.15M",
+        "etiqueta": "Habitantes"
+      },
+      {
+        "valor": "43",
+        "etiqueta": "Distritos"
+      }
+    ],
+    "puntos_criticos": [
+      {
+        "id": 1,
+        "lat": -11.9300,
+        "lng": -77.0400,
+        "zona": "Lima Norte",
+        "problema": "Miles de jóvenes de familias vulnerables, especialmente hijos de trabajadores independientes y madres solteras, siguen teniendo limitado el acceso a estudios superiores por falta de apoyo económico suficiente.",
+        "solucion": "Mayor presupuesto y ampliación para Beca 18, garantizando que el 60% de estas becas sean destinadas exclusivamente a hijos de trabajadores independientes y madres solteras."
+      },
+      {
+        "id": 2,
+        "lat": -12.0464,
+        "lng": -77.0428,
+        "zona": "Lima Centro",
+        "problema": "Persisten situaciones de castigo físico y humillante que afectan el desarrollo de niños y niñas, debilitando la protección de sus derechos desde el hogar y la crianza.",
+        "solucion": "Una supervisión rigurosa de la ley contra el castigo físico y humillante para garantizar infancias libres de violencia."
+      },
+      {
+        "id": 3,
+        "lat": -12.2000,
+        "lng": -76.9300,
+        "zona": "Lima Sur",
+        "problema": "El país enfrenta el avance de la Inteligencia Artificial sin una entidad especializada que supervise su desarrollo y uso ético, seguro y productivo.",
+        "solucion": "La creación de una Superintendencia de Desarrollo y Supervisión de Inteligencia Artificial."
+      },
+      {
+        "id": 4,
+        "lat": -12.0900,
+        "lng": -77.0500,
+        "zona": "Lima Este",
+        "problema": "La falta de educación preventiva y de acceso ampliado a la vacuna contra el VPH expone a los jóvenes a mayores riesgos de embarazo adolescente, deserción escolar, violencia de género y enfermedades prevenibles.",
+        "solucion": "Implementar Educación Sexual Integral (ESI) en las escuelas de acuerdo con la madurez y necesidad de los alumnos, y garantizar la gratuidad de la vacuna contra el VPH para jóvenes de 19 a 30 años."
+      },
+      {
+        "id": 5,
+        "lat": -12.0600,
+        "lng": -76.9700,
+        "zona": "Lima Metropolitana",
+        "problema": "Muchos espacios públicos no garantizan condiciones seguras para el desarrollo de expresiones culturales juveniles, limitando actividades como el arte, las danzas, el anime, el K-pop y la música.",
+        "solucion": "La defensa y promoción del espacio público para una cultura viva, garantizando lugares seguros para expresiones como el arte, danzas, anime, K-pop y música."
+      }
+    ]
+  },
+  "redes_sociales": {
+    "facebook": "",
+    "instagram": "https://www.instagram.com/rominauribe18?igsh=MXZvMmNrN2U2dWh3OQ%3D%3D&utm_source=qr",
+    "tiktok": "https://www.tiktok.com/@rominauribe18?_r=1&_t=ZT-95N7bjkGrqX"
+  },
+  "enlaces_importantes": [
+    {
+      "titulo": "",
+      "url": ""
+    }
+  ],
+  "multimedia": {
+    "videos": [],
+    "galeria_fotos": []
   }
+}
 ]
