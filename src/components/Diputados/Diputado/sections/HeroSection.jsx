@@ -246,7 +246,7 @@ export default function HeroSection({ candidato }) {
                           href={item.url} 
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="w-14 h-14 rounded-full border border-[#0D1B2A]/20 flex items-center justify-center hover:bg-[#D72638] hover:text-white transition-all duration-300"
+                          className="w-14 h-14 rounded-full border border-[#0D1B2A]/20 flex items-center justify-center hover:bg-[#D72638] hover:text-white transition-all duration-300 animate-bounce"
                         >
                           {IconComponent}
                         </a>
