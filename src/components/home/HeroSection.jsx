@@ -5,6 +5,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 // 1. Importamos SplitText (Asegúrate de tener instalado el paquete premium)
 import { SplitText } from 'gsap/SplitText'
 import CampaignVideoPlayer from './VideoComponent'
+import {Link} from 'react-router-dom'
 
 // 2. Registramos ambos plugins
 gsap.registerPlugin(ScrollTrigger, SplitText)
@@ -149,14 +150,14 @@ export default function HeroSection() {
               </p>
 
               <div ref={ctasRef} className="flex flex-wrap gap-4">
-                <a
-                  href="#plan"
-                  className="bg-[#D72638] text-white font-bold px-6 md:px-8 py-3.5 rounded-full hover:bg-[#B81F2E] transition-all duration-200 hover:shadow-[0_8px_24px_rgba(215,38,56,0.4)] hover:-translate-y-1 text-sm tracking-wide text-center"
-                  style={{ opacity: 0 }}
-                >
+                <Link 
+                to={"/plan-de-gobierno"} 
+                className='bg-[#D72638] text-white font-bold px-6 md:px-8 py-3.5 rounded-full hover:bg-[#B81F2E] transition-all duration-200 hover:shadow-[0_8px_24px_rgba(215,38,56,0.4)] hover:-translate-y-1 text-sm tracking-wide text-center'
+                style={{ opacity: 0 }}>
                   Ver Plan de Gobierno
-                </a>
+                </Link>
               </div>
+
             </div>
 
             {/* Hero image container */}
