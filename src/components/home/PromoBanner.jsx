@@ -3,18 +3,10 @@ import { X } from 'lucide-react';
 
 const PromoBanner = () => {
   const [isVisible, setIsVisible] = useState(true);
-
-  if (!isVisible) return null;
-
-  const images = [
-    {id: 11},
-    {id: 12},
-    {id: 13},
-  ]
-
   const [bannerTime, setBannerTime] = useState(11)
-
+  
   useEffect(() => {
+    if (!isVisible) return null;
     const timeID = setTimeout(() => {
         setBannerTime( prev => (prev < 13 ? prev + 1 : 11) )
     }, 3000)
@@ -22,6 +14,7 @@ const PromoBanner = () => {
     return () => clearTimeout(timeID)
   }, [bannerTime])
   
+   if (!isVisible) return null;
 
   return (
     // ¡AQUÍ ESTÁ EL CAMBIO! Pasamos de z-[100] a z-[9999] 
