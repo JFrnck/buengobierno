@@ -3,12 +3,12 @@ import { X } from 'lucide-react';
 
 const PromoBanner = () => {
   const [isVisible, setIsVisible] = useState(true);
-  const [bannerTime, setBannerTime] = useState(11)
+  const [bannerTime, setBannerTime] = useState(17)
   
   useEffect(() => {
     if (!isVisible) return ;
     const timeID = setTimeout(() => {
-        setBannerTime( prev => (prev < 17 ? prev + 1 : 16) )
+        setBannerTime( prev => (prev < 18 ? prev + 1 : 17) )
     }, 3000)
 
     return () => clearTimeout(timeID)
