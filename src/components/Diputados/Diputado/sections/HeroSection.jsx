@@ -275,7 +275,7 @@ export default function HeroSection({ candidato }) {
                 >
                   {/* Lado A: FRENTE */}
                   <div 
-                    className="inset-0 w-full h-full mt-7"
+                    className="inset-0 w-full h-full"
                     style={{ backfaceVisibility: 'hidden', WebkitBackfaceVisibility: 'hidden' }}
                   >
                     <img
