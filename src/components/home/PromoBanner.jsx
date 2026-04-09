@@ -9,7 +9,7 @@ const PromoBanner = () => {
     if (!isVisible) return ;
     const timeID = setTimeout(() => {
         setBannerTime( prev => (prev < 18 ? prev + 1 : 17) )
-    }, 3000)
+    }, 5000)
 
     return () => clearTimeout(timeID)
   }, [bannerTime])
