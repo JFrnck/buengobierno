@@ -5,14 +5,14 @@ const PromoBanner = () => {
   const [isVisible, setIsVisible] = useState(true);
   const [bannerTime, setBannerTime] = useState(11)
   
-  useEffect(() => {
-    if (!isVisible) return ;
-    const timeID = setTimeout(() => {
-        setBannerTime( prev => (prev < 13 ? prev + 1 : 11) )
-    }, 3000)
+  // useEffect(() => {
+  //   if (!isVisible) return ;
+  //   const timeID = setTimeout(() => {
+  //       setBannerTime( prev => (prev < 13 ? prev + 1 : 11) )
+  //   }, 3000)
 
-    return () => clearTimeout(timeID)
-  }, [bannerTime])
+  //   return () => clearTimeout(timeID)
+  // }, [bannerTime])
   
    if (!isVisible) return null;
 
@@ -36,7 +36,8 @@ const PromoBanner = () => {
 
         {/* Enlace e Imagen */}
           <a href="/plan-de-gobierno" className="flex justify-center items-center w-full cursor-pointer">
-            <img className='w-[80%]' src={`/comunicados/comunicado-${bannerTime}.jpg`} />
+            {/* <img className='w-[80%]' src={`/comunicados/comunicado-${bannerTime}.jpg`} /> */}
+            <img className='w-[80%]' src={`/comunicados/comunicado-15.jpg`} />
           </a>
       </div>
     </div>
