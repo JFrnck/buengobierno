@@ -262,7 +262,7 @@ export default function HeroSection({ candidato }) {
 
               <div 
                 ref={imageContainerRef}
-                className="relative z-10 w-full md:w-[64%] h-[40vh] md:h-[65vh] max-w-lg -mb-14 cursor-pointer group"
+                className="relative z-10 w-full md:w-[64%] h-[40vh] md:h-[65vh] max-w-lg -mb-8 sm:-mb-4 lg:-mb-14 cursor-pointer group"
                 style={{ perspective: '1000px', opacity: 0 }} 
                 onClick={() => setIsFlipped(!isFlipped)}
               >
@@ -275,7 +275,7 @@ export default function HeroSection({ candidato }) {
                 >
                   {/* Lado A: FRENTE */}
                   <div 
-                    className="inset-0 w-full h-full"
+                    className="inset-0 w-full h-full p-2"
                     style={{ backfaceVisibility: 'hidden', WebkitBackfaceVisibility: 'hidden' }}
                   >
                     <img
