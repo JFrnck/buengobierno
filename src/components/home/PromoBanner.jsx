@@ -2,8 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { X } from 'lucide-react'; 
 
 const IMAGES = [
-  '/comunicados/comunicado-17.jpg',
-  '/comunicados/comunicado-18.jpg',
+  '/comunicados/comunicado-20.jpg',
   // Puedes agregar más imágenes aquí
 ];
 

@@ -16,8 +16,8 @@ import SenadoresPage from './components/Senadores/SenadoresPage' // Ajusta la ru
 const MainLayout = () => {
   return (
     <>
-      {/* <PromoBanner/> */}
-      <BannerCierreCampana/>
+      <PromoBanner/>
+      {/* <BannerCierreCampana/> */}
       <Navbar />
       <Outlet /> 
       <CoquitoChat />
