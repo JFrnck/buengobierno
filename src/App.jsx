@@ -7,7 +7,8 @@ import CoquitoChat from './components/shared/ChatWidget'
 
 import DiputadosPage from './components/Diputados/DisputadosPage'
 import DiputadoPage from './components/Diputados/Diputado/DiputadoPage'
-import PromoBanner from './components/home/PromoBanner'
+// import PromoBanner from './components/home/PromoBanner'
+import BannerCierreCampana from './components/home/EventBanner'
 
 // 1. IMPORTAMOS LA NUEVA VISTA DE SENADORES
 import SenadoresPage from './components/Senadores/SenadoresPage' // Ajusta la ruta según donde hayas guardado el archivo
@@ -15,7 +16,8 @@ import SenadoresPage from './components/Senadores/SenadoresPage' // Ajusta la ru
 const MainLayout = () => {
   return (
     <>
-      <PromoBanner/>
+      {/* <PromoBanner/> */}
+      <BannerCierreCampana/>
       <Navbar />
       <Outlet /> 
       <CoquitoChat />
